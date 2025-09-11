@@ -1,0 +1,457 @@
+{
+  "nav": {
+    "home": "Início",
+    "story": "Minha História",
+    "blog": "Blog",
+    "media": "Mídia",
+    "contact": "Contato"
+  },
+  "home": {
+    "hero": {
+      "badge": "Especialista em Mobilidade Global",
+      "title": "Transformando a Mobilidade Global",
+      "subtitle": "Especialista em mobilidade internacional com plataformas inovadoras servindo mais de 500K expatriados mundialmente.",
+      "cta_primary": "Obter Ajuda Especializada",
+      "cta_secondary": "Descobrir Minha História"
+    },
+    "stats": {
+      "expats_helped": "Expatriados Ajudados",
+      "countries_covered": "Países",
+      "years_experience": "Anos de Experiência",
+      "satisfaction_rate": "Satisfação"
+    },
+    "mission": {
+      "title": "Minha Missão",
+      "subtitle": "Capacitar cidadãos globais através de soluções inovadoras e orientação especializada para transições internacionais fluidas.",
+      "empathy": "Empatia",
+      "empathy_desc": "Compreender os desafios únicos que cada expatriado enfrenta durante sua jornada internacional.",
+      "community": "Comunidade",
+      "community_desc": "Construir pontes entre culturas e criar redes de apoio mundialmente.",
+      "innovation": "Inovação",
+      "innovation_desc": "Desenvolver soluções de ponta para simplificar processos internacionais complexos."
+    },
+    "solutions": {
+      "title": "Minhas Soluções",
+      "subtitle": "Duas plataformas abrangentes projetadas para apoiar cada aspecto de sua jornada internacional.",
+      "sos_title": "SOS-Expat",
+      "sos_desc": "Assistência de emergência e suporte urgente para expatriados em situações críticas mundialmente.",
+      "sos_feature_1": "Suporte de Emergência 24/7",
+      "sos_feature_2": "Assistência Legal e Médica",
+      "sos_feature_3": "Suporte Multilíngue",
+      "ulixai_title": "Ulixai",
+      "ulixai_desc": "Plataforma abrangente de realocação com ferramentas alimentadas por IA e orientação especializada.",
+      "ulixai_feature_1": "Correspondência com IA",
+      "ulixai_feature_2": "Consultas de Especialistas",
+      "ulixai_feature_3": "Suíte Completa de Realocação",
+      "discover": "Descobrir"
+    },
+    "partners": {
+      "title": "Rede de Parceiros Confiáveis",
+      "subtitle": "Uma rede cuidadosamente curada de profissionais verificados em mais de 25 países.",
+      "legal": "Rede de Parceiros Legais",
+      "legal_desc": "Advogados de imigração e especialistas legais especializados em procedimentos de visto e residência.",
+      "legal_expertise": "Direito de Imigração",
+      "banking": "Soluções Bancárias",
+      "banking_desc": "Parceiros bancários internacionais oferecendo serviços financeiros amigáveis para expatriados.",
+      "banking_expertise": "Banco Internacional",
+      "housing": "Rede de Habitação",
+      "housing_desc": "Profissionais imobiliários verificados e especialistas em habitação mundialmente.",
+      "housing_expertise": "Imóveis",
+      "healthcare": "Parceiros de Saúde",
+      "healthcare_desc": "Profissionais médicos e provedores de seguro para cobertura de saúde abrangente.",
+      "healthcare_expertise": "Saúde e Seguros"
+    },
+    "clients": {
+      "title": "Confiado por Líderes Globais",
+      "subtitle": "De startups a empresas Fortune 500, organizações mundialmente confiam em nossa expertise.",
+      "startups": "Startups Tech",
+      "startups_desc": "Apoiando empresas inovadoras em sua expansão global e aquisição de talentos.",
+      "startups_projects": "150+",
+      "startups_satisfaction": "98%",
+      "multinationals": "Multinacionais",
+      "multinationals_desc": "Facilitando transferências internacionais e programas de mobilidade global.",
+      "multinationals_projects": "50+",
+      "multinationals_satisfaction": "99%",
+      "individuals": "Indivíduos",
+      "individuals_desc": "Orientação pessoal para indivíduos e famílias buscando oportunidades internacionais.",
+      "individuals_projects": "500K+",
+      "individuals_satisfaction": "97%",
+      "projects_completed": "Projetos",
+      "satisfaction": "Satisfação"
+    },
+    "help": {
+      "title": "Como Posso Te Ajudar",
+      "subtitle": "Seja você precisando de assistência de emergência, suporte de planejamento ou insights especializados, estou aqui para guiar sua jornada internacional.",
+      "emergency": "Suporte de Emergência",
+      "emergency_desc": "Assistência imediata para situações urgentes no exterior através da rede de suporte 24/7 do SOS-Expat.",
+      "emergency_action": "Obter Ajuda de Emergência",
+      "prepare": "Planeje Sua Mudança",
+      "prepare_desc": "Planejamento abrangente de realocação com correspondência alimentada por IA e orientação especializada através do Ulixai.",
+      "prepare_action": "Começar Planejamento",
+      "learn": "Aprender e Insights",
+      "learn_desc": "Insights especializados, guias práticos e experiências reais compartilhadas através do meu blog e recursos.",
+      "learn_action": "Ler Blog"
+    },
+    "cta": {
+      "title": "Pronto para Transformar Sua Jornada Global?",
+      "subtitle": "Junte-se a milhares de expatriados bem-sucedidos que transformaram sua experiência internacional com orientação especializada e soluções inovadoras.",
+      "contact": "Entrar em Contato",
+      "story": "Minha História"
+    }
+  },
+  "story": {
+    "hero": {
+      "title": "Minha História",
+      "subtitle": "De desafios pessoais a soluções globais - a jornada que levou a transformar a mobilidade internacional para milhares."
+    },
+    "intro": {
+      "title": "A Jornada Começa",
+      "paragraph_1": "Minha jornada na mobilidade internacional começou com meus próprios desafios como expatriado. Ao me mudar entre países, experimentei em primeira mão as complexidades, frustrações e lacunas no suporte que milhões de expatriados enfrentam diariamente.",
+      "paragraph_2": "Essas experiências pessoais se tornaram a base para entender o que os expatriados realmente precisam - não apenas informações, mas suporte abrangente, redes confiáveis e soluções inovadoras que realmente funcionam.",
+      "paragraph_3": "Hoje, através do SOS-Expat e Ulixai, transformei esses insights em plataformas que ajudaram mais de 500.000 expatriados a navegar suas jornadas internacionais com sucesso."
+    },
+    "timeline": {
+      "title": "Marcos Principais",
+      "subtitle": "Os momentos pivotais que moldaram minha missão de transformar a mobilidade global.",
+      "event_1": {
+        "title": "Primeira Mudança Internacional",
+        "description": "Experimentei os desafios da realocação internacional em primeira mão, identificando lacunas críticas nos serviços de suporte a expatriados."
+      },
+      "event_2": {
+        "title": "Construindo Redes",
+        "description": "Comecei a me conectar com profissionais legais, bancários e habitacionais em toda a Europa para criar redes de suporte confiáveis."
+      },
+      "event_3": {
+        "title": "Lançamento do SOS-Expat",
+        "description": "Lancei a plataforma de suporte de emergência após testemunhar expatriados em situações de crise sem ajuda adequada."
+      },
+      "event_4": {
+        "title": "Desenvolvimento do Ulixai",
+        "description": "Desenvolvi uma plataforma abrangente de realocação combinando tecnologia IA com expertise humana."
+      },
+      "event_5": {
+        "title": "Impacto Global",
+        "description": "Alcancei o marco de ajudar mais de 500K expatriados mundialmente através do ecossistema de plataformas integradas."
+      }
+    },
+    "values": {
+      "title": "Valores Fundamentais",
+      "subtitle": "Os princípios que guiam cada decisão e inovação no meu trabalho.",
+      "global": {
+        "title": "Perspectiva Global",
+        "description": "Entender que mobilidade é sobre conectar culturas, não apenas cruzar fronteiras."
+      },
+      "community": {
+        "title": "Comunidade Primeiro",
+        "description": "Construir redes de suporte onde expatriados podem prosperar, não apenas sobreviver."
+      },
+      "innovation": {
+        "title": "Inovação",
+        "description": "Aproveitar tecnologia para resolver problemas reais e criar impacto significativo."
+      },
+      "impact": {
+        "title": "Impacto Mensurável",
+        "description": "Cada solução deve melhorar demonstravelmente a experiência do expatriado."
+      }
+    },
+    "cta": {
+      "title": "Junte-se à Jornada",
+      "subtitle": "Seja parte da comunidade global que está transformando a mobilidade internacional.",
+      "sos_button": "Explorar SOS-Expat",
+      "ulixai_button": "Descobrir Ulixai"
+    }
+  },
+  "blog": {
+    "hero": {
+      "title": "Insights Especializados",
+      "subtitle": "Orientação prática, experiências reais e insights especializados para sua jornada internacional."
+    },
+    "tags": {
+      "all": "Todos os Tópicos"
+    },
+    "topics": {
+      "visas": "Vistos",
+      "banking": "Banco",
+      "housing": "Habitação",
+      "healthcare": "Saúde",
+      "culture": "Cultura",
+      "tips": "Dicas",
+      "moving": "Mudança"
+    },
+    "posts": {
+      "visa_guide": {
+        "title": "Guia Completo de Vistos Europeus: Tudo Que Você Precisa Saber",
+        "excerpt": "Navegue pelo mundo complexo dos vistos europeus com este guia abrangente cobrindo requisitos, processos e dicas especializadas para sucesso.",
+        "content": "Mudar-se para um novo país pode ser uma das aventuras mais emocionantes da vida, mas navegar pelo processo de visto não precisa ser avassalador..."
+      },
+      "banking_nomad": {
+        "title": "Banco Digital para Nômades: Melhores Soluções Bancárias Internacionais",
+        "excerpt": "Descubra as melhores soluções bancárias para nômades digitais e expatriados, incluindo contas multi-moeda e opções de transferência internacional.",
+        "content": "Como nômade digital ou expatriado, gerenciar suas finanças através de múltiplos países pode ser desafiador..."
+      },
+      "housing_berlin": {
+        "title": "Encontrar Habitação em Berlim: Guia Completo do Expatriado",
+        "excerpt": "Domine o mercado imobiliário berlinense com dicas internas sobre bairros, processos de aluguel e evitar armadilhas comuns.",
+        "content": "O mercado imobiliário de Berlim pode ser intimidante para recém-chegados, mas com a abordagem e conhecimento corretos..."
+      },
+      "healthcare_expat": {
+        "title": "Sistemas de Saúde para Expatriados: O Que Você Precisa Saber",
+        "excerpt": "Entender sistemas de saúde no exterior, requisitos de seguro e como acessar cuidados médicos de qualidade como expatriado.",
+        "content": "Cuidados de saúde são uma das considerações mais importantes ao se mudar para o exterior..."
+      },
+      "culture_shock": {
+        "title": "Superando Choque Cultural: Um Guia Prático",
+        "excerpt": "Aprenda como navegar diferenças culturais e se adaptar com sucesso ao seu novo ambiente com estratégias comprovadas.",
+        "content": "Choque cultural é uma parte natural da experiência expatriada, mas não precisa descarrilar sua jornada internacional..."
+      },
+      "moving_checklist": {
+        "title": "A Lista de Verificação Definitiva de Mudança Internacional",
+        "excerpt": "Uma lista de verificação abrangente cobrindo tudo desde documentação até logística para uma mudança internacional suave.",
+        "content": "Mudar-se internacionalmente requer planejamento e organização cuidadosos..."
+      }
+    },
+    "read_more": "Ler Mais",
+    "back_to_blog": "Voltar ao Blog",
+    "share": "Compartilhar",
+    "no_posts": "Nenhum post encontrado para este tópico.",
+    "author_bio": "Williams Jullin é um especialista em mobilidade global e fundador do SOS-Expat e Ulixai, ajudando mais de 500K expatriados mundialmente.",
+    "read_story": "Ler Minha História",
+    "get_in_touch": "Entrar em Contato"
+  },
+  "media": {
+    "hero": {
+      "title": "Mídia e Imprensa",
+      "subtitle": "Recursos, insights e materiais para profissionais de mídia e consultas de imprensa."
+    },
+    "bio": {
+      "short_title": "Biografia Curta",
+      "short_content": "Williams Jullin é um especialista em mobilidade global e empreendedor que transformou a realocação internacional através das plataformas inovadoras SOS-Expat e Ulixai, servindo mais de 500.000 expatriados mundialmente.",
+      "long_title": "Biografia Estendida",
+      "long_paragraph_1": "Williams Jullin é uma figura pioneira na mobilidade global, tendo transformado o cenário de realocação internacional através de tecnologia inovadora e redes de suporte abrangentes.",
+      "long_paragraph_2": "Como fundador do SOS-Expat e Ulixai, Williams criou um ecossistema que aborda cada aspecto da jornada expatriada, desde assistência de emergência até planejamento abrangente de realocação.",
+      "long_paragraph_3": "Suas plataformas apoiaram com sucesso mais de 500.000 expatriados em mais de 25 países, estabelecendo-o como uma autoridade líder em mobilidade internacional e serviços expatriados."
+    },
+    "topics": {
+      "title": "Tópicos de Entrevista",
+      "subtitle": "Áreas-chave de expertise para entrevistas e compromissos de palestras.",
+      "expat_trends": {
+        "title": "Tendências Globais de Expatriados",
+        "description": "Insights sobre padrões em mudança de mobilidade internacional e destinos expatriados emergentes."
+      },
+      "digital_nomad": {
+        "title": "Nomadismo Digital",
+        "description": "O crescimento do trabalho remoto e seu impacto nos padrões de mobilidade global."
+      },
+      "visa_policy": {
+        "title": "Política de Vistos e Imigração",
+        "description": "Análise de políticas de imigração em mudança e seu impacto na mobilidade internacional."
+      },
+      "relocation_tech": {
+        "title": "Tecnologia em Realocação",
+        "description": "Como IA e tecnologia estão transformando a experiência de mudança internacional."
+      },
+      "cultural_adaptation": {
+        "title": "Integração Cultural",
+        "description": "Estratégias para adaptação cultural bem-sucedida e construção de comunidade no exterior."
+      },
+      "entrepreneurship": {
+        "title": "Empreendedorismo Expatriado",
+        "description": "Construir negócios enquanto navega regulamentações internacionais e mercados."
+      }
+    },
+    "press": {
+      "title": "Cobertura de Imprensa Recente",
+      "subtitle": "Últimas aparições na mídia e menções na imprensa."
+    },
+    "photos": {
+      "title": "Fotos de Imprensa",
+      "subtitle": "Fotos de alta resolução disponíveis para uso da mídia.",
+      "portrait_1_title": "Retrato Profissional",
+      "portrait_1_description": "Retrato profissional de alta resolução adequado para mídia impressa e digital."
+    },
+    "contact": {
+      "title": "Consultas de Mídia",
+      "subtitle": "Para entrevistas, compromissos de palestras e consultas de imprensa.",
+      "email": "Email da Equipe de Imprensa",
+      "form": "Formulário de Contato"
+    },
+    "download_short_bio": "Baixar Biografia Curta",
+    "download_long_bio": "Baixar Biografia Longa",
+    "download_photo": "Baixar Foto"
+  },
+  "contact": {
+    "hero": {
+      "title": "Entrar em Contato",
+      "subtitle": "Pronto para transformar sua jornada internacional? Vamos discutir como posso ajudá-lo a ter sucesso no exterior."
+    },
+    "form": {
+      "title": "Enviar uma Mensagem",
+      "purpose": "Propósito do Contato",
+      "select_purpose": "Selecionar propósito...",
+      "full_name": "Nome Completo",
+      "full_name_placeholder": "Digite seu nome completo",
+      "email": "Endereço de Email",
+      "email_placeholder": "Digite seu endereço de email",
+      "subject": "Assunto",
+      "subject_placeholder": "Breve assunto da sua mensagem",
+      "country": "País Atual",
+      "country_placeholder": "Onde você está localizado atualmente?",
+      "message": "Mensagem",
+      "message_placeholder": "Me conte sobre sua situação e como posso ajudar...",
+      "consent": "Consinto com o processamento dos meus dados pessoais para o propósito desta consulta.",
+      "send": "Enviar Mensagem",
+      "sending": "Enviando..."
+    },
+    "purposes": {
+      "general": "Consulta Geral",
+      "media": "Mídia e Imprensa",
+      "partnership": "Oportunidade de Parceria",
+      "investment": "Consulta de Investimento",
+      "support": "Suporte da Plataforma"
+    },
+    "info": {
+      "title": "Informações de Contato",
+      "description": "Reviso pessoalmente cada mensagem e me esforço para fornecer orientação reflexiva e acionável para sua jornada internacional.",
+      "response_time": "Resposta dentro de 24-48 horas",
+      "languages": "Disponível em 7 idiomas",
+      "availability": "Cobertura de fuso horário global"
+    },
+    "visual": {
+      "title": "Orientação Especializada",
+      "subtitle": "Suporte personalizado para sua jornada global"
+    },
+    "success": {
+      "title": "Mensagem Enviada com Sucesso!",
+      "message": "Obrigado por entrar em contato. Revisarei sua mensagem e responderei dentro de 24-48 horas com orientação personalizada.",
+      "back_home": "Voltar ao Início"
+    }
+  },
+  "investors": {
+    "hero": {
+      "title": "Transformando a Mobilidade Global",
+      "subtitle": "Junte-se a nós para revolucionar como o mundo se move, trabalha e vive internacionalmente.",
+      "cta": "Solicitar Pacote de Investidor"
+    },
+    "problem": {
+      "title": "O Problema",
+      "point_1": "Mais de 500M de pessoas vivem fora de seu país de nascimento com suporte inadequado",
+      "point_2": "Serviços fragmentados criam ineficiências e experiências ruins",
+      "point_3": "Situações de emergência deixam expatriados vulneráveis sem assistência adequada"
+    },
+    "solution": {
+      "title": "Nossa Solução",
+      "point_1": "Ecossistema de plataforma abrangente abordando todas as necessidades de expatriados",
+      "point_2": "Correspondência alimentada por IA com redes profissionais verificadas",
+      "point_3": "Sistema de suporte de emergência 24/7 com cobertura global"
+    },
+    "market": {
+      "title": "Oportunidade de Mercado",
+      "size": "Tamanho do Mercado Global",
+      "growth": "Taxa de Crescimento Anual",
+      "expats": "Expatriados Globais",
+      "description": "O mercado de mobilidade global está experimentando crescimento sem precedentes, impulsionado por tendências de trabalho remoto, mobilidade de talentos e operações comerciais internacionais crescentes."
+    },
+    "traction": {
+      "title": "Tração Comprovada",
+      "subtitle": "Métricas sólidas demonstram validação de mercado e potencial de crescimento.",
+      "users": "Usuários Ativos",
+      "countries": "Países Servidos",
+      "growth": "Crescimento Anual",
+      "uptime": "Tempo de Atividade da Plataforma"
+    },
+    "products": {
+      "title": "Portfólio de Produtos",
+      "subtitle": "Duas plataformas complementares servindo o ciclo de vida completo do expatriado.",
+      "sos_description": "Plataforma de assistência de emergência fornecendo suporte 24/7 para expatriados em situações críticas mundialmente.",
+      "sos_feature_1": "Resposta de Emergência",
+      "sos_feature_2": "Países Cobertos",
+      "ulixai_description": "Plataforma abrangente de realocação com correspondência alimentada por IA e orientação especializada para mudanças internacionais suaves.",
+      "ulixai_feature_1": "Provedores de Serviços",
+      "ulixai_feature_2": "Idiomas Suportados",
+      "view_product": "Ver Plataforma"
+    },
+    "business": {
+      "title": "Modelo de Negócio",
+      "subscription": {
+        "title": "Assinatura",
+        "description": "Assinaturas mensais e anuais para recursos premium e suporte prioritário."
+      },
+      "commission": {
+        "title": "Comissão",
+        "description": "Compartilhamento de receita com provedores de serviços verificados em nossa rede."
+      },
+      "enterprise": {
+        "title": "Empresa",
+        "description": "Soluções personalizadas para corporações gerenciando mobilidade de força de trabalho global."
+      }
+    },
+    "moat": {
+      "title": "Vantagens Competitivas",
+      "subtitle": "Fossos defensáveis sólidos protegendo nossa posição no mercado.",
+      "point_1": {
+        "title": "Efeitos de Rede",
+        "description": "Base de usuários crescente atrai mais provedores de serviços, criando proposição de valor mais forte para todos os participantes."
+      },
+      "point_2": {
+        "title": "Dados e IA",
+        "description": "Algoritmos de correspondência proprietários e dados extensos de expatriados criam experiências de usuário superiores."
+      },
+      "point_3": {
+        "title": "Confiança da Marca",
+        "description": "Reputação estabelecida e histórico comprovado em situações críticas de suporte a expatriados."
+      },
+      "point_4": {
+        "title": "Expertise Regulatória",
+        "description": "Compreensão profunda de regulamentações internacionais e requisitos de conformidade através dos mercados."
+      }
+    },
+    "roadmap": {
+      "title": "Roteiro de Crescimento",
+      "subtitle": "Marcos estratégicos para escalar impacto global.",
+      "q2_2024": {
+        "title": "Integração de Plataforma",
+        "description": "Integração completa entre as plataformas SOS-Expat e Ulixai para experiência de usuário suave."
+      },
+      "q3_2024": {
+        "title": "Aprimoramento de IA",
+        "description": "Algoritmos avançados de correspondência de IA e análise preditiva para recomendações de serviço melhoradas."
+      },
+      "q4_2024": {
+        "title": "Expansão de Mercado",
+        "description": "Lançamento em 10 novos mercados com redes de provedores de serviços localizadas."
+      },
+      "q1_2025": {
+        "title": "Soluções Empresariais",
+        "description": "Plataforma empresarial completa para gerenciamento de mobilidade global corporativa."
+      },
+      "status": {
+        "completed": "Concluído",
+        "current": "Em Progresso",
+        "planned": "Planejado"
+      }
+    },
+    "team": {
+      "title": "Equipe de Liderança",
+      "founder_title": "Fundador e CEO",
+      "founder_bio": "Empreendedor em série com expertise profunda em mobilidade global, tendo navegado pessoalmente realocações internacionais e construído redes bem-sucedidas de suporte a expatriados em mais de 25 países."
+    },
+    "disclaimer": {
+      "title": "Isenção de Responsabilidade de Investimento",
+      "content": "Esta apresentação contém declarações e projeções prospectivas. Desempenho passado não garante resultados futuros. Todos os investimentos carregam risco de perda. Por favor consulte consultores financeiros qualificados antes de tomar decisões de investimento."
+    },
+    "cta": {
+      "title": "Pronto para Se Juntar à Nossa Missão?",
+      "subtitle": "Parceiro conosco para transformar a mobilidade global para milhões de expatriados mundialmente.",
+      "button": "Solicitar Pacote de Investidor"
+    }
+  },
+  "footer": {
+    "description": "Transformando mobilidade global através de soluções inovadoras e orientação especializada.",
+    "platforms": "Plataformas",
+    "legal": "Legal",
+    "investors": "Investidores",
+    "privacy": "Política de Privacidade",
+    "legal_notice": "Aviso Legal",
+    "rights_reserved": "Todos os direitos reservados."
+  }
+}

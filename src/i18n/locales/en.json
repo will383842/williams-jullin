@@ -1,0 +1,459 @@
+{
+  "nav": {
+    "home": "Home",
+    "story": "My Story",
+    "blog": "Blog",
+    "media": "Media",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "badge": "Global Mobility Expert",
+      "title": "Transforming Global Mobility",
+      "subtitle": "Expert in international mobility with innovative platforms serving over 500K expats worldwide.",
+      "cta_primary": "Get Expert Help",
+      "cta_secondary": "Discover My Story"
+    },
+    "stats": {
+      "expats_helped": "Expats Helped",
+      "countries_covered": "Countries",
+      "years_experience": "Years Experience",
+      "satisfaction_rate": "Satisfaction"
+    },
+    "mission": {
+      "title": "My Mission",
+      "subtitle": "Empowering global citizens through innovative solutions and expert guidance for seamless international transitions.",
+      "empathy": "Empathy",
+      "empathy_desc": "Understanding the unique challenges each expat faces during their international journey.",
+      "community": "Community",
+      "community_desc": "Building bridges between cultures and creating supportive networks worldwide.",
+      "innovation": "Innovation",
+      "innovation_desc": "Developing cutting-edge solutions to simplify complex international processes."
+    },
+    "solutions": {
+      "title": "My Solutions",
+      "subtitle": "Two comprehensive platforms designed to support every aspect of your international journey.",
+      "sos_title": "SOS-Expat",
+      "sos_desc": "Emergency assistance and urgent support for expats in critical situations worldwide.",
+      "sos_feature_1": "24/7 Emergency Support",
+      "sos_feature_2": "Legal & Medical Assistance",
+      "sos_feature_3": "Multi-language Support",
+      "ulixai_title": "Ulixai",
+      "ulixai_desc": "Comprehensive relocation platform with AI-powered tools and expert guidance.",
+      "ulixai_feature_1": "AI-Powered Matching",
+      "ulixai_feature_2": "Expert Consultations",
+      "ulixai_feature_3": "Complete Relocation Suite",
+      "discover": "Discover"
+    },
+    "partners": {
+      "title": "Trusted Partner Network",
+      "subtitle": "A carefully curated network of verified professionals across 25+ countries.",
+      "legal": "Legal Partners Network",
+      "legal_desc": "Immigration lawyers and legal experts specializing in visa and residency procedures.",
+      "legal_expertise": "Immigration Law",
+      "banking": "Banking Solutions",
+      "banking_desc": "International banking partners offering expat-friendly financial services.",
+      "banking_expertise": "International Banking",
+      "housing": "Housing Network",
+      "housing_desc": "Verified real estate professionals and housing specialists worldwide.",
+      "housing_expertise": "Real Estate",
+      "healthcare": "Healthcare Partners",
+      "healthcare_desc": "Medical professionals and insurance providers for comprehensive health coverage.",
+      "healthcare_expertise": "Health & Insurance"
+    },
+    "clients": {
+      "title": "Trusted by Global Leaders",
+      "subtitle": "From startups to Fortune 500 companies, organizations worldwide trust our expertise.",
+      "startups": "Tech Startups",
+      "startups_desc": "Supporting innovative companies in their global expansion and talent acquisition.",
+      "startups_projects": "150+",
+      "startups_satisfaction": "98%",
+      "multinationals": "Multinationals",
+      "multinationals_desc": "Facilitating international transfers and global mobility programs.",
+      "multinationals_projects": "50+",
+      "multinationals_satisfaction": "99%",
+      "individuals": "Individuals",
+      "individuals_desc": "Personal guidance for individuals and families pursuing international opportunities.",
+      "individuals_projects": "500K+",
+      "individuals_satisfaction": "97%",
+      "projects_completed": "Projects",
+      "satisfaction": "Satisfaction"
+    },
+    "help": {
+      "title": "How I Can Help You",
+      "subtitle": "Whether you need emergency assistance, planning support, or expert insights, I'm here to guide your international journey.",
+      "emergency": "Emergency Support",
+      "emergency_desc": "Immediate assistance for urgent situations abroad through SOS-Expat's 24/7 support network.",
+      "emergency_action": "Get Emergency Help",
+      "prepare": "Plan Your Move",
+      "prepare_desc": "Comprehensive relocation planning with AI-powered matching and expert guidance through Ulixai.",
+      "prepare_action": "Start Planning",
+      "learn": "Learn & Insights",
+      "learn_desc": "Expert insights, practical guides, and real experiences shared through my blog and resources.",
+      "learn_action": "Read Blog"
+    },
+    "cta": {
+      "title": "Ready to Transform Your Global Journey?",
+      "subtitle": "Join thousands of successful expats who have transformed their international experience with expert guidance and innovative solutions.",
+      "contact": "Get in Touch",
+      "story": "My Story"
+    }
+  },
+  "story": {
+    "hero": {
+      "title": "My Story",
+      "subtitle": "From personal challenges to global solutions - the journey that led to transforming international mobility for thousands."
+    },
+    "intro": {
+      "title": "The Journey Begins",
+      "paragraph_1": "My journey into international mobility began with my own challenges as an expat. Moving between countries, I experienced firsthand the complexities, frustrations, and gaps in support that millions of expats face daily.",
+      "paragraph_2": "These personal experiences became the foundation for understanding what expats truly need - not just information, but comprehensive support, reliable networks, and innovative solutions that actually work.",
+      "paragraph_3": "Today, through SOS-Expat and Ulixai, I've transformed these insights into platforms that have helped over 500,000 expats navigate their international journeys successfully."
+    },
+    "timeline": {
+      "title": "Key Milestones",
+      "subtitle": "The pivotal moments that shaped my mission to transform global mobility.",
+      "event_1": {
+        "title": "First International Move",
+        "description": "Experienced the challenges of international relocation firsthand, identifying critical gaps in expat support services."
+      },
+      "event_2": {
+        "title": "Building Networks",
+        "description": "Started connecting with legal, banking, and housing professionals across Europe to create reliable support networks."
+      },
+      "event_3": {
+        "title": "SOS-Expat Launch",
+        "description": "Launched emergency support platform after witnessing expats in crisis situations without adequate help."
+      },
+      "event_4": {
+        "title": "Ulixai Development",
+        "description": "Developed comprehensive relocation platform combining AI technology with human expertise."
+      },
+      "event_5": {
+        "title": "Global Impact",
+        "description": "Reached milestone of helping 500K+ expats worldwide through integrated platform ecosystem."
+      }
+    },
+    "values": {
+      "title": "Core Values",
+      "subtitle": "The principles that guide every decision and innovation in my work.",
+      "global": {
+        "title": "Global Perspective",
+        "description": "Understanding that mobility is about connecting cultures, not just crossing borders."
+      },
+      "community": {
+        "title": "Community First",
+        "description": "Building supportive networks where expats can thrive, not just survive."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Leveraging technology to solve real problems and create meaningful impact."
+      },
+      "impact": {
+        "title": "Measurable Impact",
+        "description": "Every solution must demonstrably improve the expat experience."
+      }
+    },
+    "cta": {
+      "title": "Join the Journey",
+      "subtitle": "Be part of the global community that's transforming international mobility.",
+      "sos_button": "Explore SOS-Expat",
+      "ulixai_button": "Discover Ulixai"
+    }
+  },
+  "blog": {
+    "hero": {
+      "title": "Expert Insights",
+      "subtitle": "Practical guidance, real experiences, and expert insights for your international journey."
+    },
+    "tags": {
+      "all": "All Topics"
+    },
+    "topics": {
+      "visas": "Visas",
+      "banking": "Banking",
+      "housing": "Housing",
+      "healthcare": "Healthcare",
+      "culture": "Culture",
+      "tips": "Tips",
+      "moving": "Moving"
+    },
+    "posts": {
+      "visa_guide": {
+        "title": "Complete Guide to European Visas: Everything You Need to Know",
+        "excerpt": "Navigate the complex world of European visas with this comprehensive guide covering requirements, processes, and expert tips for success.",
+        "content": "Moving to a new country can be one of life's most exciting adventures, but navigating the visa process doesn't have to be overwhelming..."
+      },
+      "banking_nomad": {
+        "title": "Digital Banking for Nomads: Best International Banking Solutions",
+        "excerpt": "Discover the top banking solutions for digital nomads and expats, including multi-currency accounts and international transfer options.",
+        "content": "As a digital nomad or expat, managing your finances across multiple countries can be challenging..."
+      },
+      "housing_berlin": {
+        "title": "Finding Housing in Berlin: An Expat's Complete Guide",
+        "excerpt": "Master the Berlin housing market with insider tips on neighborhoods, rental processes, and avoiding common pitfalls.",
+        "content": "Berlin's housing market can be intimidating for newcomers, but with the right approach and knowledge..."
+      },
+      "healthcare_expat": {
+        "title": "Healthcare Systems for Expats: What You Need to Know",
+        "excerpt": "Understanding healthcare systems abroad, insurance requirements, and how to access quality medical care as an expat.",
+        "content": "Healthcare is one of the most important considerations when moving abroad..."
+      },
+      "culture_shock": {
+        "title": "Overcoming Culture Shock: A Practical Guide",
+        "excerpt": "Learn how to navigate cultural differences and adapt successfully to your new environment with proven strategies.",
+        "content": "Culture shock is a natural part of the expat experience, but it doesn't have to derail your international journey..."
+      },
+      "moving_checklist": {
+        "title": "The Ultimate International Moving Checklist",
+        "excerpt": "A comprehensive checklist covering everything from documentation to logistics for a smooth international move.",
+        "content": "Moving internationally requires careful planning and organization..."
+      }
+    },
+    "read_more": "Read More",
+    "back_to_blog": "Back to Blog",
+    "share": "Share",
+    "no_posts": "No posts found for this topic.",
+    "author_bio": "Williams Jullin is a global mobility expert and founder of SOS-Expat and Ulixai, helping over 500K expats worldwide.",
+    "read_story": "Read My Story",
+    "get_in_touch": "Get in Touch"
+  },
+  "media": {
+    "hero": {
+      "title": "Media & Press",
+      "subtitle": "Resources, insights, and materials for media professionals and press inquiries."
+    },
+    "bio": {
+      "short_title": "Short Bio",
+      "short_content": "Williams Jullin is a global mobility expert and entrepreneur who has transformed international relocation through innovative platforms SOS-Expat and Ulixai, serving over 500,000 expats worldwide.",
+      "long_title": "Extended Bio",
+      "long_paragraph_1": "Williams Jullin is a pioneering figure in global mobility, having transformed the international relocation landscape through innovative technology and comprehensive support networks.",
+      "long_paragraph_2": "As the founder of SOS-Expat and Ulixai, Williams has created an ecosystem that addresses every aspect of the expat journey, from emergency assistance to comprehensive relocation planning.",
+      "long_paragraph_3": "His platforms have successfully supported over 500,000 expats across 25+ countries, establishing him as a leading authority in international mobility and expat services."
+    },
+    "topics": {
+      "title": "Interview Topics",
+      "subtitle": "Key areas of expertise for interviews and speaking engagements.",
+      "expat_trends": {
+        "title": "Global Expat Trends",
+        "description": "Insights into changing patterns of international mobility and emerging expat destinations."
+      },
+      "digital_nomad": {
+        "title": "Digital Nomadism",
+        "description": "The rise of remote work and its impact on global mobility patterns."
+      },
+      "visa_policy": {
+        "title": "Visa Policy & Immigration",
+        "description": "Analysis of changing immigration policies and their impact on international mobility."
+      },
+      "relocation_tech": {
+        "title": "Technology in Relocation",
+        "description": "How AI and technology are transforming the international moving experience."
+      },
+      "cultural_adaptation": {
+        "title": "Cultural Integration",
+        "description": "Strategies for successful cultural adaptation and community building abroad."
+      },
+      "entrepreneurship": {
+        "title": "Expat Entrepreneurship",
+        "description": "Building businesses while navigating international regulations and markets."
+      }
+    },
+    "press": {
+      "title": "Recent Press Coverage",
+      "subtitle": "Latest media appearances and press mentions."
+    },
+    "photos": {
+      "title": "Press Photos",
+      "subtitle": "High-resolution photos available for media use.",
+      "portrait_1_title": "Professional Portrait",
+      "portrait_1_description": "High-resolution professional headshot suitable for print and digital media.",
+      "portrait_2_title": "Casual Portrait",
+      "portrait_2_description": "Approachable casual portrait for lifestyle and feature articles."
+    },
+    "contact": {
+      "title": "Media Inquiries",
+      "subtitle": "For interviews, speaking engagements, and press inquiries.",
+      "email": "Email Press Team",
+      "form": "Contact Form"
+    },
+    "download_short_bio": "Download Short Bio",
+    "download_long_bio": "Download Long Bio",
+    "download_photo": "Download Photo"
+  },
+  "contact": {
+    "hero": {
+      "title": "Get in Touch",
+      "subtitle": "Ready to transform your international journey? Let's discuss how I can help you succeed abroad."
+    },
+    "form": {
+      "title": "Send a Message",
+      "purpose": "Purpose of Contact",
+      "select_purpose": "Select purpose...",
+      "full_name": "Full Name",
+      "full_name_placeholder": "Enter your full name",
+      "email": "Email Address",
+      "email_placeholder": "Enter your email address",
+      "subject": "Subject",
+      "subject_placeholder": "Brief subject of your message",
+      "country": "Current Country",
+      "country_placeholder": "Where are you currently located?",
+      "message": "Message",
+      "message_placeholder": "Tell me about your situation and how I can help...",
+      "consent": "I consent to processing of my personal data for the purpose of this inquiry.",
+      "send": "Send Message",
+      "sending": "Sending..."
+    },
+    "purposes": {
+      "general": "General Inquiry",
+      "media": "Media & Press",
+      "partnership": "Partnership Opportunity",
+      "investment": "Investment Inquiry",
+      "support": "Platform Support"
+    },
+    "info": {
+      "title": "Contact Information",
+      "description": "I personally review every message and strive to provide thoughtful, actionable guidance for your international journey.",
+      "response_time": "Response within 24-48 hours",
+      "languages": "Available in 7 languages",
+      "availability": "Global time zone coverage"
+    },
+    "visual": {
+      "title": "Expert Guidance",
+      "subtitle": "Personalized support for your global journey"
+    },
+    "success": {
+      "title": "Message Sent Successfully!",
+      "message": "Thank you for reaching out. I'll review your message and respond within 24-48 hours with personalized guidance.",
+      "back_home": "Back to Home"
+    }
+  },
+  "investors": {
+    "hero": {
+      "title": "Transforming Global Mobility",
+      "subtitle": "Join us in revolutionizing how the world moves, works, and lives internationally.",
+      "cta": "Request Investor Pack"
+    },
+    "problem": {
+      "title": "The Problem",
+      "point_1": "500M+ people live outside their birth country with inadequate support",
+      "point_2": "Fragmented services create inefficiencies and poor experiences",
+      "point_3": "Emergency situations leave expats vulnerable without proper assistance"
+    },
+    "solution": {
+      "title": "Our Solution",
+      "point_1": "Comprehensive platform ecosystem addressing all expat needs",
+      "point_2": "AI-powered matching with verified professional networks",
+      "point_3": "24/7 emergency support system with global coverage"
+    },
+    "market": {
+      "title": "Market Opportunity",
+      "size": "Global Market Size",
+      "growth": "Annual Growth Rate",
+      "expats": "Global Expats",
+      "description": "The global mobility market is experiencing unprecedented growth, driven by remote work trends, talent mobility, and increasing international business operations."
+    },
+    "traction": {
+      "title": "Proven Traction",
+      "subtitle": "Strong metrics demonstrate market validation and growth potential.",
+      "users": "Active Users",
+      "countries": "Countries Served",
+      "growth": "YoY Growth",
+      "uptime": "Platform Uptime"
+    },
+    "products": {
+      "title": "Product Portfolio",
+      "subtitle": "Two complementary platforms serving the complete expat lifecycle.",
+      "sos_description": "Emergency assistance platform providing 24/7 support for expats in critical situations worldwide.",
+      "sos_feature_1": "Emergency Response",
+      "sos_feature_2": "Countries Covered",
+      "ulixai_description": "Comprehensive relocation platform with AI-powered matching and expert guidance for seamless international moves.",
+      "ulixai_feature_1": "Service Providers",
+      "ulixai_feature_2": "Languages Supported",
+      "view_product": "View Platform"
+    },
+    "business": {
+      "title": "Business Model",
+      "subscription": {
+        "title": "Subscription",
+        "description": "Monthly and annual subscriptions for premium features and priority support."
+      },
+      "commission": {
+        "title": "Commission",
+        "description": "Revenue sharing with verified service providers in our network."
+      },
+      "enterprise": {
+        "title": "Enterprise",
+        "description": "Custom solutions for corporations managing global workforce mobility."
+      }
+    },
+    "moat": {
+      "title": "Competitive Advantages",
+      "subtitle": "Strong defensible moats protecting our market position.",
+      "point_1": {
+        "title": "Network Effects",
+        "description": "Growing user base attracts more service providers, creating stronger value proposition for all participants."
+      },
+      "point_2": {
+        "title": "Data & AI",
+        "description": "Proprietary matching algorithms and extensive expat data create superior user experiences."
+      },
+      "point_3": {
+        "title": "Brand Trust",
+        "description": "Established reputation and proven track record in critical expat support situations."
+      },
+      "point_4": {
+        "title": "Regulatory Expertise",
+        "description": "Deep understanding of international regulations and compliance requirements across markets."
+      }
+    },
+    "roadmap": {
+      "title": "Growth Roadmap",
+      "subtitle": "Strategic milestones for scaling global impact.",
+      "q2_2024": {
+        "title": "Platform Integration",
+        "description": "Complete integration between SOS-Expat and Ulixai platforms for seamless user experience."
+      },
+      "q3_2024": {
+        "title": "AI Enhancement",
+        "description": "Advanced AI matching algorithms and predictive analytics for improved service recommendations."
+      },
+      "q4_2024": {
+        "title": "Market Expansion",
+        "description": "Launch in 10 new markets with localized service provider networks."
+      },
+      "q1_2025": {
+        "title": "Enterprise Solutions",
+        "description": "Full enterprise platform for corporate global mobility management."
+      },
+      "status": {
+        "completed": "Completed",
+        "current": "In Progress",
+        "planned": "Planned"
+      }
+    },
+    "team": {
+      "title": "Leadership Team",
+      "founder_title": "Founder & CEO",
+      "founder_bio": "Serial entrepreneur with deep expertise in global mobility, having personally navigated international relocations and built successful expat support networks across 25+ countries."
+    },
+    "disclaimer": {
+      "title": "Investment Disclaimer",
+      "content": "This presentation contains forward-looking statements and projections. Past performance does not guarantee future results. All investments carry risk of loss. Please consult with qualified financial advisors before making investment decisions."
+    },
+    "cta": {
+      "title": "Ready to Join Our Mission?",
+      "subtitle": "Partner with us to transform global mobility for millions of expats worldwide.",
+      "button": "Request Investor Pack"
+    }
+  },
+  "footer": {
+    "description": "Transforming global mobility through innovative solutions and expert guidance.",
+    "platforms": "Platforms",
+    "legal": "Legal",
+    "investors": "Investors",
+    "privacy": "Privacy Policy",
+    "legal_notice": "Legal Notice",
+    "rights_reserved": "All rights reserved."
+  }
+}

@@ -1,0 +1,457 @@
+{
+  "nav": {
+    "home": "首页",
+    "story": "我的故事",
+    "blog": "博客",
+    "media": "媒体",
+    "contact": "联系"
+  },
+  "home": {
+    "hero": {
+      "badge": "全球流动性专家",
+      "title": "转型全球流动性",
+      "subtitle": "国际流动性专家，拥有创新平台，为全球超过50万外籍人士提供服务。",
+      "cta_primary": "获得专家帮助",
+      "cta_secondary": "了解我的故事"
+    },
+    "stats": {
+      "expats_helped": "帮助的外籍人士",
+      "countries_covered": "国家",
+      "years_experience": "年经验",
+      "satisfaction_rate": "满意度"
+    },
+    "mission": {
+      "title": "我的使命",
+      "subtitle": "通过创新解决方案和专家指导，为全球公民提供无缝国际转换的支持。",
+      "empathy": "同理心",
+      "empathy_desc": "理解每个外籍人士在国际旅程中面临的独特挑战。",
+      "community": "社区",
+      "community_desc": "在文化之间建立桥梁，在全球范围内创建支持网络。",
+      "innovation": "创新",
+      "innovation_desc": "开发尖端解决方案，简化复杂的国际流程。"
+    },
+    "solutions": {
+      "title": "我的解决方案",
+      "subtitle": "两个综合平台，旨在支持您国际旅程的每个方面。",
+      "sos_title": "SOS-Expat",
+      "sos_desc": "为全球危急情况下的外籍人士提供紧急援助和紧急支持。",
+      "sos_feature_1": "24/7紧急支持",
+      "sos_feature_2": "法律和医疗援助",
+      "sos_feature_3": "多语言支持",
+      "ulixai_title": "Ulixai",
+      "ulixai_desc": "具有AI驱动工具和专家指导的综合搬迁平台。",
+      "ulixai_feature_1": "AI驱动匹配",
+      "ulixai_feature_2": "专家咨询",
+      "ulixai_feature_3": "完整搬迁套件",
+      "discover": "发现"
+    },
+    "partners": {
+      "title": "可信合作伙伴网络",
+      "subtitle": "在25+个国家精心策划的经过验证的专业人士网络。",
+      "legal": "法律合作伙伴网络",
+      "legal_desc": "专门从事签证和居留程序的移民律师和法律专家。",
+      "legal_expertise": "移民法",
+      "banking": "银行解决方案",
+      "banking_desc": "提供外籍人士友好金融服务的国际银行合作伙伴。",
+      "banking_expertise": "国际银行",
+      "housing": "住房网络",
+      "housing_desc": "全球经过验证的房地产专业人士和住房专家。",
+      "housing_expertise": "房地产",
+      "healthcare": "医疗合作伙伴",
+      "healthcare_desc": "为全面健康覆盖提供医疗专业人士和保险提供商。",
+      "healthcare_expertise": "健康与保险"
+    },
+    "clients": {
+      "title": "受全球领导者信任",
+      "subtitle": "从初创公司到财富500强企业，全球组织都信任我们的专业知识。",
+      "startups": "科技初创公司",
+      "startups_desc": "支持创新公司的全球扩张和人才获取。",
+      "startups_projects": "150+",
+      "startups_satisfaction": "98%",
+      "multinationals": "跨国公司",
+      "multinationals_desc": "促进国际转移和全球流动性项目。",
+      "multinationals_projects": "50+",
+      "multinationals_satisfaction": "99%",
+      "individuals": "个人",
+      "individuals_desc": "为寻求国际机会的个人和家庭提供个人指导。",
+      "individuals_projects": "500K+",
+      "individuals_satisfaction": "97%",
+      "projects_completed": "项目",
+      "satisfaction": "满意度"
+    },
+    "help": {
+      "title": "我如何帮助您",
+      "subtitle": "无论您需要紧急援助、规划支持还是专家见解，我都在这里指导您的国际旅程。",
+      "emergency": "紧急支持",
+      "emergency_desc": "通过SOS-Expat的24/7支持网络为海外紧急情况提供即时援助。",
+      "emergency_action": "获得紧急帮助",
+      "prepare": "规划您的搬迁",
+      "prepare_desc": "通过Ulixai提供AI驱动匹配和专家指导的综合搬迁规划。",
+      "prepare_action": "开始规划",
+      "learn": "学习与见解",
+      "learn_desc": "通过我的博客和资源分享的专家见解、实用指南和真实经验。",
+      "learn_action": "阅读博客"
+    },
+    "cta": {
+      "title": "准备转型您的全球旅程？",
+      "subtitle": "加入数千名成功的外籍人士，他们通过专家指导和创新解决方案转型了他们的国际体验。",
+      "contact": "联系我们",
+      "story": "我的故事"
+    }
+  },
+  "story": {
+    "hero": {
+      "title": "我的故事",
+      "subtitle": "从个人挑战到全球解决方案——导致为数千人转型国际流动性的旅程。"
+    },
+    "intro": {
+      "title": "旅程开始",
+      "paragraph_1": "我的国际流动性之旅始于作为外籍人士的个人挑战。在国家间搬迁时，我亲身体验了数百万外籍人士每天面临的复杂性、挫折和支持缺口。",
+      "paragraph_2": "这些个人经历成为理解外籍人士真正需要什么的基础——不仅仅是信息，而是全面的支持、可靠的网络和真正有效的创新解决方案。",
+      "paragraph_3": "今天，通过SOS-Expat和Ulixai，我将这些见解转化为平台，帮助超过500,000名外籍人士成功导航他们的国际旅程。"
+    },
+    "timeline": {
+      "title": "关键里程碑",
+      "subtitle": "塑造我转型全球流动性使命的关键时刻。",
+      "event_1": {
+        "title": "首次国际搬迁",
+        "description": "亲身体验了国际搬迁的挑战，识别了外籍人士支持服务的关键缺口。"
+      },
+      "event_2": {
+        "title": "建立网络",
+        "description": "开始与整个欧洲的法律、银行和住房专业人士建立联系，创建可靠的支持网络。"
+      },
+      "event_3": {
+        "title": "SOS-Expat启动",
+        "description": "在目睹外籍人士在危机情况下没有足够帮助后，启动了紧急支持平台。"
+      },
+      "event_4": {
+        "title": "Ulixai开发",
+        "description": "开发了结合AI技术与人类专业知识的综合搬迁平台。"
+      },
+      "event_5": {
+        "title": "全球影响",
+        "description": "通过集成平台生态系统达到帮助全球500K+外籍人士的里程碑。"
+      }
+    },
+    "values": {
+      "title": "核心价值观",
+      "subtitle": "指导我工作中每个决策和创新的原则。",
+      "global": {
+        "title": "全球视角",
+        "description": "理解流动性是关于连接文化，而不仅仅是跨越边界。"
+      },
+      "community": {
+        "title": "社区优先",
+        "description": "建立支持网络，让外籍人士能够繁荣发展，而不仅仅是生存。"
+      },
+      "innovation": {
+        "title": "创新",
+        "description": "利用技术解决真实问题并创造有意义的影响。"
+      },
+      "impact": {
+        "title": "可衡量的影响",
+        "description": "每个解决方案都必须可证明地改善外籍人士的体验。"
+      }
+    },
+    "cta": {
+      "title": "加入旅程",
+      "subtitle": "成为正在转型国际流动性的全球社区的一部分。",
+      "sos_button": "探索SOS-Expat",
+      "ulixai_button": "发现Ulixai"
+    }
+  },
+  "blog": {
+    "hero": {
+      "title": "专家见解",
+      "subtitle": "为您的国际旅程提供实用指导、真实经验和专家见解。"
+    },
+    "tags": {
+      "all": "所有主题"
+    },
+    "topics": {
+      "visas": "签证",
+      "banking": "银行",
+      "housing": "住房",
+      "healthcare": "医疗",
+      "culture": "文化",
+      "tips": "技巧",
+      "moving": "搬迁"
+    },
+    "posts": {
+      "visa_guide": {
+        "title": "欧洲签证完整指南：您需要知道的一切",
+        "excerpt": "通过这个涵盖要求、流程和成功专家技巧的综合指南，导航复杂的欧洲签证世界。",
+        "content": "搬到新国家可能是人生最激动人心的冒险之一，但导航签证流程不必令人不知所措..."
+      },
+      "banking_nomad": {
+        "title": "数字游牧者银行：最佳国际银行解决方案",
+        "excerpt": "发现数字游牧者和外籍人士的顶级银行解决方案，包括多币种账户和国际转账选项。",
+        "content": "作为数字游牧者或外籍人士，管理跨多个国家的财务可能具有挑战性..."
+      },
+      "housing_berlin": {
+        "title": "在柏林寻找住房：外籍人士完整指南",
+        "excerpt": "通过关于社区、租赁流程和避免常见陷阱的内部技巧掌握柏林房地产市场。",
+        "content": "柏林的房地产市场对新来者来说可能令人生畏，但有了正确的方法和知识..."
+      },
+      "healthcare_expat": {
+        "title": "外籍人士医疗系统：您需要知道的",
+        "excerpt": "了解海外医疗系统、保险要求以及如何作为外籍人士获得优质医疗服务。",
+        "content": "医疗保健是搬到海外时最重要的考虑因素之一..."
+      },
+      "culture_shock": {
+        "title": "克服文化冲击：实用指南",
+        "excerpt": "学习如何通过经过验证的策略导航文化差异并成功适应您的新环境。",
+        "content": "文化冲击是外籍人士体验的自然部分，但它不必让您的国际旅程脱轨..."
+      },
+      "moving_checklist": {
+        "title": "终极国际搬迁清单",
+        "excerpt": "涵盖从文档到物流的所有内容的综合清单，确保顺利的国际搬迁。",
+        "content": "国际搬迁需要仔细的规划和组织..."
+      }
+    },
+    "read_more": "阅读更多",
+    "back_to_blog": "返回博客",
+    "share": "分享",
+    "no_posts": "未找到此主题的帖子。",
+    "author_bio": "Williams Jullin是全球流动性专家和SOS-Expat和Ulixai的创始人，帮助全球超过500K外籍人士。",
+    "read_story": "阅读我的故事",
+    "get_in_touch": "联系我们"
+  },
+  "media": {
+    "hero": {
+      "title": "媒体与新闻",
+      "subtitle": "为媒体专业人士和新闻查询提供的资源、见解和材料。"
+    },
+    "bio": {
+      "short_title": "简短传记",
+      "short_content": "Williams Jullin是全球流动性专家和企业家，通过创新平台SOS-Expat和Ulixai转型了国际搬迁，为全球超过500,000名外籍人士提供服务。",
+      "long_title": "扩展传记",
+      "long_paragraph_1": "Williams Jullin是全球流动性的先驱人物，通过创新技术和综合支持网络转型了国际搬迁格局。",
+      "long_paragraph_2": "作为SOS-Expat和Ulixai的创始人，Williams创建了一个生态系统，解决外籍人士旅程的每个方面，从紧急援助到综合搬迁规划。",
+      "long_paragraph_3": "他的平台成功支持了25+个国家的超过500,000名外籍人士，确立了他作为国际流动性和外籍人士服务领域领先权威的地位。"
+    },
+    "topics": {
+      "title": "采访主题",
+      "subtitle": "采访和演讲参与的关键专业领域。",
+      "expat_trends": {
+        "title": "全球外籍人士趋势",
+        "description": "关于国际流动性变化模式和新兴外籍人士目的地的见解。"
+      },
+      "digital_nomad": {
+        "title": "数字游牧",
+        "description": "远程工作的兴起及其对全球流动性模式的影响。"
+      },
+      "visa_policy": {
+        "title": "签证政策与移民",
+        "description": "分析变化的移民政策及其对国际流动性的影响。"
+      },
+      "relocation_tech": {
+        "title": "搬迁技术",
+        "description": "AI和技术如何转型国际搬迁体验。"
+      },
+      "cultural_adaptation": {
+        "title": "文化融合",
+        "description": "成功文化适应和海外社区建设的策略。"
+      },
+      "entrepreneurship": {
+        "title": "外籍人士创业",
+        "description": "在导航国际法规和市场的同时建立业务。"
+      }
+    },
+    "press": {
+      "title": "最近新闻报道",
+      "subtitle": "最新媒体露面和新闻提及。"
+    },
+    "photos": {
+      "title": "新闻照片",
+      "subtitle": "可供媒体使用的高分辨率照片。",
+      "portrait_1_title": "专业肖像",
+      "portrait_1_description": "适合印刷和数字媒体的高分辨率专业头像。"
+    },
+    "contact": {
+      "title": "媒体查询",
+      "subtitle": "用于采访、演讲参与和新闻查询。",
+      "email": "新闻团队邮箱",
+      "form": "联系表单"
+    },
+    "download_short_bio": "下载简短传记",
+    "download_long_bio": "下载长传记",
+    "download_photo": "下载照片"
+  },
+  "contact": {
+    "hero": {
+      "title": "联系我们",
+      "subtitle": "准备转型您的国际旅程？让我们讨论我如何帮助您在海外取得成功。"
+    },
+    "form": {
+      "title": "发送消息",
+      "purpose": "联系目的",
+      "select_purpose": "选择目的...",
+      "full_name": "全名",
+      "full_name_placeholder": "输入您的全名",
+      "email": "电子邮件地址",
+      "email_placeholder": "输入您的电子邮件地址",
+      "subject": "主题",
+      "subject_placeholder": "您消息的简短主题",
+      "country": "当前国家",
+      "country_placeholder": "您目前在哪里？",
+      "message": "消息",
+      "message_placeholder": "告诉我您的情况以及我如何帮助...",
+      "consent": "我同意为此查询目的处理我的个人数据。",
+      "send": "发送消息",
+      "sending": "发送中..."
+    },
+    "purposes": {
+      "general": "一般查询",
+      "media": "媒体与新闻",
+      "partnership": "合作机会",
+      "investment": "投资查询",
+      "support": "平台支持"
+    },
+    "info": {
+      "title": "联系信息",
+      "description": "我亲自审查每条消息，并努力为您的国际旅程提供深思熟虑、可行的指导。",
+      "response_time": "24-48小时内回复",
+      "languages": "提供7种语言",
+      "availability": "全球时区覆盖"
+    },
+    "visual": {
+      "title": "专家指导",
+      "subtitle": "为您的全球旅程提供个性化支持"
+    },
+    "success": {
+      "title": "消息发送成功！",
+      "message": "感谢您的联系。我将审查您的消息，并在24-48小时内回复个性化指导。",
+      "back_home": "返回首页"
+    }
+  },
+  "investors": {
+    "hero": {
+      "title": "转型全球流动性",
+      "subtitle": "加入我们，革命世界如何国际移动、工作和生活。",
+      "cta": "请求投资者包"
+    },
+    "problem": {
+      "title": "问题",
+      "point_1": "超过5亿人生活在出生国之外，支持不足",
+      "point_2": "分散的服务造成低效率和糟糕的体验",
+      "point_3": "紧急情况让外籍人士在没有适当援助的情况下变得脆弱"
+    },
+    "solution": {
+      "title": "我们的解决方案",
+      "point_1": "解决所有外籍人士需求的综合平台生态系统",
+      "point_2": "与经过验证的专业网络的AI驱动匹配",
+      "point_3": "具有全球覆盖的24/7紧急支持系统"
+    },
+    "market": {
+      "title": "市场机会",
+      "size": "全球市场规模",
+      "growth": "年增长率",
+      "expats": "全球外籍人士",
+      "description": "全球流动性市场正在经历前所未有的增长，由远程工作趋势、人才流动和不断增长的国际商业运营推动。"
+    },
+    "traction": {
+      "title": "已证明的牵引力",
+      "subtitle": "强劲的指标证明了市场验证和增长潜力。",
+      "users": "活跃用户",
+      "countries": "服务国家",
+      "growth": "年增长",
+      "uptime": "平台正常运行时间"
+    },
+    "products": {
+      "title": "产品组合",
+      "subtitle": "两个互补平台，服务完整的外籍人士生命周期。",
+      "sos_description": "紧急援助平台，为全球危急情况下的外籍人士提供24/7支持。",
+      "sos_feature_1": "紧急响应",
+      "sos_feature_2": "覆盖国家",
+      "ulixai_description": "具有AI驱动匹配和专家指导的综合搬迁平台，实现无缝国际搬迁。",
+      "ulixai_feature_1": "服务提供商",
+      "ulixai_feature_2": "支持语言",
+      "view_product": "查看平台"
+    },
+    "business": {
+      "title": "商业模式",
+      "subscription": {
+        "title": "订阅",
+        "description": "高级功能和优先支持的月度和年度订阅。"
+      },
+      "commission": {
+        "title": "佣金",
+        "description": "与我们网络中经过验证的服务提供商的收入分享。"
+      },
+      "enterprise": {
+        "title": "企业",
+        "description": "为管理全球劳动力流动性的企业提供定制解决方案。"
+      }
+    },
+    "moat": {
+      "title": "竞争优势",
+      "subtitle": "保护我们市场地位的强大防御护城河。",
+      "point_1": {
+        "title": "网络效应",
+        "description": "不断增长的用户群吸引更多服务提供商，为所有参与者创造更强的价值主张。"
+      },
+      "point_2": {
+        "title": "数据与AI",
+        "description": "专有匹配算法和广泛的外籍人士数据创造卓越的用户体验。"
+      },
+      "point_3": {
+        "title": "品牌信任",
+        "description": "在关键外籍人士支持情况下建立的声誉和经过验证的记录。"
+      },
+      "point_4": {
+        "title": "监管专业知识",
+        "description": "对跨市场国际法规和合规要求的深入理解。"
+      }
+    },
+    "roadmap": {
+      "title": "增长路线图",
+      "subtitle": "扩大全球影响的战略里程碑。",
+      "q2_2024": {
+        "title": "平台集成",
+        "description": "SOS-Expat和Ulixai平台之间的完整集成，实现无缝用户体验。"
+      },
+      "q3_2024": {
+        "title": "AI增强",
+        "description": "先进的AI匹配算法和预测分析，改进服务推荐。"
+      },
+      "q4_2024": {
+        "title": "市场扩张",
+        "description": "在10个新市场推出，配备本地化服务提供商网络。"
+      },
+      "q1_2025": {
+        "title": "企业解决方案",
+        "description": "企业全球流动性管理的完整企业平台。"
+      },
+      "status": {
+        "completed": "已完成",
+        "current": "进行中",
+        "planned": "已计划"
+      }
+    },
+    "team": {
+      "title": "领导团队",
+      "founder_title": "创始人兼CEO",
+      "founder_bio": "连续创业者，在全球流动性方面拥有深厚专业知识，亲自导航国际搬迁并在25+个国家建立了成功的外籍人士支持网络。"
+    },
+    "disclaimer": {
+      "title": "投资免责声明",
+      "content": "本演示包含前瞻性陈述和预测。过去的表现不保证未来的结果。所有投资都有损失风险。请在做出投资决定之前咨询合格的财务顾问。"
+    },
+    "cta": {
+      "title": "准备加入我们的使命？",
+      "subtitle": "与我们合作，为全球数百万外籍人士转型全球流动性。",
+      "button": "请求投资者包"
+    }
+  },
+  "footer": {
+    "description": "通过创新解决方案和专家指导转型全球流动性。",
+    "platforms": "平台",
+    "legal": "法律",
+    "investors": "投资者",
+    "privacy": "隐私政策",
+    "legal_notice": "法律声明",
+    "rights_reserved": "版权所有。"
+  }
+}

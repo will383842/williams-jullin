@@ -1,3 +1,4 @@
+// src/pages/Blog.tsx
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Calendar, ArrowRight, Tag } from 'lucide-react';
@@ -7,20 +8,19 @@ interface BlogProps {
 }
 
 const Blog: React.FC<BlogProps> = ({ navigate }) => {
+  // i18n
   const { t } = useTranslation();
   const [selectedTag, setSelectedTag] = useState<string>('all');
-  
+
   // SEO optimisé pour le blog
   React.useEffect(() => {
-    document.title = "Blog Expert Expatriation | Conseils Williams Jullin | Guides Pratiques Toutes Nationalités | 197 Pays";
-    
+    document.title = t('blog.seo.title');
+
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 
-        "📚 Blog expert expatriation de Williams Jullin. Guides pratiques, conseils d'expert, expériences réelles pour expatriés de toutes nationalités. Visa, logement, banking, santé, culture - tout pour réussir votre expatriation dans 197 pays."
-      );
+      metaDescription.setAttribute('content', t('blog.seo.description'));
     }
-    
+
     // Données structurées pour le blog
     const blogStructuredData = {
       "@context": "https://schema.org",
@@ -51,7 +51,7 @@ const Blog: React.FC<BlogProps> = ({ navigate }) => {
         },
         {
           "@type": "Thing",
-          "name": "Mobilité Internationale", 
+          "name": "Mobilité Internationale",
           "description": "Expertise en déplacement international"
         },
         {
@@ -67,18 +67,18 @@ const Blog: React.FC<BlogProps> = ({ navigate }) => {
         "toutes nationalités", "guides inclusifs", "conseils multiculturels"
       ]
     };
-    
+
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(blogStructuredData, null, 2);
     document.head.appendChild(script);
-    
+
     return () => {
       if (document.head.contains(script)) {
         document.head.removeChild(script);
       }
     };
-  }, []);
+  }, [t]);
 
   const tags = [
     { key: 'all', label: t('blog.tags.all'), color: 'bg-gray-100 text-gray-800' },
@@ -147,8 +147,8 @@ const Blog: React.FC<BlogProps> = ({ navigate }) => {
     }
   ];
 
-  const filteredPosts = selectedTag === 'all' 
-    ? blogPosts 
+  const filteredPosts = selectedTag === 'all'
+    ? blogPosts
     : blogPosts.filter(post => post.tags.includes(selectedTag));
 
   const formatDate = (dateString: string) => {
@@ -201,7 +201,10 @@ const Blog: React.FC<BlogProps> = ({ navigate }) => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {filteredPosts.map((post) => (
-              <article key={post.id} className="bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2">
+              <article
+                key={post.id}
+                className="bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2"
+              >
                 <div className="relative overflow-hidden">
                   <img
                     src={post.image}
@@ -209,36 +212,39 @@ const Blog: React.FC<BlogProps> = ({ navigate }) => {
                     className="w-full h-40 md:h-48 object-cover hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-3 right-3 md:top-4 md:right-4 bg-white/90 backdrop-blur-sm px-2 py-1 md:px-3 rounded-full text-xs md:text-sm font-medium text-gray-700">
-                    {t('blog.language_label')}
+                    <span>{t('blog.language_label')}</span>
                   </div>
                 </div>
-                
+
                 <div className="p-4 md:p-6">
                   <div className="flex items-center space-x-2 text-gray-500 text-xs md:text-sm mb-2 md:mb-3">
                     <Calendar size={14} className="md:w-4 md:h-4" />
                     <span>{formatDate(post.date)}</span>
                   </div>
-                  
+
                   <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3 line-clamp-2 leading-tight">
                     {post.title}
                   </h3>
-                  
+
                   <p className="text-gray-600 mb-3 md:mb-4 line-clamp-3 text-sm md:text-base leading-relaxed">
                     {post.excerpt}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
                     {post.tags.map((tagKey) => {
                       const tag = tags.find(t => t.key === tagKey);
                       return tag ? (
-                        <span key={tagKey} className={`px-2 py-1 rounded-full text-xs font-medium ${tag.color}`}>
+                        <span
+                          key={tagKey}
+                          className={`px-2 py-1 rounded-full text-xs font-medium ${tag.color}`}
+                        >
                           <Tag size={10} className="md:w-3 md:h-3 inline mr-1" />
                           {tag.label}
                         </span>
                       ) : null;
                     })}
                   </div>
-                  
+
                   <button
                     onClick={() => navigate('blog', post.id)}
                     className="touch-link flex items-center space-x-2 text-blue-600 hover:text-blue-700 active:text-blue-800 font-semibold transition-colors duration-200 text-sm md:text-base py-2"

@@ -1,29 +1,30 @@
-import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
-import { getAuth } from 'firebase/auth';
-import { getStorage } from 'firebase/storage';
-import { getAnalytics } from 'firebase/analytics';
+// src/lib/firebase.ts
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage";
+import { getAnalytics, isSupported } from "firebase/analytics";
 
-// Configuration Firebase production
 const firebaseConfig = {
-  apiKey: "AIzaSyDsyaEowojDY47rY5SkINuJBeZH19x73ho",
-  authDomain: "williams-jullin.firebaseapp.com",
-  projectId: "williams-jullin",
-  storageBucket: "williams-jullin.firebasestorage.app",
-  messagingSenderId: "30033948509",
-  appId: "1:30033948509:web:cb77d44ba304864bda82b4",
-  measurementId: "G-RMZK97X4NH"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  // facultatif (Analytics)
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-// Initialize services
+// Init app + services
+export const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const auth = getAuth(app);
 export const storage = getStorage(app);
 
-// Initialize analytics only in browser environment
-export const analytics = typeof window !== 'undefined' ? getAnalytics(app) : null;
+// Analytics seulement si supporté (et côté navigateur)
+export const analytics = await (typeof window !== "undefined" && isSupported()
+  ? getAnalytics(app)
+  : Promise.resolve(null));
 
 export default app;

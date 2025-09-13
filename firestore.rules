@@ -1,39 +1,53 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    
-    // Fonction pour vérifier si l'utilisateur est admin
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // --- OPTION A : admin identifié par email ---
     function isAdmin() {
-      return request.auth != null && 
-             request.auth.token.admin == true;
+      return isSignedIn() && request.auth.token.email == "williamsjullin@gmail.com";
     }
-    
-    // Collection contacts - Public peut créer, admin peut tout faire
-    match /contacts/{contactId} {
-      allow create: if true; // Public peut envoyer des messages
-      allow read, update, delete: if isAdmin(); // Seuls les admins peuvent lire/modifier
+
+    // --- OPTION B (plus robuste, à activer plus tard si besoin) : 
+    // Vérifie l'existence d'un doc rôle dans Firestore
+    // function isAdmin() {
+    //   return isSignedIn() &&
+    //     exists(/databases/$(database)/documents/_roles/admins/$(request.auth.uid));
+    // }
+
+    // --- Blog posts ---
+    match /posts/{id} {
+      allow read: if true;                  // lecture publique
+      allow create, update, delete: if isAdmin(); // écriture réservée admin
     }
-    
-    // Collection investors - Public peut créer, admin peut tout faire
-    match /investors/{investorId} {
-      allow create: if true; // Public peut envoyer des demandes
-      allow read, update, delete: if isAdmin(); // Seuls les admins peuvent lire/modifier
+
+    // --- Contacts (formulaire public) ---
+    match /contacts/{id} {
+      allow create: if true;                  // tout le monde peut ENVOYER
+      allow read, update, delete: if isAdmin(); // seul l’admin peut lire/modifier/supprimer
     }
-    
-    // Collection analytics - Public peut créer, admin peut lire
-    match /analytics/{analyticsId} {
-      allow create: if true; // Public peut envoyer des événements
-      allow read: if isAdmin(); // Seuls les admins peuvent lire
-      allow update, delete: if false; // Pas de modification des analytics
+
+    // --- Investors (formulaire public) ---
+    match /investors/{id} {
+      allow create: if true;                  // tout le monde peut ENVOYER
+      allow read, update, delete: if isAdmin(); // seul l’admin peut lire/modifier/supprimer
     }
-    
-    // Collection posts (blog) - Admin seulement
-    match /posts/{postId} {
-      allow read: if resource.data.status == 'published'; // Public peut lire les articles publiés
-      allow create, update, delete: if isAdmin(); // Seuls les admins peuvent gérer
+
+    // --- Analytics (tracking des événements) ---
+    match /analytics/{docId} {
+      allow create: if true;                  // écriture libre
+      allow read, update, delete: if isAdmin(); // lecture/suppression admin uniquement
     }
-    
-    // Par défaut : accès refusé
+
+    // --- Collections de test (désactivées en prod) ---
+    match /test/{id} {
+      allow read, write: if false;
+    }
+
+    // --- Par défaut : tout est interdit ---
     match /{document=**} {
       allow read, write: if false;
     }

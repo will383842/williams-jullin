@@ -15,7 +15,8 @@
       "title_2": "Jullin",
       "subtitle": "Founder of Ulixai.com and SOS-Expat.com — I instantly connect 304 million expats and 1.465 billion travelers with verified providers, worldwide.",
       "cta_primary": "Immediate help in less than 5 minutes (SOS-Expat)",
-      "cta_secondary": "Need services → find a provider (Ulixai)"
+      "cta_secondary": "Need services → find a provider (Ulixai)",
+      "photo_alt": "Williams Jullin - Global mobility expert"
     },
     "stats": {
       "expats_helped": "Expats Helped",
@@ -34,7 +35,9 @@
       "topic_3": "The future of international mobility",
       "topic_4": "Building global mutual aid networks",
       "impact_title": "My Global Impact",
-      "impact_description": "Speaker at expat and traveler conferences worldwide."
+      "impact_description": "Speaker at expat and traveler conferences worldwide.",
+      "badge": "Keynote speaker",
+      "photo_alt": "Williams Jullin giving a keynote on expatriation"
     },
     "solutions": {
       "sos": {
@@ -46,7 +49,8 @@
         "call_to_action": "👉 Need help right now?<br/>👉 Want to help and get paid? Join the network.",
         "badge_1": "24/7 Services",
         "badge_2": "Guaranteed Income",
-        "badge_3": "Secure Payment"
+        "badge_3": "Secure Payment",
+        "badge_time": "Instant call"
       },
       "ulixai": {
         "title": "Ulixai — The right provider, in your language, wherever you are",
@@ -130,6 +134,16 @@
     "cta": {
       "title": "Ready to transform your international experience?",
       "subtitle": "Join thousands of expats who have transformed their international experience with expert advice and innovative solutions."
+    },
+    "seo": {
+      "title": "Williams Jullin - #1 Global Expat Expert | Help for 500K+ Expats | 197 Countries | All Nationalities",
+      "description": "Global expatriation expertise. 24/7 help, verified services, expert advice, inclusive worldwide community."
+    },
+    "sos_expat": {
+      "alt": "SOS-Expat - Immediate help for expats"
+    },
+    "ulixai": {
+      "alt": "Ulixai - The right provider anywhere in the world"
     }
   },
   "story": {
@@ -468,7 +482,16 @@
     "no_posts": "No posts found for this topic.",
     "author_bio": "Williams Jullin is a global mobility expert and founder of SOS-Expat and Ulixai, helping over 500K expats worldwide.",
     "read_story": "Read My Story",
-    "get_in_touch": "Get in Touch"
+    "get_in_touch": "Get in Touch",
+    "language_label": "Language",
+    "author": {
+      "get_in_touch": "Get in touch",
+      "read_story": "Read my story"
+    },
+    "seo": {
+      "title": "Expat Expert Blog | Guides & Tips | All Nationalities | 197 Countries",
+      "description": "Practical guides for expatriation: visas, housing, healthcare, culture, finance."
+    }
   },
   "media": {
     "hero": {
@@ -554,7 +577,9 @@
       "message_placeholder": "Tell me about your situation and how I can help...",
       "consent": "I consent to processing of my personal data for the purpose of this inquiry.",
       "send": "Send Message",
-      "sending": "Sending..."
+      "sending": "Sending...",
+      "errors_title": "Please fix the following errors",
+      "consent_text": "I agree to be contacted about my request."
     },
     "purposes": {
       "general": "General Inquiry",
@@ -578,6 +603,24 @@
       "title": "Message Sent Successfully!",
       "message": "Thank you for reaching out. I'll review your message and respond within 24-48 hours with personalized guidance.",
       "back_home": "Back to Home"
+    },
+    "seo": {
+      "title": "Contact Williams Jullin | Expat Expert",
+      "description": "Get in touch. Reply in 24-48h, multilingual support."
+    },
+    "validation": {
+      "purpose_required": "Please select a subject",
+      "name_min": "Name must be at least 2 characters",
+      "message_min": "Message must be at least 10 characters",
+      "message_max": "Message cannot exceed 2000 characters",
+      "title_max": "Title cannot exceed 200 characters",
+      "country_max": "Country name cannot exceed 100 characters",
+      "consent_required": "You must accept data processing"
+    },
+    "toast": {
+      "success_title": "Message sent successfully! 🎉",
+      "success_message": "Thanks for your message. Williams will reply within 24–48h.",
+      "error_message": "An error occurred. Please check your info and try again."
     }
   },
   "investors": {
@@ -711,7 +754,8 @@
       "consent": "I agree to be contacted by Williams Jullin regarding this investment opportunity and consent to the processing of my personal data.",
       "newsletter_consent": "I would like to receive updates on Ulixai & SOS-Expat evolution (optional)",
       "submit": "Send my investment request",
-      "sending": "Sending..."
+      "sending": "Sending...",
+      "range_other": "Other amount"
     },
     "direct_contact": {
       "title": "Prefer direct contact?",
@@ -735,6 +779,25 @@
       "point_1": "Comprehensive platform ecosystem addressing all expat needs",
       "point_2": "AI-powered matching with verified professional networks",
       "point_3": "24/7 emergency support system with global coverage"
+    },
+    "validation": {
+      "type_required": "Please select an investor type",
+      "first_name_required": "First name is required",
+      "first_name_min": "First name must be at least 2 characters",
+      "phone_invalid": "Invalid phone number format",
+      "amount_required": "Please select an amount",
+      "timeline_required": "Please select a timeline",
+      "experience_required": "Please select your experience",
+      "platform_interest_required": "Please select your interest",
+      "message_max": "Message cannot exceed 3000 characters",
+      "fill_required": "Please fill all required fields to continue"
+    },
+    "toast": {
+      "sending": "Your investment request is being sent...",
+      "success_title": "Request sent successfully! 🎉",
+      "success_message": "Thanks for your interest! Williams will get back to you within 24–48h.",
+      "error_title": "Sending failed",
+      "error_message": "An error occurred. Please check your info and try again."
     }
   },
   "footer": {
@@ -742,5 +805,15 @@
     "platforms": "Platforms",
     "investors": "Investors",
     "rights_reserved": "All rights reserved."
+  },
+  "admin": {
+    "title": "Admin dashboard",
+    "subtitle": "Production checks, content and analytics",
+    "stats": {
+      "new": "New",
+      "contacts": "Contacts",
+      "investors": "Investors",
+      "conversion": "Conversion"
+    }
   }
 }

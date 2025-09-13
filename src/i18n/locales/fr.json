@@ -9,13 +9,18 @@
     "contact": "Contact"
   },
   "home": {
+    "seo": {
+      "title": "Williams Jullin - Expert Mondial Expatriation | Aide 500K+ Expatriés | 197 Pays | Toutes Nationalités",
+      "description": "Expertise mondiale. Aide 24/7, services vérifiés, conseils d’expert, communauté inclusive."
+    },
     "hero": {
       "badge": "Expert en Mobilité Internationale",
       "title_1": "Williams",
       "title_2": "Jullin",
       "subtitle": "Fondateur d'Ulixai.com et SOS-Expat.com — je connecte instantanément 304 millions d'expatriés et 1,465 milliard voyageurs avec des prestataires vérifiés, partout dans le monde.",
       "cta_primary": "Aide immédiate en moins de 5 minutes (SOS-Expat)",
-      "cta_secondary": "Un besoin de services → trouver un prestataire (Ulixai)"
+      "cta_secondary": "Un besoin de services → trouver un prestataire (Ulixai)",
+      "photo_alt": "Williams Jullin - Expert en mobilité internationale"
     },
     "stats": {
       "expats_helped": "Expatriés Aidés",
@@ -23,6 +28,7 @@
       "services": "Services SOS-Expat & Ulixai"
     },
     "conference": {
+      "badge": "Conférencier",
       "title": "Mes conférences sur l'expatriation et la vie d'expatrié",
       "description": "Je partage mon expertise avec des milliers d'expatriés à travers le monde",
       "point_1": "Je donne des conférences internationales sur l'expatriation",
@@ -34,7 +40,8 @@
       "topic_3": "L'avenir de la mobilité internationale",
       "topic_4": "Construire des réseaux d'entraide globaux",
       "impact_title": "Mon Impact Global",
-      "impact_description": "Intervenant dans des conférences d'expatriés et voyageurs du monde entier."
+      "impact_description": "Intervenant dans des conférences d'expatriés et voyageurs du monde entier.",
+      "photo_alt": "Williams Jullin en conférence sur l'expatriation"
     },
     "solutions": {
       "sos": {
@@ -46,7 +53,8 @@
         "call_to_action": "👉 Besoin d'aide maintenant ?<br/>👉 Envie d'aider et d'être payé ? Rejoignez le réseau.",
         "badge_1": "Services 24/7",
         "badge_2": "Revenus Garantis",
-        "badge_3": "Paiement Sécurisé"
+        "badge_3": "Paiement Sécurisé",
+        "badge_time": "Appel immédiat"
       },
       "ulixai": {
         "title": "Ulixai — Le bon prestataire, dans votre langue, où que vous soyez",
@@ -130,6 +138,12 @@
     "cta": {
       "title": "Prêt à transformer votre parcours international ?",
       "subtitle": "Rejoignez des milliers d'expatriés qui ont transformé leur expérience internationale avec des conseils d'experts et des solutions innovantes."
+    },
+    "sos_expat": {
+      "alt": "SOS-Expat - Aide immédiate pour expatriés"
+    },
+    "ulixai": {
+      "alt": "Ulixai - Le bon prestataire partout dans le monde"
     }
   },
   "story": {
@@ -273,9 +287,18 @@
     }
   },
   "blog": {
+    "seo": {
+      "title": "Blog Expert Expatriation | Conseils & Guides | Toutes Nationalités | 197 Pays",
+      "description": "Guides pratiques pour l’expatriation : visas, logement, santé, culture, finances."
+    },
     "hero": {
       "title": "Perspectives Expertes",
       "subtitle": "Orientations pratiques, expériences réelles et perspectives expertes pour votre voyage international."
+    },
+    "language_label": "Langue",
+    "author": {
+      "get_in_touch": "Me contacter",
+      "read_story": "Lire mon histoire"
     },
     "site_title": "Williams Jullin",
     "default_title": "Site Web de Personal Branding Williams Jullin",
@@ -468,6 +491,10 @@
     "download_photo": "Télécharger Photo"
   },
   "contact": {
+    "seo": {
+      "title": "Contact Williams Jullin | Expert Expatriation",
+      "description": "Contactez-nous. Réponse sous 24–48h, support multilingue."
+    },
     "hero": {
       "title": "Prendre Contact",
       "subtitle": "Prêt à transformer votre voyage international ? Discutons de comment je peux vous aider à réussir à l'étranger."
@@ -488,7 +515,9 @@
       "message_placeholder": "Parlez-moi de votre situation et comment je peux aider...",
       "consent": "Je consens au traitement de mes données personnelles dans le cadre de cette demande.",
       "send": "Envoyer le Message",
-      "sending": "Envoi en cours..."
+      "sending": "Envoi en cours...",
+      "errors_title": "Veuillez corriger les erreurs suivantes",
+      "consent_text": "J’accepte d’être contacté au sujet de ma demande."
     },
     "purposes": {
       "general": "Demande Générale",
@@ -512,6 +541,20 @@
       "title": "Message Envoyé avec Succès !",
       "message": "Merci de m'avoir contacté. Je vais réviser votre message et répondre sous 24-48 heures avec des conseils personnalisés.",
       "back_home": "Retour à l'Accueil"
+    },
+    "validation": {
+      "purpose_required": "Veuillez sélectionner un objet",
+      "name_min": "Le nom doit contenir au moins 2 caractères",
+      "message_min": "Le message doit contenir au moins 10 caractères",
+      "message_max": "Le message ne peut pas dépasser 2000 caractères",
+      "title_max": "Le titre ne peut pas dépasser 200 caractères",
+      "country_max": "Le nom du pays ne peut pas dépasser 100 caractères",
+      "consent_required": "Vous devez accepter le traitement de vos données personnelles"
+    },
+    "toast": {
+      "success_title": "Message envoyé avec succès ! 🎉",
+      "success_message": "Merci pour votre message. Williams vous répondra sous 24–48h.",
+      "error_message": "Une erreur est survenue. Veuillez vérifier vos informations et réessayer."
     }
   },
   "investors": {
@@ -670,6 +713,25 @@
       "point_1": "Écosystème de plateforme complet répondant à tous les besoins des expatriés",
       "point_2": "Correspondance alimentée par IA avec réseaux professionnels vérifiés",
       "point_3": "Système de support d'urgence 24/7 avec couverture mondiale"
+    },
+    "validation": {
+      "type_required": "Veuillez sélectionner un type d'investisseur",
+      "first_name_required": "Le prénom est requis",
+      "first_name_min": "Le prénom doit contenir au moins 2 caractères",
+      "phone_invalid": "Format de téléphone invalide",
+      "amount_required": "Veuillez sélectionner un montant",
+      "timeline_required": "Veuillez sélectionner une timeline",
+      "experience_required": "Veuillez sélectionner votre expérience",
+      "platform_interest_required": "Veuillez sélectionner votre intérêt",
+      "message_max": "Le message ne peut pas dépasser 3000 caractères",
+      "fill_required": "Veuillez remplir tous les champs obligatoires pour continuer"
+    },
+    "toast": {
+      "sending": "Votre demande d'investissement est en cours d'envoi...",
+      "success_title": "Demande envoyée avec succès ! 🎉",
+      "success_message": "Merci pour votre intérêt ! Williams vous contactera sous 24–48h.",
+      "error_title": "Erreur lors de l'envoi",
+      "error_message": "Une erreur est survenue. Veuillez vérifier vos informations et réessayer."
     }
   },
   "footer": {
@@ -677,5 +739,15 @@
     "platforms": "Plateformes",
     "investors": "Investisseurs",
     "rights_reserved": "Tous droits réservés."
+  },
+  "admin": {
+    "title": "Tableau de bord Admin",
+    "subtitle": "Contrôles de prod, contenus et analytics",
+    "stats": {
+      "new": "Nouveaux",
+      "contacts": "Contacts",
+      "investors": "Investisseurs",
+      "conversion": "Conversion"
+    }
   }
 }

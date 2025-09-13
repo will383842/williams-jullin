@@ -1,3 +1,4 @@
+// src/i18n/index.ts
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -26,7 +27,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: ['fr', 'en'],
+    fallbackLng: 'en',          // si une clé manque en DE/ES/PT/RU/ZH/FR, on tombe en EN (plus FR)
+    load: 'languageOnly',       // 'de-DE' => 'de', 'pt-BR' => 'pt', etc.
     debug: false,
     interpolation: {
       escapeValue: false

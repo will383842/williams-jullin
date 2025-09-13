@@ -12,20 +12,19 @@ interface ContactProps {
 }
 
 const Contact: React.FC<ContactProps> = ({ navigate }) => {
+  // Au début
   const { t } = useTranslation();
-  
-  // SEO optimisé pour la page contact
+
+  // SEO (i18n)
   React.useEffect(() => {
-    document.title = "Contact Williams Jullin | Expert Expatriation Mondiale | Conseil Personnalisé Toutes Nationalités | Réponse 24-48h";
-    
+    document.title = t('contact.seo.title');
+
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 
-        "💬 Contactez Williams Jullin, expert mondial en expatriation. Conseil personnalisé pour expatriés de toutes nationalités. Réponse garantie 24-48h, support 7 langues, expertise 197 pays. Transformez votre expatriation avec l'expert #1 mondial."
-      );
+      metaDescription.setAttribute('content', t('contact.seo.description'));
     }
-  }, []);
-  
+  }, [t]);
+
   const [formData, setFormData] = useState({
     purpose: '',
     fullName: '',
@@ -44,18 +43,6 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
   const [validationErrors, setValidationErrors] = useState<{[key: string]: string}>({});
   const [touchedFields, setTouchedFields] = useState<{[key: string]: boolean}>({});
 
-  // SEO simple et standard
-  React.useEffect(() => {
-    document.title = "Contact Williams Jullin | Expert Expatriation Mondiale";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 
-        "Contactez Williams Jullin, expert mondial en expatriation. Conseil personnalisé pour expatriés. Réponse 24-48h, support 7 langues, expertise 197 pays."
-      );
-    }
-  }, []);
-
   // Validation en temps réel
   const validateField = (name: string, value: string) => {
     const errors: {[key: string]: string} = {};
@@ -63,14 +50,18 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
     switch (name) {
       case 'purpose':
         if (!value.trim()) {
-          errors.purpose = 'Veuillez sélectionner un objet';
+          // - errors.purpose = 'Veuillez sélectionner un objet';
+          // + errors.purpose = t('contact.validation.purpose_required');
+          errors.purpose = t('contact.validation.purpose_required');
         }
         break;
       case 'fullName':
         if (!value.trim()) {
           errors.fullName = 'Le nom complet est requis';
         } else if (value.trim().length < 2) {
-          errors.fullName = 'Le nom doit contenir au moins 2 caractères';
+          // - errors.fullName = 'Le nom doit contenir au moins 2 caractères';
+          // + errors.fullName = t('contact.validation.name_min');
+          errors.fullName = t('contact.validation.name_min');
         } else if (!/^[a-zA-ZÀ-ÿ\s-']+$/.test(value)) {
           errors.fullName = 'Le nom ne peut contenir que des lettres, espaces et tirets';
         }
@@ -112,7 +103,7 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
   };
 
   const getValidationState = (fieldName: string) => {
-    const value = formData[fieldName] || '';
+    const value = (formData as any)[fieldName] || '';
     const hasError = validationErrors[fieldName];
     const isTouched = touchedFields[fieldName];
     
@@ -130,9 +121,9 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
   };
 
   const isFormValid = () => {
-    const requiredFields = ['purpose', 'fullName', 'email', 'message'];
+    const requiredFields = ['purpose', 'fullName', 'email', 'message'] as const;
     return requiredFields.every(field => {
-      const value = formData[field] || '';
+      const value = (formData as any)[field] || '';
       return value.trim() && !validationErrors[field];
     }) && formData.consent;
   };
@@ -149,11 +140,11 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
     e.preventDefault();
     
     // Validation complète avant soumission
-    const requiredFields = ['purpose', 'fullName', 'email', 'message'];
+    const requiredFields = ['purpose', 'fullName', 'email', 'message'] as const;
     let hasErrors = false;
     
     requiredFields.forEach(field => {
-      const isValid = validateField(field, formData[field] || '');
+      const isValid = validateField(field, (formData as any)[field] || '');
       if (!isValid) hasErrors = true;
       setTouchedFields(prev => ({ ...prev, [field]: true }));
     });
@@ -175,7 +166,9 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
     if (!formData.consent) {
       setShowFeedback(true);
       setFeedbackType('error');
-      setError('Vous devez accepter le traitement de vos données personnelles');
+      // - setError('Vous devez accepter le traitement de vos données personnelles');
+      // + setError(t('contact.validation.consent_required'));
+      setError(t('contact.validation.consent_required'));
       return;
     }
     
@@ -230,12 +223,13 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
       // Afficher l'erreur
       setFeedbackType('error');
       setIsSubmitting(false);
-      setError(err instanceof Error ? err.message : 'An error occurred');
+      // Harmoniser avec la clé i18n en fallback
+      setError(err instanceof Error ? err.message : t('contact.toast.error_message'));
     }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value, type } = e.target;
+    const { name, value, type } = e.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
     
     setFormData(prev => ({
       ...prev,
@@ -244,7 +238,7 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
     
     // Marquer le champ comme touché et valider
     setTouchedFields(prev => ({ ...prev, [name]: true }));
-    validateField(name, value);
+    validateField(name, value as string);
   };
 
   const getFeedbackContent = () => {
@@ -256,13 +250,19 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
         };
       case 'success':
         return {
-          title: 'Message envoyé avec succès ! 🎉',
-          message: 'Merci pour votre message. Williams vous répondra personnellement sous 24-48h.'
+          // - title: 'Message envoyé avec succès ! 🎉',
+          // + title: t('contact.toast.success_title'),
+        title: t('contact.toast.success_title'),
+          // - message: 'Merci pour votre message. Williams vous répondra personnellement sous 24-48h.'
+          // + message: t('contact.toast.success_message'),
+        message: t('contact.toast.success_message'),
         };
       case 'error':
         return {
           title: 'Erreur lors de l\'envoi',
-          message: error || 'Une erreur est survenue. Veuillez vérifier vos informations et réessayer.'
+          // - message: error || 'Une erreur est survenue. Veuillez vérifier vos informations et réessayer.'
+          // + message: error || t('contact.toast.error_message'),
+          message: error || t('contact.toast.error_message')
         };
       default:
         return { title: '', message: '' };
@@ -325,7 +325,7 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
 
                   <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                     {/* Résumé des erreurs */}
-                    {Object.keys(validationErrors).some(key => validationErrors[key]) && (
+                    {Object.keys(validationErrors).some(key => (validationErrors as any)[key]) && (
                       <div className="bg-red-50 border border-red-200 rounded-lg p-4">
                         <div className="flex items-center space-x-2 mb-2">
                           <AlertTriangle className="h-5 w-5 text-red-600" />

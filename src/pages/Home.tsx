@@ -25,24 +25,20 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
   const { t } = useTranslation();
 
   // Tracker cette page
-  usePageTracking('home', 'Accueil - Williams Jullin');
+  usePageTracking('home', t('home.analytics.title'));
 
   // SEO (titre + meta + JSON-LD)
   useEffect(() => {
     // Title
-    document.title =
-      'Williams Jullin - Expert Mondial Expatriation | Aide 500K+ Expatriés | 197 Pays | Toutes Nationalités';
+    document.title = t('home.seo.title');
 
     // Meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute(
-        'content',
-        "🌍 Williams Jullin, expert #1 mondial en expatriation. Fondateur Ulixai & SOS-Expat. Aide immédiate 24/7 pour 500K+ expatriés dans 197 pays. Toutes nationalités, toutes langues, toutes cultures. Services vérifiés, conseils d'expert, communauté mondiale inclusive."
-      );
+      metaDescription.setAttribute('content', t('home.seo.description'));
     }
 
-    // JSON-LD minimal propre
+    // JSON-LD (localisé)
     const structuredData = {
       '@context': 'https://schema.org',
       '@graph': [
@@ -52,9 +48,8 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
           name: 'Williams Jullin',
           url: 'https://williamsjullin.com',
           image: 'https://williamsjullin.com/Williams-jullin.jpg',
-          jobTitle: 'Expert Mondial Expatriation & Mobilité Internationale',
-          description:
-            "Expert mondial en expatriation et mobilité internationale. Fondateur d'Ulixai et SOS-Expat, aide 24/7 dans 197 pays.",
+          jobTitle: t('home.structured.person.jobTitle'),
+          description: t('home.structured.person.description'),
           sameAs: [
             'https://ulixai.com',
             'https://sos-expat.com',
@@ -67,10 +62,9 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
         {
           '@type': 'WebSite',
           '@id': 'https://williamsjullin.com/#website',
-          name: 'Williams Jullin - Expert Mondial Expatriation Inclusive',
+          name: t('home.structured.website.name'),
           url: 'https://williamsjullin.com',
-          description:
-            'Site officiel de Williams Jullin, expert mondial en expatriation inclusive. Services pour expatriés dans 197 pays.',
+          description: t('home.structured.website.description'),
           inLanguage: ['fr', 'en'],
           isAccessibleForFree: true,
           author: { '@id': 'https://williamsjullin.com/#person' },
@@ -87,7 +81,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
-  }, []);
+  }, [t]);
 
   return (
     <main className="overflow-hidden" role="main">
@@ -182,7 +176,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                 <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl md:rounded-3xl p-3 md:p-5 shadow-2xl">
                   <img
                     src="/Williams-jullin.jpg"
-                    alt="Williams Jullin - Expert en mobilité internationale"
+                    alt={t('home.hero.photo_alt')}
                     className="w-full h-64 md:h-80 lg:h-[425px] object-cover object-top rounded-xl md:rounded-2xl"
                     loading="eager"
                   />
@@ -204,7 +198,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                 <div className="relative bg-white rounded-2xl md:rounded-3xl p-3 md:p-4 shadow-2xl">
                   <img
                     src="/williams-jullin-conference.jpg"
-                    alt="Williams Jullin en conférence sur l'expatriation"
+                    alt={t('home.conference.photo_alt')}
                     className="w-full h-64 md:h-80 lg:h-[500px] object-cover rounded-xl md:rounded-2xl"
                   />
                   <div className="absolute -top-2 -right-2 md:-top-4 md:-right-4 bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-1 md:px-4 md:py-2 rounded-full font-bold text-xs md:text-sm shadow-lg">
@@ -333,7 +327,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                 <div className="relative bg-white rounded-2xl p-3 md:p-4 shadow-2xl">
                   <img
                     src="/sos-expat.com-filter-red.png"
-                    alt="SOS-Expat - Aide immédiate pour expatriés"
+                    alt={t('home.sos_expat.alt')}
                     className="w-full h-64 md:h-80 lg:h-[500px] object-cover rounded-xl"
                   />
                   <div className="absolute -top-2 -right-2 md:-top-3 md:-right-3 bg-gradient-to-r from-red-600 to-red-700 text-white px-3 py-1 md:px-4 md:py-2 rounded-full font-bold text-xs md:text-sm shadow-lg">
@@ -351,7 +345,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                 <div className="relative bg-white rounded-2xl p-3 md:p-4 shadow-2xl">
                   <img
                     src="/ulixai.com-filter-blue copy.png"
-                    alt="Ulixai - Le bon prestataire partout dans le monde"
+                    alt={t('home.ulixai.alt')}
                     className="w-full h-64 md:h-80 lg:h-[500px] object-cover rounded-xl"
                   />
                 </div>
@@ -722,7 +716,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                 <div className="p-4 md:p-6">
                   <div className="flex items-center space-x-2 text-gray-500 text-xs md:text-sm mb-2 md:mb-3">
                     <Calendar size={14} className="md:w-4 md:h-4" />
-                    <span>15 janvier 2024</span>
+                    <span>{t('blog.posts.visa_guide.date')}</span>
                   </div>
                   
                   <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3 line-clamp-2 leading-tight">
@@ -770,7 +764,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                 <div className="p-4 md:p-6">
                   <div className="flex items-center space-x-2 text-gray-500 text-xs md:text-sm mb-2 md:mb-3">
                     <Calendar size={14} className="md:w-4 md:h-4" />
-                    <span>10 janvier 2024</span>
+                    <span>{t('blog.posts.banking_nomad.date')}</span>
                   </div>
                   
                   <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3 line-clamp-2 leading-tight">
@@ -818,7 +812,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                 <div className="p-4 md:p-6">
                   <div className="flex items-center space-x-2 text-gray-500 text-xs md:text-sm mb-2 md:mb-3">
                     <Calendar size={14} className="md:w-4 md:h-4" />
-                    <span>5 janvier 2024</span>
+                    <span>{t('blog.posts.housing_berlin.date')}</span>
                   </div>
                   
                   <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3 line-clamp-2 leading-tight">

@@ -77,25 +77,25 @@ const Footer: React.FC<FooterProps> = ({ navigate }) => {
 
           {/* Legal & Investors */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">{t('footer.legal')}</h3>
+            <h3 className="text-lg font-semibold">Navigation</h3>
             <div className="space-y-2">
               <button
-                onClick={() => navigate('investors')}
+                onClick={() => navigate('blog')}
                 className="block text-blue-200 hover:text-blue-300 transition-colors duration-200"
+              >
+                Blog
+              </button>
+              <button
+                onClick={() => navigate('contact')}
+                className="block text-blue-200 hover:text-blue-300 transition-colors duration-200"
+              >
+                Contact
+              </button>
+              <button
+                onClick={() => navigate('investors')}
+                className="touch-link block text-blue-200 hover:text-blue-300 active:text-blue-100 transition-colors duration-200 py-2"
               >
                 {t('footer.investors')}
-              </button>
-              <button
-                onClick={() => navigate('privacy')}
-                className="block text-blue-200 hover:text-blue-300 transition-colors duration-200"
-              >
-                {t('footer.privacy')}
-              </button>
-              <button
-                onClick={() => navigate('legal')}
-                className="block text-blue-200 hover:text-blue-300 transition-colors duration-200"
-              >
-                {t('footer.legal_notice')}
               </button>
             </div>
           </div>

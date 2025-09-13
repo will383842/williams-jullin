@@ -1,0 +1,41 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Fonction pour vérifier si l'utilisateur est admin
+    function isAdmin() {
+      return request.auth != null && 
+             request.auth.token.admin == true;
+    }
+    
+    // Collection contacts - Public peut créer, admin peut tout faire
+    match /contacts/{contactId} {
+      allow create: if true; // Public peut envoyer des messages
+      allow read, update, delete: if isAdmin(); // Seuls les admins peuvent lire/modifier
+    }
+    
+    // Collection investors - Public peut créer, admin peut tout faire
+    match /investors/{investorId} {
+      allow create: if true; // Public peut envoyer des demandes
+      allow read, update, delete: if isAdmin(); // Seuls les admins peuvent lire/modifier
+    }
+    
+    // Collection analytics - Public peut créer, admin peut lire
+    match /analytics/{analyticsId} {
+      allow create: if true; // Public peut envoyer des événements
+      allow read: if isAdmin(); // Seuls les admins peuvent lire
+      allow update, delete: if false; // Pas de modification des analytics
+    }
+    
+    // Collection posts (blog) - Admin seulement
+    match /posts/{postId} {
+      allow read: if resource.data.status == 'published'; // Public peut lire les articles publiés
+      allow create, update, delete: if isAdmin(); // Seuls les admins peuvent gérer
+    }
+    
+    // Par défaut : accès refusé
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://williamsjullin.com/sitemap.xml
+
+# Optimisation crawl
+Crawl-delay: 1
+
+# Pages principales
+# / (accueil)
+# /mon-histoire
+# /blog
+# /contact
+# /investors
+# /media
+
+# Pas de restrictions
+# Accès total pour indexation complète

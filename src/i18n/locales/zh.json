@@ -2,6 +2,8 @@
   "nav": {
     "home": "首页",
     "story": "我的故事",
+    "ulixai": "Ulixai.com",
+    "sos_expat": "SOS-Expat.com",
     "blog": "博客",
     "media": "媒体",
     "contact": "联系"
@@ -101,8 +103,56 @@
   },
   "story": {
     "hero": {
-      "title": "我的故事",
-      "subtitle": "从个人挑战到全球解决方案——导致为数千人转型国际流动性的旅程。"
+      "badge": "威廉姆斯·朱林",
+      "title_1": "企业家",
+      "title_2": "创始人兼CEO",
+      "subtitle": "我将创业视为理所当然，作为创造和发展的需要。我的执念：不断突破我的极限，发现我能走多远。",
+      "companies": "SOS-Expat & Ulixai",
+      "location": "总部设在泰国",
+      "role_1": "企业家",
+      "role_2": "创新者"
+    },
+    "intro": {
+      "badge": "指导我的执念",
+      "title": "建设、发展、超越我的技能",
+      "paragraph_1": "被单一执念指导：建设、发展、超越我的技能，永远学习。",
+      "paragraph_2": "几家公司，有成功也有失败，锻造了我。2017年，我推出一家国家公司，起飞了，发展如此之快，很难跟上它的上升…",
+      "paragraph_3": "然后是Covid和后续。被摧毁，我必须从内部重建自己。2024年7月，我离开去泰国移居。",
+      "quote": "肾上腺素滋养我。例行公事熄灭我。我想要挑战、意外、那种推动发明和超越自己的压力。那就是我感到完全活着的地方。"
+    },
+    "expatriation": {
+      "badge": "启示",
+      "title": "改变一切的移居",
+      "shock_title": "现实的冲击",
+      "shock_paragraph_1": "没有网络。没有帮助。独自一人。每一步——签证、住房、银行账户——都成为挑战。",
+      "shock_paragraph_2": "我明白了：无论国籍如何，每个人在其他地方开始新生活时都会经历同样的孤独。",
+      "community_title": "我们的社区",
+      "community_stat_1": "帮助的外籍人士",
+      "community_stat_2": "覆盖的国家",
+      "community_description": "一个不断增长的全球社区。每天，新的外籍人士加入我们的平台，新的帮助者提供他们的服务",
+      "mission_title": "在一个生态系统中连接全世界的外籍人士和旅行者",
+      "mission_subtitle": "两个互补平台，四个明确使命。"
+    },
+    "platforms": {
+      "badge": "两个平台，4个使命",
+      "title": "完整的生态系统",
+      "subtitle": "离开或生活在自己国家之外不应再与孤独和困难押韵",
+      "sos": {
+        "subtitle": "外籍人士的即时帮助",
+        "feature_1_title": "即时帮助",
+        "feature_1_desc": "不到5分钟，律师或帮助外籍人士接听，世界任何地方。",
+        "feature_2_title": "保证收入",
+        "feature_2_desc": "律师和帮助外籍人士通过预付费电话获得报酬。",
+        "cta": "发现SOS-Expat"
+      },
+      "ulixai": {
+        "subtitle": "外籍人士的服务和报价",
+        "feature_1_title": "无限服务和报价",
+        "feature_1_desc": "签证、许可证、住房、翻译、交通…经过验证的提供商在几分钟内回应。",
+        "feature_2_title": "全球收入",
+        "feature_2_desc": "专业人士和外籍人士无论身在何处都能将其专业知识货币化。",
+        "cta": "发现Ulixai"
+      }
     },
     "intro": {
       "title": "旅程开始",
@@ -111,27 +161,57 @@
       "paragraph_3": "今天，通过SOS-Expat和Ulixai，我将这些见解转化为平台，帮助超过500,000名外籍人士成功导航他们的国际旅程。"
     },
     "timeline": {
+      "badge": "从上升到重建",
       "title": "关键里程碑",
       "subtitle": "塑造我转型全球流动性使命的关键时刻。",
+      "before_2017": "2017年前：创建了几家公司，有成功也有失败。成功给了我信心，失败教会了我谦逊并教会了我。每次经历都锻造了我的韧性并完善了我的创业愿景。",
       "event_1": {
-        "title": "首次国际搬迁",
-        "description": "亲身体验了国际搬迁的挑战，识别了外籍人士支持服务的关键缺口。"
+        "title": "闪电般的起飞",
+        "description": "推出一个经历爆炸性增长的品牌。令人眩晕的上升，挑战所有预测。",
+        "location": "法国",
+        "emotion": "🚀",
+        "feeling": "成功的兴奋",
+        "lesson": "成功可能比我们想象的来得更快"
       },
       "event_2": {
-        "title": "建立网络",
-        "description": "开始与整个欧洲的法律、银行和住房专业人士建立联系，创建可靠的支持网络。"
+        "title": "跌落和毁灭",
+        "description": "Covid袭击。不到两年，一切都崩溃了。残酷的冲击，完全的损失...但也是一个启示。",
+        "location": "法国",
+        "emotion": "💔",
+        "feeling": "从内部重建",
+        "lesson": "有时你必须失去一切才能找到一切"
       },
       "event_3": {
-        "title": "SOS-Expat启动",
-        "description": "在目睹外籍人士在危机情况下没有足够帮助后，启动了紧急支持平台。"
+        "title": "大跃进的决定",
+        "description": "48岁时，我做出了将改变我生活的决定：移居国外。离开我的舒适区，在别处重生。",
+        "location": "法国",
+        "emotion": "✈️",
+        "feeling": "重新开始的勇气",
+        "lesson": "重新开始永远不会太晚"
       },
       "event_4": {
-        "title": "Ulixai开发",
-        "description": "开发了结合AI技术与人类专业知识的综合搬迁平台。"
+        "title": "目的地泰国",
+        "description": "2024年7月：我永久定居泰国。没有网络，没有帮助。独自一人。每一步都成为挑战。",
+        "location": "泰国",
+        "emotion": "🌴",
+        "feeling": "外籍人士的孤独",
+        "lesson": "移居揭示了我们真正的内在力量"
       },
       "event_5": {
-        "title": "全球影响",
-        "description": "通过集成平台生态系统达到帮助全球500K+外籍人士的里程碑。"
+        "title": "与世隔绝的一年",
+        "description": "从凌晨4点到晚上11点7/7。很少见到我的孩子...为了一个目标最令人心碎的牺牲：创建第一个将团结全世界所有外籍人士的平台。",
+        "location": "泰国",
+        "emotion": "💻",
+        "feeling": "创造性痴迷",
+        "lesson": "最伟大的项目诞生于孤独和坚持不懈"
+      },
+      "event_6": {
+        "title": "生态系统的诞生",
+        "description": "2025年8月：同时推出总部设在爱沙尼亚的SOS-Expat和Ulixai。两个平台，4个使命：连接全世界的外籍人士。",
+        "location": "全球",
+        "emotion": "🌍",
+        "feeling": "全球影响，人类使命",
+        "lesson": "最好的想法来自我们自己的斗争"
       }
     },
     "values": {
@@ -215,8 +295,11 @@
     "share": "分享",
     "no_posts": "未找到此主题的帖子。",
     "author_bio": "Williams Jullin是全球流动性专家和SOS-Expat和Ulixai的创始人，帮助全球超过500K外籍人士。",
-    "read_story": "阅读我的故事",
-    "get_in_touch": "联系我们"
+    "language_label": "ZH",
+    "author": {
+      "read_story": "阅读我的故事",
+      "get_in_touch": "联系我们"
+    }
   },
   "media": {
     "hero": {
@@ -267,7 +350,9 @@
       "title": "新闻照片",
       "subtitle": "可供媒体使用的高分辨率照片。",
       "portrait_1_title": "专业肖像",
-      "portrait_1_description": "适合印刷和数字媒体的高分辨率专业头像。"
+      "portrait_1_description": "适合印刷和数字媒体的高分辨率专业头像。",
+      "portrait_2_title": "休闲肖像",
+      "portrait_2_description": "适合生活方式和专题文章的平易近人的休闲肖像。"
     },
     "contact": {
       "title": "媒体查询",
@@ -287,18 +372,61 @@
     "form": {
       "title": "发送消息",
       "purpose": "联系目的",
-      "select_purpose": "选择目的...",
-      "full_name": "全名",
+      "errors_title": "请纠正以下错误：",
+      "section_personal": "个人信息",
+      "section_investor": "投资者类型",
+      "section_organization": "组织",
+      "section_investment": "投资详情",
+      "section_interest": "具体兴趣",
+      "section_message": "消息和目标",
+      "first_name_placeholder": "您的名字",
+      "last_name": "姓",
+      "investor_type": "投资者类型",
+      "select_investor_type": "选择您的档案...",
+      "types": {
+        "individual": "个人投资者",
+        "family_office": "家族办公室",
+        "vc_fund": "风险投资基金",
+        "pe_fund": "私募股权基金",
+        "corporate": "企业风投",
+        "angel": "天使投资人",
+        "institutional": "机构投资者",
+        "other": "其他"
+      },
+      "organization": "组织/基金",
+      "organization_placeholder": "您的组织名称",
+      "position": "职位/角色",
+      "position_placeholder": "管理合伙人，投资总监...",
+      "website": "网站",
+      "website_placeholder": "https://您的组织.com",
+      "last_name_placeholder": "您的姓氏",
       "full_name_placeholder": "输入您的全名",
-      "email": "电子邮件地址",
-      "email_placeholder": "输入您的电子邮件地址",
-      "subject": "主题",
-      "subject_placeholder": "您消息的简短主题",
-      "country": "当前国家",
+      "investment_timeline": "投资时间线",
+      "select_timeline": "选择时间线...",
+      "timelines": {
+        "immediate": "立即（< 1个月）",
+        "short": "短期（1-3个月）",
+        "medium": "中期（3-6个月）",
+        "long": "长期（6-12个月）",
+        "flexible": "根据机会灵活"
+      },
+      "previous_investments": "投资经验",
+      "previous_investments_placeholder": "简要描述您在类似初创公司/规模化公司的以往投资...",
+      "platform_interest": "平台兴趣",
+      "select_platform": "选择您的兴趣...",
+      "platforms": {
+        "both": "完整生态系统（SOS-Expat + Ulixai）",
+        "sos_expat": "仅SOS-Expat",
+        "ulixai": "仅Ulixai",
+        "ecosystem": "全球生态系统愿景"
+      },
+      "geographic_focus": "地理重点",
+      "geographic_focus_placeholder": "欧洲，亚洲，全球...",
       "country_placeholder": "您目前在哪里？",
       "message": "消息",
-      "message_placeholder": "告诉我您的情况以及我如何帮助...",
-      "consent": "我同意为此查询目的处理我的个人数据。",
+      "message_placeholder": "告诉我们您的愿景，期望，投资策略，具体问题...",
+      "consent_text": "我同意为此查询目的处理我的个人数据。",
+      "newsletter_consent": "我希望收到关于Ulixai & SOS-Expat发展的更新（可选）",
       "send": "发送消息",
       "sending": "发送中..."
     },
@@ -328,9 +456,152 @@
   },
   "investors": {
     "hero": {
+      "badge": "投资机会",
       "title": "转型全球流动性",
       "subtitle": "加入我们，革命世界如何国际移动、工作和生活。",
-      "cta": "请求投资者包"
+      "cta": "请求投资者包",
+      "stat_1": "已帮助的外籍人士",
+      "stat_2": "覆盖国家",
+      "stat_3": "活跃服务"
+    },
+    "vision": {
+      "title": "我们的愿景：转型全球外籍生活",
+      "subtitle": "我们创建一个全球生态系统，每个外籍人士都能找到所需帮助，同时为帮助者创造收入机会。"
+    },
+    "community": {
+      "title": "我们的社区",
+      "stat_1": "帮助的外籍人士",
+      "stat_2": "覆盖国家",
+      "growth_title": "不断增长的全球社区",
+      "growth_desc": "每天都有新的外籍人士加入我们的平台，新的帮助者提供服务"
+    },
+    "platforms": {
+      "title": "两个平台，一个强大生态系统",
+      "subtitle": "SOS-Expat和Ulixai共同创造完整解决方案",
+      "view_platform": "查看平台",
+      "business_model": "商业模式",
+      "sos": {
+        "description": "为困难中的外籍人士提供即时帮助",
+        "feature_1": "保证5分钟内回电",
+        "feature_2": "经过验证的律师和帮助者",
+        "feature_3": "预付费通话，零缺席",
+        "feature_4": "帮助者即时收入",
+        "business_desc": "每次通话佣金 + 专业帮助者高级订阅"
+      },
+      "ulixai": {
+        "description": "外籍人士服务市场",
+        "feature_1": "无限服务和多重选择",
+        "feature_2": "全球验证提供商",
+        "feature_3": "安全支付和项目跟踪",
+        "feature_4": "提供商经常性收入",
+        "business_desc": "交易佣金 + 高级订阅 + 企业服务"
+      }
+    },
+    "why_invest": {
+      "title": "为什么与我们投资？",
+      "subtitle": "参与转型外籍人士援助的独特机会",
+      "growth": {
+        "title": "已证明增长",
+        "description": "已帮助125K+外籍人士，年增长率300%。我们的指标显示大规模采用和高留存率。",
+        "metric_1": "年增长率",
+        "metric_2": "留存率",
+        "metric_3": "客户满意度"
+      },
+      "team": {
+        "title": "经验丰富的团队",
+        "description": "Williams Jullin本身就是外籍创始人，深刻理解挑战。拥有大规模平台经验的强大技术团队。"
+      },
+      "advantages": {
+        "title": "竞争优势",
+        "description": "首个结合紧急帮助和计划服务的平台。强大的网络效应和高进入壁垒。"
+      }
+    },
+    "seo": {
+      "title": "投资者 | Williams Jullin | Ulixai & SOS-Expat | 全球外籍人士机会",
+      "description": "💰 与Williams Jullin的独特投资机会。Ulixai & SOS-Expat生态系统为500K+外籍人士转型外籍生活。304M外籍人士市场，300%增长，全球社会影响。"
+    },
+    "form": {
+      "title": "加入我们的冒险",
+      "subtitle": "让我们谈论您参与外籍人士援助革命",
+      "section_personal": "个人信息",
+      "section_investor": "投资者类型",
+      "section_organization": "组织",
+      "section_investment": "投资详情",
+      "section_interest": "具体兴趣",
+      "section_message": "消息和目标",
+      "section_consent": "同意书",
+      "first_name": "名字",
+      "first_name_placeholder": "您的名字",
+      "last_name": "姓氏",
+      "last_name_placeholder": "您的姓氏",
+      "email": "邮箱",
+      "email_placeholder": "您的@邮箱.com",
+      "phone": "电话",
+      "phone_placeholder": "+86 138 0013 8000",
+      "investor_type": "投资者类型",
+      "select_investor_type": "选择您的档案...",
+      "types": {
+        "individual": "个人投资者",
+        "family_office": "家族办公室",
+        "vc_fund": "风险投资基金",
+        "pe_fund": "私募股权基金",
+        "corporate": "企业风投",
+        "angel": "天使投资人",
+        "institutional": "机构投资者",
+        "other": "其他"
+      },
+      "organization": "组织/基金",
+      "organization_placeholder": "您的组织名称",
+      "position": "职位/角色",
+      "position_placeholder": "管理合伙人，投资总监...",
+      "website": "网站",
+      "website_placeholder": "https://您的组织.com",
+      "investment_range": "计划投资金额",
+      "select_range": "选择范围",
+      "investment_timeline": "投资时间线",
+      "select_timeline": "选择时间线...",
+      "timelines": {
+        "immediate": "立即（< 1个月）",
+        "short": "短期（1-3个月）",
+        "medium": "中期（3-6个月）",
+        "long": "长期（6-12个月）",
+        "flexible": "根据机会灵活"
+      },
+      "previous_investments": "投资经验",
+      "select_experience": "选择您的经验...",
+      "experience": {
+        "first_time": "首次投资",
+        "some": "一些投资",
+        "experienced": "有经验的",
+        "professional": "专业投资者"
+      },
+      "platform_interest": "平台兴趣",
+      "select_platform": "选择您的兴趣...",
+      "platforms": {
+        "both": "完整生态系统（SOS-Expat + Ulixai）",
+        "sos_expat": "仅SOS-Expat",
+        "ulixai": "仅Ulixai",
+        "ecosystem": "全球生态系统愿景"
+      },
+      "geographic_focus": "地理重点",
+      "geographic_focus_placeholder": "欧洲，亚洲，全球...",
+      "message": "消息",
+      "message_placeholder": "告诉我们您的愿景，期望，投资策略，具体问题...",
+      "consent": "我同意Williams Jullin就此投资机会与我联系，并同意处理我的个人数据。",
+      "newsletter_consent": "我希望收到关于Ulixai & SOS-Expat发展的更新（可选）",
+      "submit": "发送我的投资请求",
+      "sending": "发送中..."
+    },
+    "direct_contact": {
+      "title": "更喜欢直接联系？",
+      "subtitle": "Williams Jullin可以亲自讨论您的投资",
+      "email": "williams@ulixai.com",
+      "linkedin": "LinkedIn"
+    },
+    "success": {
+      "title": "感谢您的兴趣！",
+      "message": "我们已收到您的投资请求。Williams将在24-48小时内亲自联系您。",
+      "back_home": "返回首页"
     },
     "problem": {
       "title": "问题",
@@ -453,5 +724,15 @@
     "privacy": "隐私政策",
     "legal_notice": "法律声明",
     "rights_reserved": "版权所有。"
+  },
+  "admin": {
+    "title": "管理控制台",
+    "subtitle": "联系人和投资者管理",
+    "stats": {
+      "contacts": "联系人",
+      "investors": "投资者",
+      "new": "新的",
+      "conversion": "转换"
+    }
   }
 }

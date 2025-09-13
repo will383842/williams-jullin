@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Mail, MessageCircle, CheckCircle } from 'lucide-react';
+import { Mail, MessageCircle, CheckCircle, AlertTriangle, Loader2 } from 'lucide-react';
+import { submitContactForm, type ContactFormData } from '../services/contactService';
+import FormFeedback from '../components/FormFeedback';
+import FormValidation, { getFieldBorderClass } from '../components/FormValidation';
+
+import { trackEvent } from '../lib/analytics';
 
 interface ContactProps {
   navigate: (page: string) => void;
@@ -8,6 +13,18 @@ interface ContactProps {
 
 const Contact: React.FC<ContactProps> = ({ navigate }) => {
   const { t } = useTranslation();
+  
+  // SEO optimisé pour la page contact
+  React.useEffect(() => {
+    document.title = "Contact Williams Jullin | Expert Expatriation Mondiale | Conseil Personnalisé Toutes Nationalités | Réponse 24-48h";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 
+        "💬 Contactez Williams Jullin, expert mondial en expatriation. Conseil personnalisé pour expatriés de toutes nationalités. Réponse garantie 24-48h, support 7 langues, expertise 197 pays. Transformez votre expatriation avec l'expert #1 mondial."
+      );
+    }
+  }, []);
   
   const [formData, setFormData] = useState({
     purpose: '',
@@ -21,6 +38,104 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState<string>('');
+  const [showFeedback, setShowFeedback] = useState(false);
+  const [feedbackType, setFeedbackType] = useState<'loading' | 'success' | 'error'>('loading');
+  const [validationErrors, setValidationErrors] = useState<{[key: string]: string}>({});
+  const [touchedFields, setTouchedFields] = useState<{[key: string]: boolean}>({});
+
+  // SEO simple et standard
+  React.useEffect(() => {
+    document.title = "Contact Williams Jullin | Expert Expatriation Mondiale";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 
+        "Contactez Williams Jullin, expert mondial en expatriation. Conseil personnalisé pour expatriés. Réponse 24-48h, support 7 langues, expertise 197 pays."
+      );
+    }
+  }, []);
+
+  // Validation en temps réel
+  const validateField = (name: string, value: string) => {
+    const errors: {[key: string]: string} = {};
+    
+    switch (name) {
+      case 'purpose':
+        if (!value.trim()) {
+          errors.purpose = 'Veuillez sélectionner un objet';
+        }
+        break;
+      case 'fullName':
+        if (!value.trim()) {
+          errors.fullName = 'Le nom complet est requis';
+        } else if (value.trim().length < 2) {
+          errors.fullName = 'Le nom doit contenir au moins 2 caractères';
+        } else if (!/^[a-zA-ZÀ-ÿ\s-']+$/.test(value)) {
+          errors.fullName = 'Le nom ne peut contenir que des lettres, espaces et tirets';
+        }
+        break;
+      case 'email':
+        if (!value.trim()) {
+          errors.email = 'L\'email est requis';
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+          errors.email = 'Format d\'email invalide';
+        }
+        break;
+      case 'message':
+        if (!value.trim()) {
+          errors.message = 'Le message est requis';
+        } else if (value.trim().length < 10) {
+          errors.message = 'Le message doit contenir au moins 10 caractères';
+        } else if (value.length > 2000) {
+          errors.message = 'Le message ne peut pas dépasser 2000 caractères';
+        }
+        break;
+      case 'title':
+        if (value && value.length > 200) {
+          errors.title = 'Le titre ne peut pas dépasser 200 caractères';
+        }
+        break;
+      case 'country':
+        if (value && value.length > 100) {
+          errors.country = 'Le nom du pays ne peut pas dépasser 100 caractères';
+        }
+        break;
+    }
+    
+    setValidationErrors(prev => ({
+      ...prev,
+      [name]: errors[name] || ''
+    }));
+    
+    return !errors[name];
+  };
+
+  const getValidationState = (fieldName: string) => {
+    const value = formData[fieldName] || '';
+    const hasError = validationErrors[fieldName];
+    const isTouched = touchedFields[fieldName];
+    
+    if (!isTouched) return { isValid: true, message: '', type: 'success' as const };
+    
+    if (hasError) {
+      return { isValid: false, message: hasError, type: 'error' as const };
+    }
+    
+    if (value.trim()) {
+      return { isValid: true, message: 'Parfait !', type: 'success' as const };
+    }
+    
+    return { isValid: true, message: '', type: 'success' as const };
+  };
+
+  const isFormValid = () => {
+    const requiredFields = ['purpose', 'fullName', 'email', 'message'];
+    return requiredFields.every(field => {
+      const value = formData[field] || '';
+      return value.trim() && !validationErrors[field];
+    }) && formData.consent;
+  };
 
   const purposes = [
     { value: 'general', label: t('contact.purposes.general') },
@@ -32,12 +147,74 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validation complète avant soumission
+    const requiredFields = ['purpose', 'fullName', 'email', 'message'];
+    let hasErrors = false;
+    
+    requiredFields.forEach(field => {
+      const isValid = validateField(field, formData[field] || '');
+      if (!isValid) hasErrors = true;
+      setTouchedFields(prev => ({ ...prev, [field]: true }));
+    });
+    
+    // Valider aussi les champs optionnels s'ils sont remplis
+    if (formData.title) {
+      const titleValid = validateField('title', formData.title);
+      if (!titleValid) hasErrors = true;
+      setTouchedFields(prev => ({ ...prev, title: true }));
+    }
+    
+    if (formData.country) {
+      const countryValid = validateField('country', formData.country);
+      if (!countryValid) hasErrors = true;
+      setTouchedFields(prev => ({ ...prev, country: true }));
+    }
+    
+    // Vérifier le consentement
+    if (!formData.consent) {
+      setShowFeedback(true);
+      setFeedbackType('error');
+      setError('Vous devez accepter le traitement de vos données personnelles');
+      return;
+    }
+    
+    if (hasErrors) {
+      setShowFeedback(true);
+      setFeedbackType('error');
+      setError('Veuillez corriger les erreurs dans le formulaire');
+      return;
+    }
+
+    // Afficher le feedback de chargement
+    setShowFeedback(true);
+    setFeedbackType('loading');
+    setError('');
     setIsSubmitting(true);
 
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      const contactData: ContactFormData = {
+        purpose: formData.purpose,
+        fullName: formData.fullName,
+        email: formData.email,
+        title: formData.title,
+        message: formData.message,
+        country: formData.country
+      };
+
+      console.log('📧 Soumission formulaire contact:', contactData);
+      await submitContactForm(contactData);
+      console.log('✅ Formulaire contact soumis avec succès');
+      
+      // Tracker l'événement de soumission
+      await trackEvent('contact_form_submitted', {
+        purpose: contactData.purpose,
+        country: contactData.country || 'Unknown'
+      });
+      
+      // Afficher le succès
+      setFeedbackType('success');
       setIsSubmitting(false);
-      setIsSuccess(true);
       setFormData({
         purpose: '',
         fullName: '',
@@ -47,58 +224,84 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
         country: '',
         consent: false
       });
-    }, 2000);
+      setTouchedFields({});
+      setValidationErrors({});
+    } catch (err) {
+      // Afficher l'erreur
+      setFeedbackType('error');
+      setIsSubmitting(false);
+      setError(err instanceof Error ? err.message : 'An error occurred');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
+    
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
     }));
+    
+    // Marquer le champ comme touché et valider
+    setTouchedFields(prev => ({ ...prev, [name]: true }));
+    validateField(name, value);
   };
 
-  if (isSuccess) {
-    return (
-      <div className="pt-24">
-        <div className="min-h-[60vh] flex items-center justify-center">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-2xl mx-auto text-center">
-              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="h-10 w-10 text-green-600" />
-              </div>
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                {t('contact.success.title')}
-              </h1>
-              <p className="text-xl text-gray-600 mb-8">
-                {t('contact.success.message')}
-              </p>
-              <button
-                onClick={() => {
-                  setIsSuccess(false);
-                  navigate('home');
-                }}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
-              >
-                {t('contact.success.back_home')}
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  const getFeedbackContent = () => {
+    switch (feedbackType) {
+      case 'loading':
+        return {
+          title: 'Envoi en cours...',
+          message: 'Votre message est en cours d\'envoi. Veuillez patienter quelques instants.'
+        };
+      case 'success':
+        return {
+          title: 'Message envoyé avec succès ! 🎉',
+          message: 'Merci pour votre message. Williams vous répondra personnellement sous 24-48h.'
+        };
+      case 'error':
+        return {
+          title: 'Erreur lors de l\'envoi',
+          message: error || 'Une erreur est survenue. Veuillez vérifier vos informations et réessayer.'
+        };
+      default:
+        return { title: '', message: '' };
+    }
+  };
+
+  const handleRetry = () => {
+    setShowFeedback(false);
+    setError('');
+    setFeedbackType('loading');
+  };
+
+  const handleCloseFeedback = () => {
+    setShowFeedback(false);
+    if (feedbackType === 'success') {
+      navigate('home');
+    }
+  };
 
   return (
-    <div className="pt-24">
+    <div className="pt-20 md:pt-24 bg-slate-50 min-h-screen">
+      {/* Form Feedback Modal */}
+      <FormFeedback
+        isVisible={showFeedback}
+        type={feedbackType}
+        title={getFeedbackContent().title}
+        message={getFeedbackContent().message}
+        onClose={handleCloseFeedback}
+        onRetry={feedbackType === 'error' ? handleRetry : undefined}
+      />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 py-20">
+      <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-12 md:py-20 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6">
               {t('contact.hero.title')}
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed">
+            <p className="text-base md:text-xl lg:text-2xl text-blue-100 leading-relaxed px-4">
               {t('contact.hero.subtitle')}
             </p>
           </div>
@@ -106,24 +309,39 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
       </section>
 
       {/* Contact Form */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               {/* Form */}
               <div>
-                <div className="bg-white rounded-2xl shadow-xl p-8">
-                  <div className="flex items-center space-x-3 mb-8">
-                    <MessageCircle className="h-8 w-8 text-amber-600" />
-                    <h2 className="text-2xl font-bold text-gray-900">
+                <div className="bg-white rounded-2xl md:rounded-3xl shadow-xl p-6 md:p-8">
+                  <div className="flex items-center space-x-3 mb-6 md:mb-8">
+                    <MessageCircle className="h-6 w-6 md:h-8 md:w-8 text-blue-600" />
+                    <h2 className="text-xl md:text-2xl font-bold text-slate-900">
                       {t('contact.form.title')}
                     </h2>
                   </div>
 
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+                    {/* Résumé des erreurs */}
+                    {Object.keys(validationErrors).some(key => validationErrors[key]) && (
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                        <div className="flex items-center space-x-2 mb-2">
+                          <AlertTriangle className="h-5 w-5 text-red-600" />
+                          <h4 className="font-medium text-red-800">{t('contact.form.errors_title')}</h4>
+                        </div>
+                        <ul className="text-sm text-red-700 space-y-1">
+                          {Object.entries(validationErrors).map(([field, error]) => 
+                            error ? <li key={field}>• {error}</li> : null
+                          )}
+                        </ul>
+                      </div>
+                    )}
+
                     {/* Purpose */}
                     <div>
-                      <label htmlFor="purpose" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="purpose" className="block text-sm font-medium text-slate-700 mb-1 md:mb-2">
                         {t('contact.form.purpose')} *
                       </label>
                       <select
@@ -132,7 +350,7 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
                         value={formData.purpose}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-colors duration-200"
+                        className={`w-full px-3 py-3 md:px-4 border rounded-lg md:rounded-xl focus:ring-2 transition-all duration-200 text-sm md:text-base ${getFieldBorderClass(getValidationState('purpose'), touchedFields.purpose)}`}
                       >
                         <option value="">{t('contact.form.select_purpose')}</option>
                         {purposes.map(purpose => (
@@ -141,11 +359,17 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
                           </option>
                         ))}
                       </select>
+                      <FormValidation
+                        field="purpose"
+                        value={formData.purpose}
+                        validation={getValidationState('purpose')}
+                        showValidation={touchedFields.purpose}
+                      />
                     </div>
 
                     {/* Full Name */}
                     <div>
-                      <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="fullName" className="block text-sm font-medium text-slate-700 mb-1 md:mb-2">
                         {t('contact.form.full_name')} *
                       </label>
                       <input
@@ -155,14 +379,20 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
                         value={formData.fullName}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-colors duration-200"
+                        className={`w-full px-3 py-3 md:px-4 border rounded-lg md:rounded-xl focus:ring-2 transition-all duration-200 text-sm md:text-base ${getFieldBorderClass(getValidationState('fullName'), touchedFields.fullName)}`}
                         placeholder={t('contact.form.full_name_placeholder')}
+                      />
+                      <FormValidation
+                        field="fullName"
+                        value={formData.fullName}
+                        validation={getValidationState('fullName')}
+                        showValidation={touchedFields.fullName}
                       />
                     </div>
 
                     {/* Email */}
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1 md:mb-2">
                         {t('contact.form.email')} *
                       </label>
                       <input
@@ -172,15 +402,21 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-colors duration-200"
+                        className={`w-full px-3 py-3 md:px-4 border rounded-lg md:rounded-xl focus:ring-2 transition-all duration-200 text-sm md:text-base ${getFieldBorderClass(getValidationState('email'), touchedFields.email)}`}
                         placeholder={t('contact.form.email_placeholder')}
+                      />
+                      <FormValidation
+                        field="email"
+                        value={formData.email}
+                        validation={getValidationState('email')}
+                        showValidation={touchedFields.email}
                       />
                     </div>
 
                     {/* Title/Subject */}
                     <div>
-                      <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-2">
-                        {t('contact.form.subject')} *
+                      <label htmlFor="title" className="block text-sm font-medium text-slate-700 mb-1 md:mb-2">
+                        {t('contact.form.subject')}
                       </label>
                       <input
                         type="text"
@@ -188,15 +424,14 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
                         name="title"
                         value={formData.title}
                         onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-colors duration-200"
+                        className="w-full px-3 py-3 md:px-4 border border-slate-300 rounded-lg md:rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-sm md:text-base"
                         placeholder={t('contact.form.subject_placeholder')}
                       />
                     </div>
 
                     {/* Country */}
                     <div>
-                      <label htmlFor="country" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="country" className="block text-sm font-medium text-slate-700 mb-1 md:mb-2">
                         {t('contact.form.country')}
                       </label>
                       <input
@@ -205,14 +440,20 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
                         name="country"
                         value={formData.country}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-colors duration-200"
+                        className={`w-full px-3 py-3 md:px-4 border rounded-lg md:rounded-xl focus:ring-2 transition-all duration-200 text-sm md:text-base ${getFieldBorderClass(getValidationState('country'), touchedFields.country)}`}
                         placeholder={t('contact.form.country_placeholder')}
+                      />
+                      <FormValidation
+                        field="country"
+                        value={formData.country}
+                        validation={getValidationState('country')}
+                        showValidation={touchedFields.country}
                       />
                     </div>
 
                     {/* Message */}
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-1 md:mb-2">
                         {t('contact.form.message')} *
                       </label>
                       <textarea
@@ -221,14 +462,25 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
                         value={formData.message}
                         onChange={handleChange}
                         required
-                        rows={6}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-colors duration-200 resize-vertical"
+                        rows={4}
+                        className={`w-full px-3 py-3 md:px-4 border rounded-lg md:rounded-xl focus:ring-2 transition-all duration-200 resize-vertical text-sm md:text-base md:rows-6 ${getFieldBorderClass(getValidationState('message'), touchedFields.message)}`}
                         placeholder={t('contact.form.message_placeholder')}
                       />
+                      <div className="flex justify-between items-center mt-1">
+                        <FormValidation
+                          field="message"
+                          value={formData.message}
+                          validation={getValidationState('message')}
+                          showValidation={touchedFields.message}
+                        />
+                        <span className={`text-xs ${formData.message.length > 1800 ? 'text-red-600' : 'text-gray-500'}`}>
+                          {formData.message.length}/2000
+                        </span>
+                      </div>
                     </div>
 
                     {/* Consent */}
-                    <div className="flex items-start space-x-3">
+                    <div className="flex items-start space-x-3 pt-2">
                       <input
                         type="checkbox"
                         id="consent"
@@ -236,75 +488,76 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
                         checked={formData.consent}
                         onChange={handleChange}
                         required
-                        className="mt-1 h-4 w-4 text-amber-600 border-gray-300 rounded focus:ring-amber-500"
+                        className="mt-0.5 h-4 w-4 text-blue-600 border-slate-300 rounded focus:ring-blue-500 flex-shrink-0"
                       />
-                      <label htmlFor="consent" className="text-sm text-gray-700">
-                        {t('contact.form.consent')} *
+                      <label htmlFor="consent" className="text-xs md:text-sm text-slate-700 leading-relaxed">
+                        {t('contact.form.consent_text')} *
                       </label>
                     </div>
 
                     {/* Submit Button */}
                     <button
                       type="submit"
-                      disabled={isSubmitting}
-                      className={`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-200 ${
-                        isSubmitting
-                          ? 'bg-gray-400 cursor-not-allowed'
-                          : 'bg-amber-600 hover:bg-amber-700 transform hover:scale-105'
+                      disabled={isSubmitting || !isFormValid()}
+                      className={`touch-button w-full py-4 px-6 rounded-lg md:rounded-xl font-semibold text-white transition-all duration-200 text-base md:text-base flex items-center justify-center space-x-2 ${
+                        isSubmitting || !isFormValid()
+                          ? 'bg-slate-400 cursor-not-allowed'
+                          : 'bg-blue-600 hover:bg-blue-700 active:bg-blue-800 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl'
                       }`}
                     >
-                      {isSubmitting ? t('contact.form.sending') : t('contact.form.send')}
+                      {isSubmitting && <Loader2 className="h-5 w-5 animate-spin" />}
+                      <span>{isSubmitting ? t('contact.form.sending') : t('contact.form.send')}</span>
                     </button>
                   </form>
                 </div>
               </div>
 
               {/* Contact Info & Visual */}
-              <div className="space-y-8">
+              <div className="space-y-6 md:space-y-8 mt-8 lg:mt-0">
                 {/* Contact Info */}
-                <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8">
-                  <div className="flex items-center space-x-3 mb-6">
-                    <Mail className="h-8 w-8 text-amber-600" />
-                    <h2 className="text-2xl font-bold text-gray-900">
+                <div className="bg-gradient-to-br from-blue-50 to-slate-50 rounded-2xl md:rounded-3xl p-6 md:p-8">
+                  <div className="flex items-center space-x-3 mb-4 md:mb-6">
+                    <Mail className="h-6 w-6 md:h-8 md:w-8 text-blue-600" />
+                    <h2 className="text-xl md:text-2xl font-bold text-slate-900">
                       {t('contact.info.title')}
                     </h2>
                   </div>
                   
-                  <div className="space-y-4 text-gray-700">
-                    <p className="text-lg leading-relaxed">
+                  <div className="space-y-3 md:space-y-4 text-slate-700">
+                    <p className="text-sm md:text-lg leading-relaxed">
                       {t('contact.info.description')}
                     </p>
                     
-                    <div className="space-y-3">
+                    <div className="space-y-2 md:space-y-3">
                       <div className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
-                        <span>{t('contact.info.response_time')}</span>
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span className="text-sm md:text-base">{t('contact.info.response_time')}</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
-                        <span>{t('contact.info.languages')}</span>
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span className="text-sm md:text-base">{t('contact.info.languages')}</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
-                        <span>{t('contact.info.availability')}</span>
+                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                        <span className="text-sm md:text-base">{t('contact.info.availability')}</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Visual Element */}
-                <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <div className="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
                   <img
                     src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600"
                     alt="Contact Williams Jullin"
-                    className="w-full h-80 object-cover"
+                    className="w-full h-64 md:h-80 object-cover"
                   />
-                  <div className="absolute inset-0 bg-amber-600/20"></div>
-                  <div className="absolute bottom-6 left-6 text-white">
-                    <h3 className="text-xl font-bold mb-2">
+                  <div className="absolute inset-0 bg-blue-600/20"></div>
+                  <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 text-white">
+                    <h3 className="text-lg md:text-xl font-bold mb-1 md:mb-2">
                       {t('contact.visual.title')}
                     </h3>
-                    <p className="text-amber-100">
+                    <p className="text-blue-100 text-sm md:text-base">
                       {t('contact.visual.subtitle')}
                     </p>
                   </div>

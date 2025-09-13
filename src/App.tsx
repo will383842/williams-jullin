@@ -9,6 +9,7 @@ import BlogPost from './pages/BlogPost';
 import Media from './pages/Media';
 import Contact from './pages/Contact';
 import Investors from './pages/Investors';
+import Admin from './pages/Admin';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -33,7 +34,11 @@ function App() {
   // Handle URL routing
   useEffect(() => {
     const path = window.location.pathname;
-    if (path === '/mon-histoire') {
+    if (path.startsWith('/blog/')) {
+      const postId = path.replace('/blog/', '');
+      setCurrentPage('blog');
+      setBlogPostId(postId);
+    } else if (path === '/mon-histoire') {
       setCurrentPage('story');
     } else if (path === '/blog') {
       setCurrentPage('blog');
@@ -43,6 +48,8 @@ function App() {
       setCurrentPage('contact');
     } else if (path === '/investors') {
       setCurrentPage('investors');
+    } else if (path === '/admin') {
+      setCurrentPage('admin');
     } else {
       setCurrentPage('home');
     }
@@ -63,6 +70,8 @@ function App() {
         return <Contact navigate={navigate} />;
       case 'investors':
         return <Investors navigate={navigate} />;
+      case 'admin':
+        return <Admin navigate={navigate} />;
       default:
         return <Home navigate={navigate} />;
     }

@@ -10,17 +10,449 @@ interface BlogPostProps {
 const BlogPost: React.FC<BlogPostProps> = ({ navigate, postId }) => {
   const { t } = useTranslation();
   
-  // Mock blog post data - in a real app, this would come from an API
-  const blogPost = {
-    id: postId,
-    title: t('blog.posts.visa_guide.title'),
-    content: t('blog.posts.visa_guide.content'),
-    date: '2024-01-15',
-    tags: ['visas', 'tips'],
-    language: 'EN',
-    image: 'https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg?auto=compress&cs=tinysrgb&w=800',
-    readTime: '8 min read'
+  // Blog posts data with full content
+  const blogPosts = {
+    'guide-complet-visas-europeens': {
+      id: 'guide-complet-visas-europeens',
+      title: t('blog.posts.visa_guide.title'),
+      content: `
+        <p class="text-xl text-gray-600 mb-8 font-medium">
+          ${t('blog.posts.visa_guide.intro')}
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">${t('blog.posts.visa_guide.section_1_title')}</h2>
+        <p>${t('blog.posts.visa_guide.section_1_intro')}</p>
+        <ul class="list-disc pl-6 space-y-2 mb-6">
+          <li><strong>${t('blog.posts.visa_guide.tourist_visa_title')}:</strong> ${t('blog.posts.visa_guide.tourist_visa_desc')}</li>
+          <li><strong>${t('blog.posts.visa_guide.work_visa_title')}:</strong> ${t('blog.posts.visa_guide.work_visa_desc')}</li>
+          <li><strong>${t('blog.posts.visa_guide.student_visa_title')}:</strong> ${t('blog.posts.visa_guide.student_visa_desc')}</li>
+          <li><strong>${t('blog.posts.visa_guide.business_visa_title')}:</strong> ${t('blog.posts.visa_guide.business_visa_desc')}</li>
+          <li><strong>${t('blog.posts.visa_guide.residence_permit_title')}:</strong> ${t('blog.posts.visa_guide.residence_permit_desc')}</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">${t('blog.posts.visa_guide.schengen_title')}</h2>
+        <p class="mb-6">
+          ${t('blog.posts.visa_guide.schengen_desc')}
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">${t('blog.posts.visa_guide.documents_title')}</h2>
+        <p>${t('blog.posts.visa_guide.documents_intro')}</p>
+        <ul class="list-disc pl-6 space-y-2 mb-6">
+          <li>${t('blog.posts.visa_guide.doc_passport')}</li>
+          <li>${t('blog.posts.visa_guide.doc_application')}</li>
+          <li>${t('blog.posts.visa_guide.doc_photos')}</li>
+          <li>${t('blog.posts.visa_guide.doc_insurance')}</li>
+          <li>${t('blog.posts.visa_guide.doc_accommodation')}</li>
+          <li>${t('blog.posts.visa_guide.doc_financial')}</li>
+          <li>${t('blog.posts.visa_guide.doc_itinerary')}</li>
+        </ul>
+
+        <div class="bg-blue-50 p-6 rounded-lg mt-6 mb-6">
+          <h3 class="text-lg font-semibold text-blue-900 mb-3">${t('blog.posts.visa_guide.pro_tip_title')}</h3>
+          <p class="text-blue-800">
+            ${t('blog.posts.visa_guide.pro_tip_content')}
+          </p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">${t('blog.posts.visa_guide.timeline_title')}</h2>
+        <p class="mb-4">${t('blog.posts.visa_guide.timeline_intro')}</p>
+        <ul class="list-disc pl-6 space-y-2 mb-6">
+          <li>${t('blog.posts.visa_guide.timeline_1')}</li>
+          <li>${t('blog.posts.visa_guide.timeline_2')}</li>
+          <li>${t('blog.posts.visa_guide.timeline_3')}</li>
+          <li>${t('blog.posts.visa_guide.timeline_4')}</li>
+        </ul>
+
+        <p class="mt-8 text-lg">
+          ${t('blog.posts.visa_guide.conclusion')}
+        </p>
+      `,
+      date: '2024-01-15',
+      tags: ['visas', 'tips'],
+      language: t('blog.language_fr'),
+      image: 'https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg?auto=compress&cs=tinysrgb&w=800',
+      readTime: t('blog.read_time_8')
+    },
+    'banking-digital-nomades-solutions': {
+      id: 'banking-digital-nomades-solutions',
+      title: t('blog.posts.banking_nomad.title'),
+      content: `
+        <p class="text-xl text-gray-600 mb-8 font-medium">
+          ${t('blog.posts.banking_nomad.intro')}
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">${t('blog.posts.banking_nomad.challenges_title')}</h2>
+        <p class="mb-6">
+          ${t('blog.posts.banking_nomad.challenges_desc')}
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">${t('blog.posts.banking_nomad.solutions_title')}</h2>
+        <div class="space-y-6">
+          <div class="bg-green-50 p-6 rounded-lg">
+            <h3 class="text-lg font-semibold text-green-900 mb-3">${t('blog.posts.banking_nomad.digital_banks_title')}</h3>
+            <p class="text-green-800 mb-4">
+              ${t('blog.posts.banking_nomad.digital_banks_desc')}
+            </p>
+            <ul class="list-disc pl-6 space-y-2 text-green-700">
+              <li>${t('blog.posts.banking_nomad.digital_feature_1')}</li>
+              <li>${t('blog.posts.banking_nomad.digital_feature_2')}</li>
+              <li>${t('blog.posts.banking_nomad.digital_feature_3')}</li>
+              <li>${t('blog.posts.banking_nomad.digital_feature_4')}</li>
+            </ul>
+          </div>
+
+          <div class="bg-blue-50 p-6 rounded-lg">
+            <h3 class="text-lg font-semibold text-blue-900 mb-3">${t('blog.posts.banking_nomad.traditional_banks_title')}</h3>
+            <p class="text-blue-800 mb-4">
+              ${t('blog.posts.banking_nomad.traditional_banks_desc')}
+            </p>
+            <ul class="list-disc pl-6 space-y-2 text-blue-700">
+              <li>${t('blog.posts.banking_nomad.traditional_feature_1')}</li>
+              <li>${t('blog.posts.banking_nomad.traditional_feature_2')}</li>
+              <li>${t('blog.posts.banking_nomad.traditional_feature_3')}</li>
+              <li>${t('blog.posts.banking_nomad.traditional_feature_4')}</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">${t('blog.posts.banking_nomad.tips_title')}</h2>
+        <ul class="list-disc pl-6 space-y-2 mb-6">
+          <li>${t('blog.posts.banking_nomad.tip_1')}</li>
+          <li>${t('blog.posts.banking_nomad.tip_2')}</li>
+          <li>${t('blog.posts.banking_nomad.tip_3')}</li>
+          <li>${t('blog.posts.banking_nomad.tip_4')}</li>
+        </ul>
+
+        <p class="mt-8 text-lg">
+          ${t('blog.posts.banking_nomad.conclusion')}
+        </p>
+      `,
+      date: '2024-01-10',
+      tags: ['banking', 'tips'],
+      language: t('blog.language_fr'),
+      image: 'https://images.pexels.com/photos/259200/pexels-photo-259200.jpeg?auto=compress&cs=tinysrgb&w=800',
+      readTime: t('blog.read_time_6')
+    },
+    'trouver-logement-berlin-guide-expat': {
+      id: 'trouver-logement-berlin-guide-expat',
+      title: t('blog.posts.housing_berlin.title'),
+      content: `
+        <p class="text-xl text-gray-600 mb-8 font-medium">
+          ${t('blog.posts.housing_berlin.intro')}
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">${t('blog.posts.housing_berlin.market_title')}</h2>
+        <p class="mb-6">
+          ${t('blog.posts.housing_berlin.market_desc')}
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">${t('blog.posts.housing_berlin.neighborhoods_title')}</h2>
+        <div class="space-y-4 mb-6">
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-gray-900">${t('blog.posts.housing_berlin.mitte_title')}</h3>
+            <p class="text-gray-700">${t('blog.posts.housing_berlin.mitte_desc')}</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-gray-900">${t('blog.posts.housing_berlin.prenzlauer_title')}</h3>
+            <p class="text-gray-700">${t('blog.posts.housing_berlin.prenzlauer_desc')}</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-gray-900">${t('blog.posts.housing_berlin.kreuzberg_title')}</h3>
+            <p class="text-gray-700">${t('blog.posts.housing_berlin.kreuzberg_desc')}</p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Processus de Location</h2>
+        <ol class="list-decimal pl-6 space-y-2 mb-6">
+          <li>Préparez votre dossier complet (Schufa, revenus, références)</li>
+          <li>Recherchez sur ImmobilienScout24, WG-Gesucht</li>
+          <li>Réagissez rapidement aux annonces</li>
+          <li>Préparez-vous pour les visites groupées</li>
+          <li>Négociez si possible</li>
+        </ol>
+
+        <div class="bg-yellow-50 p-6 rounded-lg mt-6 mb-6">
+          <h3 class="text-lg font-semibold text-yellow-900 mb-3">Attention aux Arnaques</h3>
+          <p class="text-yellow-800">
+            Ne versez jamais d'argent avant d'avoir visité le logement et rencontré le propriétaire en personne. Méfiez-vous des prix trop attractifs.
+          </p>
+        </div>
+
+        <p class="mt-8 text-lg">
+          ${t('blog.posts.housing_berlin.conclusion')}
+        </p>
+      `,
+      date: '2024-01-05',
+      tags: ['housing', 'culture'],
+      language: t('blog.language_fr'),
+      image: 'https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=800',
+      readTime: t('blog.read_time_5')
+    },
+    'systemes-sante-expatries-guide': {
+      id: 'systemes-sante-expatries-guide',
+      title: t('blog.posts.healthcare_expat.title'),
+      content: `
+        <p class="text-xl text-gray-600 mb-8 font-medium">
+          ${t('blog.posts.healthcare_expat.intro')}
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Types de Systèmes de Santé</h2>
+        <div class="space-y-4 mb-6">
+          <div class="bg-blue-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-blue-900">Système Public</h3>
+            <p class="text-blue-800">Financé par les impôts, accès universel (France, UK, Canada)</p>
+          </div>
+          <div class="bg-green-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-green-900">Système Mixte</h3>
+            <p class="text-green-800">Combinaison public/privé (Allemagne, Pays-Bas)</p>
+          </div>
+          <div class="bg-orange-50 p-4 rounded-lg">
+            <h3 class="font-semibold text-orange-900">Système Privé</h3>
+            <p class="text-orange-800">Basé sur l'assurance privée (États-Unis)</p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Assurance Santé Internationale</h2>
+        <p class="mb-4">Pour les expatriés, plusieurs options s'offrent :</p>
+        <ul class="list-disc pl-6 space-y-2 mb-6">
+          <li><strong>Assurance locale :</strong> Intégration au système du pays d'accueil</li>
+          <li><strong>Assurance internationale :</strong> Couverture mondiale</li>
+          <li><strong>Assurance voyage longue durée :</strong> Pour les séjours temporaires</li>
+          <li><strong>Assurance employeur :</strong> Fournie par votre entreprise</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Conseils Pratiques</h2>
+        <div class="bg-green-50 p-6 rounded-lg mb-6">
+          <h3 class="text-lg font-semibold text-green-900 mb-3">Avant le Départ</h3>
+          <ul class="list-disc pl-6 space-y-2 text-green-800">
+            <li>Obtenez vos dossiers médicaux traduits</li>
+            <li>Faites un bilan de santé complet</li>
+            <li>Constituez une trousse de premiers secours</li>
+            <li>Recherchez les hôpitaux près de votre futur domicile</li>
+          </ul>
+        </div>
+
+        <div class="bg-blue-50 p-6 rounded-lg mb-6">
+          <h3 class="text-lg font-semibold text-blue-900 mb-3">À l'Arrivée</h3>
+          <ul class="list-disc pl-6 space-y-2 text-blue-800">
+            <li>Inscrivez-vous au système de santé local</li>
+            <li>Trouvez un médecin généraliste</li>
+            <li>Apprenez le vocabulaire médical de base</li>
+            <li>Gardez vos documents d'assurance accessibles</li>
+          </ul>
+        </div>
+
+        <p class="mt-8 text-lg">
+          ${t('blog.posts.healthcare_expat.conclusion')}
+        </p>
+      `,
+      date: '2024-01-01',
+      tags: ['healthcare', 'tips'],
+      language: t('blog.language_fr'),
+      image: 'https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=800',
+      readTime: t('blog.read_time_7')
+    },
+    'surmonter-choc-culturel-guide-pratique': {
+      id: 'surmonter-choc-culturel-guide-pratique',
+      title: t('blog.posts.culture_shock.title'),
+      content: `
+        <p class="text-xl text-gray-600 mb-8 font-medium">
+          ${t('blog.posts.culture_shock.intro')}
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Les Phases du Choc Culturel</h2>
+        <div class="space-y-4 mb-6">
+          <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+            <h3 class="font-semibold text-yellow-900">1. Lune de Miel</h3>
+            <p class="text-yellow-800">Tout semble nouveau et excitant</p>
+          </div>
+          <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-400">
+            <h3 class="font-semibold text-red-900">2. Frustration</h3>
+            <p class="text-red-800">Les différences deviennent irritantes</p>
+          </div>
+          <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+            <h3 class="font-semibold text-blue-900">3. Ajustement</h3>
+            <p class="text-blue-800">Vous commencez à vous adapter</p>
+          </div>
+          <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-400">
+            <h3 class="font-semibold text-green-900">4. Adaptation</h3>
+            <p class="text-green-800">Vous vous sentez chez vous</p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Stratégies d'Adaptation</h2>
+        <div class="space-y-6 mb-6">
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Restez Ouvert d'Esprit</h3>
+            <p class="text-gray-700">
+              Approchez les différences culturelles avec curiosité plutôt qu'avec jugement. Chaque culture a ses raisons d'être.
+            </p>
+          </div>
+          
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Créez des Connexions</h3>
+            <p class="text-gray-700">
+              Rejoignez des groupes d'expatriés, participez à des activités locales, apprenez la langue. Les relations humaines sont essentielles.
+            </p>
+          </div>
+          
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Gardez Vos Racines</h3>
+            <p class="text-gray-700">
+              Maintenez le contact avec votre culture d'origine. L'équilibre entre adaptation et préservation de votre identité est clé.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Quand Demander de l'Aide</h2>
+        <p class="mb-4">N'hésitez pas à chercher du soutien si vous ressentez :</p>
+        <ul class="list-disc pl-6 space-y-2 mb-6">
+          <li>Une tristesse persistante ou de l'anxiété</li>
+          <li>Un isolement social prolongé</li>
+          <li>Des difficultés à accomplir les tâches quotidiennes</li>
+          <li>Une perte d'intérêt pour les activités habituelles</li>
+        </ul>
+
+        <div class="bg-blue-50 p-6 rounded-lg mt-6 mb-6">
+          <h3 class="text-lg font-semibold text-blue-900 mb-3">Ressources d'Aide</h3>
+          <ul class="list-disc pl-6 space-y-2 text-blue-800">
+            <li>Conseillers spécialisés en expatriation</li>
+            <li>Groupes de soutien d'expatriés</li>
+            <li>Services de santé mentale locaux</li>
+            <li>Plateformes comme SOS-Expat pour une aide immédiate</li>
+          </ul>
+        </div>
+
+        <p class="mt-8 text-lg">
+          ${t('blog.posts.culture_shock.conclusion')}
+        </p>
+      `,
+      date: '2023-12-28',
+      tags: ['culture', 'tips'],
+      language: t('blog.language_fr'),
+      image: 'https://images.pexels.com/photos/1366957/pexels-photo-1366957.jpeg?auto=compress&cs=tinysrgb&w=800',
+      readTime: t('blog.read_time_6')
+    },
+    'checklist-demenagement-international': {
+      id: 'checklist-demenagement-international',
+      title: t('blog.posts.moving_checklist.title'),
+      content: `
+        <p class="text-xl text-gray-600 mb-8 font-medium">
+          ${t('blog.posts.moving_checklist.intro')}
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">3-6 Mois Avant le Départ</h2>
+        <div class="bg-blue-50 p-6 rounded-lg mb-6">
+          <h3 class="text-lg font-semibold text-blue-900 mb-3">Documents et Formalités</h3>
+          <ul class="list-disc pl-6 space-y-2 text-blue-800">
+            <li>Vérifiez la validité de votre passeport (6 mois minimum)</li>
+            <li>Demandez votre visa si nécessaire</li>
+            <li>Obtenez des copies certifiées de tous vos documents importants</li>
+            <li>Faites traduire vos diplômes et certificats</li>
+            <li>Demandez un extrait de casier judiciaire</li>
+          </ul>
+        </div>
+
+        <div class="bg-green-50 p-6 rounded-lg mb-6">
+          <h3 class="text-lg font-semibold text-green-900 mb-3">Finances</h3>
+          <ul class="list-disc pl-6 space-y-2 text-green-800">
+            <li>Recherchez les options bancaires dans votre pays de destination</li>
+            <li>Informez votre banque de votre déménagement</li>
+            <li>Étudiez les implications fiscales</li>
+            <li>Souscrivez une assurance santé internationale</li>
+          </ul>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">1-3 Mois Avant le Départ</h2>
+        <div class="bg-orange-50 p-6 rounded-lg mb-6">
+          <h3 class="text-lg font-semibold text-orange-900 mb-3">Logement et Déménagement</h3>
+          <ul class="list-disc pl-6 space-y-2 text-orange-800">
+            <li>Recherchez et réservez votre logement</li>
+            <li>Obtenez des devis de déménageurs internationaux</li>
+            <li>Décidez ce que vous emportez, vendez ou stockez</li>
+            <li>Organisez le transport de vos animaux de compagnie</li>
+          </ul>
+        </div>
+
+        <div class="bg-purple-50 p-6 rounded-lg mb-6">
+          <h3 class="text-lg font-semibold text-purple-900 mb-3">Santé et Éducation</h3>
+          <ul class="list-disc pl-6 space-y-2 text-purple-800">
+            <li>Faites un bilan de santé complet</li>
+            <li>Obtenez vos dossiers médicaux</li>
+            <li>Mettez à jour vos vaccinations</li>
+            <li>Recherchez des écoles pour vos enfants</li>
+          </ul>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">1 Mois Avant le Départ</h2>
+        <div class="bg-red-50 p-6 rounded-lg mb-6">
+          <h3 class="text-lg font-semibold text-red-900 mb-3">Dernières Formalités</h3>
+          <ul class="list-disc pl-6 space-y-2 text-red-800">
+            <li>Résiliez vos contrats (électricité, gaz, internet, téléphone)</li>
+            <li>Changez votre adresse auprès des administrations</li>
+            <li>Videz et fermez vos comptes bancaires locaux si nécessaire</li>
+            <li>Organisez une fête d'adieu</li>
+          </ul>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Semaine du Départ</h2>
+        <div class="bg-gray-50 p-6 rounded-lg mb-6">
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Derniers Préparatifs</h3>
+          <ul class="list-disc pl-6 space-y-2 text-gray-800">
+            <li>Préparez votre bagage à main avec les essentiels</li>
+            <li>Confirmez tous vos vols et réservations</li>
+            <li>Échangez de l'argent dans la devise locale</li>
+            <li>Sauvegardez vos données importantes</li>
+            <li>Préparez un kit de survie pour les premiers jours</li>
+          </ul>
+        </div>
+
+        <div class="bg-yellow-50 p-6 rounded-lg mt-6 mb-6">
+          <h3 class="text-lg font-semibold text-yellow-900 mb-3">Conseil Final</h3>
+          <p class="text-yellow-800">
+            Gardez une copie numérique de tous vos documents importants dans le cloud. Préparez aussi une trousse de premiers secours avec vos médicaments essentiels.
+          </p>
+        </div>
+
+        <p class="mt-8 text-lg">
+          ${t('blog.posts.moving_checklist.conclusion')}
+        </p>
+      `,
+      date: '2023-12-25',
+      tags: ['tips', 'moving'],
+      language: t('blog.language_fr'),
+      image: 'https://images.pexels.com/photos/7464860/pexels-photo-7464860.jpeg?auto=compress&cs=tinysrgb&w=800',
+      readTime: t('blog.read_time_10')
+    }
   };
+
+  const blogPost = blogPosts[postId];
+
+  if (!blogPost) {
+    return (
+      <div className="pt-24 min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">{t('blog.not_found_title')}</h1>
+          <button
+            onClick={() => navigate('blog')}
+            className="text-blue-600 hover:text-blue-700 font-semibold"
+          >
+            {t('blog.back_to_blog')}
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // Update URL and page title
+  React.useEffect(() => {
+    window.history.pushState({}, '', `/blog/${postId}`);
+    document.title = `${blogPost.title} - ${t('blog.site_title')}`;
+    
+    return () => {
+      document.title = t('blog.default_title');
+    };
+  }, [postId, blogPost.title, t]);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -91,7 +523,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ navigate, postId }) => {
               <span>{blogPost.readTime}</span>
               <span>•</span>
               <span className="px-3 py-1 bg-gray-100 rounded-full text-sm font-medium">
-                {blogPost.language}
+                {t('blog.language_label')}
               </span>
             </div>
 
@@ -128,7 +560,6 @@ const BlogPost: React.FC<BlogPostProps> = ({ navigate, postId }) => {
                 key={tag}
                 className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
               >
-                <Tag size={12} className="inline mr-1" />
                 {t(`blog.topics.${tag}`)}
               </span>
             ))}
@@ -136,99 +567,10 @@ const BlogPost: React.FC<BlogPostProps> = ({ navigate, postId }) => {
 
           {/* Article Content */}
           <div className="prose prose-lg max-w-none">
-            <div className="text-gray-700 leading-relaxed space-y-6">
-              <p className="text-xl text-gray-600 mb-8 font-medium">
-                Moving to a new country can be one of life's most exciting adventures, but navigating the visa process doesn't have to be overwhelming. This comprehensive guide will walk you through everything you need to know about obtaining visas for European countries.
-              </p>
-
-              <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Understanding Visa Types</h2>
-              <p>
-                European countries offer various types of visas depending on your purpose of visit. The most common categories include:
-              </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li><strong>Tourist Visas:</strong> For short-term visits up to 90 days</li>
-                <li><strong>Work Visas:</strong> For employment purposes with specific employer sponsorship</li>
-                <li><strong>Student Visas:</strong> For educational pursuits at recognized institutions</li>
-                <li><strong>Business Visas:</strong> For short-term business activities</li>
-                <li><strong>Residence Permits:</strong> For long-term stays exceeding 90 days</li>
-              </ul>
-
-              <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">The Schengen Agreement</h2>
-              <p>
-                One of the most important concepts to understand is the Schengen Area, which allows free movement between 27 European countries with a single visa. This means that once you have a Schengen visa, you can travel freely within all member countries during your authorized stay period.
-              </p>
-
-              <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Essential Documents</h2>
-              <p>
-                Regardless of the visa type, you'll typically need:
-              </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Valid passport with at least 6 months remaining validity</li>
-                <li>Completed visa application form</li>
-                <li>Recent passport-sized photographs</li>
-                <li>Travel insurance covering €30,000 minimum</li>
-                <li>Proof of accommodation</li>
-                <li>Financial statements showing sufficient funds</li>
-                <li>Flight itinerary or travel bookings</li>
-              </ul>
-
-              <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Country-Specific Requirements</h2>
-              <p>
-                While the Schengen area has standardized many requirements, each country may have specific additional requirements. For example:
-              </p>
-
-              <div className="bg-blue-50 p-6 rounded-lg mt-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-3">Pro Tip</h3>
-                <p className="text-blue-800">
-                  Always check the specific requirements for your destination country, as regulations can change frequently. Consider consulting with the embassy or consulate directly for the most up-to-date information.
-                </p>
-              </div>
-
-              <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Timeline and Planning</h2>
-              <p>
-                Visa processing times can vary significantly depending on your nationality, the type of visa, and the time of year. Generally, you should:
-              </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Apply 3-4 weeks before your intended travel date</li>
-                <li>Schedule appointments well in advance, especially during peak seasons</li>
-                <li>Prepare all documents thoroughly to avoid delays</li>
-                <li>Consider premium processing services if available and needed</li>
-              </ul>
-
-              <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Common Mistakes to Avoid</h2>
-              <p>
-                Based on my experience helping thousands of expats, here are the most common mistakes that can derail your visa application:
-              </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Incomplete or incorrectly filled application forms</li>
-                <li>Insufficient financial documentation</li>
-                <li>Inadequate travel insurance coverage</li>
-                <li>Missing or expired supporting documents</li>
-                <li>Applying to the wrong embassy or consulate</li>
-              </ul>
-
-              <div className="bg-yellow-50 p-6 rounded-lg mt-6">
-                <h3 className="text-lg font-semibold text-yellow-900 mb-3">Important Note</h3>
-                <p className="text-yellow-800">
-                  Visa denials can affect future applications, so it's crucial to get everything right the first time. When in doubt, seek professional assistance or consult with experienced expats who have successfully navigated the process.
-                </p>
-              </div>
-
-              <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Next Steps</h2>
-              <p>
-                Once you have your visa approved, the real adventure begins! Remember to:
-              </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Register with local authorities within the required timeframe</li>
-                <li>Set up essential services like banking and healthcare</li>
-                <li>Consider long-term residence options if you plan to stay</li>
-                <li>Connect with local expat communities for support and networking</li>
-              </ul>
-
-              <p className="mt-8 text-lg">
-                The visa process might seem daunting at first, but with proper preparation and understanding of the requirements, you'll be well on your way to your European adventure. Remember, every successful expat started exactly where you are now – with a dream and the determination to make it happen.
-              </p>
-            </div>
+            <div
+              className="text-gray-700 leading-relaxed space-y-6"
+              dangerouslySetInnerHTML={{ __html: blogPost.content }}
+            />
           </div>
 
           {/* Author Box */}
@@ -249,13 +591,13 @@ const BlogPost: React.FC<BlogPostProps> = ({ navigate, postId }) => {
                     onClick={() => navigate('story')}
                     className="text-blue-600 hover:text-blue-700 font-semibold"
                   >
-                    {t('blog.read_story')}
+                    {t('blog.author.read_story')}
                   </button>
                   <button
                     onClick={() => navigate('contact')}
                     className="text-blue-600 hover:text-blue-700 font-semibold"
                   >
-                    {t('blog.get_in_touch')}
+                    {t('blog.author.get_in_touch')}
                   </button>
                 </div>
               </div>

@@ -1,0 +1,103 @@
+--- a/project/src/pages/admin/LogsAdmin.tsx
++++ b/project/src/pages/admin/LogsAdmin.tsx
+@@ -38,7 +38,7 @@
+ }
+ 
+ const LogsAdmin: React.FC = () => {
+-  const { t } = useTranslation();
++  const { t, i18n } = useTranslation();
+ 
+   const [logs, setLogs] = useState<LogEntry[]>([]);
+   const [loading, setLoading] = useState(true);
+@@ -283,14 +283,14 @@
+   };
+ 
+   const clearOldLogs = async () => {
+-    if (confirm('Êtes-vous sûr de vouloir supprimer les logs de plus de 30 jours ? Cette action est irréversible.')) {
++    if (confirm(t('admin.logs.confirm_clear'))) {
+       try {
+         const cutoffDate = new Date();
+         cutoffDate.setDate(cutoffDate.getDate() - 30);
+         await new Promise(resolve => setTimeout(resolve, 1000));
+-        alert('Logs anciens supprimés avec succès (simulation)');
++        alert(t('admin.logs.gc_success'));
+       } catch (error) {
+-        alert('Erreur lors de la suppression des logs');
++        alert(t('admin.logs.gc_error'));
+       }
+     }
+   };
+@@ -298,7 +298,7 @@
+   const formatTimestamp = (timestamp: any) => {
+     if (!timestamp) return '—';
+     const date = timestamp.toDate ? timestamp.toDate() : new Date(timestamp);
+-    return date.toLocaleString('fr-FR');
++    return date.toLocaleString(i18n.language);
+   };
+ 
+   const formatDuration = (duration?: number) => {
+--- a/project/src/components/admin/AdminSidebar.tsx
++++ b/project/src/components/admin/AdminSidebar.tsx
+@@ -82,7 +82,7 @@
+     },
+     {
+       id: 'settings',
+-      title: 'Paramètres',
++      title: t('admin.menu.settings'),
+       icon: <Settings className="w-5 h-5" />,
+       subItems: [
+         {
+@@ -148,7 +148,7 @@
+           <button
+             onClick={() => setCollapsed(!collapsed)}
+             className="p-2 hover:bg-slate-100 rounded-lg transition-colors"
+-            title={collapsed ? 'Étendre' : 'Réduire'}
++            title={collapsed ? t('admin.common.expand') : t('admin.common.collapse')}
+           >
+             <ChevronRight className={`w-4 h-4 transition-transform ${collapsed ? '' : 'rotate-180'}`} />
+           </button>
+@@ -268,7 +268,7 @@
+           <button
+             onClick={handleSignOut}
+             className="w-full p-3 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+-            title="Se déconnecter"
++            title={t("admin.auth.logout")}
+           >
+             <LogOut className="w-5 h-5" />
+           </button>
+@@ -291,7 +291,7 @@
+             <div className="flex space-x-2">
+               <button className="flex-1 flex items-center justify-center space-x-1 p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors">
+                 <Shield className="w-4 h-4" />
+-                <span className="text-xs">Sécurité</span>
++                <span className="text-xs">{t("admin.menu.security")}</span>
+               </button>
+               <button
+                 onClick={handleSignOut}
+--- a/project/src/components/BlogEditor.tsx
++++ b/project/src/components/BlogEditor.tsx
+@@ -12,6 +12,7 @@
+ } from 'firebase/firestore';
+ import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+ import { db, storage } from '../lib/firebase';
++import { useTranslation } from 'react-i18next';
+ import { 
+   Plus, 
+   Edit, 
+@@ -43,6 +44,7 @@
+ }
+ 
+ const BlogEditor: React.FC = () => {
++  const { t } = useTranslation();
+   const [posts, setPosts] = useState<BlogPost[]>([]);
+   const [isEditing, setIsEditing] = useState(false);
+   const [editingPost, setEditingPost] = useState<Partial<BlogPost>>({
+@@ -169,7 +171,7 @@
+   };
+ 
+   const deletePost = async (postId: string) => {
+-    if (!confirm('Êtes-vous sûr de vouloir supprimer cet article ?')) return;
++    if (!confirm(t('admin.blog.confirm_delete'))) return;
+     
+     try {
+       await deleteDoc(doc(db, 'posts', postId));

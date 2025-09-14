@@ -1,738 +1,1520 @@
 {
-  "nav": {
-    "home": "Inicio",
-    "story": "Mi Historia",
-    "ulixai": "Ulixai.com",
-    "sos_expat": "SOS-Expat.com",
-    "blog": "Blog",
-    "media": "Medios",
-    "contact": "Contacto"
-  },
-  "home": {
-    "hero": {
-      "badge": "Experto en Movilidad Global",
-      "title": "Transformando la Movilidad Global",
-      "subtitle": "Experto en movilidad internacional con plataformas innovadoras sirviendo a más de 500K expatriados en todo el mundo.",
-      "cta_primary": "Obtener Ayuda Experta",
-      "cta_secondary": "Descubrir Mi Historia"
+  "admin": {
+    "activity": {
+      "none": "None",
+      "recent": "Recent",
+      "recent_actions": "Recent actions",
+      "title": "Title"
+    },
+    "analytics": {
+      "all_data": "All data",
+      "devices": "Devices",
+      "geo": "Geo",
+      "over_time": "Over time",
+      "subtitle": "Subtitle"
+    },
+    "audit": {
+      "checklist": {
+        "admin_console": "Admin console",
+        "connected": "Connected",
+        "contacts": "Contacts",
+        "deployment_ready": "Deployment ready",
+        "firestore": "Firestore",
+        "languages": "Languages",
+        "performance": "Performance",
+        "security": "Security",
+        "seo": "Seo",
+        "spa": "Spa"
+      },
+      "close_panel": "Close panel",
+      "details_label": "Details label",
+      "errors": "Errors",
+      "export": "Export",
+      "footer": "Footer",
+      "header_title": "Header title",
+      "last_run": "Last run",
+      "open_button": "Open button",
+      "open_title": "Open title",
+      "recommendation_label": "Recommendation label",
+      "run_full": "Run full",
+      "running": "Running",
+      "success": "Success",
+      "success_ratio": "Success ratio",
+      "tests_count": "Tests count",
+      "warnings": "Warnings"
+    },
+    "auth": {
+      "admin_required": "Admin required",
+      "checking": "Checking",
+      "connecting": "Connecting",
+      "invalid_email": "Invalid email",
+      "login_error": "Login error",
+      "logout": "Logout",
+      "secure_login_required": "Secure login required",
+      "sign_in": "Sign in",
+      "user_not_found": "User not found",
+      "wrong_password": "Wrong password"
+    },
+    "blog": {
+      "confirm_delete": "Are you sure you want to delete this post?"
+    },
+    "common": {
+      "actions": "Actions",
+      "all": "All",
+      "all_priorities": "All priorities",
+      "all_statuses": "All statuses",
+      "archive": "Archive",
+      "archived": "Archived",
+      "cancel": "Cancel",
+      "create": "Create",
+      "delete": "Delete",
+      "high": "High",
+      "last_1h": "Last 1h",
+      "last_24h": "Last 24h",
+      "last_30d": "Last 30d",
+      "last_7d": "Last 7d",
+      "loading": "Loading",
+      "low": "Low",
+      "mark_read": "Mark read",
+      "mark_replied": "Mark replied",
+      "medium": "Medium",
+      "new": "New",
+      "no_results": "No results",
+      "of": "Of",
+      "per_page": "Per page",
+      "read": "Read",
+      "replied": "Replied",
+      "selected": "Selected",
+      "total": "Total",
+      "urgent": "Urgent",
+      "view_details": "View details"
+    },
+    "contacts": {
+      "bulk_action_error": "Bulk action error",
+      "country": "Country",
+      "delete_confirm_description": "Delete confirm description",
+      "delete_confirm_title": "Delete confirm title",
+      "delete_error": "Delete error",
+      "deleted_success": "Deleted success",
+      "detail_title": "Detail title",
+      "email": "Email",
+      "full_name": "Full name",
+      "message": "Message",
+      "priority": "Priority",
+      "priority_update_error": "Priority update error",
+      "priority_updated_success": "Priority updated success",
+      "received_date": "Received date",
+      "status": "Status",
+      "status_update_error": "Status update error",
+      "status_updated_success": "Status updated success",
+      "subject": "Subject",
+      "subtitle": "Subtitle"
+    },
+    "dashboard": {
+      "need_attention": "Need attention",
+      "title": "Title"
+    },
+    "header": {
+      "title": "Title"
+    },
+    "investors": {
+      "all_types": "All types",
+      "batch": {
+        "mark_qualified": "Mark qualified",
+        "mark_urgent": "Mark urgent",
+        "meeting_scheduled": "Meeting scheduled",
+        "reject": "Reject"
+      },
+      "bulk_action_error": "Bulk action error",
+      "delete_confirm_description": "Delete confirm description",
+      "delete_confirm_title": "Delete confirm title",
+      "delete_error": "Delete error",
+      "deleted_success": "Deleted success",
+      "detail_title": "Detail title",
+      "email": "Email",
+      "experience": "Experience",
+      "full_name": "Full name",
+      "geographic_focus": "Geographic focus",
+      "investment_amount": "Investment amount",
+      "investor_type": "Investor type",
+      "message": "Message",
+      "organization": "Organization",
+      "phone": "Phone",
+      "platform_interest": "Platform interest",
+      "position": "Position",
+      "priority_update_error": "Priority update error",
+      "priority_updated_success": "Priority updated success",
+      "received_date": "Received date",
+      "section": {
+        "investment": "Investment",
+        "personal": "Personal",
+        "professional": "Professional"
+      },
+      "status": {
+        "closed": "Closed",
+        "due_diligence": "Due diligence",
+        "meeting": "Meeting",
+        "negotiation": "Negotiation",
+        "new": "New",
+        "qualified": "Qualified",
+        "rejected": "Rejected"
+      },
+      "status_update_error": "Status update error",
+      "status_updated_success": "Status updated success",
+      "subtitle": "Subtitle",
+      "table": {
+        "email": "Email",
+        "name": "Name",
+        "organization": "Organization",
+        "priority": "Priority",
+        "received": "Received",
+        "status": "Status",
+        "ticket": "Ticket",
+        "timeline": "Timeline",
+        "type": "Type"
+      },
+      "timeline": "Timeline",
+      "title": "Title",
+      "website": "Website"
+    },
+    "logs": {
+      "confirm_clear": "Confirm clear",
+      "gc_error": "Gc error",
+      "gc_success": "Gc success",
+      "none": "None",
+      "subtitle": "Subtitle",
+      "title": "Title"
+    },
+    "menu": {
+      "contacts": "Contacts",
+      "dashboard": "Dashboard",
+      "investors": "Investors",
+      "messages": "Messages",
+      "notifications": "Notifications"
+    },
+    "notifications": {
+      "actions": {
+        "archive": "Archive",
+        "mark_all_read": "Mark all read",
+        "mark_read": "Mark read"
+      },
+      "channels_label": "Channels label",
+      "filters": {
+        "categories": {
+          "all": "All",
+          "contact": "Contact",
+          "investor": "Investor",
+          "marketing": "Marketing",
+          "security": "Security",
+          "system": "System",
+          "update": "Update"
+        },
+        "priority": {
+          "all": "All"
+        },
+        "read": {
+          "all": "All",
+          "read": "Read",
+          "unread": "Unread"
+        },
+        "types": {
+          "all": "All",
+          "error": "Error",
+          "info": "Info",
+          "success": "Success",
+          "system": "System",
+          "warning": "Warning"
+        }
+      },
+      "form": {
+        "message": "Message",
+        "priority": "Priority",
+        "title": "Title",
+        "type": "Type"
+      },
+      "loading": "Loading",
+      "new": {
+        "button": "Button",
+        "title": "Title"
+      },
+      "none": "None",
+      "settings": {
+        "categories": "Categories",
+        "close": "Close",
+        "desktop": "Desktop",
+        "enable": "Enable",
+        "general": "General",
+        "open": "Open",
+        "quiet_hours": {
+          "enable": "Enable",
+          "end": "End",
+          "start": "Start",
+          "title": "Title"
+        },
+        "save": "Save",
+        "sound": "Sound",
+        "title": "Title"
+      },
+      "stats": {
+        "today": "Today",
+        "total": "Total",
+        "unread": "Unread",
+        "urgent": "Urgent"
+      },
+      "subtitle": "Subtitle",
+      "title": "Title"
+    },
+    "realtime": {
+      "active_users": "Active users",
+      "activity_5min": "Activity 5min",
+      "by": "By",
+      "close": "Close",
+      "connected": "Connected",
+      "disconnected": "Disconnected",
+      "error_rate": "Error rate",
+      "errors": "Errors",
+      "events": "Events",
+      "info": "Info",
+      "last_5m": "Last 5m",
+      "memory": "Memory",
+      "none": "None",
+      "req_per_min": "Req per min",
+      "response_time": "Response time",
+      "stream": "Stream",
+      "subtitle": "Subtitle",
+      "success": "Success",
+      "system_load": "System load",
+      "system_metrics": "System metrics",
+      "title": "Title",
+      "uptime": "Uptime",
+      "view_details": "View details",
+      "warnings": "Warnings"
+    },
+    "search": {
+      "contacts_placeholder": "Contacts placeholder",
+      "investors_placeholder": "Investors placeholder",
+      "placeholder": "Placeholder"
+    },
+    "settings": {
+      "availability": "Availability",
+      "backup_success": "Backup success",
+      "load_error": "Load error",
+      "restore_confirm": "Restore confirm",
+      "system_state": "System state",
+      "system_subtitle": "System subtitle",
+      "system_title": "System title",
+      "unsaved_changes": "Unsaved changes"
     },
     "stats": {
-      "expats_helped": "Expatriados Ayudados",
-      "countries_covered": "Países",
-      "years_experience": "Años de Experiencia",
-      "satisfaction_rate": "Satisfacción"
+      "contacts": "Contactos",
+      "conversion": "Conversión",
+      "investors": "Inversores",
+      "new": "Nuevos"
     },
-    "mission": {
-      "title": "Mi Misión",
-      "subtitle": "Empoderar a ciudadanos globales a través de soluciones innovadoras y orientación experta para transiciones internacionales fluidas.",
-      "empathy": "Empatía",
-      "empathy_desc": "Entender los desafíos únicos que cada expatriado enfrenta durante su viaje internacional.",
-      "community": "Comunidad",
-      "community_desc": "Construir puentes entre culturas y crear redes de apoyo en todo el mundo.",
-      "innovation": "Innovación",
-      "innovation_desc": "Desarrollar soluciones de vanguardia para simplificar procesos internacionales complejos."
-    },
-    "solutions": {
-      "title": "Mis Soluciones",
-      "subtitle": "Dos plataformas integrales diseñadas para apoyar cada aspecto de tu viaje internacional.",
-      "sos_title": "SOS-Expat",
-      "sos_desc": "Asistencia de emergencia y apoyo urgente para expatriados en situaciones críticas en todo el mundo.",
-      "sos_feature_1": "Soporte de Emergencia 24/7",
-      "sos_feature_2": "Asistencia Legal y Médica",
-      "sos_feature_3": "Soporte Multiidioma",
-      "ulixai_title": "Ulixai",
-      "ulixai_desc": "Plataforma integral de reubicación con herramientas impulsadas por IA y orientación experta.",
-      "ulixai_feature_1": "Emparejamiento con IA",
-      "ulixai_feature_2": "Consultas de Expertos",
-      "ulixai_feature_3": "Suite Completa de Reubicación",
-      "discover": "Descubrir"
-    },
-    "partners": {
-      "title": "Red de Socios de Confianza",
-      "subtitle": "Una red cuidadosamente curada de profesionales verificados en más de 25 países.",
-      "legal": "Red de Socios Legales",
-      "legal_desc": "Abogados de inmigración y expertos legales especializados en procedimientos de visa y residencia.",
-      "legal_expertise": "Derecho de Inmigración",
-      "banking": "Soluciones Bancarias",
-      "banking_desc": "Socios bancarios internacionales que ofrecen servicios financieros amigables para expatriados.",
-      "banking_expertise": "Banca Internacional",
-      "housing": "Red de Vivienda",
-      "housing_desc": "Profesionales inmobiliarios verificados y especialistas en vivienda en todo el mundo.",
-      "housing_expertise": "Bienes Raíces",
-      "healthcare": "Socios de Salud",
-      "healthcare_desc": "Profesionales médicos y proveedores de seguros para cobertura de salud integral.",
-      "healthcare_expertise": "Salud y Seguros"
-    },
-    "clients": {
-      "title": "Confiado por Líderes Globales",
-      "subtitle": "Desde startups hasta empresas Fortune 500, organizaciones de todo el mundo confían en nuestra experiencia.",
-      "startups": "Startups Tech",
-      "startups_desc": "Apoyando empresas innovadoras en su expansión global y adquisición de talento.",
-      "startups_projects": "150+",
-      "startups_satisfaction": "98%",
-      "multinationals": "Multinacionales",
-      "multinationals_desc": "Facilitando transferencias internacionales y programas de movilidad global.",
-      "multinationals_projects": "50+",
-      "multinationals_satisfaction": "99%",
-      "individuals": "Individuos",
-      "individuals_desc": "Orientación personal para individuos y familias que buscan oportunidades internacionales.",
-      "individuals_projects": "500K+",
-      "individuals_satisfaction": "97%",
-      "projects_completed": "Proyectos",
-      "satisfaction": "Satisfacción"
-    },
-    "help": {
-      "title": "Cómo Puedo Ayudarte",
-      "subtitle": "Ya sea que necesites asistencia de emergencia, apoyo de planificación o perspectivas expertas, estoy aquí para guiar tu viaje internacional.",
-      "emergency": "Soporte de Emergencia",
-      "emergency_desc": "Asistencia inmediata para situaciones urgentes en el extranjero a través de la red de soporte 24/7 de SOS-Expat.",
-      "emergency_action": "Obtener Ayuda de Emergencia",
-      "prepare": "Planifica Tu Mudanza",
-      "prepare_desc": "Planificación integral de reubicación con emparejamiento impulsado por IA y orientación experta a través de Ulixai.",
-      "prepare_action": "Comenzar Planificación",
-      "learn": "Aprender e Insights",
-      "learn_desc": "Perspectivas expertas, guías prácticas y experiencias reales compartidas a través de mi blog y recursos.",
-      "learn_action": "Leer Blog"
-    },
-    "cta": {
-      "title": "¿Listo para Transformar Tu Viaje Global?",
-      "subtitle": "Únete a miles de expatriados exitosos que han transformado su experiencia internacional con orientación experta y soluciones innovadoras.",
-      "contact": "Ponerse en Contacto",
-      "story": "Mi Historia"
-    }
-  },
-  "story": {
-    "hero": {
-      "badge": "Williams Jullin",
-      "title_1": "Empresario",
-      "title_2": "Fundador y CEO",
-      "subtitle": "Vivo el emprendimiento como una evidencia, como una necesidad de crear y desarrollar. Mi obsesión: superar constantemente mis límites y descubrir hasta dónde puedo llegar.",
-      "companies": "SOS-Expat & Ulixai",
-      "location": "Con sede en Tailandia",
-      "role_1": "Empresario",
-      "role_2": "Innovador"
-    },
-    "intro": {
-      "badge": "La obsesión que me guía",
-      "title": "Construir, desarrollar, superar mis habilidades",
-      "paragraph_1": "Guiado por una sola obsesión: construir, desarrollar, superar mis habilidades, aprender siempre y para siempre.",
-      "paragraph_2": "Varias empresas, con éxitos y fracasos, me han forjado. En 2017, lanzo una empresa nacional que despega, se desarrolla tan rápido que era difícil seguir su ascensión…",
-      "paragraph_3": "Luego Covid y lo que siguió. Devastado, tuve que reconstruirme desde adentro. En julio de 2024, me voy a expatriar a Tailandia.",
-      "quote": "La adrenalina me nutre. La rutina me apaga. Quiero desafíos, imprevistos, esa presión que empuja a inventar y superarse. Ahí es donde me siento completamente vivo."
-    },
-    "expatriation": {
-      "badge": "La revelación",
-      "title": "La expatriación que lo cambia todo",
-      "shock_title": "El shock de la realidad",
-      "shock_paragraph_1": "Sin red. Sin ayuda. Solo. Cada paso — visa, vivienda, cuenta bancaria — se convierte en un desafío.",
-      "shock_paragraph_2": "Y entiendo: Sin importar su nacionalidad, todos experimentan la misma soledad al comenzar una nueva vida en otro lugar.",
-      "community_title": "Nuestra Comunidad",
-      "community_stat_1": "Expatriados ayudados",
-      "community_stat_2": "Países cubiertos",
-      "community_description": "Una comunidad global en crecimiento. Cada día, nuevos expatriados se unen a nuestras plataformas y nuevos ayudantes ofrecen sus servicios",
-      "mission_title": "Conectar expatriados y viajeros de todo el mundo, en un ecosistema",
-      "mission_subtitle": "Dos plataformas complementarias, cuatro misiones claras."
-    },
-    "platforms": {
-      "badge": "Dos plataformas, 4 misiones",
-      "title": "El ecosistema completo",
-      "subtitle": "Dejar o vivir fuera de su país ya no debe rimar con soledad y dificultades",
-      "sos": {
-        "subtitle": "Ayuda inmediata para expatriados",
-        "feature_1_title": "Ayuda inmediata",
-        "feature_1_desc": "En menos de 5 minutos, un abogado o expatriado ayudante contesta, en cualquier parte del mundo.",
-        "feature_2_title": "Ingresos garantizados",
-        "feature_2_desc": "Abogados y expatriados ayudantes son pagados a través de llamadas prepagadas.",
-        "cta": "Descubrir SOS-Expat"
+    "status": {
+      "close_panel": "Close panel",
+      "components_ready": "Components ready",
+      "config_required": "Config required",
+      "critical_errors_headline": "Critical errors headline",
+      "enable_services_hint": "Enable services hint",
+      "env_missing": "Env missing",
+      "firebase": {
+        "connection": "Connection"
       },
-      "ulixai": {
-        "subtitle": "Servicios y cotizaciones para expatriados",
-        "feature_1_title": "Servicios y cotizaciones ilimitados",
-        "feature_1_desc": "Visa, permisos, vivienda, traducciones, transporte… proveedores verificados responden en minutos.",
-        "feature_2_title": "Ingresos globales",
-        "feature_2_desc": "Profesionales y expatriados monetizan su experiencia donde sea que estén.",
-        "cta": "Descubrir Ulixai"
-      }
+      "firebase_test": {
+        "error": "Error",
+        "run": "Run",
+        "running": "Running",
+        "title": "Title"
+      },
+      "improvements_headline": "Improvements headline",
+      "open_title": "Open title",
+      "production_ready_badge": "Production ready badge",
+      "ready_headline": "Ready headline",
+      "title": "Title"
     },
-    "intro": {
-      "title": "El Viaje Comienza",
-      "paragraph_1": "Mi viaje en la movilidad internacional comenzó con mis propios desafíos como expatriado. Al mudarme entre países, experimenté de primera mano las complejidades, frustraciones y brechas en el apoyo que millones de expatriados enfrentan diariamente.",
-      "paragraph_2": "Estas experiencias personales se convirtieron en la base para entender lo que los expatriados realmente necesitan - no solo información, sino apoyo integral, redes confiables y soluciones innovadoras que realmente funcionen.",
-      "paragraph_3": "Hoy, a través de SOS-Expat y Ulixai, he transformado estas perspectivas en plataformas que han ayudado a más de 500,000 expatriados a navegar sus viajes internacionales exitosamente."
-    },
-    "timeline": {
-      "badge": "Del ascenso a la reconstrucción",
-      "title": "Hitos Clave",
-      "subtitle": "Los momentos pivotales que dieron forma a mi misión de transformar la movilidad global.",
-      "before_2017": "Antes de 2017: Varias empresas creadas con éxitos como fracasos. Éxitos que me dieron confianza, fracasos que me enseñaron humildad y me enseñaron. Cada experiencia forjó mi resistencia y refinó mi visión empresarial.",
-      "event_1": {
-        "title": "El despegue fulminante",
-        "description": "Lanzamiento de una marca que experimenta crecimiento explosivo. Un ascenso vertiginoso que desafía todas las predicciones.",
-        "location": "Francia",
-        "emotion": "🚀",
-        "feeling": "La euforia del éxito",
-        "lesson": "El éxito puede llegar más rápido de lo que imaginamos"
-      },
-      "event_2": {
-        "title": "La caída y aniquilación",
-        "description": "Covid golpea. En menos de dos años, todo se derrumba. Un shock brutal, una pérdida total... pero también una revelación.",
-        "location": "Francia",
-        "emotion": "💔",
-        "feeling": "Reconstrucción desde adentro",
-        "lesson": "A veces hay que perderlo todo para encontrarlo todo"
-      },
-      "event_3": {
-        "title": "La decisión del gran salto",
-        "description": "A los 48, tomo la decisión que cambiará mi vida: expatriarme. Dejar mi zona de confort para renacer en otro lugar.",
-        "location": "Francia",
-        "emotion": "✈️",
-        "feeling": "El coraje de empezar de nuevo",
-        "lesson": "Nunca es demasiado tarde para empezar de nuevo"
-      },
-      "event_4": {
-        "title": "Destino Tailandia",
-        "description": "Julio 2024: me establezco definitivamente en Tailandia. Sin red, sin ayuda. Solo. Cada trámite se convierte en un desafío.",
-        "location": "Tailandia",
-        "emotion": "🌴",
-        "feeling": "La soledad del expatriado",
-        "lesson": "La expatriación revela nuestra verdadera fuerza interior"
-      },
-      "event_5": {
-        "title": "Un año aislado del mundo",
-        "description": "De 4 AM a 11 PM 7/7. Viendo poco a mis hijos... El sacrificio más desgarrador para un objetivo: crear la primera plataforma que unirá a todos los expatriados del mundo.",
-        "location": "Tailandia",
-        "emotion": "💻",
-        "feeling": "Obsesión creativa",
-        "lesson": "Los proyectos más grandes nacen en la soledad y la tenacidad"
-      },
-      "event_6": {
-        "title": "El nacimiento del ecosistema",
-        "description": "Agosto 2025: lanzamiento simultáneo de SOS-Expat y Ulixai con sede en Estonia. Dos plataformas, 4 misiones: conectar expatriados mundialmente.",
-        "location": "Global",
-        "emotion": "🌍",
-        "feeling": "Impacto global, misión humana",
-        "lesson": "Las mejores ideas nacen de nuestras propias luchas"
-      }
-    },
-    "values": {
-      "title": "Valores Fundamentales",
-      "subtitle": "Los principios que guían cada decisión e innovación en mi trabajo.",
-      "global": {
-        "title": "Perspectiva Global",
-        "description": "Entender que la movilidad se trata de conectar culturas, no solo cruzar fronteras."
-      },
-      "community": {
-        "title": "Comunidad Primero",
-        "description": "Construir redes de apoyo donde los expatriados puedan prosperar, no solo sobrevivir."
-      },
-      "innovation": {
-        "title": "Innovación",
-        "description": "Aprovechar la tecnología para resolver problemas reales y crear impacto significativo."
-      },
-      "impact": {
-        "title": "Impacto Medible",
-        "description": "Cada solución debe mejorar demostrablemente la experiencia del expatriado."
-      }
-    },
-    "cta": {
-      "title": "Únete al Viaje",
-      "subtitle": "Sé parte de la comunidad global que está transformando la movilidad internacional.",
-      "sos_button": "Explorar SOS-Expat",
-      "ulixai_button": "Descubrir Ulixai"
+    "subtitle": "Gestión de contactos e inversores",
+    "title": "Consola de Administración",
+    "toast": {
+      "data_refreshed": "Data refreshed"
     }
   },
   "blog": {
+    "author": {
+      "get_in_touch": "Ponerse en Contacto",
+      "read_story": "Leer Mi Historia"
+    },
+    "author_bio": "Williams Jullin es un experto en movilidad global y fundador de SOS-Expat y Ulixai, ayudando a más de 500K expatriados en todo el mundo.",
+    "back_to_blog": "Volver al Blog",
+    "cta": {
+      "badge": "My signature",
+      "connect": "💬 Want to chat? Let's connect!",
+      "sos_button": "🆘 SOS Expat",
+      "subtitle": "I am a creator of human experiences convinced that a life elsewhere can be a new beginning to fulfill oneself.",
+      "title": "A bridge builder between cultures",
+      "ulixai_button": "🔍 Ulixai"
+    },
+    "default_title": "Williams Jullin Personal Branding Website",
+    "expatriation": {
+      "badge": "The revelation",
+      "community_description": "A growing global community. Every day, new expats join our platforms and new helpers offer their services",
+      "community_stat_1": "Expats helped",
+      "community_stat_2": "Countries covered",
+      "community_title": "Our Community",
+      "mission_subtitle": "Two complementary platforms, four clear missions.",
+      "mission_title": "Connect expats and travelers worldwide, in one ecosystem",
+      "shock_paragraph_1": "No network. No help. Alone. Every step — visa, housing, bank account — becomes a challenge.",
+      "shock_paragraph_2": "And I understand: Whatever their nationality, everyone experiences the same solitude when starting a new life elsewhere.",
+      "shock_title": "The shock of reality",
+      "title": "The expatriation that changes everything"
+    },
+    "get_in_touch": "Get in Touch",
     "hero": {
-      "title": "Perspectivas Expertas",
-      "subtitle": "Orientación práctica, experiencias reales y perspectivas expertas para tu viaje internacional."
+      "subtitle": "Orientación práctica, experiencias reales y perspectivas expertas para tu viaje internacional.",
+      "title": "Perspectivas Expertas"
+    },
+    "language_fr": "EN",
+    "language_label": "ES",
+    "no_posts": "No se encontraron publicaciones para este tema.",
+    "not_found_title": "Article not found",
+    "platforms": {
+      "badge": "Two platforms, 4 missions",
+      "sos": {
+        "cta": "Discover SOS-Expat",
+        "feature_1_desc": "In less than 5 minutes, a lawyer or helping expat picks up, anywhere in the world.",
+        "feature_1_title": "Immediate help",
+        "feature_2_desc": "Lawyers & helping expats are paid through prepaid calls.",
+        "feature_2_title": "Guaranteed income",
+        "subtitle": "Immediate help for expats"
+      },
+      "subtitle": "Leaving or living outside your country should no longer rhyme with loneliness and difficulties",
+      "title": "The complete ecosystem",
+      "ulixai": {
+        "cta": "Discover Ulixai",
+        "feature_1_desc": "Visa, permits, housing, translations, transport… verified providers respond in minutes.",
+        "feature_1_title": "Unlimited services & quotes",
+        "feature_2_desc": "Professionals and expats monetize their expertise wherever they are.",
+        "feature_2_title": "Global income",
+        "subtitle": "Services & quotes for expats"
+      }
+    },
+    "posts": {
+      "banking_nomad": {
+        "challenges_desc": "Digital nomads face unique challenges: high exchange fees, blocked accounts, difficulties opening accounts without fixed address, and managing multiple currencies.",
+        "challenges_title": "International Banking Challenges",
+        "conclusion": "With the right banking solutions, managing your finances as a digital nomad becomes much simpler. The initial investment in researching and setting up these tools will save you time and money in the long run.",
+        "content": "Como nómada digital o expatriado, gestionar tus finanzas a través de múltiples países puede ser desafiante...",
+        "date": "Date",
+        "digital_banks_desc": "Revolut, Wise (formerly TransferWise), and N26 offer solutions specifically designed for digital nomads.",
+        "digital_banks_title": "Digital Banks",
+        "digital_feature_1": "Multi-currency accounts",
+        "digital_feature_2": "No foreign transaction fees cards",
+        "digital_feature_3": "Competitive exchange rates",
+        "digital_feature_4": "100% digital account opening",
+        "excerpt": "Descubre las mejores soluciones bancarias para nómadas digitales y expatriados, incluyendo cuentas multi-moneda y opciones de transferencia internacional.",
+        "intro": "As a digital nomad or expat, managing your finances across multiple countries can be challenging. This guide explores the best banking solutions for mobile professionals.",
+        "solutions_title": "Recommended Solutions",
+        "tip_1": "Always keep at least two accounts with different banks",
+        "tip_2": "Inform your banks of your travels to avoid blocks",
+        "tip_3": "Use financial management apps to track your expenses",
+        "tip_4": "Negotiate banking fees as an international client",
+        "tips_title": "Practical Tips",
+        "title": "Banca Digital para Nómadas: Mejores Soluciones Bancarias Internacionales",
+        "traditional_banks_desc": "HSBC, BNP Paribas International, and Crédit Agricole International offer dedicated expat services.",
+        "traditional_banks_title": "International Traditional Banks",
+        "traditional_feature_1": "Global presence",
+        "traditional_feature_2": "Premium expat services",
+        "traditional_feature_3": "Specialized advisors",
+        "traditional_feature_4": "Free internal transfers"
+      },
+      "culture_shock": {
+        "conclusion": "Culture shock is temporary and surmountable. With patience, open-mindedness and the right strategies, you'll transform this trial into an extraordinary personal growth opportunity.",
+        "content": "El choque cultural es una parte natural de la experiencia expatriada, pero no tiene que descarrilar tu viaje internacional...",
+        "excerpt": "Aprende cómo navegar las diferencias culturales y adaptarte exitosamente a tu nuevo entorno con estrategias probadas.",
+        "intro": "Culture shock is a natural part of the expat experience, but it doesn't have to derail your international journey. Here's how to overcome it.",
+        "title": "Superar el Choque Cultural: Una Guía Práctica"
+      },
+      "healthcare_expat": {
+        "arrival": {
+          "items": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4"
+          },
+          "title": "Title"
+        },
+        "conclusion": "Good health preparation will allow you to live your expatriation peacefully. Don't hesitate to get support from professionals specialized in expat health.",
+        "content": "La atención médica es una de las consideraciones más importantes al mudarse al extranjero...",
+        "excerpt": "Entender los sistemas de salud en el extranjero, requisitos de seguro y cómo acceder a atención médica de calidad como expatriado.",
+        "intro": "Healthcare is one of the most important considerations when moving abroad. This guide helps you navigate international healthcare systems.",
+        "title": "Sistemas de Salud para Expatriados: Lo Que Necesitas Saber"
+      },
+      "housing_berlin": {
+        "conclusion": "Finding housing in Berlin requires perseverance, but the city offers exceptional quality of life. With this guide, you're better prepared to navigate the Berlin real estate market.",
+        "content": "El mercado inmobiliario de Berlín puede ser intimidante para los recién llegados, pero con el enfoque y conocimiento correctos...",
+        "date": "Date",
+        "excerpt": "Domina el mercado inmobiliario berlinés con consejos internos sobre barrios, procesos de alquiler y evitar trampas comunes.",
+        "intro": "Berlin's housing market can be intimidating for newcomers, but with the right approach and knowledge, you can find your ideal home.",
+        "kreuzberg_desc": "Alternative and multicultural atmosphere",
+        "kreuzberg_title": "Kreuzberg",
+        "market_desc": "Berlin remains relatively affordable compared to other European capitals, but demand is strong. Patience and preparation are essential.",
+        "market_title": "Understanding the Berlin Market",
+        "mitte_desc": "Historic center, perfect for professionals",
+        "mitte_title": "Mitte",
+        "neighborhoods_title": "Best Neighborhoods",
+        "prenzlauer_desc": "Family neighborhood with many cafes",
+        "prenzlauer_title": "Prenzlauer Berg",
+        "process": {
+          "file_prep": "File prep",
+          "group_visits": "Group visits",
+          "negotiate": "Negotiate",
+          "react_fast": "React fast",
+          "search_portals": "Search portals",
+          "title": "Title"
+        },
+        "scams": {
+          "desc": "Desc",
+          "title": "Title"
+        },
+        "title": "Encontrar Vivienda en Berlín: Guía Completa del Expatriado"
+      },
+      "moving_checklist": {
+        "conclusion": "A well-planned international move is the key to successful expatriation. This checklist will help you not forget anything and approach your new life with serenity.",
+        "content": "Mudarse internacionalmente requiere planificación y organización cuidadosas...",
+        "excerpt": "Una lista de verificación integral que cubre todo desde documentación hasta logística para una mudanza internacional sin problemas.",
+        "intro": "International moving requires careful planning and organization. This comprehensive checklist guides you step by step.",
+        "title": "La Lista de Verificación Definitiva de Mudanza Internacional"
+      },
+      "visa_guide": {
+        "business_visa_desc": "For short-term business activities",
+        "business_visa_title": "Business Visas",
+        "conclusion": "The visa process may seem daunting at first, but with proper preparation and understanding of requirements, you'll be well on your way to your European adventure. Remember, every successful expat started exactly where you are now - with a dream and the determination to make it happen.",
+        "content": "Mudarse a un nuevo país puede ser una de las aventuras más emocionantes de la vida, pero navegar por el proceso de visa no tiene que ser abrumador...",
+        "date": "Date",
+        "doc_accommodation": "Proof of accommodation",
+        "doc_application": "Completed visa application form",
+        "doc_financial": "Financial statements showing sufficient funds",
+        "doc_insurance": "Travel insurance covering minimum €30,000",
+        "doc_itinerary": "Flight itinerary or travel bookings",
+        "doc_passport": "Valid passport with at least 6 months remaining validity",
+        "doc_photos": "Recent passport-format photographs",
+        "documents_intro": "Regardless of visa type, you'll typically need:",
+        "documents_title": "Essential Documents",
+        "excerpt": "Navega por el complejo mundo de las visas europeas con esta guía integral que cubre requisitos, procesos y consejos expertos para el éxito.",
+        "intro": "Moving to a new country can be one of life's most exciting adventures, but navigating the visa process doesn't have to be overwhelming. This comprehensive guide will walk you through everything you need to know about obtaining visas for European countries.",
+        "pro_tip_content": "Always check specific requirements for your destination country, as regulations can change frequently. Consider consulting directly with the embassy or consulate for the most up-to-date information.",
+        "pro_tip_title": "Pro Tip",
+        "residence_permit_desc": "For long-term stays exceeding 90 days",
+        "residence_permit_title": "Residence Permits",
+        "schengen_desc": "One of the most important concepts to understand is the Schengen Area, which allows free movement between 27 European countries with a single visa. This means once you have a Schengen visa, you can travel freely within all member countries during your authorized stay period.",
+        "schengen_title": "The Schengen Agreement",
+        "section_1_intro": "European countries offer different types of visas depending on your purpose of visit. The most common categories include:",
+        "section_1_title": "Understanding Visa Types",
+        "student_visa_desc": "For educational pursuits at recognized institutions",
+        "student_visa_title": "Student Visas",
+        "timeline_1": "Apply 3-4 weeks before your intended travel date",
+        "timeline_2": "Schedule appointments well in advance, especially during peak seasons",
+        "timeline_3": "Prepare all documents thoroughly to avoid delays",
+        "timeline_4": "Consider premium processing services if available and necessary",
+        "timeline_intro": "Visa processing times can vary significantly based on your nationality, visa type, and time of year. Generally, you should:",
+        "timeline_title": "Timeline and Planning",
+        "title": "Guía Completa de Visas Europeas: Todo Lo Que Necesitas Saber",
+        "tourist_visa_desc": "For short-term visits up to 90 days",
+        "tourist_visa_title": "Tourist Visas",
+        "work_visa_desc": "For employment purposes with specific employer sponsorship",
+        "work_visa_title": "Work Visas"
+      }
+    },
+    "read_more": "Leer Más",
+    "read_story": "Read My Story",
+    "read_time_10": "10 min read",
+    "read_time_5": "5 min read",
+    "read_time_6": "6 min read",
+    "read_time_7": "7 min read",
+    "read_time_8": "8 min read",
+    "seo": {
+      "description": "Practical guides for expatriation: visas, housing, healthcare, culture, finance.",
+      "title": "Expat Expert Blog | Guides & Tips | All Nationalities | 197 Countries"
+    },
+    "share": "Compartir",
+    "site_title": "Williams Jullin",
+    "structured": {
+      "description": "Description",
+      "name": "Name",
+      "topic_culture": "Topic culture",
+      "topic_culture_desc": "Topic culture desc",
+      "topic_expat": "Topic expat",
+      "topic_expat_desc": "Topic expat desc",
+      "topic_mobility": "Topic mobility",
+      "topic_mobility_desc": "Topic mobility desc"
     },
     "tags": {
       "all": "Todos los Temas"
     },
     "topics": {
-      "visas": "Visas",
       "banking": "Banca",
-      "housing": "Vivienda",
-      "healthcare": "Salud",
       "culture": "Cultura",
+      "healthcare": "Salud",
+      "housing": "Vivienda",
+      "moving": "Mudanza",
       "tips": "Consejos",
-      "moving": "Mudanza"
+      "visas": "Visas"
     },
-    "posts": {
-      "visa_guide": {
-        "title": "Guía Completa de Visas Europeas: Todo Lo Que Necesitas Saber",
-        "excerpt": "Navega por el complejo mundo de las visas europeas con esta guía integral que cubre requisitos, procesos y consejos expertos para el éxito.",
-        "content": "Mudarse a un nuevo país puede ser una de las aventuras más emocionantes de la vida, pero navegar por el proceso de visa no tiene que ser abrumador..."
+    "values": {
+      "badge": "What guides me",
+      "build": {
+        "description": "Develop, exceed my skills, always learn",
+        "story": "My obsession since stopping my studies: create and grow",
+        "title": "Build constantly"
       },
-      "banking_nomad": {
-        "title": "Banca Digital para Nómadas: Mejores Soluciones Bancarias Internacionales",
-        "excerpt": "Descubre las mejores soluciones bancarias para nómadas digitales y expatriados, incluyendo cuentas multi-moneda y opciones de transferencia internacional.",
-        "content": "Como nómada digital o expatriado, gestionar tus finanzas a través de múltiples países puede ser desafiante..."
+      "connection": {
+        "description": "Create bridges between cultures and experiences",
+        "story": "Every expat deserves to be accompanied in their journey",
+        "title": "Human connection"
       },
-      "housing_berlin": {
-        "title": "Encontrar Vivienda en Berlín: Guía Completa del Expatriado",
-        "excerpt": "Domina el mercado inmobiliario berlinés con consejos internos sobre barrios, procesos de alquiler y evitar trampas comunes.",
-        "content": "El mercado inmobiliario de Berlín puede ser intimidante para los recién llegados, pero con el enfoque y conocimiento correctos..."
+      "innovation": {
+        "description": "Transform struggles into solutions for everyone",
+        "story": "If I struggle, it means others struggle too",
+        "title": "Social innovation"
       },
-      "healthcare_expat": {
-        "title": "Sistemas de Salud para Expatriados: Lo Que Necesitas Saber",
-        "excerpt": "Entender los sistemas de salud en el extranjero, requisitos de seguro y cómo acceder a atención médica de calidad como expatriado.",
-        "content": "La atención médica es una de las consideraciones más importantes al mudarse al extranjero..."
+      "resilience": {
+        "description": "Rebuild from within after collapse",
+        "story": "Covid took everything from me, but revealed who I really was",
+        "title": "Resilience"
       },
-      "culture_shock": {
-        "title": "Superar el Choque Cultural: Una Guía Práctica",
-        "excerpt": "Aprende cómo navegar las diferencias culturales y adaptarte exitosamente a tu nuevo entorno con estrategias probadas.",
-        "content": "El choque cultural es una parte natural de la experiencia expatriada, pero no tiene que descarrilar tu viaje internacional..."
-      },
-      "moving_checklist": {
-        "title": "La Lista de Verificación Definitiva de Mudanza Internacional",
-        "excerpt": "Una lista de verificación integral que cubre todo desde documentación hasta logística para una mudanza internacional sin problemas.",
-        "content": "Mudarse internacionalmente requiere planificación y organización cuidadosas..."
-      }
-    },
-    "read_more": "Leer Más",
-    "back_to_blog": "Volver al Blog",
-    "share": "Compartir",
-    "no_posts": "No se encontraron publicaciones para este tema.",
-    "author_bio": "Williams Jullin es un experto en movilidad global y fundador de SOS-Expat y Ulixai, ayudando a más de 500K expatriados en todo el mundo.",
-    "language_label": "ES",
-    "author": {
-      "read_story": "Leer Mi Historia",
-      "get_in_touch": "Ponerse en Contacto"
+      "title": "My entrepreneurial philosophy"
     }
   },
-  "media": {
-    "hero": {
-      "title": "Medios y Prensa",
-      "subtitle": "Recursos, perspectivas y materiales para profesionales de medios y consultas de prensa."
-    },
-    "bio": {
-      "short_title": "Biografía Corta",
-      "short_content": "Williams Jullin es un experto en movilidad global y empresario que ha transformado la reubicación internacional a través de las plataformas innovadoras SOS-Expat y Ulixai, sirviendo a más de 500,000 expatriados en todo el mundo.",
-      "long_title": "Biografía Extendida",
-      "long_paragraph_1": "Williams Jullin es una figura pionera en la movilidad global, habiendo transformado el panorama de reubicación internacional a través de tecnología innovadora y redes de apoyo integrales.",
-      "long_paragraph_2": "Como fundador de SOS-Expat y Ulixai, Williams ha creado un ecosistema que aborda cada aspecto del viaje expatriado, desde asistencia de emergencia hasta planificación integral de reubicación.",
-      "long_paragraph_3": "Sus plataformas han apoyado exitosamente a más de 500,000 expatriados en más de 25 países, estableciéndolo como una autoridad líder en movilidad internacional y servicios expatriados."
-    },
-    "topics": {
-      "title": "Temas de Entrevista",
-      "subtitle": "Áreas clave de experiencia para entrevistas y compromisos de conferencias.",
-      "expat_trends": {
-        "title": "Tendencias Globales de Expatriados",
-        "description": "Perspectivas sobre patrones cambiantes de movilidad internacional y destinos expatriados emergentes."
-      },
-      "digital_nomad": {
-        "title": "Nomadismo Digital",
-        "description": "El auge del trabajo remoto y su impacto en los patrones de movilidad global."
-      },
-      "visa_policy": {
-        "title": "Política de Visas e Inmigración",
-        "description": "Análisis de políticas de inmigración cambiantes y su impacto en la movilidad internacional."
-      },
-      "relocation_tech": {
-        "title": "Tecnología en Reubicación",
-        "description": "Cómo la IA y la tecnología están transformando la experiencia de mudanza internacional."
-      },
-      "cultural_adaptation": {
-        "title": "Integración Cultural",
-        "description": "Estrategias para adaptación cultural exitosa y construcción de comunidad en el extranjero."
-      },
-      "entrepreneurship": {
-        "title": "Emprendimiento Expatriado",
-        "description": "Construir negocios mientras se navegan regulaciones internacionales y mercados."
-      }
-    },
-    "press": {
-      "title": "Cobertura de Prensa Reciente",
-      "subtitle": "Últimas apariciones en medios y menciones de prensa."
-    },
-    "photos": {
-      "title": "Fotos de Prensa",
-      "subtitle": "Fotos de alta resolución disponibles para uso de medios.",
-      "portrait_1_title": "Retrato Profesional",
-      "portrait_1_description": "Retrato profesional de alta resolución adecuado para medios impresos y digitales.",
-      "portrait_2_title": "Retrato Casual",
-      "portrait_2_description": "Retrato casual y accesible para artículos de estilo de vida y reportajes."
-    },
-    "contact": {
-      "title": "Consultas de Medios",
-      "subtitle": "Para entrevistas, compromisos de conferencias y consultas de prensa.",
-      "email": "Email del Equipo de Prensa",
-      "form": "Formulario de Contacto"
-    },
-    "download_short_bio": "Descargar Biografía Corta",
-    "download_long_bio": "Descargar Biografía Larga",
-    "download_photo": "Descargar Foto"
+  "common": {
+    "close": "Close",
+    "just_now": "Just now",
+    "retry": "Retry"
   },
   "contact": {
-    "hero": {
-      "title": "Ponerse en Contacto",
-      "subtitle": "¿Listo para transformar tu viaje internacional? Hablemos sobre cómo puedo ayudarte a tener éxito en el extranjero."
-    },
     "form": {
-      "title": "Enviar un Mensaje",
-      "purpose": "Propósito del Contacto",
+      "consent": "I consent to processing of my personal data for the purpose of this inquiry.",
+      "consent_text": "Consiento el procesamiento de mis datos personales para el propósito de esta consulta.",
+      "country": "Current Country",
+      "country_placeholder": "¿Dónde te encuentras actualmente?",
+      "email": "Email Address",
+      "email_placeholder": "Enter your email address",
       "errors_title": "Por favor corrija los siguientes errores:",
-      "section_personal": "Información Personal",
-      "section_investor": "Tipo de Inversor",
-      "section_organization": "Organización",
-      "section_investment": "Detalles de Inversión",
-      "section_interest": "Interés Específico",
-      "section_message": "Mensaje y Objetivos",
       "first_name_placeholder": "Tu nombre",
-      "last_name": "Apellido",
-      "investor_type": "Tipo de inversor",
-      "select_investor_type": "Selecciona tu perfil...",
-      "types": {
-        "individual": "Inversor Individual",
-        "family_office": "Family Office",
-        "vc_fund": "Fondo de Venture Capital",
-        "pe_fund": "Fondo de Private Equity",
-        "corporate": "Corporate Venture",
-        "angel": "Business Angel",
-        "institutional": "Inversor Institucional",
-        "other": "Otro"
-      },
-      "organization": "Organización / Fondo",
-      "organization_placeholder": "Nombre de tu organización",
-      "position": "Posición / Rol",
-      "position_placeholder": "Managing Partner, Director de Inversión...",
-      "website": "Sitio web",
-      "website_placeholder": "https://tu-organizacion.com",
-      "last_name_placeholder": "Tu apellido",
+      "full_name": "Full Name",
       "full_name_placeholder": "Ingresa tu nombre completo",
-      "investment_timeline": "Timeline de inversión",
-      "select_timeline": "Selecciona una timeline...",
-      "timelines": {
-        "immediate": "Inmediato (< 1 mes)",
-        "short": "Corto plazo (1-3 meses)",
-        "medium": "Medio plazo (3-6 meses)",
-        "long": "Largo plazo (6-12 meses)",
-        "flexible": "Flexible según oportunidad"
-      },
-      "previous_investments": "Experiencia de inversión",
-      "previous_investments_placeholder": "Describe brevemente tus inversiones previas en startups/scale-ups similares...",
-      "platform_interest": "Interés en plataforma",
-      "select_platform": "Selecciona tu interés...",
-      "platforms": {
-        "both": "Ecosistema completo (SOS-Expat + Ulixai)",
-        "sos_expat": "Solo SOS-Expat",
-        "ulixai": "Solo Ulixai",
-        "ecosystem": "Visión de ecosistema global"
-      },
       "geographic_focus": "Enfoque geográfico",
       "geographic_focus_placeholder": "Europa, Asia, Global...",
-      "country_placeholder": "¿Dónde te encuentras actualmente?",
+      "investment_timeline": "Timeline de inversión",
+      "investor_type": "Tipo de inversor",
+      "last_name": "Apellido",
+      "last_name_placeholder": "Tu apellido",
       "message": "Mensaje",
       "message_placeholder": "Cuéntanos sobre tu visión, expectativas, estrategia de inversión, preguntas específicas...",
-      "consent_text": "Consiento el procesamiento de mis datos personales para el propósito de esta consulta.",
       "newsletter_consent": "Me gustaría recibir actualizaciones sobre la evolución de Ulixai & SOS-Expat (opcional)",
+      "organization": "Organización / Fondo",
+      "organization_placeholder": "Nombre de tu organización",
+      "platform_interest": "Interés en plataforma",
+      "platforms": {
+        "both": "Ecosistema completo (SOS-Expat + Ulixai)",
+        "ecosystem": "Visión de ecosistema global",
+        "sos_expat": "Solo SOS-Expat",
+        "ulixai": "Solo Ulixai"
+      },
+      "position": "Posición / Rol",
+      "position_placeholder": "Managing Partner, Director de Inversión...",
+      "previous_investments": "Experiencia de inversión",
+      "previous_investments_placeholder": "Describe brevemente tus inversiones previas en startups/scale-ups similares...",
+      "purpose": "Propósito del Contacto",
+      "section_interest": "Interés Específico",
+      "section_investment": "Detalles de Inversión",
+      "section_investor": "Tipo de Inversor",
+      "section_message": "Mensaje y Objetivos",
+      "section_organization": "Organización",
+      "section_personal": "Información Personal",
+      "select_investor_type": "Selecciona tu perfil...",
+      "select_platform": "Selecciona tu interés...",
+      "select_purpose": "Select purpose...",
+      "select_timeline": "Selecciona una timeline...",
       "send": "Enviar Mensaje",
-      "sending": "Enviando..."
+      "sending": "Enviando...",
+      "subject": "Subject",
+      "subject_placeholder": "Brief subject of your message",
+      "timelines": {
+        "flexible": "Flexible según oportunidad",
+        "immediate": "Inmediato (< 1 mes)",
+        "long": "Largo plazo (6-12 meses)",
+        "medium": "Medio plazo (3-6 meses)",
+        "short": "Corto plazo (1-3 meses)"
+      },
+      "title": "Enviar un Mensaje",
+      "types": {
+        "angel": "Business Angel",
+        "corporate": "Corporate Venture",
+        "family_office": "Family Office",
+        "individual": "Inversor Individual",
+        "institutional": "Inversor Institucional",
+        "other": "Otro",
+        "pe_fund": "Fondo de Private Equity",
+        "vc_fund": "Fondo de Venture Capital"
+      },
+      "website": "Sitio web",
+      "website_placeholder": "https://tu-organizacion.com"
+    },
+    "hero": {
+      "subtitle": "¿Listo para transformar tu viaje internacional? Hablemos sobre cómo puedo ayudarte a tener éxito en el extranjero.",
+      "title": "Ponerse en Contacto"
+    },
+    "info": {
+      "availability": "Cobertura de zona horaria global",
+      "description": "Reviso personalmente cada mensaje y me esfuerzo por proporcionar orientación reflexiva y accionable para tu viaje internacional.",
+      "languages": "Disponible en 7 idiomas",
+      "response_time": "Respuesta dentro de 24-48 horas",
+      "title": "Información de Contacto"
     },
     "purposes": {
       "general": "Consulta General",
+      "investment": "Consulta de Inversión",
       "media": "Medios y Prensa",
       "partnership": "Oportunidad de Asociación",
-      "investment": "Consulta de Inversión",
       "support": "Soporte de Plataforma"
     },
-    "info": {
-      "title": "Información de Contacto",
-      "description": "Reviso personalmente cada mensaje y me esfuerzo por proporcionar orientación reflexiva y accionable para tu viaje internacional.",
-      "response_time": "Respuesta dentro de 24-48 horas",
-      "languages": "Disponible en 7 idiomas",
-      "availability": "Cobertura de zona horaria global"
-    },
-    "visual": {
-      "title": "Orientación Experta",
-      "subtitle": "Apoyo personalizado para tu viaje global"
+    "seo": {
+      "description": "Get in touch. Reply in 24-48h, multilingual support.",
+      "title": "Contact Williams Jullin | Expat Expert"
     },
     "success": {
-      "title": "¡Mensaje Enviado Exitosamente!",
+      "back_home": "Volver al Inicio",
       "message": "Gracias por contactarme. Revisaré tu mensaje y responderé dentro de 24-48 horas con orientación personalizada.",
-      "back_home": "Volver al Inicio"
+      "title": "¡Mensaje Enviado Exitosamente!"
+    },
+    "toast": {
+      "error_message": "An error occurred. Please check your info and try again.",
+      "success_message": "Thanks for your message. Williams will reply within 24–48h.",
+      "success_title": "Message sent successfully! 🎉"
+    },
+    "validation": {
+      "consent_required": "You must accept data processing",
+      "country_max": "Country name cannot exceed 100 characters",
+      "email_invalid": "Email invalid",
+      "email_required": "Email required",
+      "message_max": "Message cannot exceed 2000 characters",
+      "message_min": "Message must be at least 10 characters",
+      "message_required": "Message required",
+      "name_charset": "Name charset",
+      "name_min": "Name must be at least 2 characters",
+      "name_required": "Name required",
+      "purpose_required": "Please select a subject",
+      "title_max": "Title cannot exceed 200 characters"
+    },
+    "visual": {
+      "subtitle": "Apoyo personalizado para tu viaje global",
+      "title": "Orientación Experta"
+    }
+  },
+  "footer": {
+    "description": "Transformando la movilidad global a través de soluciones innovadoras y orientación experta.",
+    "investors": "Inversores",
+    "legal": "Legal",
+    "legal_notice": "Aviso Legal",
+    "navigation": "Navigation",
+    "platforms": "Plataformas",
+    "privacy": "Política de Privacidad",
+    "rights_reserved": "Todos los derechos reservados."
+  },
+  "form": {
+    "errors": {
+      "submit_failed": "Submit failed",
+      "validation_list": "Validation list"
+    },
+    "feedback": {
+      "perfect": "Perfect"
+    },
+    "validation": {
+      "email_invalid": "Email invalid",
+      "email_required": "Email required",
+      "first_name_min": "First name min",
+      "first_name_required": "First name required",
+      "last_name_min": "Last name min",
+      "last_name_required": "Last name required",
+      "message_max_3000": "Message max 3000",
+      "message_min_20": "Message min 20",
+      "message_required": "Message required",
+      "phone_invalid": "Phone invalid",
+      "website_invalid": "Website invalid"
+    }
+  },
+  "home": {
+    "analytics": {
+      "title": "Title"
+    },
+    "blog": {
+      "see_all": "All articles",
+      "subtitle": "Expert advice for your expatriation",
+      "title": "Latest articles"
+    },
+    "clients": {
+      "individuals": "Individuos",
+      "individuals_desc": "Orientación personal para individuos y familias que buscan oportunidades internacionales.",
+      "individuals_projects": "500K+",
+      "individuals_satisfaction": "97%",
+      "multinationals": "Multinacionales",
+      "multinationals_desc": "Facilitando transferencias internacionales y programas de movilidad global.",
+      "multinationals_projects": "50+",
+      "multinationals_satisfaction": "99%",
+      "projects_completed": "Proyectos",
+      "satisfaction": "Satisfacción",
+      "startups": "Startups Tech",
+      "startups_desc": "Apoyando empresas innovadoras en su expansión global y adquisición de talento.",
+      "startups_projects": "150+",
+      "startups_satisfaction": "98%",
+      "subtitle": "Desde startups hasta empresas Fortune 500, organizaciones de todo el mundo confían en nuestra experiencia.",
+      "title": "Confiado por Líderes Globales"
+    },
+    "conference": {
+      "badge": "Keynote speaker",
+      "description": "I share my expertise with thousands of expats around the world",
+      "impact_description": "Speaker at expat and traveler conferences worldwide.",
+      "impact_title": "My Global Impact",
+      "photo_alt": "Williams Jullin giving a keynote on expatriation",
+      "point_1": "I give international conferences on expatriation",
+      "point_2": "Recognized expert in international mobility",
+      "point_3": "I am the founder of SOS-Expat and Ulixai",
+      "title": "My conferences on expatriation and expat life",
+      "topic_1": "The challenges of modern expatriation",
+      "topic_2": "How to create income as an expat",
+      "topic_3": "The future of international mobility",
+      "topic_4": "Building global mutual aid networks",
+      "topics_title": "🎤 My conference topics"
+    },
+    "cta": {
+      "contact": "Ponerse en Contacto",
+      "story": "Mi Historia",
+      "subtitle": "Únete a miles de expatriados exitosos que han transformado su experiencia internacional con orientación experta y soluciones innovadoras.",
+      "title": "¿Listo para Transformar Tu Viaje Global?"
+    },
+    "double_impact": {
+      "badge": "Double Impact",
+      "conclusion_desc": "We help expats with their challenges AND we create income opportunities for helpers and providers, worldwide.",
+      "conclusion_title": "Global Double Impact",
+      "sos": {
+        "cta": "Start with SOS-Expat",
+        "mission_1_desc": "Expats, travelers, vacationers in difficulty worldwide",
+        "mission_1_title": "Mission 1: Immediate help",
+        "mission_2_desc": "Lawyers & helping expats earn with prepaid calls",
+        "mission_2_title": "Mission 2: Guaranteed income",
+        "name": "SOS-Expat.com",
+        "tagline": "Immediate help"
+      },
+      "subtitle": "Help expats AND create income for everyone, worldwide",
+      "title": "2 platforms, 4 missions",
+      "ulixai": {
+        "cta": "Post a request on Ulixai",
+        "mission_1_desc": "Find the right provider anywhere in the world",
+        "mission_1_title": "Mission 1: Unlimited services & choice between multiple offers and providers",
+        "mission_2_desc": "Expat providers or professionals earn income wherever they are in the world",
+        "mission_2_title": "Mission 2: Global income",
+        "name": "Ulixai.com",
+        "tagline": "Services & Quotes"
+      }
+    },
+    "help": {
+      "emergency": "Soporte de Emergencia",
+      "emergency_action": "Obtener Ayuda de Emergencia",
+      "emergency_desc": "Asistencia inmediata para situaciones urgentes en el extranjero a través de la red de soporte 24/7 de SOS-Expat.",
+      "learn": "Aprender e Insights",
+      "learn_action": "Leer Blog",
+      "learn_desc": "Perspectivas expertas, guías prácticas y experiencias reales compartidas a través de mi blog y recursos.",
+      "prepare": "Planifica Tu Mudanza",
+      "prepare_action": "Comenzar Planificación",
+      "prepare_desc": "Planificación integral de reubicación con emparejamiento impulsado por IA y orientación experta a través de Ulixai.",
+      "subtitle": "Ya sea que necesites asistencia de emergencia, apoyo de planificación o perspectivas expertas, estoy aquí para guiar tu viaje internacional.",
+      "title": "Cómo Puedo Ayudarte"
+    },
+    "hero": {
+      "badge": "Experto en Movilidad Global",
+      "badge_verified": "Badge verified",
+      "cta_primary": "Obtener Ayuda Experta",
+      "cta_secondary": "Descubrir Mi Historia",
+      "headline": "Headline",
+      "photo_alt": "Williams Jullin - Global mobility expert",
+      "subtitle": "Experto en movilidad internacional con plataformas innovadoras sirviendo a más de 500K expatriados en todo el mundo.",
+      "title": "Transformando la Movilidad Global",
+      "title_1": "Williams",
+      "title_2": "Jullin"
+    },
+    "mission": {
+      "community": "Comunidad",
+      "community_desc": "Construir puentes entre culturas y crear redes de apoyo en todo el mundo.",
+      "empathy": "Empatía",
+      "empathy_desc": "Entender los desafíos únicos que cada expatriado enfrenta durante su viaje internacional.",
+      "innovation": "Innovación",
+      "innovation_desc": "Desarrollar soluciones de vanguardia para simplificar procesos internacionales complejos.",
+      "subtitle": "Empoderar a ciudadanos globales a través de soluciones innovadoras y orientación experta para transiciones internacionales fluidas.",
+      "title": "Mi Misión"
+    },
+    "partners": {
+      "banking": "Soluciones Bancarias",
+      "banking_desc": "Socios bancarios internacionales que ofrecen servicios financieros amigables para expatriados.",
+      "banking_expertise": "Banca Internacional",
+      "healthcare": "Socios de Salud",
+      "healthcare_desc": "Profesionales médicos y proveedores de seguros para cobertura de salud integral.",
+      "healthcare_expertise": "Salud y Seguros",
+      "housing": "Red de Vivienda",
+      "housing_desc": "Profesionales inmobiliarios verificados y especialistas en vivienda en todo el mundo.",
+      "housing_expertise": "Bienes Raíces",
+      "legal": "Red de Socios Legales",
+      "legal_desc": "Abogados de inmigración y expertos legales especializados en procedimientos de visa y residencia.",
+      "legal_expertise": "Derecho de Inmigración",
+      "subtitle": "Una red cuidadosamente curada de profesionales verificados en más de 25 países.",
+      "title": "Red de Socios de Confianza"
+    },
+    "seo": {
+      "description": "Global expatriation expertise. 24/7 help, verified services, expert advice, inclusive worldwide community.",
+      "title": "Williams Jullin - #1 Global Expat Expert | Help for 500K+ Expats | 197 Countries | All Nationalities"
+    },
+    "services": {
+      "banking": "Banking",
+      "education": "Education",
+      "health": "Health",
+      "housing": "Housing",
+      "jobs": "Jobs",
+      "moving": "Moving",
+      "renovation": "Renovation",
+      "tax": "Tax",
+      "taxes": "Taxes",
+      "transport": "Transport",
+      "visas": "Visas",
+      "visas_permits": "Visas permits",
+      "work": "Work"
+    },
+    "solutions": {
+      "discover": "Descubrir",
+      "sos": {
+        "badge_1": "24/7 Services",
+        "badge_2": "Guaranteed Income",
+        "badge_3": "Secure Payment",
+        "badge_time": "Instant call",
+        "call_to_action": "👉 Need help right now?<br/>👉 Want to help and get paid? Join the network.",
+        "description": "In less than 5 minutes, we connect you with a trusted lawyer or expat helper. Guaranteed call. No stress, no surprises—just a solution, now.",
+        "feature_1": "100+ verified pros and helpers",
+        "feature_2": "Worldwide, 24/7",
+        "feature_3": "Human first, efficiency second",
+        "title": "SOS-Expat: Immediate help for everyone"
+      },
+      "sos_desc": "Asistencia de emergencia y apoyo urgente para expatriados en situaciones críticas en todo el mundo.",
+      "sos_feature_1": "Soporte de Emergencia 24/7",
+      "sos_feature_2": "Asistencia Legal y Médica",
+      "sos_feature_3": "Soporte Multiidioma",
+      "sos_title": "SOS-Expat",
+      "subtitle": "Dos plataformas integrales diseñadas para apoyar cada aspecto de tu viaje internacional.",
+      "title": "Mis Soluciones",
+      "ulixai": {
+        "client_step_1": "Describe your need (country, language, service, deadline).",
+        "client_step_2": "Receive multiple proposals and quotes from verified providers who speak your language.",
+        "client_step_3": "Choose in-person or online services. Payment, history and reviews in one place.",
+        "client_title": "Client side — how it works",
+        "description": "Helping expat providers or verified pros, quick responses, fast quotes, simple tracking. For expats, future expats, travelers, vacationers — all nationalities, everywhere.",
+        "examples": "Examples: visa, translations, housing, education, health, procedures, troubleshooting, moving, work…",
+        "provider_step_1": "2-minute registration (expat or pro).",
+        "provider_step_2": "Receive requests according to your languages/countries.",
+        "provider_step_3": "Quote → completion → payment, build your reputation.",
+        "provider_title": "Provider side",
+        "title": "Ulixai — The right provider, in your language, wherever you are",
+        "why_fair": "income for expats & pros",
+        "why_fair_label": "Fair",
+        "why_fast": "quotes in minutes, centralized tracking",
+        "why_fast_label": "Fast",
+        "why_global": "anywhere in the world",
+        "why_global_label": "Global",
+        "why_multilingual": "in your language",
+        "why_multilingual_label": "Multilingual",
+        "why_title": "Why Ulixai",
+        "why_verified": "expats or verified & evaluated pros",
+        "why_verified_label": "Verified"
+      },
+      "ulixai_desc": "Plataforma integral de reubicación con herramientas impulsadas por IA y orientación experta.",
+      "ulixai_feature_1": "Emparejamiento con IA",
+      "ulixai_feature_2": "Consultas de Expertos",
+      "ulixai_feature_3": "Suite Completa de Reubicación",
+      "ulixai_title": "Ulixai"
+    },
+    "sos_expat": {
+      "alt": "SOS-Expat - Immediate help for expats"
+    },
+    "stats": {
+      "countries_covered": "Países",
+      "expats_helped": "Expatriados Ayudados",
+      "satisfaction_rate": "Satisfacción",
+      "services": "SOS-Expat & Ulixai Services",
+      "years_experience": "Años de Experiencia"
+    },
+    "structured": {
+      "person": {
+        "description": "Description",
+        "jobTitle": "JobTitle"
+      },
+      "website": {
+        "description": "Description",
+        "name": "Name"
+      }
+    },
+    "testimonials": {
+      "item_1": {
+        "meta": "Meta",
+        "name": "Name",
+        "quote": "Quote"
+      },
+      "item_2": {
+        "meta": "Meta",
+        "name": "Name",
+        "quote": "Quote"
+      },
+      "item_3": {
+        "meta": "Meta",
+        "name": "Name",
+        "quote": "Quote"
+      },
+      "testimonial_1": {
+        "location": "Singapore",
+        "name": "Léa M.",
+        "quote": "Thanks to SOS-Expat, I was able to solve my visa problem AND start generating income by helping other expats.",
+        "role": "Lawyer"
+      },
+      "testimonial_2": {
+        "location": "Toronto",
+        "name": "Yassine K.",
+        "quote": "Ulixai allowed me to find the perfect apartment in Berlin AND develop my real estate consulting business.",
+        "role": "Consultant"
+      },
+      "title": "They trust us"
+    },
+    "trust": {
+      "subtitle": "Subtitle",
+      "title": "Title"
+    },
+    "ulixai": {
+      "alt": "Ulixai - The right provider anywhere in the world"
     }
   },
   "investors": {
+    "business": {
+      "commission": {
+        "description": "Compartición de ingresos con proveedores de servicios verificados en nuestra red.",
+        "title": "Comisión"
+      },
+      "enterprise": {
+        "description": "Soluciones personalizadas para corporaciones que gestionan movilidad de fuerza laboral global.",
+        "title": "Empresa"
+      },
+      "subscription": {
+        "description": "Suscripciones mensuales y anuales para características premium y soporte prioritario.",
+        "title": "Suscripción"
+      },
+      "title": "Modelo de Negocio"
+    },
+    "community": {
+      "growth_desc": "Cada día, nuevos expatriados se unen a nuestras plataformas y nuevos ayudantes ofrecen sus servicios",
+      "growth_title": "Una comunidad global en crecimiento",
+      "stat_1": "Expatriados ayudados",
+      "stat_2": "Países cubiertos",
+      "title": "Nuestra Comunidad"
+    },
+    "cta": {
+      "button": "Solicitar Paquete de Inversor",
+      "subtitle": "Asóciate con nosotros para transformar la movilidad global para millones de expatriados en todo el mundo.",
+      "title": "¿Listo para Unirte a Nuestra Misión?"
+    },
+    "direct_contact": {
+      "email": "williams@ulixai.com",
+      "linkedin": "LinkedIn",
+      "subtitle": "Williams Jullin está disponible para discutir personalmente tu inversión",
+      "title": "¿Prefieres contacto directo?"
+    },
+    "disclaimer": {
+      "content": "Esta presentación contiene declaraciones y proyecciones prospectivas. El rendimiento pasado no garantiza resultados futuros. Todas las inversiones conllevan riesgo de pérdida. Por favor consulte con asesores financieros calificados antes de tomar decisiones de inversión.",
+      "title": "Descargo de Responsabilidad de Inversión"
+    },
+    "form": {
+      "consent": "Acepto ser contactado por Williams Jullin sobre esta oportunidad de inversión y consiento el procesamiento de mis datos personales.",
+      "email": "Email",
+      "email_placeholder": "tu@email.com",
+      "experience": {
+        "experienced": "Experimentado",
+        "first_time": "Primera inversión",
+        "professional": "Inversor profesional",
+        "some": "Algunas inversiones"
+      },
+      "first_name": "Nombre",
+      "first_name_placeholder": "Tu nombre",
+      "geographic_focus": "Enfoque geográfico",
+      "geographic_focus_placeholder": "Europa, Asia, Global...",
+      "investment_range": "Cantidad de inversión planificada",
+      "investment_timeline": "Timeline de inversión",
+      "investor_type": "Tipo de inversor",
+      "last_name": "Apellido",
+      "last_name_placeholder": "Tu apellido",
+      "message": "Mensaje",
+      "message_placeholder": "Cuéntanos sobre tu visión, expectativas, estrategia de inversión, preguntas específicas...",
+      "newsletter_consent": "Me gustaría recibir actualizaciones sobre la evolución de Ulixai & SOS-Expat (opcional)",
+      "organization": "Organización / Fondo",
+      "organization_placeholder": "Nombre de tu organización",
+      "phone": "Teléfono",
+      "phone_placeholder": "+34 91 123 4567",
+      "platform_interest": "Interés en plataforma",
+      "platforms": {
+        "both": "Ecosistema completo (SOS-Expat + Ulixai)",
+        "ecosystem": "Visión de ecosistema global",
+        "sos_expat": "Solo SOS-Expat",
+        "ulixai": "Solo Ulixai"
+      },
+      "position": "Posición / Rol",
+      "position_placeholder": "Managing Partner, Director de Inversión...",
+      "previous_investments": "Experiencia de inversión",
+      "progress_title": "Progress title",
+      "range_other": "Other amount",
+      "section_consent": "Consentimientos",
+      "section_interest": "Interés Específico",
+      "section_investment": "Detalles de Inversión",
+      "section_investor": "Tipo de Inversor",
+      "section_message": "Mensaje y Objetivos",
+      "section_organization": "Organización",
+      "section_personal": "Información Personal",
+      "select_experience": "Selecciona tu experiencia...",
+      "select_investor_type": "Selecciona tu perfil...",
+      "select_platform": "Selecciona tu interés...",
+      "select_range": "Selecciona un rango",
+      "select_timeline": "Selecciona una timeline...",
+      "sending": "Enviando...",
+      "submit": "Enviar mi solicitud de inversión",
+      "subtitle": "Hablemos sobre tu participación en la revolución de ayuda a expatriados",
+      "timelines": {
+        "flexible": "Flexible según oportunidad",
+        "immediate": "Inmediato (< 1 mes)",
+        "long": "Largo plazo (6-12 meses)",
+        "medium": "Medio plazo (3-6 meses)",
+        "short": "Corto plazo (1-3 meses)"
+      },
+      "title": "Únete a Nuestra Aventura",
+      "types": {
+        "angel": "Inversor Ángel",
+        "corporate": "Corporate Venture",
+        "family_office": "Family Office",
+        "individual": "Inversor Individual",
+        "institutional": "Inversor Institucional",
+        "other": "Otro",
+        "pe_fund": "Fondo de Private Equity",
+        "vc_fund": "Fondo de Venture Capital"
+      },
+      "website": "Sitio web",
+      "website_placeholder": "https://tu-organizacion.com"
+    },
     "hero": {
       "badge": "Oportunidad de Inversión",
-      "title": "Transformando la Movilidad Global",
-      "subtitle": "Únete a nosotros para revolucionar cómo el mundo se mueve, trabaja y vive internacionalmente.",
       "cta": "Solicitar Paquete de Inversor",
       "stat_1": "Expatriados ya ayudados",
       "stat_2": "Países cubiertos",
-      "stat_3": "Servicios activos"
+      "stat_3": "Servicios activos",
+      "subtitle": "Únete a nosotros para revolucionar cómo el mundo se mueve, trabaja y vive internacionalmente.",
+      "title": "Transformando la Movilidad Global"
     },
-    "vision": {
-      "title": "Nuestra Visión: Transformar la Expatriación Global",
-      "subtitle": "Creamos un ecosistema global donde cada expatriado encuentra la ayuda que necesita, mientras creamos oportunidades de ingresos para quienes ayudan."
+    "market": {
+      "description": "El mercado de movilidad global está experimentando un crecimiento sin precedentes, impulsado por tendencias de trabajo remoto, movilidad de talento y operaciones comerciales internacionales crecientes.",
+      "expats": "Expatriados Globales",
+      "growth": "Tasa de Crecimiento Anual",
+      "size": "Tamaño del Mercado Global",
+      "title": "Oportunidad de Mercado"
     },
-    "community": {
-      "title": "Nuestra Comunidad",
-      "stat_1": "Expatriados ayudados",
-      "stat_2": "Países cubiertos",
-      "growth_title": "Una comunidad global en crecimiento",
-      "growth_desc": "Cada día, nuevos expatriados se unen a nuestras plataformas y nuevos ayudantes ofrecen sus servicios"
+    "moat": {
+      "point_1": {
+        "description": "La base de usuarios creciente atrae más proveedores de servicios, creando una propuesta de valor más fuerte para todos los participantes.",
+        "title": "Efectos de Red"
+      },
+      "point_2": {
+        "description": "Algoritmos de emparejamiento propietarios y datos extensos de expatriados crean experiencias de usuario superiores.",
+        "title": "Datos e IA"
+      },
+      "point_3": {
+        "description": "Reputación establecida y historial probado en situaciones críticas de apoyo a expatriados.",
+        "title": "Confianza de Marca"
+      },
+      "point_4": {
+        "description": "Comprensión profunda de regulaciones internacionales y requisitos de cumplimiento en todos los mercados.",
+        "title": "Experiencia Regulatoria"
+      },
+      "subtitle": "Fosos defendibles sólidos que protegen nuestra posición en el mercado.",
+      "title": "Ventajas Competitivas"
     },
     "platforms": {
-      "title": "Dos Plataformas, Un Ecosistema Poderoso",
-      "subtitle": "SOS-Expat y Ulixai trabajan juntos para crear una solución completa",
-      "view_platform": "Ver plataforma",
       "business_model": "Modelo de Negocio",
       "sos": {
+        "business_desc": "Comisión en cada llamada + suscripciones premium para ayudantes profesionales",
         "description": "Ayuda inmediata para expatriados en dificultades",
         "feature_1": "Llamada garantizada en menos de 5 minutos",
         "feature_2": "Abogados y ayudantes verificados",
         "feature_3": "Llamadas prepagadas, cero ausencias",
-        "feature_4": "Ingresos inmediatos para ayudantes",
-        "business_desc": "Comisión en cada llamada + suscripciones premium para ayudantes profesionales"
+        "feature_4": "Ingresos inmediatos para ayudantes"
       },
+      "subtitle": "SOS-Expat y Ulixai trabajan juntos para crear una solución completa",
+      "title": "Dos Plataformas, Un Ecosistema Poderoso",
       "ulixai": {
+        "business_desc": "Comisión en transacciones + suscripciones premium + servicios empresariales",
         "description": "Marketplace de servicios para expatriados",
         "feature_1": "Servicios ilimitados y opción múltiple",
         "feature_2": "Proveedores verificados globalmente",
         "feature_3": "Pago seguro y seguimiento de proyecto",
-        "feature_4": "Ingresos recurrentes para proveedores",
-        "business_desc": "Comisión en transacciones + suscripciones premium + servicios empresariales"
-      }
-    },
-    "why_invest": {
-      "title": "¿Por qué Invertir con Nosotros?",
-      "subtitle": "Una oportunidad única de participar en la transformación de la ayuda a expatriados",
-      "growth": {
-        "title": "Crecimiento Probado",
-        "description": "125K+ expatriados ya ayudados con 300% de crecimiento año tras año. Nuestras métricas muestran adopción masiva y alta retención.",
-        "metric_1": "Crecimiento anual",
-        "metric_2": "Tasa de retención",
-        "metric_3": "Satisfacción del cliente"
+        "feature_4": "Ingresos recurrentes para proveedores"
       },
-      "team": {
-        "title": "Equipo Experimentado",
-        "description": "Williams Jullin, fundador expatriado él mismo, comprende íntimamente los desafíos. Equipo técnico sólido con experiencia en plataformas a gran escala."
-      },
-      "advantages": {
-        "title": "Ventajas Competitivas",
-        "description": "Primera plataforma en combinar ayuda de emergencia Y servicios planificados. Efectos de red poderosos y altas barreras de entrada."
-      }
-    },
-    "seo": {
-      "title": "Inversores | Williams Jullin | Ulixai & SOS-Expat | Oportunidad Expatriación Global",
-      "description": "💰 Oportunidad de inversión única con Williams Jullin. Ecosistema Ulixai & SOS-Expat transformando expatriación para 500K+ expats. Mercado 304M expats, crecimiento 300%, impacto social global."
-    },
-    "form": {
-      "title": "Únete a Nuestra Aventura",
-      "subtitle": "Hablemos sobre tu participación en la revolución de ayuda a expatriados",
-      "section_personal": "Información Personal",
-      "section_investor": "Tipo de Inversor",
-      "section_organization": "Organización",
-      "section_investment": "Detalles de Inversión",
-      "section_interest": "Interés Específico",
-      "section_message": "Mensaje y Objetivos",
-      "section_consent": "Consentimientos",
-      "first_name": "Nombre",
-      "first_name_placeholder": "Tu nombre",
-      "last_name": "Apellido",
-      "last_name_placeholder": "Tu apellido",
-      "email": "Email",
-      "email_placeholder": "tu@email.com",
-      "phone": "Teléfono",
-      "phone_placeholder": "+34 91 123 4567",
-      "investor_type": "Tipo de inversor",
-      "select_investor_type": "Selecciona tu perfil...",
-      "types": {
-        "individual": "Inversor Individual",
-        "family_office": "Family Office",
-        "vc_fund": "Fondo de Venture Capital",
-        "pe_fund": "Fondo de Private Equity",
-        "corporate": "Corporate Venture",
-        "angel": "Inversor Ángel",
-        "institutional": "Inversor Institucional",
-        "other": "Otro"
-      },
-      "organization": "Organización / Fondo",
-      "organization_placeholder": "Nombre de tu organización",
-      "position": "Posición / Rol",
-      "position_placeholder": "Managing Partner, Director de Inversión...",
-      "website": "Sitio web",
-      "website_placeholder": "https://tu-organizacion.com",
-      "investment_range": "Cantidad de inversión planificada",
-      "select_range": "Selecciona un rango",
-      "investment_timeline": "Timeline de inversión",
-      "select_timeline": "Selecciona una timeline...",
-      "timelines": {
-        "immediate": "Inmediato (< 1 mes)",
-        "short": "Corto plazo (1-3 meses)",
-        "medium": "Medio plazo (3-6 meses)",
-        "long": "Largo plazo (6-12 meses)",
-        "flexible": "Flexible según oportunidad"
-      },
-      "previous_investments": "Experiencia de inversión",
-      "select_experience": "Selecciona tu experiencia...",
-      "experience": {
-        "first_time": "Primera inversión",
-        "some": "Algunas inversiones",
-        "experienced": "Experimentado",
-        "professional": "Inversor profesional"
-      },
-      "platform_interest": "Interés en plataforma",
-      "select_platform": "Selecciona tu interés...",
-      "platforms": {
-        "both": "Ecosistema completo (SOS-Expat + Ulixai)",
-        "sos_expat": "Solo SOS-Expat",
-        "ulixai": "Solo Ulixai",
-        "ecosystem": "Visión de ecosistema global"
-      },
-      "geographic_focus": "Enfoque geográfico",
-      "geographic_focus_placeholder": "Europa, Asia, Global...",
-      "message": "Mensaje",
-      "message_placeholder": "Cuéntanos sobre tu visión, expectativas, estrategia de inversión, preguntas específicas...",
-      "consent": "Acepto ser contactado por Williams Jullin sobre esta oportunidad de inversión y consiento el procesamiento de mis datos personales.",
-      "newsletter_consent": "Me gustaría recibir actualizaciones sobre la evolución de Ulixai & SOS-Expat (opcional)",
-      "submit": "Enviar mi solicitud de inversión",
-      "sending": "Enviando..."
-    },
-    "direct_contact": {
-      "title": "¿Prefieres contacto directo?",
-      "subtitle": "Williams Jullin está disponible para discutir personalmente tu inversión",
-      "email": "williams@ulixai.com",
-      "linkedin": "LinkedIn"
-    },
-    "success": {
-      "title": "¡Gracias por tu interés!",
-      "message": "Hemos recibido tu solicitud de inversión. Williams te contactará personalmente en 24-48h.",
-      "back_home": "Volver al inicio"
+      "view_platform": "Ver plataforma"
     },
     "problem": {
-      "title": "El Problema",
       "point_1": "Más de 500M de personas viven fuera de su país de nacimiento con apoyo inadecuado",
       "point_2": "Los servicios fragmentados crean ineficiencias y malas experiencias",
-      "point_3": "Las situaciones de emergencia dejan a los expatriados vulnerables sin asistencia adecuada"
-    },
-    "solution": {
-      "title": "Nuestra Solución",
-      "point_1": "Ecosistema de plataforma integral que aborda todas las necesidades de expatriados",
-      "point_2": "Emparejamiento impulsado por IA con redes profesionales verificadas",
-      "point_3": "Sistema de soporte de emergencia 24/7 con cobertura global"
-    },
-    "market": {
-      "title": "Oportunidad de Mercado",
-      "size": "Tamaño del Mercado Global",
-      "growth": "Tasa de Crecimiento Anual",
-      "expats": "Expatriados Globales",
-      "description": "El mercado de movilidad global está experimentando un crecimiento sin precedentes, impulsado por tendencias de trabajo remoto, movilidad de talento y operaciones comerciales internacionales crecientes."
-    },
-    "traction": {
-      "title": "Tracción Probada",
-      "subtitle": "Métricas sólidas demuestran validación de mercado y potencial de crecimiento.",
-      "users": "Usuarios Activos",
-      "countries": "Países Servidos",
-      "growth": "Crecimiento Anual",
-      "uptime": "Tiempo de Actividad de Plataforma"
+      "point_3": "Las situaciones de emergencia dejan a los expatriados vulnerables sin asistencia adecuada",
+      "title": "El Problema"
     },
     "products": {
-      "title": "Portafolio de Productos",
-      "subtitle": "Dos plataformas complementarias que sirven el ciclo de vida completo del expatriado.",
       "sos_description": "Plataforma de asistencia de emergencia que proporciona soporte 24/7 para expatriados en situaciones críticas en todo el mundo.",
       "sos_feature_1": "Respuesta de Emergencia",
       "sos_feature_2": "Países Cubiertos",
+      "subtitle": "Dos plataformas complementarias que sirven el ciclo de vida completo del expatriado.",
+      "title": "Portafolio de Productos",
       "ulixai_description": "Plataforma integral de reubicación con emparejamiento impulsado por IA y orientación experta para mudanzas internacionales sin problemas.",
       "ulixai_feature_1": "Proveedores de Servicios",
       "ulixai_feature_2": "Idiomas Soportados",
       "view_product": "Ver Plataforma"
     },
-    "business": {
-      "title": "Modelo de Negocio",
-      "subscription": {
-        "title": "Suscripción",
-        "description": "Suscripciones mensuales y anuales para características premium y soporte prioritario."
-      },
-      "commission": {
-        "title": "Comisión",
-        "description": "Compartición de ingresos con proveedores de servicios verificados en nuestra red."
-      },
-      "enterprise": {
-        "title": "Empresa",
-        "description": "Soluciones personalizadas para corporaciones que gestionan movilidad de fuerza laboral global."
-      }
-    },
-    "moat": {
-      "title": "Ventajas Competitivas",
-      "subtitle": "Fosos defendibles sólidos que protegen nuestra posición en el mercado.",
-      "point_1": {
-        "title": "Efectos de Red",
-        "description": "La base de usuarios creciente atrae más proveedores de servicios, creando una propuesta de valor más fuerte para todos los participantes."
-      },
-      "point_2": {
-        "title": "Datos e IA",
-        "description": "Algoritmos de emparejamiento propietarios y datos extensos de expatriados crean experiencias de usuario superiores."
-      },
-      "point_3": {
-        "title": "Confianza de Marca",
-        "description": "Reputación establecida y historial probado en situaciones críticas de apoyo a expatriados."
-      },
-      "point_4": {
-        "title": "Experiencia Regulatoria",
-        "description": "Comprensión profunda de regulaciones internacionales y requisitos de cumplimiento en todos los mercados."
-      }
-    },
     "roadmap": {
-      "title": "Hoja de Ruta de Crecimiento",
-      "subtitle": "Hitos estratégicos para escalar el impacto global.",
+      "q1_2025": {
+        "description": "Plataforma empresarial completa para gestión de movilidad global corporativa.",
+        "title": "Soluciones Empresariales"
+      },
       "q2_2024": {
-        "title": "Integración de Plataforma",
-        "description": "Integración completa entre las plataformas SOS-Expat y Ulixai para una experiencia de usuario sin problemas."
+        "description": "Integración completa entre las plataformas SOS-Expat y Ulixai para una experiencia de usuario sin problemas.",
+        "title": "Integración de Plataforma"
       },
       "q3_2024": {
-        "title": "Mejora de IA",
-        "description": "Algoritmos avanzados de emparejamiento de IA y análisis predictivo para recomendaciones de servicio mejoradas."
+        "description": "Algoritmos avanzados de emparejamiento de IA y análisis predictivo para recomendaciones de servicio mejoradas.",
+        "title": "Mejora de IA"
       },
       "q4_2024": {
-        "title": "Expansión de Mercado",
-        "description": "Lanzamiento en 10 nuevos mercados con redes de proveedores de servicios localizadas."
-      },
-      "q1_2025": {
-        "title": "Soluciones Empresariales",
-        "description": "Plataforma empresarial completa para gestión de movilidad global corporativa."
+        "description": "Lanzamiento en 10 nuevos mercados con redes de proveedores de servicios localizadas.",
+        "title": "Expansión de Mercado"
       },
       "status": {
         "completed": "Completado",
         "current": "En Progreso",
         "planned": "Planificado"
-      }
+      },
+      "subtitle": "Hitos estratégicos para escalar el impacto global.",
+      "title": "Hoja de Ruta de Crecimiento"
+    },
+    "seo": {
+      "description": "💰 Oportunidad de inversión única con Williams Jullin. Ecosistema Ulixai & SOS-Expat transformando expatriación para 500K+ expats. Mercado 304M expats, crecimiento 300%, impacto social global.",
+      "title": "Inversores | Williams Jullin | Ulixai & SOS-Expat | Oportunidad Expatriación Global"
+    },
+    "solution": {
+      "point_1": "Ecosistema de plataforma integral que aborda todas las necesidades de expatriados",
+      "point_2": "Emparejamiento impulsado por IA con redes profesionales verificadas",
+      "point_3": "Sistema de soporte de emergencia 24/7 con cobertura global",
+      "title": "Nuestra Solución"
+    },
+    "success": {
+      "back_home": "Volver al inicio",
+      "message": "Hemos recibido tu solicitud de inversión. Williams te contactará personalmente en 24-48h.",
+      "title": "¡Gracias por tu interés!"
     },
     "team": {
-      "title": "Equipo de Liderazgo",
+      "founder_bio": "Empresario en serie con experiencia profunda en movilidad global, habiendo navegado personalmente reubicaciones internacionales y construido redes exitosas de apoyo a expatriados en más de 25 países.",
       "founder_title": "Fundador y CEO",
-      "founder_bio": "Empresario en serie con experiencia profunda en movilidad global, habiendo navegado personalmente reubicaciones internacionales y construido redes exitosas de apoyo a expatriados en más de 25 países."
+      "title": "Equipo de Liderazgo"
     },
-    "disclaimer": {
-      "title": "Descargo de Responsabilidad de Inversión",
-      "content": "Esta presentación contiene declaraciones y proyecciones prospectivas. El rendimiento pasado no garantiza resultados futuros. Todas las inversiones conllevan riesgo de pérdida. Por favor consulte con asesores financieros calificados antes de tomar decisiones de inversión."
+    "toast": {
+      "error_message": "An error occurred. Please check your info and try again.",
+      "error_title": "Sending failed",
+      "sending": "Your investment request is being sent...",
+      "success_message": "Thanks for your interest! Williams will get back to you within 24–48h.",
+      "success_title": "Request sent successfully! 🎉"
     },
-    "cta": {
-      "title": "¿Listo para Unirte a Nuestra Misión?",
-      "subtitle": "Asóciate con nosotros para transformar la movilidad global para millones de expatriados en todo el mundo.",
-      "button": "Solicitar Paquete de Inversor"
+    "traction": {
+      "countries": "Países Servidos",
+      "growth": "Crecimiento Anual",
+      "subtitle": "Métricas sólidas demuestran validación de mercado y potencial de crecimiento.",
+      "title": "Tracción Probada",
+      "uptime": "Tiempo de Actividad de Plataforma",
+      "users": "Usuarios Activos"
+    },
+    "validation": {
+      "amount_required": "Please select an amount",
+      "experience_required": "Please select your experience",
+      "fill_required": "Please fill all required fields to continue",
+      "first_name_min": "First name must be at least 2 characters",
+      "first_name_required": "First name is required",
+      "investorType_required": "InvestorType required",
+      "message_max": "Message cannot exceed 3000 characters",
+      "phone_invalid": "Invalid phone number format",
+      "platform_interest_required": "Please select your interest",
+      "timeline_required": "Please select a timeline",
+      "type_required": "Please select an investor type"
+    },
+    "vision": {
+      "subtitle": "Creamos un ecosistema global donde cada expatriado encuentra la ayuda que necesita, mientras creamos oportunidades de ingresos para quienes ayudan.",
+      "title": "Nuestra Visión: Transformar la Expatriación Global"
+    },
+    "why_invest": {
+      "advantages": {
+        "description": "Primera plataforma en combinar ayuda de emergencia Y servicios planificados. Efectos de red poderosos y altas barreras de entrada.",
+        "title": "Ventajas Competitivas"
+      },
+      "growth": {
+        "description": "125K+ expatriados ya ayudados con 300% de crecimiento año tras año. Nuestras métricas muestran adopción masiva y alta retención.",
+        "metric_1": "Crecimiento anual",
+        "metric_2": "Tasa de retención",
+        "metric_3": "Satisfacción del cliente",
+        "title": "Crecimiento Probado"
+      },
+      "subtitle": "Una oportunidad única de participar en la transformación de la ayuda a expatriados",
+      "team": {
+        "description": "Williams Jullin, fundador expatriado él mismo, comprende íntimamente los desafíos. Equipo técnico sólido con experiencia en plataformas a gran escala.",
+        "title": "Equipo Experimentado"
+      },
+      "title": "¿Por qué Invertir con Nosotros?"
     }
   },
-  "footer": {
-    "description": "Transformando la movilidad global a través de soluciones innovadoras y orientación experta.",
-    "platforms": "Plataformas",
-    "legal": "Legal",
-    "investors": "Inversores",
-    "privacy": "Política de Privacidad",
-    "legal_notice": "Aviso Legal",
-    "rights_reserved": "Todos los derechos reservados."
+  "media": {
+    "bio": {
+      "long_paragraph_1": "Williams Jullin es una figura pionera en la movilidad global, habiendo transformado el panorama de reubicación internacional a través de tecnología innovadora y redes de apoyo integrales.",
+      "long_paragraph_2": "Como fundador de SOS-Expat y Ulixai, Williams ha creado un ecosistema que aborda cada aspecto del viaje expatriado, desde asistencia de emergencia hasta planificación integral de reubicación.",
+      "long_paragraph_3": "Sus plataformas han apoyado exitosamente a más de 500,000 expatriados en más de 25 países, estableciéndolo como una autoridad líder en movilidad internacional y servicios expatriados.",
+      "long_title": "Biografía Extendida",
+      "short_content": "Williams Jullin es un experto en movilidad global y empresario que ha transformado la reubicación internacional a través de las plataformas innovadoras SOS-Expat y Ulixai, sirviendo a más de 500,000 expatriados en todo el mundo.",
+      "short_title": "Biografía Corta"
+    },
+    "contact": {
+      "email": "Email del Equipo de Prensa",
+      "form": "Formulario de Contacto",
+      "subtitle": "Para entrevistas, compromisos de conferencias y consultas de prensa.",
+      "title": "Consultas de Medios"
+    },
+    "download_long_bio": "Descargar Biografía Larga",
+    "download_photo": "Descargar Foto",
+    "download_short_bio": "Descargar Biografía Corta",
+    "hero": {
+      "subtitle": "Recursos, perspectivas y materiales para profesionales de medios y consultas de prensa.",
+      "title": "Medios y Prensa"
+    },
+    "photos": {
+      "portrait_1_description": "Retrato profesional de alta resolución adecuado para medios impresos y digitales.",
+      "portrait_1_title": "Retrato Profesional",
+      "portrait_2_description": "Retrato casual y accesible para artículos de estilo de vida y reportajes.",
+      "portrait_2_title": "Retrato Casual",
+      "subtitle": "Fotos de alta resolución disponibles para uso de medios.",
+      "title": "Fotos de Prensa"
+    },
+    "press": {
+      "subtitle": "Últimas apariciones en medios y menciones de prensa.",
+      "title": "Cobertura de Prensa Reciente"
+    },
+    "topics": {
+      "cultural_adaptation": {
+        "description": "Estrategias para adaptación cultural exitosa y construcción de comunidad en el extranjero.",
+        "title": "Integración Cultural"
+      },
+      "digital_nomad": {
+        "description": "El auge del trabajo remoto y su impacto en los patrones de movilidad global.",
+        "title": "Nomadismo Digital"
+      },
+      "entrepreneurship": {
+        "description": "Construir negocios mientras se navegan regulaciones internacionales y mercados.",
+        "title": "Emprendimiento Expatriado"
+      },
+      "expat_trends": {
+        "description": "Perspectivas sobre patrones cambiantes de movilidad internacional y destinos expatriados emergentes.",
+        "title": "Tendencias Globales de Expatriados"
+      },
+      "relocation_tech": {
+        "description": "Cómo la IA y la tecnología están transformando la experiencia de mudanza internacional.",
+        "title": "Tecnología en Reubicación"
+      },
+      "subtitle": "Áreas clave de experiencia para entrevistas y compromisos de conferencias.",
+      "title": "Temas de Entrevista",
+      "visa_policy": {
+        "description": "Análisis de políticas de inmigración cambiantes y su impacto en la movilidad internacional.",
+        "title": "Política de Visas e Inmigración"
+      }
+    }
   },
-  "admin": {
-    "title": "Consola de Administración",
-    "subtitle": "Gestión de contactos e inversores",
-    "stats": {
-      "contacts": "Contactos",
-      "investors": "Inversores",
-      "new": "Nuevos",
-      "conversion": "Conversión"
+  "nav": {
+    "blog": "Blog",
+    "contact": "Contacto",
+    "home": "Inicio",
+    "media": "Medios",
+    "sos_expat": "SOS-Expat.com",
+    "story": "Mi Historia",
+    "ulixai": "Ulixai.com"
+  },
+  "non": {
+    "existent": {
+      "key": "Key"
+    }
+  },
+  "story": {
+    "cta": {
+      "badge": "My signature",
+      "connect": "💬 Want to chat? Let's connect!",
+      "sos_button": "Explorar SOS-Expat",
+      "subtitle": "Sé parte de la comunidad global que está transformando la movilidad internacional.",
+      "title": "Únete al Viaje",
+      "ulixai_button": "Descubrir Ulixai"
+    },
+    "expatriation": {
+      "badge": "La revelación",
+      "community_description": "Una comunidad global en crecimiento. Cada día, nuevos expatriados se unen a nuestras plataformas y nuevos ayudantes ofrecen sus servicios",
+      "community_stat_1": "Expatriados ayudados",
+      "community_stat_2": "Países cubiertos",
+      "community_title": "Nuestra Comunidad",
+      "mission_details": {
+        "sos_expat_1": "SOS‑Expat: instant matching with a lawyer or an experienced expat for your case; first consultation by chat/phone/video in under 5 minutes, anywhere in the world, in your language.",
+        "sos_expat_2": "SOS‑Expat: payouts sent in under 24 hours, for both the lawyer and the helping expat.",
+        "ulixai_1": "ULIXAI: all your needs (visa, banking, paperwork, driver…) → multiple provider offers for you to choose from.",
+        "ulixai_2": "ULIXAI: providers, helpers and local pros monetize their skills, with guaranteed payment in a few days."
+      },
+      "mission_subtitle": "Dos plataformas complementarias, cuatro misiones claras.",
+      "mission_title": "Conectar expatriados y viajeros de todo el mundo, en un ecosistema",
+      "shock_paragraph_1": "Sin red. Sin ayuda. Solo. Cada paso — visa, vivienda, cuenta bancaria — se convierte en un desafío.",
+      "shock_paragraph_2": "Y entiendo: Sin importar su nacionalidad, todos experimentan la misma soledad al comenzar una nueva vida en otro lugar.",
+      "shock_title": "El shock de la realidad",
+      "title": "La expatriación que lo cambia todo"
+    },
+    "hero": {
+      "badge": "Williams Jullin",
+      "companies": "SOS-Expat & Ulixai",
+      "location": "Con sede en Tailandia",
+      "role_1": "Empresario",
+      "role_2": "Innovador",
+      "subtitle": "Vivo el emprendimiento como una evidencia, como una necesidad de crear y desarrollar. Mi obsesión: superar constantemente mis límites y descubrir hasta dónde puedo llegar.",
+      "title_1": "Empresario",
+      "title_2": "Fundador y CEO"
+    },
+    "intro": {
+      "badge": "The obsession that guides me",
+      "paragraph_1": "Mi viaje en la movilidad internacional comenzó con mis propios desafíos como expatriado. Al mudarme entre países, experimenté de primera mano las complejidades, frustraciones y brechas en el apoyo que millones de expatriados enfrentan diariamente.",
+      "paragraph_2": "Estas experiencias personales se convirtieron en la base para entender lo que los expatriados realmente necesitan - no solo información, sino apoyo integral, redes confiables y soluciones innovadoras que realmente funcionen.",
+      "paragraph_3": "Hoy, a través de SOS-Expat y Ulixai, he transformado estas perspectivas en plataformas que han ayudado a más de 500,000 expatriados a navegar sus viajes internacionales exitosamente.",
+      "quote": "Adrenaline nourishes me. Routine extinguishes me. I want challenges, unexpected events, that pressure that pushes to invent and exceed oneself. That's where I feel fully alive.",
+      "title": "El Viaje Comienza"
+    },
+    "platforms": {
+      "badge": "Dos plataformas, 4 misiones",
+      "sos": {
+        "cta": "Descubrir SOS-Expat",
+        "feature_1_desc": "En menos de 5 minutos, un abogado o expatriado ayudante contesta, en cualquier parte del mundo.",
+        "feature_1_title": "Ayuda inmediata",
+        "feature_2_desc": "Abogados y expatriados ayudantes son pagados a través de llamadas prepagadas.",
+        "feature_2_title": "Ingresos garantizados",
+        "subtitle": "Ayuda inmediata para expatriados"
+      },
+      "subtitle": "Dejar o vivir fuera de su país ya no debe rimar con soledad y dificultades",
+      "title": "El ecosistema completo",
+      "ulixai": {
+        "cta": "Descubrir Ulixai",
+        "feature_1_desc": "Visa, permisos, vivienda, traducciones, transporte… proveedores verificados responden en minutos.",
+        "feature_1_title": "Servicios y cotizaciones ilimitados",
+        "feature_2_desc": "Profesionales y expatriados monetizan su experiencia donde sea que estén.",
+        "feature_2_title": "Ingresos globales",
+        "subtitle": "Servicios y cotizaciones para expatriados"
+      }
+    },
+    "timeline": {
+      "badge": "Del ascenso a la reconstrucción",
+      "before_2017": "Antes de 2017: Varias empresas creadas con éxitos como fracasos. Éxitos que me dieron confianza, fracasos que me enseñaron humildad y me enseñaron. Cada experiencia forjó mi resistencia y refinó mi visión empresarial.",
+      "event_1": {
+        "description": "Lanzamiento de una marca que experimenta crecimiento explosivo. Un ascenso vertiginoso que desafía todas las predicciones.",
+        "emotion": "🚀",
+        "feeling": "La euforia del éxito",
+        "lesson": "El éxito puede llegar más rápido de lo que imaginamos",
+        "location": "Francia",
+        "title": "El despegue fulminante"
+      },
+      "event_2": {
+        "description": "Covid golpea. En menos de dos años, todo se derrumba. Un shock brutal, una pérdida total... pero también una revelación.",
+        "emotion": "💔",
+        "feeling": "Reconstrucción desde adentro",
+        "lesson": "A veces hay que perderlo todo para encontrarlo todo",
+        "location": "Francia",
+        "title": "La caída y aniquilación"
+      },
+      "event_3": {
+        "description": "A los 48, tomo la decisión que cambiará mi vida: expatriarme. Dejar mi zona de confort para renacer en otro lugar.",
+        "emotion": "✈️",
+        "feeling": "El coraje de empezar de nuevo",
+        "lesson": "Nunca es demasiado tarde para empezar de nuevo",
+        "location": "Francia",
+        "title": "La decisión del gran salto"
+      },
+      "event_4": {
+        "description": "Julio 2024: me establezco definitivamente en Tailandia. Sin red, sin ayuda. Solo. Cada trámite se convierte en un desafío.",
+        "emotion": "🌴",
+        "feeling": "La soledad del expatriado",
+        "lesson": "La expatriación revela nuestra verdadera fuerza interior",
+        "location": "Tailandia",
+        "title": "Destino Tailandia"
+      },
+      "event_5": {
+        "description": "De 4 AM a 11 PM 7/7. Viendo poco a mis hijos... El sacrificio más desgarrador para un objetivo: crear la primera plataforma que unirá a todos los expatriados del mundo.",
+        "emotion": "💻",
+        "feeling": "Obsesión creativa",
+        "lesson": "Los proyectos más grandes nacen en la soledad y la tenacidad",
+        "location": "Tailandia",
+        "title": "Un año aislado del mundo"
+      },
+      "event_6": {
+        "description": "Agosto 2025: lanzamiento simultáneo de SOS-Expat y Ulixai con sede en Estonia. Dos plataformas, 4 misiones: conectar expatriados mundialmente.",
+        "emotion": "🌍",
+        "feeling": "Impacto global, misión humana",
+        "lesson": "Las mejores ideas nacen de nuestras propias luchas",
+        "location": "Global",
+        "title": "El nacimiento del ecosistema"
+      },
+      "subtitle": "Los momentos pivotales que dieron forma a mi misión de transformar la movilidad global.",
+      "title": "Hitos Clave"
+    },
+    "values": {
+      "badge": "What guides me",
+      "build": {
+        "description": "Develop, exceed my skills, always learn",
+        "story": "My obsession since stopping my studies: create and grow",
+        "title": "Build constantly"
+      },
+      "community": {
+        "description": "Construir redes de apoyo donde los expatriados puedan prosperar, no solo sobrevivir.",
+        "title": "Comunidad Primero"
+      },
+      "connection": {
+        "description": "Create bridges between cultures and experiences",
+        "story": "Every expat deserves to be accompanied in their journey",
+        "title": "Human connection"
+      },
+      "global": {
+        "description": "Entender que la movilidad se trata de conectar culturas, no solo cruzar fronteras.",
+        "title": "Perspectiva Global"
+      },
+      "impact": {
+        "description": "Cada solución debe mejorar demostrablemente la experiencia del expatriado.",
+        "title": "Impacto Medible"
+      },
+      "innovation": {
+        "description": "Aprovechar la tecnología para resolver problemas reales y crear impacto significativo.",
+        "story": "If I struggle, it means others struggle too",
+        "title": "Innovación"
+      },
+      "resilience": {
+        "description": "Rebuild from within after collapse",
+        "story": "Covid took everything from me, but revealed who I really was",
+        "title": "Resilience"
+      },
+      "subtitle": "Los principios que guían cada decisión e innovación en mi trabajo.",
+      "title": "Valores Fundamentales"
     }
   }
 }

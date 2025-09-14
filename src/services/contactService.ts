@@ -1,5 +1,7 @@
+// src/services/contactService.ts
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../lib/firebase';
+import i18n from '../i18n';
 
 export interface ContactFormData {
   purpose: string;
@@ -18,21 +20,21 @@ export const validateContactForm = (data: ContactFormData): string[] => {
   const errors: string[] = [];
 
   if (!data.purpose.trim()) {
-    errors.push('Purpose is required');
+    errors.push(i18n.t('contact.validation.purpose_required'));
   }
 
   if (!data.fullName.trim()) {
-    errors.push('Full name is required');
+    errors.push(i18n.t('contact.validation.name_required'));
   }
 
   if (!data.email.trim()) {
-    errors.push('Email is required');
+    errors.push(i18n.t('contact.validation.email_required'));
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-    errors.push('Email format is invalid');
+    errors.push(i18n.t('contact.validation.email_invalid'));
   }
 
   if (!data.message.trim()) {
-    errors.push('Message is required');
+    errors.push(i18n.t('contact.validation.message_required'));
   }
 
   return errors;
@@ -60,10 +62,10 @@ export const submitContactForm = async (data: ContactFormData): Promise<string> 
     // Extension point for email notification via Cloud Functions
     // TODO: Trigger Cloud Function for email notification
     // This could be done via a separate collection write or HTTP callable function
-    
+
     return docRef.id;
   } catch (error) {
     console.error('Error submitting contact form:', error);
-    throw new Error('Failed to submit contact form. Please try again.');
+    throw new Error(i18n.t('contact.toast.error_message'));
   }
 };

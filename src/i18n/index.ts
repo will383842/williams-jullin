@@ -19,7 +19,7 @@ const resources = {
   es: { translation: es },
   pt: { translation: pt },
   ru: { translation: ru },
-  zh: { translation: zh }
+  zh: { translation: zh },
 };
 
 i18n
@@ -27,16 +27,16 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'en',          // si une clé manque en DE/ES/PT/RU/ZH/FR, on tombe en EN (plus FR)
-    load: 'languageOnly',       // 'de-DE' => 'de', 'pt-BR' => 'pt', etc.
+    fallbackLng: 'en',                             // ✅ fallback unique
+    supportedLngs: ['en','fr','de','es','pt','ru','zh'], // ✅ les 7
+    nonExplicitSupportedLngs: true,                // 'pt-BR' → 'pt', 'zh-CN' → 'zh'
+    load: 'languageOnly',                          // 'de-CH' → 'de'
     debug: false,
-    interpolation: {
-      escapeValue: false
-    },
+    interpolation: { escapeValue: false },
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
-      caches: ['localStorage']
-    }
+      order: ['localStorage','navigator','htmlTag','path','subdomain'],
+      caches: ['localStorage'],
+    },
   });
 
 export default i18n;

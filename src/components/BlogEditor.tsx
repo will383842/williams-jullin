@@ -12,6 +12,7 @@ import {
 } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { db, storage } from '../lib/firebase';
+import { useTranslation } from 'react-i18next';
 import { 
   Plus, 
   Edit, 
@@ -43,6 +44,7 @@ interface BlogPost {
 }
 
 const BlogEditor: React.FC = () => {
+  const { t } = useTranslation();
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [isEditing, setIsEditing] = useState(false);
   const [editingPost, setEditingPost] = useState<Partial<BlogPost>>({
@@ -169,7 +171,7 @@ const BlogEditor: React.FC = () => {
   };
 
   const deletePost = async (postId: string) => {
-    if (!confirm('Êtes-vous sûr de vouloir supprimer cet article ?')) return;
+    if (!confirm(t('admin.blog.confirm_delete'))) return;
     
     try {
       await deleteDoc(doc(db, 'posts', postId));

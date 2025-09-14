@@ -1,5 +1,7 @@
+// src/services/investorService.ts
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../lib/firebase';
+import i18n from '../i18n';
 
 export interface InvestorFormData {
   investorType: string;
@@ -30,11 +32,11 @@ export const validateInvestorForm = (data: InvestorFormData): string[] => {
 
   // Champs obligatoires
   if (!data.investorType.trim()) {
-    errors.push('Le type d\'investisseur est requis');
+    errors.push("Le type d'investisseur est requis");
   }
 
   if (!data.firstName.trim()) {
-    errors.push('Le prénom est requis');
+    errors.push(i18n.t('form.validation.first_name_required'));
   }
 
   if (!data.lastName.trim()) {
@@ -42,13 +44,13 @@ export const validateInvestorForm = (data: InvestorFormData): string[] => {
   }
 
   if (!data.email.trim()) {
-    errors.push('L\'email est requis');
+    errors.push("L'email est requis");
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-    errors.push('Le format de l\'email est invalide');
+    errors.push("Le format de l'email est invalide");
   }
 
   if (!data.investmentAmount.trim()) {
-    errors.push('Le montant d\'investissement est requis');
+    errors.push("Le montant d'investissement est requis");
   }
 
   if (!data.timeline.trim()) {
@@ -56,11 +58,11 @@ export const validateInvestorForm = (data: InvestorFormData): string[] => {
   }
 
   if (!data.experience.trim()) {
-    errors.push('L\'expérience d\'investissement est requise');
+    errors.push("L'expérience d'investissement est requise");
   }
 
   if (!data.platformInterest.trim()) {
-    errors.push('L\'intérêt plateforme est requis');
+    errors.push("L'intérêt plateforme est requis");
   }
 
   if (!data.message.trim()) {
@@ -69,7 +71,7 @@ export const validateInvestorForm = (data: InvestorFormData): string[] => {
 
   // Validation des URLs
   if (data.website && data.website.trim() && !data.website.match(/^https?:\/\/.+/)) {
-    errors.push('Le format du site web est invalide (doit commencer par http:// ou https://)');
+    errors.push(i18n.t('form.validation.website_invalid'));
   }
 
   return errors;
@@ -107,10 +109,10 @@ export const submitInvestorForm = async (data: InvestorFormData): Promise<string
 
     // Point d'extension pour notification email via Cloud Functions
     // TODO: Déclencher Cloud Function pour notification email
-    
+
     return docRef.id;
   } catch (error) {
     console.error('Erreur lors de la soumission du formulaire investisseur:', error);
-    throw new Error('Échec de la soumission du formulaire. Veuillez réessayer.');
+    throw new Error(i18n.t('form.errors.submit_failed'));
   }
 };

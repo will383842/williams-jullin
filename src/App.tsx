@@ -1,3 +1,4 @@
+// src/App.tsx
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Header from './components/Header';
@@ -14,7 +15,14 @@ import Admin from './pages/Admin';
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [blogPostId, setBlogPostId] = useState<string | null>(null);
-  const { i18n } = useTranslation();
+  const { i18n } = useTranslation(); // ✅ récupère i18n
+
+  // Deep-link: ouvre directement l’admin si l’URL est /admin
+  useEffect(() => {
+    if (window.location.pathname === '/admin') {
+      setCurrentPage('admin');
+    }
+  }, []);
 
   // Handle navigation
   const navigate = (page: string, postId?: string) => {
@@ -25,10 +33,19 @@ function App() {
       setBlogPostId(null);
     }
     window.scrollTo(0, 0);
+    // (Optionnel) mets l’URL "propre" quand on navigue
+    if (page === 'admin') {
+      window.history.replaceState({}, '', '/admin');
+    } else {
+      window.history.replaceState({}, '', '/');
+    }
   };
 
+  // ✅ changement de langue : i18n + persistance + <html lang>
   const setCurrentLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
+    localStorage.setItem('i18nextLng', lang); // persistance explicite
+    document.documentElement.lang = lang;     // <html lang="...">
   };
 
   // Handle URL routing
@@ -55,6 +72,17 @@ function App() {
     }
   }, []);
 
+  // ✅ Mount: synchronise <html lang> et persiste la langue courante
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+    localStorage.setItem('i18nextLng', i18n.language);
+  }, []); // mount only
+
+  // ✅ À chaque changement de langue: maj <html lang> pour SEO/a11y
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
   const renderPage = () => {
     switch (currentPage) {
       case 'story':
@@ -79,9 +107,9 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      <Header 
-        currentPage={currentPage} 
-        navigate={navigate} 
+      <Header
+        currentPage={currentPage}
+        navigate={navigate}
         currentLanguage={i18n.language}
         setCurrentLanguage={setCurrentLanguage}
       />

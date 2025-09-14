@@ -1,79 +1,81 @@
-import { logEvent } from 'firebase/analytics';
+// project/src/lib/analytics.ts
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { useEffect } from 'react';
-import { db, analytics } from './firebase';
+import { db, app } from './firebase';
 
-// Tracker une vue de page
-export const trackPageView = async (page: string, title: string) => {
+/** Enregistre une vue de page (Firestore + GA si dispo) */
+export async function trackPageView(path: string): Promise<void> {
+  // Firestore (optionnel)
   try {
-    // Google Analytics
-    if (analytics) {
-      logEvent(analytics, 'page_view', {
-        page_title: title,
-        page_location: window.location.href,
-        page_path: page
-      });
-    }
-
-    // Analytics Firestore
-    await addDoc(collection(db, 'analytics'), {
-      type: 'page_view',
-      page,
-      title,
-      url: window.location.href,
-      timestamp: serverTimestamp(),
-      userAgent: navigator.userAgent,
-      language: navigator.language || 'en',
-      country: 'Unknown', // Sera détecté côté serveur
-      sessionId: sessionStorage.getItem('sessionId') || generateSessionId(),
-      viewport: {
-        width: window.innerWidth,
-        height: window.innerHeight
-      }
+    await addDoc(collection(db, 'pageViews'), {
+      path,
+      ts: serverTimestamp(),
+      ua: typeof navigator !== 'undefined' ? navigator.userAgent : 'ssr',
     });
-
-  } catch (error) {
-    console.error('Erreur tracking page view:', error);
+  } catch {
+    /* silencieux */
   }
-};
 
-// Tracker un événement personnalisé
-export const trackEvent = async (eventName: string, parameters: Record<string, any> = {}) => {
+  // Google Analytics (optionnel)
   try {
-    // Google Analytics
-    if (analytics) {
-      logEvent(analytics, eventName, parameters);
-    }
+    if (typeof window === 'undefined') return;
+    const { isSupported, getAnalytics, logEvent } = await import('firebase/analytics');
+    const supported = await isSupported();
+    if (!supported) return;
 
-    // Analytics Firestore
-    await addDoc(collection(db, 'analytics'), {
-      type: 'custom_event',
-      eventName,
-      parameters,
-      timestamp: serverTimestamp(),
-      page: window.location.pathname,
-      language: navigator.language || 'en',
-      country: 'Unknown',
-      sessionId: sessionStorage.getItem('sessionId') || generateSessionId()
-    });
-
-  } catch (error) {
-    console.error('Erreur tracking event:', error);
+    const analytics = getAnalytics(app);
+    logEvent(analytics, 'page_view', { page_path: path });
+  } catch {
+    /* silencieux */
   }
-};
+}
 
-// Générer un ID de session unique
-const generateSessionId = (): string => {
-  const sessionId = Math.random().toString(36).substring(2) + Date.now().toString(36);
-  sessionStorage.setItem('sessionId', sessionId);
-  return sessionId;
-};
-
-// Hook pour tracker automatiquement les pages
-export const usePageTracking = (page: string, title: string) => {
+/** Hook recommandé : envoie une page_view pour le chemin fourni */
+export function usePageView(path: string): void {
   useEffect(() => {
-    trackPageView(page, title);
-  }, [page, title]);
-};
+    void trackPageView(path);
+  }, [path]);
+}
 
-export default analytics;
+/** Alias rétro-compatible : si aucun chemin, on prend location.pathname+search */
+export function usePageTracking(path?: string): void {
+  useEffect(() => {
+    const p =
+      path ??
+      (typeof window !== 'undefined'
+        ? `${window.location.pathname}${window.location.search}`
+        : '/');
+    void trackPageView(p);
+  }, [path]);
+}
+
+/** Événements génériques (clics, soumissions, etc.) */
+export async function trackEvent(
+  eventName: string,
+  params?: Record<string, unknown>
+): Promise<void> {
+  // Firestore (optionnel)
+  try {
+    await addDoc(collection(db, 'events'), {
+      name: eventName,
+      params: params ?? null,
+      ts: serverTimestamp(),
+      ua: typeof navigator !== 'undefined' ? navigator.userAgent : 'ssr',
+    });
+  } catch {
+    /* silencieux */
+  }
+
+  // Google Analytics (optionnel)
+  try {
+    if (typeof window === 'undefined') return;
+    const { isSupported, getAnalytics, logEvent } = await import('firebase/analytics');
+    const supported = await isSupported();
+    if (!supported) return;
+
+    const analytics = getAnalytics(app);
+    logEvent(analytics, eventName as any, params as any);
+  } catch {
+    /* silencieux */
+  }
+}

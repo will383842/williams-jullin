@@ -21,12 +21,12 @@ const Blog: React.FC<BlogProps> = ({ navigate }) => {
       metaDescription.setAttribute('content', t('blog.seo.description'));
     }
 
-    // Données structurées pour le blog
+    // Données structurées pour le blog (localisées)
     const blogStructuredData = {
       "@context": "https://schema.org",
       "@type": "Blog",
-      "name": "Blog Expert Expatriation Williams Jullin",
-      "description": "Blog expert expatriation avec guides pratiques pour toutes nationalités",
+      "name": t('blog.structured.name'),
+      "description": t('blog.structured.description'),
       "url": "https://williamsjullin.com/blog",
       "author": {
         "@type": "Person",
@@ -44,21 +44,9 @@ const Blog: React.FC<BlogProps> = ({ navigate }) => {
         "description": "Expatriés, futurs expatriés, nomades numériques de toutes nationalités cherchant conseils experts"
       },
       "about": [
-        {
-          "@type": "Thing",
-          "name": "Expatriation",
-          "description": "Conseils et guides pour vivre à l'étranger"
-        },
-        {
-          "@type": "Thing",
-          "name": "Mobilité Internationale",
-          "description": "Expertise en déplacement international"
-        },
-        {
-          "@type": "Thing",
-          "name": "Adaptation Culturelle",
-          "description": "Guides pour s'adapter aux nouvelles cultures"
-        }
+        { "@type": "Thing", "name": t('blog.structured.topic_expat'),    "description": t('blog.structured.topic_expat_desc') },
+        { "@type": "Thing", "name": t('blog.structured.topic_mobility'), "description": t('blog.structured.topic_mobility_desc') },
+        { "@type": "Thing", "name": t('blog.structured.topic_culture'),  "description": t('blog.structured.topic_culture_desc') }
       ],
       "keywords": [
         "blog expatriation", "conseils expert expatriés", "guides pratiques expatriation",
@@ -209,7 +197,7 @@ const Blog: React.FC<BlogProps> = ({ navigate }) => {
                   <img
                     src={post.image}
                     alt={post.title}
-                    className="w-full h-40 md:h-48 object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-40 md:h-48 object-cover hover:scale-105 transition-transform durée-300"
                   />
                   <div className="absolute top-3 right-3 md:top-4 md:right-4 bg-white/90 backdrop-blur-sm px-2 py-1 md:px-3 rounded-full text-xs md:text-sm font-medium text-gray-700">
                     <span>{t('blog.language_label')}</span>
@@ -247,7 +235,7 @@ const Blog: React.FC<BlogProps> = ({ navigate }) => {
 
                   <button
                     onClick={() => navigate('blog', post.id)}
-                    className="touch-link flex items-center space-x-2 text-blue-600 hover:text-blue-700 active:text-blue-800 font-semibold transition-colors duration-200 text-sm md:text-base py-2"
+                    className="touch-link flex items-center space-x-2 text-blue-600 hover:text-blue-700 active:text-blue-800 font-semibold transition-colors durée-200 text-sm md:text-base py-2"
                   >
                     <span>{t('blog.read_more')}</span>
                     <ArrowRight size={14} className="md:w-4 md:h-4" />

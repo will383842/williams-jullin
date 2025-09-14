@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { auth } from '../lib/firebase';
-import { Lock, LogOut, Eye, EyeOff, Loader2 } from 'lucide-react';
+import { Lock, LogOut, Eye, EyeOff, Loader2, Shield } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface AdminAuthProps {
   user: any;
@@ -9,6 +10,8 @@ interface AdminAuthProps {
 }
 
 const AdminAuth: React.FC<AdminAuthProps> = ({ user, onAuthChange }) => {
+  const { t } = useTranslation();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -23,26 +26,26 @@ const AdminAuth: React.FC<AdminAuthProps> = ({ user, onAuthChange }) => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-      
+
       // Vérifier les custom claims pour l'admin
       const idTokenResult = await user.getIdTokenResult();
-      
+
       if (idTokenResult.claims.admin) {
         onAuthChange(user);
       } else {
-        setError('Accès administrateur requis');
+        setError(t('admin.auth.admin_required'));
         await signOut(auth);
       }
     } catch (error: any) {
-      console.error('Erreur de connexion:', error);
+      console.error(t('admin.auth.login_error'), error);
       if (error.code === 'auth/user-not-found') {
-        setError('Utilisateur non trouvé');
+        setError(t('admin.auth.user_not_found'));
       } else if (error.code === 'auth/wrong-password') {
-        setError('Mot de passe incorrect');
+        setError(t('admin.auth.wrong_password'));
       } else if (error.code === 'auth/invalid-email') {
-        setError('Email invalide');
+        setError(t('admin.auth.invalid_email'));
       } else {
-        setError('Erreur de connexion');
+        setError(t('admin.auth.login_error'));
       }
     } finally {
       setLoading(false);
@@ -71,7 +74,7 @@ const AdminAuth: React.FC<AdminAuthProps> = ({ user, onAuthChange }) => {
           className="flex items-center space-x-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
         >
           <LogOut size={16} />
-          <span>Déconnexion</span>
+          <span>{t('admin.auth.logout')}</span>
         </button>
       </div>
     );
@@ -83,8 +86,8 @@ const AdminAuth: React.FC<AdminAuthProps> = ({ user, onAuthChange }) => {
         <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
           <Lock className="h-8 w-8 text-blue-600" />
         </div>
-        <h2 className="text-2xl font-bold text-gray-900">Administration</h2>
-        <p className="text-gray-600 mt-2">Connexion sécurisée requise</p>
+        <h2 className="text-2xl font-bold text-gray-900">{t('admin.header.title')}</h2>
+        <p className="text-gray-600 mt-2">{t('admin.auth.secure_login_required')}</p>
       </div>
 
       <form onSubmit={handleLogin} className="space-y-4">
@@ -139,7 +142,7 @@ const AdminAuth: React.FC<AdminAuthProps> = ({ user, onAuthChange }) => {
           className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center space-x-2"
         >
           {loading && <Loader2 className="h-4 w-4 animate-spin" />}
-          <span>{loading ? 'Connexion...' : 'Se connecter'}</span>
+          <span>{loading ? t('admin.auth.connecting') : t('admin.auth.sign_in')}</span>
         </button>
       </form>
 

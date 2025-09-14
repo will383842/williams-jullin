@@ -1,3 +1,4 @@
+// src/pages/BlogPost.tsx
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArrowLeft, Calendar, Tag, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
@@ -162,19 +163,20 @@ const BlogPost: React.FC<BlogPostProps> = ({ navigate, postId }) => {
           </div>
         </div>
 
-        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Processus de Location</h2>
+        <!-- ✅ A) Processus & Arnaques — i18n -->
+        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">${t('blog.posts.housing_berlin.process.title')}</h2>
         <ol class="list-decimal pl-6 space-y-2 mb-6">
-          <li>Préparez votre dossier complet (Schufa, revenus, références)</li>
-          <li>Recherchez sur ImmobilienScout24, WG-Gesucht</li>
-          <li>Réagissez rapidement aux annonces</li>
-          <li>Préparez-vous pour les visites groupées</li>
-          <li>Négociez si possible</li>
+          <li>${t('blog.posts.housing_berlin.process.file_prep')}</li>
+          <li>${t('blog.posts.housing_berlin.process.search_portals')}</li>
+          <li>${t('blog.posts.housing_berlin.process.react_fast')}</li>
+          <li>${t('blog.posts.housing_berlin.process.group_visits')}</li>
+          <li>${t('blog.posts.housing_berlin.process.negotiate')}</li>
         </ol>
 
         <div class="bg-yellow-50 p-6 rounded-lg mt-6 mb-6">
-          <h3 class="text-lg font-semibold text-yellow-900 mb-3">Attention aux Arnaques</h3>
+          <h3 class="text-lg font-semibold text-yellow-900 mb-3">${t('blog.posts.housing_berlin.scams.title')}</h3>
           <p class="text-yellow-800">
-            Ne versez jamais d'argent avant d'avoir visité le logement et rencontré le propriétaire en personne. Méfiez-vous des prix trop attractifs.
+            ${t('blog.posts.housing_berlin.scams.desc')}
           </p>
         </div>
 
@@ -232,13 +234,14 @@ const BlogPost: React.FC<BlogPostProps> = ({ navigate, postId }) => {
           </ul>
         </div>
 
+        <!-- ✅ B) À l’arrivée — i18n -->
         <div class="bg-blue-50 p-6 rounded-lg mb-6">
-          <h3 class="text-lg font-semibold text-blue-900 mb-3">À l'Arrivée</h3>
+          <h3 class="text-lg font-semibold text-blue-900 mb-3">${t('blog.posts.healthcare_expat.arrival.title')}</h3>
           <ul class="list-disc pl-6 space-y-2 text-blue-800">
-            <li>Inscrivez-vous au système de santé local</li>
-            <li>Trouvez un médecin généraliste</li>
-            <li>Apprenez le vocabulaire médical de base</li>
-            <li>Gardez vos documents d'assurance accessibles</li>
+            <li>${t('blog.posts.healthcare_expat.arrival.items.1')}</li>
+            <li>${t('blog.posts.healthcare_expat.arrival.items.2')}</li>
+            <li>${t('blog.posts.healthcare_expat.arrival.items.3')}</li>
+            <li>${t('blog.posts.healthcare_expat.arrival.items.4')}</li>
           </ul>
         </div>
 

@@ -1,6 +1,7 @@
+// src/pages/Investors.tsx
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { TrendingUp, Users, Globe, Shield, ArrowRight, ExternalLink, Mail, Phone, MessageCircle, CheckCircle, Heart, Zap, Target, Rocket, AlertTriangle, Loader2 } from 'lucide-react';
+import { TrendingUp, Users, Globe, Shield, ArrowRight, ExternalLink, Phone, MessageCircle, CheckCircle, Heart, Zap, Target, Rocket, AlertTriangle, Loader2 } from 'lucide-react';
 import { submitInvestorForm, type InvestorFormData } from '../services/investorService';
 import FormFeedback from '../components/FormFeedback';
 import FormValidation, { getFieldBorderClass } from '../components/FormValidation';
@@ -47,32 +48,32 @@ const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
     
     switch (name) {
       case 'investorType':
-        if (!value.trim()) errors.investorType = 'Veuillez sélectionner un type d\'investisseur';
+        if (!value.trim()) errors.investorType = t('investors.validation.investorType_required');
         break;
       case 'firstName':
         if (!value.trim()) {
-          errors.firstName = 'Le prénom est requis';
+          errors.firstName = t('form.validation.first_name_required');
         } else if (value.trim().length < 2) {
-          errors.firstName = 'Le prénom doit contenir au moins 2 caractères';
+          errors.firstName = t('form.validation.first_name_min');
         }
         break;
       case 'lastName':
         if (!value.trim()) {
-          errors.lastName = 'Le nom est requis';
+          errors.lastName = t('form.validation.last_name_required');
         } else if (value.trim().length < 2) {
-          errors.lastName = 'Le nom doit contenir au moins 2 caractères';
+          errors.lastName = t('form.validation.last_name_min');
         }
         break;
       case 'email':
         if (!value.trim()) {
-          errors.email = 'L\'email est requis';
+          errors.email = t('form.validation.email_required');
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-          errors.email = 'Format d\'email invalide';
+          errors.email = t('form.validation.email_invalid');
         }
         break;
       case 'phone':
         if (value.trim() && !/^[\+]?[0-9\s\-\(\)]{10,}$/.test(value)) {
-          errors.phone = 'Format de téléphone invalide';
+          errors.phone = t('form.validation.phone_invalid');
         }
         break;
       case 'website':
@@ -94,11 +95,11 @@ const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
         break;
       case 'message':
         if (!value.trim()) {
-          errors.message = 'Le message est requis';
+          errors.message = t('form.validation.message_required');
         } else if (value.trim().length < 20) {
-          errors.message = 'Le message doit contenir au moins 20 caractères';
+          errors.message = t('form.validation.message_min_20');
         } else if (value.length > 3000) {
-          errors.message = 'Le message ne peut pas dépasser 3000 caractères';
+          errors.message = t('form.validation.message_max_3000');
         }
         break;
     }
@@ -495,7 +496,7 @@ const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
                     href="https://sos-expat.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-2 text-white hover:text-red-100 transition-colors duration-200"
+                    className="inline-flex items-center space-x-2 text-white hover:text-red-100 transition-colors durée-200"
                   >
                     <span>{t('investors.platforms.view_platform')}</span>
                     <ExternalLink size={16} />
@@ -542,7 +543,7 @@ const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
                     href="https://ulixai.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-2 text-white hover:text-blue-100 transition-colors duration-200"
+                    className="inline-flex items-center space-x-2 text-white hover:text-blue-100 transition-colors durée-200"
                   >
                     <span>{t('investors.platforms.view_platform')}</span>
                     <ExternalLink size={16} />
@@ -672,7 +673,7 @@ const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
               {/* Barre de progression */}
               <div className="mb-8">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-700">Progression du formulaire</span>
+                  <span className="text-sm font-medium text-gray-700">{t('investors.form.progress_title')}</span>
                   <span className="text-sm font-medium text-blue-600">{formProgress}%</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
@@ -690,7 +691,7 @@ const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
                   <div className="bg-red-50 border border-red-200 rounded-xl p-4">
                     <div className="flex items-center space-x-2 mb-3">
                       <AlertTriangle className="h-5 w-5 text-red-600" />
-                      <h4 className="font-medium text-red-800">Veuillez corriger les erreurs suivantes :</h4>
+                      <h4 className="font-medium text-red-800">{t('form.errors.validation_list')}</h4>
                     </div>
                     <ul className="text-sm text-red-700 space-y-1">
                       {Object.entries(validationErrors).map(([field, error]) => 
@@ -858,7 +859,7 @@ const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
                         name="organization"
                         value={formData.organization}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all durée-200"
                         placeholder={t('investors.form.organization_placeholder')}
                       />
                     </div>
@@ -873,7 +874,7 @@ const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
                         name="position"
                         value={formData.position}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all durée-200"
                         placeholder={t('investors.form.position_placeholder')}
                       />
                     </div>
@@ -889,7 +890,7 @@ const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
                       name="website"
                       value={formData.website}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 border rounded-xl focus:ring-2 transition-all duration-200 ${getFieldBorderClass(getValidationState('website'), touchedFields.website)}`}
+                      className={`w-full px-4 py-3 border rounded-xl focus:ring-2 transition-all durée-200 ${getFieldBorderClass(getValidationState('website'), touchedFields.website)}`}
                       placeholder={t('investors.form.website_placeholder')}
                     />
                     <FormValidation
@@ -921,7 +922,7 @@ const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
                         value={formData.investmentAmount}
                         onChange={handleChange}
                         required
-                        className={`w-full px-4 py-3 border rounded-xl focus:ring-2 transition-all duration-200 ${getFieldBorderClass(getValidationState('investmentAmount'), touchedFields.investmentAmount)}`}
+                        className={`w-full px-4 py-3 border rounded-xl focus:ring-2 transition-all durée-200 ${getFieldBorderClass(getValidationState('investmentAmount'), touchedFields.investmentAmount)}`}
                       >
                         <option value="">{t('investors.form.select_range')}</option>
                         {investmentRanges.map(range => (
@@ -948,7 +949,7 @@ const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
                         value={formData.timeline}
                         onChange={handleChange}
                         required
-                        className={`w-full px-4 py-3 border rounded-xl focus:ring-2 transition-all duration-200 ${getFieldBorderClass(getValidationState('timeline'), touchedFields.timeline)}`}
+                        className={`w-full px-4 py-3 border rounded-xl focus:ring-2 transition-all durée-200 ${getFieldBorderClass(getValidationState('timeline'), touchedFields.timeline)}`}
                       >
                         <option value="">{t('investors.form.select_timeline')}</option>
                         {timelines.map(timeline => (
@@ -976,7 +977,7 @@ const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
                       value={formData.experience}
                       onChange={handleChange}
                       required
-                      className={`w-full px-4 py-3 border rounded-xl focus:ring-2 transition-all duration-200 ${getFieldBorderClass(getValidationState('experience'), touchedFields.experience)}`}
+                      className={`w-full px-4 py-3 border rounded-xl focus:ring-2 transition-all durée-200 ${getFieldBorderClass(getValidationState('experience'), touchedFields.experience)}`}
                     >
                       <option value="">{t('investors.form.select_experience')}</option>
                       {experienceLevels.map(level => (
@@ -1014,7 +1015,7 @@ const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
                         value={formData.platformInterest}
                         onChange={handleChange}
                         required
-                        className={`w-full px-4 py-3 border rounded-xl focus:ring-2 transition-all duration-200 ${getFieldBorderClass(getValidationState('platformInterest'), touchedFields.platformInterest)}`}
+                        className={`w-full px-4 py-3 border rounded-xl focus:ring-2 transition-all durée-200 ${getFieldBorderClass(getValidationState('platformInterest'), touchedFields.platformInterest)}`}
                       >
                         <option value="">{t('investors.form.select_platform')}</option>
                         {platforms.map(platform => (
@@ -1041,7 +1042,7 @@ const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
                         name="geographicFocus"
                         value={formData.geographicFocus}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all durée-200"
                         placeholder={t('investors.form.geographic_focus_placeholder')}
                       />
                     </div>
@@ -1051,7 +1052,7 @@ const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
                 {/* Section 6: Message */}
                 <div className="border-b border-gray-200 pb-8">
                   <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-yellow-100 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 bg-yellow-100 rounded-full flex items中心 justify-center">
                       <span className="text-yellow-600 font-bold text-sm">6</span>
                     </div>
                     <span>{t('investors.form.section_message')}</span>
@@ -1068,7 +1069,7 @@ const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className={`w-full px-4 py-3 border rounded-xl focus:ring-2 transition-all duration-200 resize-vertical ${getFieldBorderClass(getValidationState('message'), touchedFields.message)}`}
+                      className={`w-full px-4 py-3 border rounded-xl focus:ring-2 transition-all durée-200 resize-vertical ${getFieldBorderClass(getValidationState('message'), touchedFields.message)}`}
                       placeholder={t('investors.form.message_placeholder')}
                     />
                     <div className="flex justify-between items-center mt-1">
@@ -1148,38 +1149,6 @@ const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
                   )}
                 </div>
               </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Direct */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              {t('investors.direct_contact.title')}
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              {t('investors.direct_contact.subtitle')}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:williams@ulixai.com"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-colors duration-200"
-              >
-                <Mail size={20} />
-                <span>{t('investors.direct_contact.email')}</span>
-              </a>
-              <a
-                href="https://linkedin.com/in/williamsjullin"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-colors duration-200"
-              >
-                <ExternalLink size={20} />
-                <span>{t('investors.direct_contact.linkedin')}</span>
-              </a>
             </div>
           </div>
         </div>

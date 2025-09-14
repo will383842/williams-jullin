@@ -1,3 +1,4 @@
+// src/components/ProductionAuditPanel.tsx
 import React, { useState, useEffect } from 'react';
 import { 
   CheckCircle, 
@@ -14,15 +15,20 @@ import {
   Zap,
   Settings
 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { runComprehensiveProductionTest, type ComprehensiveTestResult } from '../utils/comprehensiveProductionTest';
 
 const ProductionAuditPanel: React.FC = () => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const [isRunning, setIsRunning] = useState(false);
   const [results, setResults] = useState<ComprehensiveTestResult[]>([]);
   const [lastRun, setLastRun] = useState<Date | null>(null);
   const [detailedReport, setDetailedReport] = useState<string>('');
   const [isProductionReady, setIsProductionReady] = useState(false);
+
+  // Optionnel : nombre de langues supportées (pour l’élément de checklist)
+  const languagesSupported = 7;
 
   const runAudit = async () => {
     setIsRunning(true);
@@ -42,7 +48,7 @@ const ProductionAuditPanel: React.FC = () => {
     if (isVisible && results.length === 0) {
       runAudit();
     }
-  }, [isVisible]);
+  }, [isVisible]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const getStatusIcon = (status: string) => {
     switch (status) {
@@ -138,10 +144,13 @@ const ProductionAuditPanel: React.FC = () => {
         <button
           onClick={() => setIsVisible(true)}
           className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-200 flex items-center space-x-2"
-          title="Audit de production complet"
+          title={t('admin.audit.open_title') as string}
+          aria-label={t('admin.audit.open_title') as string}
         >
           <Eye size={20} />
-          <span className="hidden sm:inline text-sm font-medium">Audit Production</span>
+          <span className="hidden sm:inline text-sm font-medium">
+            {t('admin.audit.open_button')}
+          </span>
         </button>
       </div>
     );
@@ -162,9 +171,15 @@ const ProductionAuditPanel: React.FC = () => {
                 <AlertTriangle className="h-6 w-6" />
               )}
               <div>
-                <h3 className="font-bold">Audit de Production Complet</h3>
+                <h3 className="font-bold">{t('admin.audit.header_title')}</h3>
                 <p className="text-sm opacity-90">
-                  {isProductionReady ? '🚀 PRODUCTION READY' : `${successCount}/${totalTests} tests réussis (${successRate}%)`}
+                  {isProductionReady
+                    ? t('admin.status.production_ready_badge')
+                    : t('admin.audit.success_ratio', {
+                        success: successCount,
+                        total: totalTests,
+                        rate: successRate
+                      })}
                 </p>
               </div>
             </div>
@@ -172,13 +187,16 @@ const ProductionAuditPanel: React.FC = () => {
               <button
                 onClick={exportReport}
                 className="p-2 hover:bg-white/20 rounded-lg transition-colors"
-                title="Exporter le rapport"
+                title={t('admin.audit.export') as string}
+                aria-label={t('admin.audit.export') as string}
               >
                 <Download size={16} />
               </button>
               <button
                 onClick={() => setIsVisible(false)}
                 className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+                aria-label={t('admin.audit.close_panel') as string}
+                title={t('admin.audit.close_panel') as string}
               >
                 <EyeOff size={18} />
               </button>
@@ -200,12 +218,14 @@ const ProductionAuditPanel: React.FC = () => {
                 ) : (
                   <Play className="h-4 w-4" />
                 )}
-                <span>{isRunning ? 'Audit complet en cours...' : 'AUDIT COMPLET'}</span>
+                <span>
+                  {isRunning ? t('admin.audit.running') : t('admin.audit.run_full')}
+                </span>
               </button>
               
               {lastRun && (
                 <span className="text-xs text-gray-500">
-                  Dernier audit: {lastRun.toLocaleTimeString()}
+                  {t('admin.audit.last_run', { time: lastRun.toLocaleTimeString() })}
                 </span>
               )}
             </div>
@@ -236,7 +256,7 @@ const ProductionAuditPanel: React.FC = () => {
                   {getCategoryIcon(category)}
                   <h4 className="font-bold text-gray-900">{category}</h4>
                   <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full">
-                    {categoryResults.length} tests
+                    {t('admin.audit.tests_count', { count: categoryResults.length })}
                   </span>
                 </div>
               </div>
@@ -254,13 +274,15 @@ const ProductionAuditPanel: React.FC = () => {
                         
                         {result.details && (
                           <div className="text-xs text-gray-600 bg-white/50 rounded p-2 mb-2">
-                            <strong>Détails:</strong> {typeof result.details === 'string' ? result.details : JSON.stringify(result.details)}
+                            <strong>{t('admin.audit.details_label')} </strong>
+                            {typeof result.details === 'string' ? result.details : JSON.stringify(result.details)}
                           </div>
                         )}
                         
                         {result.recommendation && (
                           <div className="text-xs text-blue-700 bg-blue-50 rounded p-2">
-                            <strong>💡 Recommandation:</strong> {result.recommendation}
+                            <strong>💡 {t('admin.audit.recommendation_label')} </strong>
+                            {result.recommendation}
                           </div>
                         )}
                       </div>
@@ -279,38 +301,47 @@ const ProductionAuditPanel: React.FC = () => {
               {isProductionReady ? '🚀' : errorCount > 0 ? '🚨' : '⚠️'}
             </div>
             <p className="font-bold text-lg mb-3">
-              {isProductionReady ? 'SITE 100% PRÊT POUR LA PRODUCTION !' : errorCount > 0 ? 'ERREURS CRITIQUES À CORRIGER' : 'AMÉLIORATIONS RECOMMANDÉES'}
+              {isProductionReady
+                ? t('admin.status.ready_headline')
+                : errorCount > 0
+                  ? t('admin.status.critical_errors_headline')
+                  : t('admin.status.improvements_headline')}
             </p>
             
             <div className="grid grid-cols-3 gap-4 text-sm mb-4">
               <div>
                 <div className="font-bold text-green-700">{successCount}</div>
-                <div className="text-green-600">Réussis</div>
+                <div className="text-green-600">{t('admin.audit.success')}</div>
               </div>
               <div>
                 <div className="font-bold text-yellow-700">{warningCount}</div>
-                <div className="text-yellow-600">Avertissements</div>
+                <div className="text-yellow-600">{t('admin.audit.warnings')}</div>
               </div>
               <div>
                 <div className="font-bold text-red-700">{errorCount}</div>
-                <div className="text-red-600">Erreurs</div>
+                <div className="text-red-600">{t('admin.audit.errors')}</div>
               </div>
             </div>
             
             {isProductionReady && (
               <div className="mt-3 space-y-1">
-                <p className="text-sm text-green-700 font-medium">✅ Formulaires Contact & Investisseurs fonctionnels</p>
-                <p className="text-sm text-green-700 font-medium">✅ Console admin 100% opérationnelle</p>
-                <p className="text-sm text-green-700 font-medium">✅ Base de données & règles Firestore OK</p>
-                <p className="text-sm text-green-700 font-medium">✅ 7 langues supportées</p>
-                <p className="text-sm text-green-700 font-medium">✅ Navigation SPA fluide</p>
-                <p className="text-sm text-green-700 font-medium">✅ Performance optimisée</p>
-                <p className="text-sm text-green-700 font-medium">✅ Sécurité configurée</p>
+                <p className="text-sm text-green-700 font-medium">✅ {t('admin.audit.checklist.contacts')}</p>
+                <p className="text-sm text-green-700 font-medium">✅ {t('admin.audit.checklist.admin_console')}</p>
+                <p className="text-sm text-green-700 font-medium">✅ {t('admin.audit.checklist.firestore')}</p>
+                <p className="text-sm text-green-700 font-medium">✅ {t('admin.audit.checklist.languages', { count: languagesSupported })}</p>
+                <p className="text-sm text-green-700 font-medium">✅ {t('admin.audit.checklist.spa')}</p>
+                <p className="text-sm text-green-700 font-medium">✅ {t('admin.audit.checklist.performance')}</p>
+                <p className="text-sm text-green-700 font-medium">✅ {t('admin.audit.checklist.security')}</p>
               </div>
             )}
             
             <div className="mt-4 text-xs text-gray-600">
-              <p>Audit complet: {totalTests} tests • Dernière vérification: {lastRun?.toLocaleTimeString()}</p>
+              <p>
+                {t('admin.audit.footer', {
+                  count: totalTests,
+                  time: lastRun ? lastRun.toLocaleTimeString() : '—'
+                })}
+              </p>
             </div>
           </div>
         </div>

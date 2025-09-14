@@ -77,7 +77,7 @@ const Footer: React.FC<FooterProps> = ({ navigate }) => {
 
           {/* Legal & Investors */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Navigation</h3>
+            <h3 className="text-lg font-semibold">{t('footer.navigation')}</h3>
             <div className="space-y-2">
               <button
                 onClick={() => navigate('blog')}

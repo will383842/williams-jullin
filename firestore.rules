@@ -1,53 +1,48 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-
     function isSignedIn() {
       return request.auth != null;
     }
-
-    // --- OPTION A : admin identifié par email ---
+    
     function isAdmin() {
-      return isSignedIn() && request.auth.token.email == "williamsjullin@gmail.com";
+      return isSignedIn() && request.auth.token.admin == true;
     }
-
-    // --- OPTION B (plus robuste, à activer plus tard si besoin) : 
-    // Vérifie l'existence d'un doc rôle dans Firestore
-    // function isAdmin() {
-    //   return isSignedIn() &&
-    //     exists(/databases/$(database)/documents/_roles/admins/$(request.auth.uid));
-    // }
-
-    // --- Blog posts ---
+    
+    // --- Blog posts (lecture publique) ---
     match /posts/{id} {
-      allow read: if true;                  // lecture publique
-      allow create, update, delete: if isAdmin(); // écriture réservée admin
+      allow read: if true;                  // lecture publique SANS AUTH
+      allow create, update, delete: if isAdmin();
+    }
+    
+    // --- Analytics (auth requise pour lire/écrire) ---
+    match /analytics/{document} {
+      allow read, write: if isSignedIn();
     }
 
-    // --- Contacts (formulaire public) ---
+    // --- Admin (auth requise) ---
+    match /admin_logs/{document} {
+      allow read, write: if isSignedIn();
+    }
+    match /admin_notifications/{document} {
+      allow read, write: if isSignedIn();
+    }
+    match /admin_settings/{document} {
+      allow read, write: if isSignedIn();
+    }
+    
+    // --- Contacts et Investors ---
     match /contacts/{id} {
-      allow create: if true;                  // tout le monde peut ENVOYER
-      allow read, update, delete: if isAdmin(); // seul l’admin peut lire/modifier/supprimer
+      allow create: if true;
+      allow read, update, delete: if isAdmin();
     }
-
-    // --- Investors (formulaire public) ---
+    
     match /investors/{id} {
-      allow create: if true;                  // tout le monde peut ENVOYER
-      allow read, update, delete: if isAdmin(); // seul l’admin peut lire/modifier/supprimer
+      allow create: if true;
+      allow read, update, delete: if isAdmin();
     }
-
-    // --- Analytics (tracking des événements) ---
-    match /analytics/{docId} {
-      allow create: if true;                  // écriture libre
-      allow read, update, delete: if isAdmin(); // lecture/suppression admin uniquement
-    }
-
-    // --- Collections de test (désactivées en prod) ---
-    match /test/{id} {
-      allow read, write: if false;
-    }
-
-    // --- Par défaut : tout est interdit ---
+    
+    // --- Par défaut ---
     match /{document=**} {
       allow read, write: if false;
     }

@@ -1,10 +1,24 @@
 rules_version = '2';
-
-// Craft rules based on data in your Firestore database
-// allow write: if firestore.get(
-//    /databases/(default)/documents/users/$(request.auth.uid)).data.isAdmin;
 service firebase.storage {
   match /b/{bucket}/o {
+    
+    // --- Images publiques du blog ---
+    match /blog/{allPaths=**} {
+      allow read: if true; // tout le monde peut voir les images du blog
+      allow write: if request.auth != null && request.auth.token.admin == true; 
+      // seul admin peut créer / modifier / supprimer
+    }
+
+    // --- Uploads utilisateurs (documents, pièces jointes, etc.) ---
+    match /uploads/{userId}/{allPaths=**} {
+      // Un utilisateur connecté peut écrire uniquement dans son propre dossier
+      allow write: if request.auth != null && request.auth.uid == userId;
+
+      // Seul l'admin peut lire les fichiers uploadés
+      allow read: if request.auth != null && request.auth.token.admin == true;
+    }
+
+    // --- Par défaut : tout interdit ---
     match /{allPaths=**} {
       allow read, write: if false;
     }

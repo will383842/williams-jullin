@@ -1,5 +1,6 @@
 import React from 'react';
 import { CheckCircle, XCircle, AlertTriangle, Loader2, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 interface FormFeedbackProps {
   isVisible: boolean;
@@ -18,6 +19,8 @@ const FormFeedback: React.FC<FormFeedbackProps> = ({
   onClose,
   onRetry
 }) => {
+  const { t } = useTranslation();
+
   if (!isVisible) return null;
 
   const getIcon = () => {
@@ -55,6 +58,7 @@ const FormFeedback: React.FC<FormFeedbackProps> = ({
             <button
               onClick={onClose}
               className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors"
+              aria-label={t('common.close')}
             >
               <X size={20} className="text-gray-500" />
             </button>
@@ -93,14 +97,14 @@ const FormFeedback: React.FC<FormFeedbackProps> = ({
                     onClick={onRetry}
                     className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                   >
-                    Réessayer
+                    {t('common.retry')}
                   </button>
                 )}
                 <button
                   onClick={onClose}
                   className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                 >
-                  Fermer
+                  {t('common.close')}
                 </button>
               </>
             )}

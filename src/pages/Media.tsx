@@ -2,12 +2,25 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Download, Mail, ExternalLink } from 'lucide-react';
 
+import SEO from '../seo/SEO';
+import { buildAlternates, canonical } from '../seo/helpers';
+import { PATHS, LOCALES, type Locale } from '../router/paths';
+import { metaMedia } from '../seo/meta';
+
+
 interface MediaProps {
   navigate: (page: string) => void;
 }
 
 const Media: React.FC<MediaProps> = ({ navigate }) => {
-  const { t } = useTranslation();
+
+  // === SEO locale & URLs ===
+  const locale = (i18n?.language?.split('-')[0] ?? 'fr') as Locale;
+  const bcp47 = locale === 'fr' ? 'fr-FR' : `${locale}-${locale.toUpperCase()}`;
+  const alternates = buildAlternates(locale, 'media');
+  const can = canonical(locale, 'media');
+  const meta = metaMedia(locale);
+const { t, i18n } = useTranslation();
   
   const interviewTopics = [
     {
@@ -69,6 +82,15 @@ const Media: React.FC<MediaProps> = ({ navigate }) => {
   };
 
   return (
+  <>
+    <SEO
+  title={meta.title}
+  description={meta.desc}
+  canonical={can}
+  locale={bcp47}
+  alternates={alternates}
+/>
+
     <div className="pt-24">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 py-20">
@@ -296,7 +318,9 @@ const Media: React.FC<MediaProps> = ({ navigate }) => {
         </div>
       </section>
     </div>
-  );
+  
+  </>
+);
 };
 
 export default Media;

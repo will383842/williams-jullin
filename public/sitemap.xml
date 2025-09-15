@@ -1,244 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://williamsjullin.com/</loc>
     <lastmod>2025-09-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es" />
-  </url>
-  <url>
-    <loc>https://williamsjullin.com/en</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es" />
-  </url>
-  <url>
-    <loc>https://williamsjullin.com/de</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es" />
-  </url>
-  <url>
-    <loc>https://williamsjullin.com/es</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es"/>
+<xhtml:link rel="alternate" hreflang="pt" href="https://williamsjullin.com/pt"/>
+<xhtml:link rel="alternate" hreflang="ru" href="https://williamsjullin.com/ru"/>
+<xhtml:link rel="alternate" hreflang="zh" href="https://williamsjullin.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://williamsjullin.com/en"/>
   </url>
   <url>
     <loc>https://williamsjullin.com/mon-histoire</loc>
     <lastmod>2025-09-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/mon-histoire" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/mon-histoire" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/mon-histoire" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/mon-histoire" />
-  </url>
-  <url>
-    <loc>https://williamsjullin.com/en/mon-histoire</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/mon-histoire" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/mon-histoire" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/mon-histoire" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/mon-histoire" />
-  </url>
-  <url>
-    <loc>https://williamsjullin.com/de/mon-histoire</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/mon-histoire" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/mon-histoire" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/mon-histoire" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/mon-histoire" />
-  </url>
-  <url>
-    <loc>https://williamsjullin.com/es/mon-histoire</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/mon-histoire" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/mon-histoire" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/mon-histoire" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/mon-histoire" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/mon-histoire"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/my-story"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/meine-geschichte"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/mi-historia"/>
+<xhtml:link rel="alternate" hreflang="pt" href="https://williamsjullin.com/pt/minha-historia"/>
+<xhtml:link rel="alternate" hreflang="ru" href="https://williamsjullin.com/ru/moja-istoria"/>
+<xhtml:link rel="alternate" hreflang="zh" href="https://williamsjullin.com/zh/我的故事"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://williamsjullin.com/en/my-story"/>
   </url>
   <url>
     <loc>https://williamsjullin.com/blog</loc>
     <lastmod>2025-09-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/blog" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/blog" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/blog" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/blog" />
-  </url>
-  <url>
-    <loc>https://williamsjullin.com/en/blog</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/blog" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/blog" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/blog" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/blog" />
-  </url>
-  <url>
-    <loc>https://williamsjullin.com/de/blog</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/blog" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/blog" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/blog" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/blog" />
-  </url>
-  <url>
-    <loc>https://williamsjullin.com/es/blog</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/blog" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/blog" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/blog" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/blog" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/blog"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/blog"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/blog"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/blog"/>
+<xhtml:link rel="alternate" hreflang="pt" href="https://williamsjullin.com/pt/blog"/>
+<xhtml:link rel="alternate" hreflang="ru" href="https://williamsjullin.com/ru/blog"/>
+<xhtml:link rel="alternate" hreflang="zh" href="https://williamsjullin.com/zh/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://williamsjullin.com/en/blog"/>
   </url>
   <url>
     <loc>https://williamsjullin.com/contact</loc>
     <lastmod>2025-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/contact" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/contact" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/contact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/contact" />
-  </url>
-  <url>
-    <loc>https://williamsjullin.com/en/contact</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/contact" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/contact" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/contact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/contact" />
-  </url>
-  <url>
-    <loc>https://williamsjullin.com/de/contact</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/contact" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/contact" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/contact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/contact" />
-  </url>
-  <url>
-    <loc>https://williamsjullin.com/es/contact</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/contact" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/contact" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/contact" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/contact" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/contact"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/contact"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/kontakt"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/contacto"/>
+<xhtml:link rel="alternate" hreflang="pt" href="https://williamsjullin.com/pt/contato"/>
+<xhtml:link rel="alternate" hreflang="ru" href="https://williamsjullin.com/ru/kontakt"/>
+<xhtml:link rel="alternate" hreflang="zh" href="https://williamsjullin.com/zh/联系"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://williamsjullin.com/en/contact"/>
   </url>
   <url>
     <loc>https://williamsjullin.com/media</loc>
     <lastmod>2025-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/media" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/media" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/media" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/media" />
-  </url>
-  <url>
-    <loc>https://williamsjullin.com/en/media</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/media" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/media" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/media" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/media" />
-  </url>
-  <url>
-    <loc>https://williamsjullin.com/de/media</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/media" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/media" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/media" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/media" />
-  </url>
-  <url>
-    <loc>https://williamsjullin.com/es/media</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/media" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/media" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/media" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/media" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/media"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/media"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/medien"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/medios"/>
+<xhtml:link rel="alternate" hreflang="pt" href="https://williamsjullin.com/pt/midia"/>
+<xhtml:link rel="alternate" hreflang="ru" href="https://williamsjullin.com/ru/media"/>
+<xhtml:link rel="alternate" hreflang="zh" href="https://williamsjullin.com/zh/媒体"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://williamsjullin.com/en/media"/>
   </url>
   <url>
     <loc>https://williamsjullin.com/investors</loc>
     <lastmod>2025-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/investors" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/investors" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/investors" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/investors" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/investors"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/investors"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/investoren"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/inversores"/>
+<xhtml:link rel="alternate" hreflang="pt" href="https://williamsjullin.com/pt/investidores"/>
+<xhtml:link rel="alternate" hreflang="ru" href="https://williamsjullin.com/ru/investory"/>
+<xhtml:link rel="alternate" hreflang="zh" href="https://williamsjullin.com/zh/投资者"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://williamsjullin.com/en/investors"/>
   </url>
   <url>
-    <loc>https://williamsjullin.com/en/investors</loc>
+    <loc>https://williamsjullin.com/blog/visa-guide-2024</loc>
     <lastmod>2025-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/investors" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/investors" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/investors" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/investors" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/blog/visa-guide-2024"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/blog/visa-guide-2024"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/blog/visa-guide-2024"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/blog/visa-guide-2024"/>
+<xhtml:link rel="alternate" hreflang="pt" href="https://williamsjullin.com/pt/blog/visa-guide-2024"/>
+<xhtml:link rel="alternate" hreflang="ru" href="https://williamsjullin.com/ru/blog/visa-guide-2024"/>
+<xhtml:link rel="alternate" hreflang="zh" href="https://williamsjullin.com/zh/blog/visa-guide-2024"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://williamsjullin.com/en/blog/visa-guide-2024"/>
   </url>
   <url>
-    <loc>https://williamsjullin.com/de/investors</loc>
+    <loc>https://williamsjullin.com/blog/banking-digital-nomades-solutions</loc>
     <lastmod>2025-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/investors" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/investors" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/investors" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/investors" />
-  </url>
-  <url>
-    <loc>https://williamsjullin.com/es/investors</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/investors" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/investors" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/investors" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/investors" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://williamsjullin.com/blog/banking-digital-nomades-solutions"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://williamsjullin.com/en/blog/banking-digital-nomades-solutions"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://williamsjullin.com/de/blog/banking-digital-nomades-solutions"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://williamsjullin.com/es/blog/banking-digital-nomades-solutions"/>
+<xhtml:link rel="alternate" hreflang="pt" href="https://williamsjullin.com/pt/blog/banking-digital-nomades-solutions"/>
+<xhtml:link rel="alternate" hreflang="ru" href="https://williamsjullin.com/ru/blog/banking-digital-nomades-solutions"/>
+<xhtml:link rel="alternate" hreflang="zh" href="https://williamsjullin.com/zh/blog/banking-digital-nomades-solutions"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://williamsjullin.com/en/blog/banking-digital-nomades-solutions"/>
   </url>
 </urlset>

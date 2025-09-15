@@ -4,16 +4,13 @@ Allow: /
 # Sitemap
 Sitemap: https://williamsjullin.com/sitemap.xml
 
-# Optimisation crawl
-Crawl-delay: 1
+# (Optionnel) Bots IA
+User-agent: GPTBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: PerplexityBot
+Allow: /
 
-# Pages principales
-# / (accueil)
-# /mon-histoire
-# /blog
-# /contact
-# /investors
-# /media
-
-# Pas de restrictions
-# Accès total pour indexation complète
+# (Optionnel) Les moteurs ignorent souvent ceci :
+# Crawl-delay: 1

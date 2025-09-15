@@ -66,8 +66,10 @@
       "archive": "Archive",
       "archived": "Archived",
       "cancel": "Cancel",
+      "collapse": "收起",
       "create": "Create",
       "delete": "Delete",
+      "expand": "展开",
       "high": "High",
       "last_1h": "Last 1h",
       "last_24h": "Last 24h",
@@ -87,9 +89,7 @@
       "selected": "Selected",
       "total": "Total",
       "urgent": "Urgent",
-      "view_details": "View details",
-      "expand": "展开",
-      "collapse": "收起"
+      "view_details": "View details"
     },
     "contacts": {
       "bulk_action_error": "Bulk action error",
@@ -406,7 +406,6 @@
         "challenges_desc": "Digital nomads face unique challenges: high exchange fees, blocked accounts, difficulties opening accounts without fixed address, and managing multiple currencies.",
         "challenges_title": "International Banking Challenges",
         "conclusion": "With the right banking solutions, managing your finances as a digital nomad becomes much simpler. The initial investment in researching and setting up these tools will save you time and money in the long run.",
-        "content": "作为数字游牧者或外籍人士，管理跨多个国家的财务可能具有挑战性...",
         "date": "Date",
         "digital_banks_desc": "Revolut, Wise (formerly TransferWise), and N26 offer solutions specifically designed for digital nomads.",
         "digital_banks_title": "Digital Banks",
@@ -428,14 +427,15 @@
         "traditional_feature_1": "Global presence",
         "traditional_feature_2": "Premium expat services",
         "traditional_feature_3": "Specialized advisors",
-        "traditional_feature_4": "Free internal transfers"
+        "traditional_feature_4": "Free internal transfers",
+        "content": "作为数字游牧者或外籍人士，管理跨多个国家的财务可能具有挑战性..."
       },
       "culture_shock": {
         "conclusion": "Culture shock is temporary and surmountable. With patience, open-mindedness and the right strategies, you'll transform this trial into an extraordinary personal growth opportunity.",
-        "content": "文化冲击是外籍人士体验的自然部分，但它不必让您的国际旅程脱轨...",
         "excerpt": "学习如何通过经过验证的策略导航文化差异并成功适应您的新环境。",
         "intro": "Culture shock is a natural part of the expat experience, but it doesn't have to derail your international journey. Here's how to overcome it.",
-        "title": "克服文化冲击：实用指南"
+        "title": "克服文化冲击：实用指南",
+        "content": "文化冲击是外籍人士体验的自然部分，但它不必让您的国际旅程脱轨..."
       },
       "healthcare_expat": {
         "arrival": {
@@ -448,14 +448,13 @@
           "title": "Title"
         },
         "conclusion": "Good health preparation will allow you to live your expatriation peacefully. Don't hesitate to get support from professionals specialized in expat health.",
-        "content": "医疗保健是搬到海外时最重要的考虑因素之一...",
         "excerpt": "了解海外医疗系统、保险要求以及如何作为外籍人士获得优质医疗服务。",
         "intro": "Healthcare is one of the most important considerations when moving abroad. This guide helps you navigate international healthcare systems.",
-        "title": "外籍人士医疗系统：您需要知道的"
+        "title": "外籍人士医疗系统：您需要知道的",
+        "content": "医疗保健是搬到海外时最重要的考虑因素之一..."
       },
       "housing_berlin": {
         "conclusion": "Finding housing in Berlin requires perseverance, but the city offers exceptional quality of life. With this guide, you're better prepared to navigate the Berlin real estate market.",
-        "content": "柏林的房地产市场对新来者来说可能令人生畏，但有了正确的方法和知识...",
         "date": "Date",
         "excerpt": "通过关于社区、租赁流程和避免常见陷阱的内部技巧掌握柏林房地产市场。",
         "intro": "Berlin's housing market can be intimidating for newcomers, but with the right approach and knowledge, you can find your ideal home.",
@@ -480,20 +479,20 @@
           "desc": "Desc",
           "title": "Title"
         },
-        "title": "在柏林寻找住房：外籍人士完整指南"
+        "title": "在柏林寻找住房：外籍人士完整指南",
+        "content": "柏林的房地产市场对新来者来说可能令人生畏，但有了正确的方法和知识..."
       },
       "moving_checklist": {
         "conclusion": "A well-planned international move is the key to successful expatriation. This checklist will help you not forget anything and approach your new life with serenity.",
-        "content": "国际搬迁需要仔细的规划和组织...",
         "excerpt": "涵盖从文档到物流的所有内容的综合清单，确保顺利的国际搬迁。",
         "intro": "International moving requires careful planning and organization. This comprehensive checklist guides you step by step.",
-        "title": "终极国际搬迁清单"
+        "title": "终极国际搬迁清单",
+        "content": "国际搬迁需要仔细的规划和组织..."
       },
       "visa_guide": {
         "business_visa_desc": "For short-term business activities",
         "business_visa_title": "Business Visas",
         "conclusion": "The visa process may seem daunting at first, but with proper preparation and understanding of requirements, you'll be well on your way to your European adventure. Remember, every successful expat started exactly where you are now - with a dream and the determination to make it happen.",
-        "content": "搬到新国家可能是人生最激动人心的冒险之一，但导航签证流程不必令人不知所措...",
         "date": "Date",
         "doc_accommodation": "Proof of accommodation",
         "doc_application": "Completed visa application form",
@@ -526,7 +525,8 @@
         "tourist_visa_desc": "For short-term visits up to 90 days",
         "tourist_visa_title": "Tourist Visas",
         "work_visa_desc": "For employment purposes with specific employer sponsorship",
-        "work_visa_title": "Work Visas"
+        "work_visa_title": "Work Visas",
+        "content": "搬到新国家可能是人生最激动人心的冒险之一，但导航签证流程不必令人不知所措..."
       }
     },
     "read_more": "阅读更多",
@@ -603,17 +603,24 @@
       "email": "Email Address",
       "email_placeholder": "Enter your email address",
       "errors_title": "请纠正以下错误：",
-      "first_name_placeholder": "您的名字",
       "full_name": "Full Name",
       "full_name_placeholder": "输入您的全名",
+      "message": "消息",
+      "message_placeholder": "告诉我们您的愿景，期望，投资策略，具体问题...",
+      "purpose": "联系目的",
+      "select_purpose": "Select purpose...",
+      "send": "发送消息",
+      "sending": "发送中...",
+      "subject": "Subject",
+      "subject_placeholder": "Brief subject of your message",
+      "title": "发送消息",
+      "first_name_placeholder": "您的名字",
       "geographic_focus": "地理重点",
       "geographic_focus_placeholder": "欧洲，亚洲，全球...",
       "investment_timeline": "投资时间线",
       "investor_type": "投资者类型",
       "last_name": "姓",
       "last_name_placeholder": "您的姓氏",
-      "message": "消息",
-      "message_placeholder": "告诉我们您的愿景，期望，投资策略，具体问题...",
       "newsletter_consent": "我希望收到关于Ulixai & SOS-Expat发展的更新（可选）",
       "organization": "组织/基金",
       "organization_placeholder": "您的组织名称",
@@ -628,7 +635,6 @@
       "position_placeholder": "管理合伙人，投资总监...",
       "previous_investments": "投资经验",
       "previous_investments_placeholder": "简要描述您在类似初创公司/规模化公司的以往投资...",
-      "purpose": "联系目的",
       "section_interest": "具体兴趣",
       "section_investment": "投资详情",
       "section_investor": "投资者类型",
@@ -637,12 +643,7 @@
       "section_personal": "个人信息",
       "select_investor_type": "选择您的档案...",
       "select_platform": "选择您的兴趣...",
-      "select_purpose": "Select purpose...",
       "select_timeline": "选择时间线...",
-      "send": "发送消息",
-      "sending": "发送中...",
-      "subject": "Subject",
-      "subject_placeholder": "Brief subject of your message",
       "timelines": {
         "flexible": "根据机会灵活",
         "immediate": "立即（< 1个月）",
@@ -650,7 +651,6 @@
         "medium": "中期（3-6个月）",
         "short": "短期（1-3个月）"
       },
-      "title": "发送消息",
       "types": {
         "angel": "天使投资人",
         "corporate": "企业风投",
@@ -718,12 +718,12 @@
   "footer": {
     "description": "通过创新解决方案和专家指导转型全球流动性。",
     "investors": "投资者",
-    "legal": "法律",
-    "legal_notice": "法律声明",
     "navigation": "Navigation",
     "platforms": "平台",
-    "privacy": "隐私政策",
-    "rights_reserved": "版权所有。"
+    "rights_reserved": "版权所有。",
+    "legal": "法律",
+    "legal_notice": "法律声明",
+    "privacy": "隐私政策"
   },
   "form": {
     "errors": {
@@ -752,35 +752,187 @@
       "title": "标题"
     },
     "blog": {
-      "see_all": "文本",
-      "subtitle": "标题",
-      "title": "标题",
-      "read_more": "文本",
-      "language_label": "标签",
+      "see_all": "所有文章",
+      "subtitle": "为你的海外之路提供专家建议",
+      "title": "最新文章",
+      "read_more": "阅读更多",
+      "language_label": "语言",
       "topics": {
-        "visas": "文本",
-        "tips": "文本",
-        "banking": "文本",
-        "housing": "文本",
-        "culture": "文本"
+        "visas": "签证",
+        "tips": "技巧",
+        "banking": "银行",
+        "housing": "住房",
+        "culture": "文化"
       },
       "posts": {
         "visa_guide": {
-          "date": "文本",
-          "title": "标题",
-          "excerpt": "描述"
+          "date": "",
+          "title": "",
+          "excerpt": ""
         },
         "banking_nomad": {
-          "date": "文本",
-          "title": "标题",
-          "excerpt": "描述"
+          "date": "",
+          "title": "",
+          "excerpt": ""
         },
         "housing_berlin": {
-          "date": "文本",
-          "title": "标题",
-          "excerpt": "描述"
+          "date": "",
+          "title": "",
+          "excerpt": ""
         }
       }
+    },
+    "conference": {
+      "badge": "主题演讲者",
+      "description": "我将自己的经验分享给全球成千上万的外籍人士",
+      "impact_description": "在全球外籍与旅行者会议上担任演讲嘉宾。",
+      "impact_title": "我的全球影响力",
+      "photo_alt": "Williams Jullin 进行有关外派的主题演讲",
+      "point_1": "我举办关于外派的国际演讲",
+      "point_2": "获认可的国际流动专家",
+      "point_3": "SOS‑Expat 与 Ulixai 的创始人",
+      "title": "我的外派与外籍生活主题演讲",
+      "topic_1": "现代外派的挑战",
+      "topic_2": "如何作为外籍人士创造收入",
+      "topic_3": "国际流动的未来",
+      "topic_4": "构建全球互助网络",
+      "topics_title": "🎤 我的演讲主题"
+    },
+    "cta": {
+      "subtitle": "加入成千上万通过专家建议与创新方案改变海外生活体验的外籍人士。",
+      "title": "准备好升级你的国际体验了吗？"
+    },
+    "double_impact": {
+      "badge": "双重影响",
+      "conclusion_desc": "我们既帮助外籍人士解决难题，也为帮助者与服务商创造全球收入机会。",
+      "conclusion_title": "全球双重影响",
+      "sos": {
+        "cta": "从 SOS‑Expat 开始",
+        "mission_1_desc": "全球范围内遇到困难的外籍人士、旅行者与游客",
+        "mission_1_title": "使命一：即时帮助",
+        "mission_2_desc": "律师与外籍帮助者通过预付费通话获得收入",
+        "mission_2_title": "使命二：保证收入",
+        "name": "SOS‑Expat.com",
+        "tagline": "即时帮助"
+      },
+      "subtitle": "帮助外籍人士，并为所有人创造收入",
+      "title": "两大平台，四项使命",
+      "ulixai": {
+        "cta": "在 Ulixai 发布需求",
+        "mission_1_desc": "在世界任何地方找到合适的服务商",
+        "mission_1_title": "使命一：不限服务，多个报价可选",
+        "mission_2_desc": "外籍服务者或专业人士在世界各地都能获得收入",
+        "mission_2_title": "使命二：全球收入",
+        "name": "Ulixai.com",
+        "tagline": "服务与报价"
+      }
+    },
+    "hero": {
+      "badge": "国际流动专家",
+      "badge_verified": "已验证徽章",
+      "cta_primary": "5 分钟内获得即时帮助（SOS‑Expat）",
+      "cta_secondary": "需要服务 → 在 Ulixai 找到合适的服务商",
+      "headline": "无限服务",
+      "photo_alt": "Williams Jullin — 全球流动领域专家",
+      "subtitle": "Ulixai.com 与 SOS‑Expat.com 创始人 —— 我将 3.04 亿外籍人士与 14.65 亿旅行者即时连接到全球经过验证的服务商。",
+      "title_1": "Williams",
+      "title_2": "Jullin",
+      "tagline": "每一次搬迁，都能获得可信赖的帮助。"
+    },
+    "seo": {
+      "description": "描述",
+      "title": "标题"
+    },
+    "services": {
+      "banking": "银行",
+      "education": "教育",
+      "health": "健康",
+      "housing": "住房",
+      "jobs": "工作",
+      "moving": "搬家",
+      "renovation": "翻修",
+      "tax": "税务",
+      "taxes": "税费",
+      "transport": "交通",
+      "visas": "签证",
+      "visas_permits": "签证与许可",
+      "work": "就业",
+      "more_html": "……以及更多服务。"
+    },
+    "solutions": {
+      "sos": {
+        "badge_1": "全天候服务",
+        "badge_2": "保证收入",
+        "badge_3": "安全支付",
+        "badge_time": "即时接通",
+        "call_to_action": "👉 现在就需要帮助？<br/>👉 想帮助他人并获得报酬？加入我们的网络。",
+        "description": "在 5 分钟内，我们把你与可信赖的律师或资深外籍帮助者连接。通话有保障。无压力、无意外——现在就给出解决方案。",
+        "feature_1": "100+ 名经过验证的专业人士与帮助者",
+        "feature_2": "全球范围，全天候",
+        "feature_3": "以人为本，其次才是效率",
+        "title": "SOS‑Expat：为所有人提供即刻帮助",
+        "cta": ""
+      },
+      "ulixai": {
+        "client_step_1": "描述你的需求（国家、语言、服务、截止时间）。",
+        "client_step_2": "收到会说你语言的验证服务商的多个方案与报价。",
+        "client_step_3": "选择线下或线上服务。支付、历史与评价集中在同一处。",
+        "client_title": "客户端 —— 工作方式",
+        "description": "外籍服务者或经过验证的专业人士，响应迅速，报价快捷，流程简单。面向外籍人士、准备外派者、旅行者与游客 —— 适用于所有国籍、任何地点。",
+        "examples": "示例：签证、翻译、住房、教育、健康、手续办理、疑难排解、搬家、工作……",
+        "provider_step_1": "2 分钟完成注册（外籍或专业人士）。",
+        "provider_step_2": "按你的语言/国家收到相关请求。",
+        "provider_step_3": "报价 → 执行 → 收款，建立你的口碑。",
+        "provider_title": "服务商端",
+        "title": "Ulixai —— 在任何地方，用你的语言，找到合适的服务商",
+        "why_fair": "为外籍与专业人士创造收入",
+        "why_fair_label": "公平",
+        "why_fast": "数分钟内给出报价，集中化跟进",
+        "why_fast_label": "快速",
+        "why_global": "世界各地皆可",
+        "why_global_label": "全球",
+        "why_multilingual": "使用你的语言",
+        "why_multilingual_label": "多语言",
+        "why_title": "为什么选择 Ulixai",
+        "why_verified": "外籍或经过验证并评估的专业人士",
+        "why_verified_label": "已验证",
+        "cta": ""
+      }
+    },
+    "sos_expat": {
+      "alt": "描述"
+    },
+    "stats": {
+      "countries_covered": "覆盖国家",
+      "expats_helped": "已帮助外籍人士",
+      "services": "SOS‑Expat 与 Ulixai 服务"
+    },
+    "structured": {
+      "person": {
+        "description": "描述",
+        "jobTitle": "标题"
+      },
+      "website": {
+        "description": "描述",
+        "name": "姓名"
+      }
+    },
+    "testimonials": {
+      "title": "他们信任我们",
+      "items": [
+        {
+          "quote": "多亏了 SOS‑Expat，我解决了签证问题，并开始通过帮助其他外籍人士来获得收入。",
+          "name": "Léa M.",
+          "role": "律师",
+          "location": "新加坡"
+        },
+        {
+          "quote": "Ulixai 帮我在柏林找到了完美的公寓，并发展了我的房地产咨询业务。",
+          "name": "Yassine K.",
+          "role": "顾问",
+          "location": "多伦多"
+        }
+      ]
     },
     "clients": {
       "individuals": "个人",
@@ -800,53 +952,6 @@
       "subtitle": "从初创公司到财富500强企业，全球组织都信任我们的专业知识。",
       "title": "受全球领导者信任"
     },
-    "conference": {
-      "badge": "徽章",
-      "description": "描述",
-      "impact_description": "描述",
-      "impact_title": "标题",
-      "photo_alt": "描述",
-      "point_1": "文本",
-      "point_2": "文本",
-      "point_3": "文本",
-      "title": "标题",
-      "topic_1": "文本",
-      "topic_2": "文本",
-      "topic_3": "文本",
-      "topic_4": "文本",
-      "topics_title": "标题"
-    },
-    "cta": {
-      "contact": "联系我们",
-      "story": "我的故事",
-      "subtitle": "加入数千名成功的外籍人士，他们通过专家指导和创新解决方案转型了他们的国际体验。",
-      "title": "准备转型您的全球旅程？"
-    },
-    "double_impact": {
-      "badge": "徽章",
-      "conclusion_desc": "描述",
-      "conclusion_title": "标题",
-      "sos": {
-        "cta": "操作",
-        "mission_1_desc": "描述",
-        "mission_1_title": "标题",
-        "mission_2_desc": "描述",
-        "mission_2_title": "标题",
-        "name": "姓名",
-        "tagline": "文本"
-      },
-      "subtitle": "标题",
-      "title": "标题",
-      "ulixai": {
-        "cta": "操作",
-        "mission_1_desc": "描述",
-        "mission_1_title": "标题",
-        "mission_2_desc": "描述",
-        "mission_2_title": "标题",
-        "name": "姓名",
-        "tagline": "文本"
-      }
-    },
     "help": {
       "emergency": "紧急支持",
       "emergency_action": "获得紧急帮助",
@@ -859,19 +964,6 @@
       "prepare_desc": "通过Ulixai提供AI驱动匹配和专家指导的综合搬迁规划。",
       "subtitle": "无论您需要紧急援助、规划支持还是专家见解，我都在这里指导您的国际旅程。",
       "title": "我如何帮助您"
-    },
-    "hero": {
-      "badge": "全球流动性专家",
-      "badge_verified": "徽章",
-      "cta_primary": "获得专家帮助",
-      "cta_secondary": "了解我的故事",
-      "headline": "无限服务",
-      "photo_alt": "描述",
-      "subtitle": "国际流动性专家，拥有创新平台，为全球超过50万外籍人士提供服务。",
-      "title": "转型全球流动性",
-      "title_1": "标题",
-      "title_2": "标题",
-      "tagline": "您在全球移居路上的伙伴。"
     },
     "mission": {
       "community": "社区",
@@ -899,153 +991,15 @@
       "subtitle": "在25+个国家精心策划的经过验证的专业人士网络。",
       "title": "可信合作伙伴网络"
     },
-    "seo": {
-      "description": "描述",
-      "title": "标题"
-    },
-    "services": {
-      "banking": "文本",
-      "education": "文本",
-      "health": "描述",
-      "housing": "文本",
-      "jobs": "文本",
-      "moving": "文本",
-      "renovation": "文本",
-      "tax": "文本",
-      "taxes": "文本",
-      "transport": "文本",
-      "visas": "文本",
-      "visas_permits": "文本",
-      "work": "文本",
-      "more_html": "……以及更多服务。"
-    },
-    "solutions": {
-      "discover": "发现",
-      "sos": {
-        "badge_1": "徽章",
-        "badge_2": "徽章",
-        "badge_3": "徽章",
-        "badge_time": "徽章",
-        "call_to_action": "文本",
-        "description": "描述",
-        "feature_1": "文本",
-        "feature_2": "文本",
-        "feature_3": "文本",
-        "title": "标题",
-        "cta": "操作"
-      },
-      "sos_desc": "为全球危急情况下的外籍人士提供紧急援助和紧急支持。",
-      "sos_feature_1": "24/7紧急支持",
-      "sos_feature_2": "法律和医疗援助",
-      "sos_feature_3": "多语言支持",
-      "sos_title": "SOS-Expat",
-      "subtitle": "两个综合平台，旨在支持您国际旅程的每个方面。",
-      "title": "我的解决方案",
-      "ulixai": {
-        "client_step_1": "文本",
-        "client_step_2": "文本",
-        "client_step_3": "文本",
-        "client_title": "标题",
-        "description": "描述",
-        "examples": "文本",
-        "provider_step_1": "文本",
-        "provider_step_2": "文本",
-        "provider_step_3": "文本",
-        "provider_title": "标题",
-        "title": "标题",
-        "why_fair": "文本",
-        "why_fair_label": "标签",
-        "why_fast": "文本",
-        "why_fast_label": "标签",
-        "why_global": "文本",
-        "why_global_label": "标签",
-        "why_multilingual": "文本",
-        "why_multilingual_label": "标签",
-        "why_title": "标题",
-        "why_verified": "文本",
-        "why_verified_label": "标签",
-        "cta": "操作"
-      },
-      "ulixai_desc": "具有AI驱动工具和专家指导的综合搬迁平台。",
-      "ulixai_feature_1": "AI驱动匹配",
-      "ulixai_feature_2": "专家咨询",
-      "ulixai_feature_3": "完整搬迁套件",
-      "ulixai_title": "Ulixai"
-    },
-    "sos_expat": {
-      "alt": "描述"
-    },
-    "stats": {
-      "countries_covered": "国家",
-      "expats_helped": "帮助的外籍人士",
-      "satisfaction_rate": "满意度",
-      "services": "文本",
-      "years_experience": "年经验"
-    },
-    "structured": {
-      "person": {
-        "description": "描述",
-        "jobTitle": "标题"
-      },
-      "website": {
-        "description": "描述",
-        "name": "姓名"
-      }
-    },
-    "testimonials": {
-      "item_1": {
-        "meta": "文本",
-        "name": "姓名",
-        "quote": "引用"
-      },
-      "item_2": {
-        "meta": "文本",
-        "name": "姓名",
-        "quote": "引用"
-      },
-      "item_3": {
-        "meta": "文本",
-        "name": "姓名",
-        "quote": "引用"
-      },
-      "testimonial_1": {
-        "location": "文本",
-        "name": "姓名",
-        "quote": "引用",
-        "role": "文本"
-      },
-      "testimonial_2": {
-        "location": "文本",
-        "name": "姓名",
-        "quote": "引用",
-        "role": "文本"
-      },
-      "title": "标题"
-    },
     "trust": {
       "subtitle": "标题",
       "title": "标题"
     },
     "ulixai": {
-      "alt": "描述"
+      "alt": "Ulixai —— 在世界任何地方找到合适的服务商"
     }
   },
   "investors": {
-    "business": {
-      "commission": {
-        "description": "与我们网络中经过验证的服务提供商的收入分享。",
-        "title": "佣金"
-      },
-      "enterprise": {
-        "description": "为管理全球劳动力流动性的企业提供定制解决方案。",
-        "title": "企业"
-      },
-      "subscription": {
-        "description": "高级功能和优先支持的月度和年度订阅。",
-        "title": "订阅"
-      },
-      "title": "商业模式"
-    },
     "community": {
       "growth_desc": "每天都有新的外籍人士加入我们的平台，新的帮助者提供服务",
       "growth_title": "不断增长的全球社区",
@@ -1053,20 +1007,11 @@
       "stat_2": "覆盖国家",
       "title": "我们的社区"
     },
-    "cta": {
-      "button": "请求投资者包",
-      "subtitle": "与我们合作，为全球数百万外籍人士转型全球流动性。",
-      "title": "准备加入我们的使命？"
-    },
     "direct_contact": {
       "email": "williams@ulixai.com",
       "linkedin": "LinkedIn",
       "subtitle": "Williams Jullin可以亲自讨论您的投资",
       "title": "更喜欢直接联系？"
-    },
-    "disclaimer": {
-      "content": "本演示包含前瞻性陈述和预测。过去的表现不保证未来的结果。所有投资都有损失风险。请在做出投资决定之前咨询合格的财务顾问。",
-      "title": "投资免责声明"
     },
     "form": {
       "consent": "我同意Williams Jullin就此投资机会与我联系，并同意处理我的个人数据。",
@@ -1144,39 +1089,12 @@
     },
     "hero": {
       "badge": "投资机会",
-      "cta": "请求投资者包",
       "stat_1": "已帮助的外籍人士",
       "stat_2": "覆盖国家",
       "stat_3": "活跃服务",
       "subtitle": "加入我们，革命世界如何国际移动、工作和生活。",
-      "title": "转型全球流动性"
-    },
-    "market": {
-      "description": "全球流动性市场正在经历前所未有的增长，由远程工作趋势、人才流动和不断增长的国际商业运营推动。",
-      "expats": "全球外籍人士",
-      "growth": "年增长率",
-      "size": "全球市场规模",
-      "title": "市场机会"
-    },
-    "moat": {
-      "point_1": {
-        "description": "不断增长的用户群吸引更多服务提供商，为所有参与者创造更强的价值主张。",
-        "title": "网络效应"
-      },
-      "point_2": {
-        "description": "专有匹配算法和广泛的外籍人士数据创造卓越的用户体验。",
-        "title": "数据与AI"
-      },
-      "point_3": {
-        "description": "在关键外籍人士支持情况下建立的声誉和经过验证的记录。",
-        "title": "品牌信任"
-      },
-      "point_4": {
-        "description": "对跨市场国际法规和合规要求的深入理解。",
-        "title": "监管专业知识"
-      },
-      "subtitle": "保护我们市场地位的强大防御护城河。",
-      "title": "竞争优势"
+      "title": "转型全球流动性",
+      "cta": "请求投资者包"
     },
     "platforms": {
       "business_model": "商业模式",
@@ -1205,6 +1123,111 @@
       "point_2": "分散的服务造成低效率和糟糕的体验",
       "point_3": "紧急情况让外籍人士在没有适当援助的情况下变得脆弱",
       "title": "问题"
+    },
+    "solution": {
+      "point_1": "解决所有外籍人士需求的综合平台生态系统",
+      "point_2": "与经过验证的专业网络的AI驱动匹配",
+      "point_3": "具有全球覆盖的24/7紧急支持系统",
+      "title": "我们的解决方案"
+    },
+    "success": {
+      "back_home": "返回首页",
+      "message": "我们已收到您的投资请求。Williams将在24-48小时内亲自联系您。",
+      "title": "感谢您的兴趣！"
+    },
+    "toast": {
+      "error_message": "An error occurred. Please check your info and try again.",
+      "error_title": "Sending failed",
+      "sending": "Your investment request is being sent...",
+      "success_message": "Thanks for your interest! Williams will get back to you within 24–48h.",
+      "success_title": "Request sent successfully! 🎉"
+    },
+    "validation": {
+      "amount_required": "Please select an amount",
+      "experience_required": "Please select your experience",
+      "fill_required": "Please fill all required fields to continue",
+      "first_name_min": "First name must be at least 2 characters",
+      "first_name_required": "First name is required",
+      "investorType_required": "InvestorType required",
+      "message_max": "Message cannot exceed 3000 characters",
+      "phone_invalid": "Invalid phone number format",
+      "platform_interest_required": "Please select your interest",
+      "timeline_required": "Please select a timeline",
+      "type_required": "Please select an investor type"
+    },
+    "vision": {
+      "subtitle": "我们创建一个全球生态系统，每个外籍人士都能找到所需帮助，同时为帮助者创造收入机会。",
+      "title": "我们的愿景：转型全球外籍生活"
+    },
+    "why_invest": {
+      "advantages": {
+        "description": "首个结合紧急帮助和计划服务的平台。强大的网络效应和高进入壁垒。",
+        "title": "竞争优势"
+      },
+      "subtitle": "参与转型外籍人士援助的独特机会",
+      "team": {
+        "description": "Williams Jullin本身就是外籍创始人，深刻理解挑战。拥有大规模平台经验的强大技术团队。",
+        "title": "经验丰富的团队"
+      },
+      "title": "为什么与我们投资？",
+      "growth": {
+        "description": "已帮助125K+外籍人士，年增长率300%。我们的指标显示大规模采用和高留存率。",
+        "metric_1": "年增长率",
+        "metric_2": "留存率",
+        "metric_3": "客户满意度",
+        "title": "已证明增长"
+      }
+    },
+    "business": {
+      "commission": {
+        "description": "与我们网络中经过验证的服务提供商的收入分享。",
+        "title": "佣金"
+      },
+      "enterprise": {
+        "description": "为管理全球劳动力流动性的企业提供定制解决方案。",
+        "title": "企业"
+      },
+      "subscription": {
+        "description": "高级功能和优先支持的月度和年度订阅。",
+        "title": "订阅"
+      },
+      "title": "商业模式"
+    },
+    "cta": {
+      "button": "请求投资者包",
+      "subtitle": "与我们合作，为全球数百万外籍人士转型全球流动性。",
+      "title": "准备加入我们的使命？"
+    },
+    "disclaimer": {
+      "content": "本演示包含前瞻性陈述和预测。过去的表现不保证未来的结果。所有投资都有损失风险。请在做出投资决定之前咨询合格的财务顾问。",
+      "title": "投资免责声明"
+    },
+    "market": {
+      "description": "全球流动性市场正在经历前所未有的增长，由远程工作趋势、人才流动和不断增长的国际商业运营推动。",
+      "expats": "全球外籍人士",
+      "growth": "年增长率",
+      "size": "全球市场规模",
+      "title": "市场机会"
+    },
+    "moat": {
+      "point_1": {
+        "description": "不断增长的用户群吸引更多服务提供商，为所有参与者创造更强的价值主张。",
+        "title": "网络效应"
+      },
+      "point_2": {
+        "description": "专有匹配算法和广泛的外籍人士数据创造卓越的用户体验。",
+        "title": "数据与AI"
+      },
+      "point_3": {
+        "description": "在关键外籍人士支持情况下建立的声誉和经过验证的记录。",
+        "title": "品牌信任"
+      },
+      "point_4": {
+        "description": "对跨市场国际法规和合规要求的深入理解。",
+        "title": "监管专业知识"
+      },
+      "subtitle": "保护我们市场地位的强大防御护城河。",
+      "title": "竞争优势"
     },
     "products": {
       "sos_description": "紧急援助平台，为全球危急情况下的外籍人士提供24/7支持。",
@@ -1246,28 +1269,10 @@
       "description": "💰 与Williams Jullin的独特投资机会。Ulixai & SOS-Expat生态系统为500K+外籍人士转型外籍生活。304M外籍人士市场，300%增长，全球社会影响。",
       "title": "投资者 | Williams Jullin | Ulixai & SOS-Expat | 全球外籍人士机会"
     },
-    "solution": {
-      "point_1": "解决所有外籍人士需求的综合平台生态系统",
-      "point_2": "与经过验证的专业网络的AI驱动匹配",
-      "point_3": "具有全球覆盖的24/7紧急支持系统",
-      "title": "我们的解决方案"
-    },
-    "success": {
-      "back_home": "返回首页",
-      "message": "我们已收到您的投资请求。Williams将在24-48小时内亲自联系您。",
-      "title": "感谢您的兴趣！"
-    },
     "team": {
       "founder_bio": "连续创业者，在全球流动性方面拥有深厚专业知识，亲自导航国际搬迁并在25+个国家建立了成功的外籍人士支持网络。",
       "founder_title": "创始人兼CEO",
       "title": "领导团队"
-    },
-    "toast": {
-      "error_message": "An error occurred. Please check your info and try again.",
-      "error_title": "Sending failed",
-      "sending": "Your investment request is being sent...",
-      "success_message": "Thanks for your interest! Williams will get back to you within 24–48h.",
-      "success_title": "Request sent successfully! 🎉"
     },
     "traction": {
       "countries": "服务国家",
@@ -1276,42 +1281,6 @@
       "title": "已证明的牵引力",
       "uptime": "平台正常运行时间",
       "users": "活跃用户"
-    },
-    "validation": {
-      "amount_required": "Please select an amount",
-      "experience_required": "Please select your experience",
-      "fill_required": "Please fill all required fields to continue",
-      "first_name_min": "First name must be at least 2 characters",
-      "first_name_required": "First name is required",
-      "investorType_required": "InvestorType required",
-      "message_max": "Message cannot exceed 3000 characters",
-      "phone_invalid": "Invalid phone number format",
-      "platform_interest_required": "Please select your interest",
-      "timeline_required": "Please select a timeline",
-      "type_required": "Please select an investor type"
-    },
-    "vision": {
-      "subtitle": "我们创建一个全球生态系统，每个外籍人士都能找到所需帮助，同时为帮助者创造收入机会。",
-      "title": "我们的愿景：转型全球外籍生活"
-    },
-    "why_invest": {
-      "advantages": {
-        "description": "首个结合紧急帮助和计划服务的平台。强大的网络效应和高进入壁垒。",
-        "title": "竞争优势"
-      },
-      "growth": {
-        "description": "已帮助125K+外籍人士，年增长率300%。我们的指标显示大规模采用和高留存率。",
-        "metric_1": "年增长率",
-        "metric_2": "留存率",
-        "metric_3": "客户满意度",
-        "title": "已证明增长"
-      },
-      "subtitle": "参与转型外籍人士援助的独特机会",
-      "team": {
-        "description": "Williams Jullin本身就是外籍创始人，深刻理解挑战。拥有大规模平台经验的强大技术团队。",
-        "title": "经验丰富的团队"
-      },
-      "title": "为什么与我们投资？"
     }
   },
   "media": {
@@ -1420,162 +1389,149 @@
       "title": "改变一切的移居"
     },
     "hero": {
-      "badge": "威廉姆斯·朱林",
-      "companies": "文本",
-      "location": "总部设在泰国",
+      "badge": "Williams Jullin",
+      "companies": "SOS‑Expat 与 Ulixai",
+      "location": "常驻泰国",
       "role_1": "企业家",
       "role_2": "创新者",
-      "subtitle": "我将创业视为理所当然，作为创造和发展的需要。我的执念：不断突破我的极限，发现我能走多远。",
+      "subtitle": "对我而言，创业是一种必然 —— 需要去创造与发展。我的执念：不断突破自我，看看自己能走多远。",
       "title_1": "企业家",
-      "title_2": "创始人兼CEO",
-      "image_alt": "描述"
+      "title_2": "创始人 & CEO",
+      "image_alt": "Williams Jullin"
     },
     "intro": {
-      "badge": "徽章",
-      "paragraph_1": "我的国际流动性之旅始于作为外籍人士的个人挑战。在国家间搬迁时，我亲身体验了数百万外籍人士每天面临的复杂性、挫折和支持缺口。",
-      "paragraph_2": "这些个人经历成为理解外籍人士真正需要什么的基础——不仅仅是信息，而是全面的支持、可靠的网络和真正有效的创新解决方案。",
-      "paragraph_3": "今天，通过SOS-Expat和Ulixai，我将这些见解转化为平台，帮助超过500,000名外籍人士成功导航他们的国际旅程。",
-      "quote": "引用",
-      "title": "旅程开始"
+      "badge": "驱动我的执念",
+      "paragraph_1": "被唯一的执念所驱动：建设、发展、超越自我，永远学习。",
+      "paragraph_2": "数家企业、成功与失败交织，塑造了今天的我。2017 年，我创立一家全国性公司，腾飞之势令人目不暇接……",
+      "paragraph_3": "随后，新冠与其影响席卷而来。我被击垮，不得不从内在重建自己。2024 年 7 月，我移居泰国。",
+      "quote": "肾上腺素滋养我，日复一日的常规让我熄灭。我渴望挑战与未知，渴望那股逼迫人去发明与超越的压力。那时的我，才真正活着。",
+      "title": "建设、发展、超越自我"
     },
     "platforms": {
-      "badge": "两个平台，4个使命",
+      "badge": "两大平台，四项使命",
       "sos": {
-        "cta": "发现SOS-Expat",
-        "feature_1_desc": "不到5分钟，律师或帮助外籍人士接听，世界任何地方。",
+        "cta": "了解 SOS‑Expat",
+        "feature_1_desc": "不到 5 分钟，律师或外籍帮助者即可在世界任何地方接入。",
         "feature_1_title": "即时帮助",
-        "feature_2_desc": "律师和帮助外籍人士通过预付费电话获得报酬。",
+        "feature_2_desc": "律师与外籍帮助者通过预付费通话获得报酬。",
         "feature_2_title": "保证收入",
-        "subtitle": "外籍人士的即时帮助"
+        "subtitle": "为外籍人士提供即时帮助"
       },
-      "subtitle": "离开或生活在自己国家之外不应再与孤独和困难押韵",
-      "title": "完整的生态系统",
+      "subtitle": "离开或生活在国外，不应再与孤独和困难划等号",
+      "title": "完整生态系统",
       "ulixai": {
-        "cta": "发现Ulixai",
-        "feature_1_desc": "签证、许可证、住房、翻译、交通…经过验证的提供商在几分钟内回应。",
-        "feature_1_title": "无限服务和报价",
-        "feature_2_desc": "专业人士和外籍人士无论身在何处都能将其专业知识货币化。",
+        "cta": "了解 Ulixai",
+        "feature_1_desc": "签证、许可、住房、翻译、交通……经过验证的服务商数分钟内响应。",
+        "feature_1_title": "无限服务与报价",
+        "feature_2_desc": "专业人士与外籍服务者可在世界任何地方变现其专业。",
         "feature_2_title": "全球收入",
-        "subtitle": "外籍人士的服务和报价"
+        "subtitle": "面向外籍人士的服务与报价"
       }
     },
     "timeline": {
-      "badge": "从上升到重建",
-      "before_2017": "2017年前：创建了几家公司，有成功也有失败。成功给了我信心，失败教会了我谦逊并教会了我。每次经历都锻造了我的韧性并完善了我的创业愿景。",
+      "badge": "从高峰到重建",
+      "before_2017": "2017 年之前：创办过多家公司，既有成功也有失败。成功带来自信，失败教会谦逊。每段经历都锻造了我的韧性，并塑造了我的创业视野。",
       "event_1": {
-        "description": "推出一个经历爆炸性增长的品牌。令人眩晕的上升，挑战所有预测。",
-        "emotion": "文本",
-        "feeling": "成功的兴奋",
-        "lesson": "成功可能比我们想象的来得更快",
+        "description": "推出一个品牌并实现爆发式增长。令人眩晕的上升势头，超出所有预期。",
+        "emotion": "🚀",
+        "feeling": "成功的喜悦",
+        "lesson": "成功可能比想象来得更快",
         "location": "法国",
-        "title": "闪电般的起飞"
+        "title": "闪电起飞"
       },
       "event_2": {
-        "description": "Covid袭击。不到两年，一切都崩溃了。残酷的冲击，完全的损失...但也是一个启示。",
-        "emotion": "文本",
-        "feeling": "从内部重建",
-        "lesson": "有时你必须失去一切才能找到一切",
+        "description": "疫情袭来。不到两年，一切土崩瓦解。沉重打击与全面失去……却也是一次觉醒。",
+        "emotion": "💔",
+        "feeling": "从内而外重建",
+        "lesson": "有时必须失去所有，才能重新拥有一切",
         "location": "法国",
-        "title": "跌落和毁灭"
+        "title": "坠落与崩塌"
       },
       "event_3": {
-        "description": "48岁时，我做出了将改变我生活的决定：移居国外。离开我的舒适区，在别处重生。",
-        "emotion": "文本",
+        "description": "48 岁时，我做出改变一生的决定：移居海外。走出舒适区，在他处重生。",
+        "emotion": "✈️",
         "feeling": "重新开始的勇气",
-        "lesson": "重新开始永远不会太晚",
+        "lesson": "开始永远不嫌晚",
         "location": "法国",
-        "title": "大跃进的决定"
+        "title": "跃出关键一步"
       },
       "event_4": {
-        "description": "2024年7月：我永久定居泰国。没有网络，没有帮助。独自一人。每一步都成为挑战。",
-        "emotion": "文本",
+        "description": "2024 年 7 月：我在泰国永久定居。没有人脉，没有帮助，独自一人。每一步都成了挑战。",
+        "emotion": "🌴",
         "feeling": "外籍人士的孤独",
-        "lesson": "移居揭示了我们真正的内在力量",
+        "lesson": "移居海外会唤醒我们真正的内在力量",
         "location": "泰国",
-        "title": "目的地泰国"
+        "title": "目的地：泰国"
       },
       "event_5": {
-        "description": "从凌晨4点到晚上11点7/7。很少见到我的孩子...为了一个目标最令人心碎的牺牲：创建第一个将团结全世界所有外籍人士的平台。",
-        "emotion": "文本",
-        "feeling": "创造性痴迷",
-        "lesson": "最伟大的项目诞生于孤独和坚持不懈",
+        "description": "每天 4:00 至 23:00，全年无休。几乎见不到孩子……为了一个目标作出最痛的牺牲：创建首个连接全球外籍人士的平台。",
+        "emotion": "💻",
+        "feeling": "创造性的执念",
+        "lesson": "伟大项目诞生于孤独与坚持",
         "location": "泰国",
         "title": "与世隔绝的一年"
       },
       "event_6": {
-        "description": "2025年8月：同时推出总部设在爱沙尼亚的SOS-Expat和Ulixai。两个平台，4个使命：连接全世界的外籍人士。",
-        "emotion": "文本",
-        "feeling": "全球影响，人类使命",
-        "lesson": "最好的想法来自我们自己的斗争",
+        "description": "2025 年 8 月：在爱沙尼亚同时推出 SOS‑Expat 与 Ulixai。两大平台，四项使命：连接全球外籍人士。",
+        "emotion": "🌍",
+        "feeling": "全球影响，初心为人",
+        "lesson": "最好的点子来源于我们自己的困境",
         "location": "全球",
         "title": "生态系统的诞生"
       },
-      "subtitle": "塑造我转型全球流动性使命的关键时刻。",
-      "title": "关键里程碑",
-      "ribbon": "从崛起到重建"
+      "subtitle": "每一步都塑造了如今的愿景与使命",
+      "title": "我的创业之路",
+      "ribbon": "从高峰到重建"
     },
     "values": {
-      "badge": "徽章",
+      "badge": "我的价值观",
+      "title": "我的创业哲学",
       "build": {
-        "description": "描述",
-        "story": "文本",
-        "title": "标题"
-      },
-      "community": {
-        "description": "建立支持网络，让外籍人士能够繁荣发展，而不仅仅是生存。",
-        "title": "社区优先"
+        "description": "发展、超越自我、持续学习",
+        "story": "自从离开学业开始，我的执念就是：创造与成长",
+        "title": "持续建设"
       },
       "connection": {
-        "description": "描述",
-        "story": "文本",
-        "title": "标题"
-      },
-      "global": {
-        "description": "理解流动性是关于连接文化，而不仅仅是跨越边界。",
-        "title": "全球视角"
-      },
-      "impact": {
-        "description": "每个解决方案都必须可证明地改善外籍人士的体验。",
-        "title": "可衡量的影响"
+        "description": "搭建文化与经验之间的桥梁",
+        "story": "每一位外籍人士都值得被陪伴",
+        "title": "人际连接"
       },
       "innovation": {
-        "description": "利用技术解决真实问题并创造有意义的影响。",
-        "story": "文本",
-        "title": "创新"
+        "description": "把困难转化为人人可用的解决方案",
+        "story": "如果我会遇到困难，别人也会",
+        "title": "社会创新"
       },
       "resilience": {
-        "description": "描述",
-        "story": "文本",
-        "title": "标题"
+        "description": "在崩溃之后从内在重生",
+        "story": "新冠带走了我的一切，却让我看清真正的自己",
+        "title": "韧性"
       },
-      "subtitle": "指导我工作中每个决策和创新的原则。",
-      "title": "核心价值观",
       "items": {
         "build": {
-          "title": "标题",
-          "subtitle": "标题",
-          "bubble": "文本"
+          "title": "持续建设",
+          "subtitle": "发展、超越自我、持续学习",
+          "bubble": "自从离开学业开始，我的执念就是：创造与成长"
         },
         "resilience": {
-          "title": "标题",
-          "subtitle": "标题",
-          "bubble": "文本"
+          "title": "韧性",
+          "subtitle": "在崩溃之后从内在重生",
+          "bubble": "新冠带走了一切，却让我看清真正的自己"
         },
         "connection": {
-          "title": "标题",
-          "subtitle": "标题",
-          "bubble": "文本"
+          "title": "人际连接",
+          "subtitle": "搭建文化与经验之间的桥梁",
+          "bubble": "每一位外籍人士都值得被陪伴"
         },
         "innovation": {
-          "title": "创新",
-          "subtitle": "利用技术解决真实问题并创造有意义的影响。",
-          "bubble": "文本"
+          "title": "社会创新",
+          "subtitle": "把困难转化为人人可用的解决方案",
+          "bubble": "如果我会遇到困难，别人也会"
         }
       }
     },
     "mission": {
-      "title": "使命诞生",
-      "body": "无论是移居者还是旅行者，都不应独自面对。借助 ULIXAI.com 与 SOS‑Expat.com，支持变得简单、快捷、随处可达——每个人也都可以在全球获得收入。"
+      "title": "使命由此诞生",
+      "body": "无论是外籍人士还是旅行者，都不应独自面对。通过 ULIXAI.com 与 SOS‑Expat.com，帮助将变得简单、快速、无处不在 —— 任何人也都可以在全球范围获得收入。"
     },
     "seo": {
       "title": "我的故事 — Williams Jullin｜从崩溃到重生",

@@ -752,17 +752,17 @@
       "title": "Título"
     },
     "blog": {
-      "see_all": "Texto",
-      "subtitle": "Título",
-      "title": "Título",
-      "read_more": "Texto",
-      "language_label": "Rótulo",
+      "see_all": "Todos os artigos",
+      "subtitle": "Conselhos de especialista para sua expatriação",
+      "title": "Últimos artigos",
+      "read_more": "Ler mais",
+      "language_label": "Idioma",
       "topics": {
-        "visas": "Texto",
-        "tips": "Texto",
-        "banking": "Texto",
-        "housing": "Texto",
-        "culture": "Texto"
+        "visas": "Vistos",
+        "tips": "Dicas",
+        "banking": "Bancos",
+        "housing": "Moradia",
+        "culture": "Cultura"
       },
       "posts": {
         "visa_guide": {
@@ -801,50 +801,48 @@
       "title": "Confiado por Líderes Globais"
     },
     "conference": {
-      "badge": "Selo",
-      "description": "Descrição",
-      "impact_description": "Descrição",
-      "impact_title": "Título",
-      "photo_alt": "Descrição",
-      "point_1": "Texto",
-      "point_2": "Texto",
-      "point_3": "Texto",
-      "title": "Título",
-      "topic_1": "Texto",
-      "topic_2": "Texto",
-      "topic_3": "Texto",
-      "topic_4": "Texto",
-      "topics_title": "Título"
+      "badge": "Palestrante principal",
+      "description": "Compartilho minha expertise com milhares de expatriados no mundo todo",
+      "impact_description": "Palestrante em conferências para expatriados e viajantes ao redor do globo.",
+      "impact_title": "Meu impacto global",
+      "photo_alt": "Williams Jullin fazendo uma palestra sobre expatriação",
+      "point_1": "Faço palestras internacionais sobre expatriação",
+      "point_2": "Especialista reconhecido em mobilidade internacional",
+      "point_3": "Sou fundador da SOS‑Expat e Ulixai",
+      "title": "Minhas palestras sobre expatriação e vida de expatriado",
+      "topic_1": "Os desafios da expatriação moderna",
+      "topic_2": "Como gerar renda como expatriado",
+      "topic_3": "O futuro da mobilidade internacional",
+      "topic_4": "Construindo redes globais de ajuda mútua",
+      "topics_title": "🎤 Meus temas de palestra"
     },
     "cta": {
-      "contact": "Entrar em Contato",
-      "story": "Minha História",
-      "subtitle": "Junte-se a milhares de expatriados bem-sucedidos que transformaram sua experiência internacional com orientação especializada e soluções inovadoras.",
-      "title": "Pronto para Transformar Sua Jornada Global?"
+      "subtitle": "Junte‑se a milhares de expatriados que transformaram sua experiência internacional com conselhos especialistas e soluções inovadoras.",
+      "title": "Pronto para transformar sua experiência internacional?"
     },
     "double_impact": {
-      "badge": "Selo",
-      "conclusion_desc": "Descrição",
-      "conclusion_title": "Título",
+      "badge": "Duplo Impacto",
+      "conclusion_desc": "Ajudamos expatriados com seus desafios E criamos oportunidades de renda para ajudantes e prestadores, no mundo todo.",
+      "conclusion_title": "Duplo impacto global",
       "sos": {
-        "cta": "Ação",
-        "mission_1_desc": "Descrição",
-        "mission_1_title": "Título",
-        "mission_2_desc": "Descrição",
-        "mission_2_title": "Título",
-        "name": "Nome",
-        "tagline": "Texto"
+        "cta": "Começar com o SOS‑Expat",
+        "mission_1_desc": "Expatriados, viajantes, turistas em dificuldade no mundo inteiro",
+        "mission_1_title": "Missão 1: Ajuda imediata",
+        "mission_2_desc": "Advogados e expatriados ajudantes recebem por chamadas pré‑pagas",
+        "mission_2_title": "Missão 2: Renda garantida",
+        "name": "SOS‑Expat.com",
+        "tagline": "Ajuda imediata"
       },
-      "subtitle": "Título",
-      "title": "Título",
+      "subtitle": "Ajudar expatriados E criar renda para todos, globalmente",
+      "title": "2 plataformas, 4 missões",
       "ulixai": {
-        "cta": "Ação",
-        "mission_1_desc": "Descrição",
-        "mission_1_title": "Título",
-        "mission_2_desc": "Descrição",
-        "mission_2_title": "Título",
-        "name": "Nome",
-        "tagline": "Texto"
+        "cta": "Publicar um pedido na Ulixai",
+        "mission_1_desc": "Encontre o prestador certo em qualquer lugar do mundo",
+        "mission_1_title": "Missão 1: Serviços ilimitados e escolha entre várias propostas",
+        "mission_2_desc": "Prestadores expatriados ou profissionais ganham onde quer que estejam",
+        "mission_2_title": "Missão 2: Renda global",
+        "name": "Ulixai.com",
+        "tagline": "Serviços & Orçamentos"
       }
     },
     "help": {
@@ -861,17 +859,16 @@
       "title": "Como Posso Te Ajudar"
     },
     "hero": {
-      "badge": "Especialista em Mobilidade Global",
-      "badge_verified": "Selo",
-      "cta_primary": "Obter Ajuda Especializada",
-      "cta_secondary": "Descobrir Minha História",
+      "badge": "Especialista em Mobilidade Internacional",
+      "badge_verified": "Selo verificado",
+      "cta_primary": "Ajuda imediata em menos de 5 minutos (SOS‑Expat)",
+      "cta_secondary": "Precisa de serviços → encontre um prestador (Ulixai)",
       "headline": "Serviços ilimitados",
-      "photo_alt": "Descrição",
-      "subtitle": "Especialista em mobilidade internacional com plataformas inovadoras servindo mais de 500K expatriados mundialmente.",
-      "title": "Transformando a Mobilidade Global",
-      "title_1": "Título",
-      "title_2": "Título",
-      "tagline": "Seu aliado global para a expatriação."
+      "photo_alt": "Williams Jullin — Especialista em mobilidade global",
+      "subtitle": "Fundador da Ulixai.com e SOS‑Expat.com — conecto instantaneamente 304 milhões de expatriados e 1,465 bilhão de viajantes a prestadores verificados, no mundo inteiro.",
+      "title_1": "Williams",
+      "title_2": "Jullin",
+      "tagline": "Ajuda confiável para cada mudança, em qualquer lugar."
     },
     "mission": {
       "community": "Comunidade",
@@ -904,83 +901,68 @@
       "title": "Título"
     },
     "services": {
-      "banking": "Texto",
-      "education": "Texto",
-      "health": "Descrição",
-      "housing": "Texto",
-      "jobs": "Texto",
-      "moving": "Texto",
-      "renovation": "Texto",
-      "tax": "Texto",
-      "taxes": "Texto",
-      "transport": "Texto",
-      "visas": "Texto",
-      "visas_permits": "Texto",
-      "work": "Texto",
-      "more_html": "…e muito mais."
+      "banking": "Bancos",
+      "education": "Educação",
+      "health": "Saúde",
+      "housing": "Moradia",
+      "jobs": "Empregos",
+      "moving": "Mudança",
+      "renovation": "Reforma",
+      "tax": "Imposto",
+      "taxes": "Impostos",
+      "transport": "Transporte",
+      "visas": "Vistos",
+      "visas_permits": "Vistos e autorizações",
+      "work": "Trabalho",
+      "more_html": "…e muitos outros serviços."
     },
     "solutions": {
-      "discover": "Descobrir",
       "sos": {
-        "badge_1": "Selo",
-        "badge_2": "Selo",
-        "badge_3": "Selo",
-        "badge_time": "Selo",
-        "call_to_action": "Texto",
-        "description": "Descrição",
-        "feature_1": "Texto",
-        "feature_2": "Texto",
-        "feature_3": "Texto",
-        "title": "Título",
-        "cta": "Ação"
+        "badge_1": "Serviços 24/7",
+        "badge_2": "Renda garantida",
+        "badge_3": "Pagamento seguro",
+        "badge_time": "Ligação imediata",
+        "call_to_action": "👉 Precisa de ajuda agora?<br/>👉 Quer ajudar e receber? Entre na rede.",
+        "description": "Em menos de 5 minutos, conectamos você a um advogado confiável ou expatriado ajudante. Ligação garantida. Sem stress, sem surpresas — apenas a solução, agora.",
+        "feature_1": "100+ profissionais e ajudantes verificados",
+        "feature_2": "No mundo inteiro, 24/7",
+        "feature_3": "Pessoas primeiro, eficiência depois",
+        "title": "SOS‑Expat: ajuda imediata para todos",
+        "cta": ""
       },
-      "sos_desc": "Assistência de emergência e suporte urgente para expatriados em situações críticas mundialmente.",
-      "sos_feature_1": "Suporte de Emergência 24/7",
-      "sos_feature_2": "Assistência Legal e Médica",
-      "sos_feature_3": "Suporte Multilíngue",
-      "sos_title": "SOS-Expat",
-      "subtitle": "Duas plataformas abrangentes projetadas para apoiar cada aspecto de sua jornada internacional.",
-      "title": "Minhas Soluções",
       "ulixai": {
-        "client_step_1": "Texto",
-        "client_step_2": "Texto",
-        "client_step_3": "Texto",
-        "client_title": "Título",
-        "description": "Descrição",
-        "examples": "Texto",
-        "provider_step_1": "Texto",
-        "provider_step_2": "Texto",
-        "provider_step_3": "Texto",
-        "provider_title": "Título",
-        "title": "Título",
-        "why_fair": "Texto",
-        "why_fair_label": "Rótulo",
-        "why_fast": "Texto",
-        "why_fast_label": "Rótulo",
-        "why_global": "Texto",
-        "why_global_label": "Rótulo",
-        "why_multilingual": "Texto",
-        "why_multilingual_label": "Rótulo",
-        "why_title": "Título",
-        "why_verified": "Texto",
-        "why_verified_label": "Rótulo",
-        "cta": "Ação"
-      },
-      "ulixai_desc": "Plataforma abrangente de realocação com ferramentas alimentadas por IA e orientação especializada.",
-      "ulixai_feature_1": "Correspondência com IA",
-      "ulixai_feature_2": "Consultas de Especialistas",
-      "ulixai_feature_3": "Suíte Completa de Realocação",
-      "ulixai_title": "Ulixai"
+        "client_step_1": "Descreva sua necessidade (país, idioma, serviço, prazo).",
+        "client_step_2": "Receba várias propostas e orçamentos de prestadores verificados que falam seu idioma.",
+        "client_step_3": "Escolha atendimento presencial ou online. Pagamento, histórico e avaliações em um só lugar.",
+        "client_title": "Lado do cliente — como funciona",
+        "description": "Prestadores expatriados ou profissionais verificados, respostas rápidas, orçamentos ágeis, acompanhamento simples. Para expatriados, futuros expatriados, viajantes, turistas — todas as nacionalidades, em qualquer lugar.",
+        "examples": "Exemplos: visto, traduções, moradia, educação, saúde, trâmites, resolução de problemas, mudança, trabalho…",
+        "provider_step_1": "Cadastro em 2 minutos (expatriado ou profissional).",
+        "provider_step_2": "Receba pedidos conforme seus idiomas/países.",
+        "provider_step_3": "Orçamento → execução → pagamento, construa sua reputação.",
+        "provider_title": "Lado do prestador",
+        "title": "Ulixai — O prestador certo, no seu idioma, onde quer que você esteja",
+        "why_fair": "renda para expatriados & profissionais",
+        "why_fair_label": "Justo",
+        "why_fast": "orçamentos em minutos, acompanhamento centralizado",
+        "why_fast_label": "Rápido",
+        "why_global": "em qualquer lugar do mundo",
+        "why_global_label": "Global",
+        "why_multilingual": "no seu idioma",
+        "why_multilingual_label": "Multilíngue",
+        "why_title": "Por que a Ulixai",
+        "why_verified": "expatriados ou profissionais verificados & avaliados",
+        "why_verified_label": "Verificado",
+        "cta": ""
+      }
     },
     "sos_expat": {
       "alt": "Descrição"
     },
     "stats": {
-      "countries_covered": "Países",
-      "expats_helped": "Expatriados Ajudados",
-      "satisfaction_rate": "Satisfação",
-      "services": "Texto",
-      "years_experience": "Anos de Experiência"
+      "countries_covered": "Países atendidos",
+      "expats_helped": "Expatriados ajudados",
+      "services": "Serviços SOS‑Expat & Ulixai"
     },
     "structured": {
       "person": {
@@ -993,41 +975,28 @@
       }
     },
     "testimonials": {
-      "item_1": {
-        "meta": "Texto",
-        "name": "Nome",
-        "quote": "Citação"
-      },
-      "item_2": {
-        "meta": "Texto",
-        "name": "Nome",
-        "quote": "Citação"
-      },
-      "item_3": {
-        "meta": "Texto",
-        "name": "Nome",
-        "quote": "Citação"
-      },
-      "testimonial_1": {
-        "location": "Texto",
-        "name": "Nome",
-        "quote": "Citação",
-        "role": "Texto"
-      },
-      "testimonial_2": {
-        "location": "Texto",
-        "name": "Nome",
-        "quote": "Citação",
-        "role": "Texto"
-      },
-      "title": "Título"
+      "title": "Eles confiam em nós",
+      "items": [
+        {
+          "quote": "Graças ao SOS‑Expat, consegui resolver meu problema de visto E começar a gerar renda ajudando outros expatriados.",
+          "name": "Léa M.",
+          "role": "Advogada",
+          "location": "Singapura"
+        },
+        {
+          "quote": "A Ulixai me ajudou a encontrar o apartamento perfeito em Berlim E a desenvolver meu negócio de consultoria imobiliária.",
+          "name": "Yassine K.",
+          "role": "Consultor",
+          "location": "Toronto"
+        }
+      ]
     },
     "trust": {
       "subtitle": "Título",
       "title": "Título"
     },
     "ulixai": {
-      "alt": "Descrição"
+      "alt": "Ulixai — O prestador certo em qualquer lugar do mundo"
     }
   },
   "investors": {
@@ -1299,7 +1268,7 @@
         "description": "Primeira plataforma a combinar ajuda de emergência E serviços planejados. Efeitos de rede poderosos e altas barreiras de entrada.",
         "title": "Vantagens Competitivas"
       },
-            "subtitle": "Uma oportunidade única de participar da transformação da ajuda a expatriados",
+      "subtitle": "Uma oportunidade única de participar da transformação da ajuda a expatriados",
       "team": {
         "description": "Williams Jullin, fundador expatriado ele mesmo, compreende intimamente os desafios. Equipe técnica sólida com experiência em plataformas de grande escala.",
         "title": "Equipe Experiente"
@@ -1413,162 +1382,149 @@
       "title": "A expatriação que muda tudo"
     },
     "hero": {
-      "badge": "Selo",
-      "companies": "Texto",
+      "badge": "Williams Jullin",
+      "companies": "SOS‑Expat & Ulixai",
       "location": "Baseado na Tailândia",
       "role_1": "Empreendedor",
       "role_2": "Inovador",
-      "subtitle": "Vivo o empreendedorismo como uma evidência, como uma necessidade de criar e desenvolver. Minha obsessão: constantemente ultrapassar meus limites e descobrir até onde posso ir.",
+      "subtitle": "Vivo o empreendedorismo como uma evidência — a necessidade de criar e desenvolver. Minha obsessão: ultrapassar meus limites e descobrir até onde posso ir.",
       "title_1": "Empreendedor",
       "title_2": "Fundador & CEO",
-      "image_alt": "Descrição"
+      "image_alt": "Williams Jullin"
     },
     "intro": {
-      "badge": "Selo",
-      "paragraph_1": "Minha jornada na mobilidade internacional começou com meus próprios desafios como expatriado. Ao me mudar entre países, experimentei em primeira mão as complexidades, frustrações e lacunas no suporte que milhões de expatriados enfrentam diariamente.",
-      "paragraph_2": "Essas experiências pessoais se tornaram a base para entender o que os expatriados realmente precisam - não apenas informações, mas suporte abrangente, redes confiáveis e soluções inovadoras que realmente funcionam.",
-      "paragraph_3": "Hoje, através do SOS-Expat e Ulixai, transformei esses insights em plataformas que ajudaram mais de 500.000 expatriados a navegar suas jornadas internacionais com sucesso.",
-      "quote": "Citação",
-      "title": "A Jornada Começa"
+      "badge": "A obsessão que me guia",
+      "paragraph_1": "Guiado por uma única obsessão: construir, desenvolver, superar minhas habilidades, aprender sempre.",
+      "paragraph_2": "Várias empresas, com sucessos e fracassos, moldaram‑me. Em 2017, lanço uma empresa nacional que decola e cresce tão rápido que foi difícil acompanhar…",
+      "paragraph_3": "Depois, a Covid e o que se seguiu. Devastado, precisei me reconstruir por dentro. Em julho de 2024, parti para me expatriar na Tailândia.",
+      "quote": "A adrenalina me alimenta. A rotina me apaga. Quero desafios, imprevistos, aquela pressão que nos faz inventar e superar. É aí que me sinto plenamente vivo.",
+      "title": "Construir, desenvolver, superar minhas habilidades"
     },
     "platforms": {
       "badge": "Duas plataformas, 4 missões",
       "sos": {
-        "cta": "Descobrir SOS-Expat",
+        "cta": "Descobrir o SOS‑Expat",
         "feature_1_desc": "Em menos de 5 minutos, um advogado ou expatriado ajudante atende, em qualquer lugar do mundo.",
         "feature_1_title": "Ajuda imediata",
-        "feature_2_desc": "Advogados e expatriados ajudantes são pagos através de chamadas pré-pagas.",
+        "feature_2_desc": "Advogados e expatriados ajudantes são pagos por chamadas pré‑pagas.",
         "feature_2_title": "Renda garantida",
         "subtitle": "Ajuda imediata para expatriados"
       },
-      "subtitle": "Deixar ou viver fora de seu país não deve mais rimar com solidão e dificuldades",
+      "subtitle": "Sair ou viver fora do país não deve rimar com solidão e dificuldades",
       "title": "O ecossistema completo",
       "ulixai": {
-        "cta": "Descobrir Ulixai",
-        "feature_1_desc": "Visto, licenças, moradia, traduções, transporte… provedores verificados respondem em minutos.",
-        "feature_1_title": "Serviços e orçamentos ilimitados",
-        "feature_2_desc": "Profissionais e expatriados monetizam sua expertise onde quer que estejam.",
+        "cta": "Descobrir a Ulixai",
+        "feature_1_desc": "Vistos, autorizações, moradia, traduções, transporte… prestadores verificados respondem em minutos.",
+        "feature_1_title": "Serviços ilimitados & orçamentos",
+        "feature_2_desc": "Profissionais e expatriados monetizam sua expertise onde estiverem.",
         "feature_2_title": "Renda global",
-        "subtitle": "Serviços e orçamentos para expatriados"
+        "subtitle": "Serviços & orçamentos para expatriados"
       }
     },
     "timeline": {
-      "badge": "Da ascensão à reconstrução",
-      "before_2017": "Antes de 2017: Várias empresas criadas com sucessos como fracassos. Sucessos que me deram confiança, fracassos que me ensinaram humildade e me ensinaram. Cada experiência forjou minha resistência e refinou minha visão empresarial.",
+      "badge": "Do auge à reconstrução",
+      "before_2017": "Antes de 2017: Várias empresas criadas, com sucessos e fracassos. Sucessos que deram confiança; fracassos que trouxeram humildade e lições. Cada experiência reforçou minha resiliência e refinou minha visão.",
       "event_1": {
-        "description": "Lançamento de uma marca que experimenta crescimento explosivo. Uma ascensão vertiginosa que desafia todas as previsões.",
-        "emotion": "Texto",
+        "description": "Lançamento de uma marca que vive um crescimento explosivo. Uma ascensão vertiginosa que desafia todas as previsões.",
+        "emotion": "🚀",
         "feeling": "A euforia do sucesso",
         "lesson": "O sucesso pode vir mais rápido do que imaginamos",
         "location": "França",
-        "title": "A decolagem fulminante"
+        "title": "A decolagem relâmpago"
       },
       "event_2": {
-        "description": "Covid ataca. Em menos de dois anos, tudo desmorona. Um choque brutal, uma perda total... mas também uma revelação.",
-        "emotion": "Texto",
-        "feeling": "Reconstrução de dentro",
-        "lesson": "Às vezes você tem que perder tudo para encontrar tudo",
+        "description": "Chega a Covid. Em menos de dois anos, tudo desaba. Um choque brutal, uma perda total… mas também uma revelação.",
+        "emotion": "💔",
+        "feeling": "Reconstrução por dentro",
+        "lesson": "Às vezes é preciso perder tudo para encontrar tudo",
         "location": "França",
-        "title": "A queda e aniquilação"
+        "title": "A queda e a aniquilação"
       },
       "event_3": {
-        "description": "Aos 48, tomo a decisão que mudará minha vida: expatriar. Deixar minha zona de conforto para renascer em outro lugar.",
-        "emotion": "Texto",
-        "feeling": "A coragem de recomeçar",
-        "lesson": "Nunca é tarde demais para recomeçar",
+        "description": "Aos 48, tomo a decisão que mudará minha vida: expatriar-me. Sair da zona de conforto para renascer em outro lugar.",
+        "emotion": "✈️",
+        "feeling": "A coragem do recomeço",
+        "lesson": "Nunca é tarde para recomeçar",
         "location": "França",
         "title": "A decisão do grande salto"
       },
       "event_4": {
-        "description": "Julho 2024: me estabeleço definitivamente na Tailândia. Nenhuma rede, nenhuma ajuda. Sozinho. Cada passo se torna um desafio.",
-        "emotion": "Texto",
+        "description": "Julho de 2024: Instalo‑me definitivamente na Tailândia. Sem rede, sem ajuda. Sozinho. Cada etapa vira um desafio.",
+        "emotion": "🌴",
         "feeling": "A solidão do expatriado",
         "lesson": "A expatriação revela nossa verdadeira força interior",
         "location": "Tailândia",
         "title": "Destino Tailândia"
       },
       "event_5": {
-        "description": "Das 4h da manhã às 23h 7/7. Vendo pouco meus filhos... O sacrifício mais dilacerante para um objetivo: criar a primeira plataforma que unirá todos os expatriados do mundo.",
-        "emotion": "Texto",
+        "description": "Das 4h às 23h, 7 dias/semana. Mal vejo meus filhos… O sacrifício mais doloroso por um objetivo: criar a primeira plataforma que unirá todos os expatriados do mundo.",
+        "emotion": "💻",
         "feeling": "Obsessão criativa",
-        "lesson": "Os maiores projetos nascem na solidão e na tenacidade",
+        "lesson": "Os maiores projetos nascem na solidão e na persistência",
         "location": "Tailândia",
         "title": "Um ano isolado do mundo"
       },
       "event_6": {
-        "description": "Agosto 2025: lançamento simultâneo de SOS-Expat e Ulixai sediado na Estônia. Duas plataformas, 4 missões: conectar expatriados mundialmente.",
-        "emotion": "Texto",
+        "description": "Agosto de 2025: lançamento simultâneo do SOS‑Expat e Ulixai com sede na Estônia. Duas plataformas, 4 missões: conectar expatriados no mundo inteiro.",
+        "emotion": "🌍",
         "feeling": "Impacto global, missão humana",
-        "lesson": "As melhores ideias nascem de nossas próprias lutas",
-        "location": "Texto",
+        "lesson": "As melhores ideias nascem das nossas próprias lutas",
+        "location": "Global",
         "title": "O nascimento do ecossistema"
       },
-      "subtitle": "Os momentos pivotais que moldaram minha missão de transformar a mobilidade global.",
-      "title": "Marcos Principais",
-      "ribbon": "Da ascensão à reconstrução"
+      "subtitle": "Cada etapa moldou minha visão e missão atuais",
+      "title": "Minha jornada empreendedora",
+      "ribbon": "Do auge à reconstrução"
     },
     "values": {
-      "badge": "Selo",
+      "badge": "O que me guia",
       "build": {
-        "description": "Descrição",
-        "story": "Texto",
-        "title": "Título"
-      },
-      "community": {
-        "description": "Construir redes de suporte onde expatriados podem prosperar, não apenas sobreviver.",
-        "title": "Comunidade Primeiro"
+        "description": "Desenvolver, superar minhas habilidades, aprender sempre",
+        "story": "Minha obsessão desde que parei os estudos: criar e crescer",
+        "title": "Construir constantemente"
       },
       "connection": {
-        "description": "Descrição",
-        "story": "Texto",
-        "title": "Título"
-      },
-      "global": {
-        "description": "Entender que mobilidade é sobre conectar culturas, não apenas cruzar fronteiras.",
-        "title": "Perspectiva Global"
-      },
-      "impact": {
-        "description": "Cada solução deve melhorar demonstravelmente a experiência do expatriado.",
-        "title": "Impacto Mensurável"
+        "description": "Criar pontes entre culturas e experiências",
+        "story": "Todo expatriado merece ser acompanhado na sua jornada",
+        "title": "Conexão humana"
       },
       "innovation": {
-        "description": "Aproveitar tecnologia para resolver problemas reais e criar impacto significativo.",
-        "story": "Texto",
-        "title": "Inovação"
+        "description": "Transformar dificuldades em soluções para todos",
+        "story": "Se eu enfrento, outros também enfrentam",
+        "title": "Inovação social"
       },
       "resilience": {
-        "description": "Descrição",
-        "story": "Texto",
-        "title": "Título"
+        "description": "Reconstruir‑se por dentro após o colapso",
+        "story": "A Covid tirou tudo de mim, mas revelou quem eu realmente era",
+        "title": "Resiliência"
       },
-      "subtitle": "Os princípios que guiam cada decisão e inovação no meu trabalho.",
-      "title": "Valores Fundamentais",
+      "title": "Minha filosofia empreendedora",
       "items": {
         "build": {
-          "title": "Título",
-          "subtitle": "Título",
-          "bubble": "Texto"
+          "title": "Construir constantemente",
+          "subtitle": "Desenvolver, superar minhas habilidades, aprender sempre",
+          "bubble": "Minha obsessão desde que parei os estudos: criar e crescer"
         },
         "resilience": {
-          "title": "Título",
-          "subtitle": "Título",
-          "bubble": "Texto"
+          "title": "Resiliência",
+          "subtitle": "Reconstruir‑se por dentro após o colapso",
+          "bubble": "A Covid tirou tudo de mim, mas revelou quem eu realmente era"
         },
         "connection": {
-          "title": "Título",
-          "subtitle": "Título",
-          "bubble": "Texto"
+          "title": "Conexão humana",
+          "subtitle": "Criar pontes entre culturas e experiências",
+          "bubble": "Todo expatriado merece ser acompanhado na sua jornada"
         },
         "innovation": {
-          "title": "Inovação",
-          "subtitle": "Aproveitar tecnologia para resolver problemas reais e criar impacto significativo.",
-          "bubble": "Texto"
+          "title": "Inovação social",
+          "subtitle": "Transformar dificuldades em soluções para todos",
+          "bubble": "Se eu enfrento, outros também enfrentam"
         }
       }
     },
     "mission": {
-      "title": "Nasce a missão",
-      "body": "Expatriado ou viajante, ninguém deveria estar sozinho. Com ULIXAI.com e SOS‑Expat.com, o apoio é simples, rápido e acessível em qualquer lugar — e qualquer pessoa também pode gerar renda no mundo todo."
+      "title": "A Missão Nasce",
+      "body": "Expatriado ou viajante, ninguém deve ficar sozinho. Com ULIXAI.com e SOS‑Expat.com, a ajuda é simples, rápida e disponível em qualquer lugar — e qualquer pessoa também pode ganhar globalmente."
     },
     "seo": {
       "title": "Minha História — Williams Jullin | Do colapso ao renascimento",

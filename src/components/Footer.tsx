@@ -1,14 +1,14 @@
+// src/components/Footer.tsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Instagram, Linkedin, Facebook, ExternalLink } from 'lucide-react';
+import { PATHS, type Locale } from '../router/paths';
 
-interface FooterProps {
-  navigate: (page: string) => void;
-}
-
-const Footer: React.FC<FooterProps> = ({ navigate }) => {
+export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const locale = (i18n.language?.split('-')[0] ?? 'fr') as Locale;
 
   return (
     <footer className="bg-blue-900 text-white">
@@ -79,24 +79,24 @@ const Footer: React.FC<FooterProps> = ({ navigate }) => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">{t('footer.navigation')}</h3>
             <div className="space-y-2">
-              <button
-                onClick={() => navigate('blog')}
+              <Link
+                to={PATHS[locale].blog}
                 className="block text-blue-200 hover:text-blue-300 transition-colors duration-200"
               >
                 {t('nav.blog')}
-              </button>
-              <button
-                onClick={() => navigate('contact')}
+              </Link>
+              <Link
+                to={PATHS[locale].contact}
                 className="block text-blue-200 hover:text-blue-300 transition-colors duration-200"
               >
                 {t('nav.contact')}
-              </button>
-              <button
-                onClick={() => navigate('investors')}
+              </Link>
+              <Link
+                to={PATHS[locale].investors}
                 className="touch-link block text-blue-200 hover:text-blue-300 active:text-blue-100 transition-colors duration-200 py-2"
               >
                 {t('footer.investors')}
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -107,6 +107,4 @@ const Footer: React.FC<FooterProps> = ({ navigate }) => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

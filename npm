@@ -1,0 +1,16 @@
+Start-Process : Impossible d'ex‚cuter cette 
+commande en raison de l'erreur: Le fichier 
+sp‚cifi‚ est introuvable.
+Au caractŠre Ligne:1 : 1
++ Start-Process -Filepath 
+'C:\Users\corey\OneDrive\Documents\workspace\ 
+...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation  
+   : (:) [Start-Process], InvalidOperationExce  
+  ption
+    + FullyQualifiedErrorId : InvalidOperationE 
+   xception,Microsoft.PowerShell.Commands.Star  
+  tProcessCommand
+ 

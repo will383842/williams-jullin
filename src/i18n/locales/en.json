@@ -859,44 +859,24 @@
         "name": "Name"
       }
     },
-    "testimonials": {
-      "item_1": {
-        "meta": "Meta",
-        "name": "Name",
-        "quote": "Quote"
-      },
-      "item_2": {
-        "meta": "Meta",
-        "name": "Name",
-        "quote": "Quote"
-      },
-      "item_3": {
-        "meta": "Meta",
-        "name": "Name",
-        "quote": "Quote"
-      },
-      "testimonial_1": {
-        "location": "Singapore",
-        "name": "Léa M.",
-        "quote": "Thanks to SOS-Expat, I was able to solve my visa problem AND start generating income by helping other expats.",
-        "role": "Lawyer"
-      },
-      "testimonial_2": {
-        "location": "Toronto",
-        "name": "Yassine K.",
-        "quote": "Ulixai allowed me to find the perfect apartment in Berlin AND develop my real estate consulting business.",
-        "role": "Consultant"
-      },
-      "title": "They trust us"
+  "testimonials": {
+  "title": "They trust us",
+  "items": [
+    {
+      "quote": "Thanks to SOS-Expat, I was able to solve my visa problem AND start generating income by helping other expats.",
+      "name": "Léa M.",
+      "role": "Lawyer",
+      "location": "Singapore"
     },
-    "trust": {
-      "subtitle": "Subtitle",
-      "title": "Title"
-    },
-    "ulixai": {
-      "alt": "Ulixai - The right provider anywhere in the world"
+    {
+      "quote": "Ulixai allowed me to find the perfect apartment in Berlin AND develop my real estate consulting business.",
+      "name": "Yassine K.",
+      "role": "Consultant",
+      "location": "Toronto"
     }
-  },
+  ]
+  }
+},
   "investors": {
     "community": {
       "growth_desc": "Every day, new expats join our platforms and new helpers offer their services",

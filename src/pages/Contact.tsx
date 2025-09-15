@@ -8,13 +8,26 @@ import FormValidation, { getFieldBorderClass } from '../components/FormValidatio
 
 import { trackEvent } from '../lib/analytics';
 
+import SEO from '../seo/SEO';
+import { buildAlternates, canonical } from '../seo/helpers';
+import { PATHS, LOCALES, type Locale } from '../router/paths';
+import { metaContact } from '../seo/meta';
+
+
 interface ContactProps {
   navigate: (page: string) => void;
 }
 
 const Contact: React.FC<ContactProps> = ({ navigate }) => {
   // Au dÃ©but
-  const { t } = useTranslation();
+
+  // === SEO locale & URLs ===
+  const locale = (i18n?.language?.split('-')[0] ?? 'fr') as Locale;
+  const bcp47 = locale === 'fr' ? 'fr-FR' : `${locale}-${locale.toUpperCase()}`;
+  const alternates = buildAlternates(locale, 'contact');
+  const can = canonical(locale, 'contact');
+  const meta = metaContact(locale);
+const { t, i18n } = useTranslation();
 
   // SEO (i18n)
   React.useEffect(() => {
@@ -286,6 +299,15 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
   };
 
   return (
+  <>
+    <SEO
+  title={meta.title}
+  description={meta.desc}
+  canonical={can}
+  locale={bcp47}
+  alternates={alternates}
+/>
+
     <div className="pt-20 md:pt-24 bg-slate-50 min-h-screen">
       {/* Form Feedback Modal */}
       <FormFeedback
@@ -571,8 +593,9 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
         </div>
       </section>
     </div>
-  );
+  
+  </>
+);
 };
 
 export default Contact;
-

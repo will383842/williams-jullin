@@ -7,12 +7,25 @@ import FormFeedback from '../components/FormFeedback';
 import FormValidation, { getFieldBorderClass } from '../components/FormValidation';
 import { trackEvent } from '../lib/analytics';
 
+import SEO from '../seo/SEO';
+import { buildAlternates, canonical } from '../seo/helpers';
+import { PATHS, LOCALES, type Locale } from '../router/paths';
+import { metaInvestors } from '../seo/meta';
+
+
 interface InvestorsProps {
   navigate: (page: string) => void;
 }
 
 const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
-  const { t } = useTranslation();
+
+  // === SEO locale & URLs ===
+  const locale = (i18n?.language?.split('-')[0] ?? 'fr') as Locale;
+  const bcp47 = locale === 'fr' ? 'fr-FR' : `${locale}-${locale.toUpperCase()}`;
+  const alternates = buildAlternates(locale, 'investors');
+  const can = canonical(locale, 'investors');
+  const meta = metaInvestors(locale);
+const { t, i18n } = useTranslation();
   
   const [formData, setFormData] = useState({
     investorType: '',
@@ -345,6 +358,15 @@ const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
   }, [formData]);
 
   return (
+  <>
+    <SEO
+  title={meta.title}
+  description={meta.desc}
+  canonical={can}
+  locale={bcp47}
+  alternates={alternates}
+/>
+
     <div className="pt-24">
       {/* Form Feedback Modal */}
       <FormFeedback
@@ -1128,7 +1150,9 @@ const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
         </div>
       </section>
     </div>
-  );
+  
+  </>
+);
 };
 
 export default Investors;

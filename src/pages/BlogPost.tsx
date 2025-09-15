@@ -1,18 +1,47 @@
 // src/pages/BlogPost.tsx
 import React from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowLeft, Calendar, Tag, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
 
-interface BlogPostProps {
-  navigate: (page: string) => void;
-  postId: string;
-}
+import SEO from '../seo/SEO';
+import { buildAlternates, canonical } from '../seo/helpers';
+import { PATHS, type Locale } from '../router/paths';
+import { articleSchema } from '../seo/schema';
 
-const BlogPost: React.FC<BlogPostProps> = ({ navigate, postId }) => {
-  const { t } = useTranslation();
-  
-  // Blog posts data with full content
-  const blogPosts = {
+type TagKey =
+  | 'visas'
+  | 'banking'
+  | 'housing'
+  | 'healthcare'
+  | 'culture'
+  | 'tips'
+  | 'moving';
+
+export default function BlogPost() {
+  const { slug: postId = '' } = useParams<{ slug: string }>();
+  const { t, i18n } = useTranslation();
+
+  // === SEO locale & URLs ===
+  const locale = (i18n?.language?.split('-')[0] ?? 'fr') as Locale;
+  const bcp47 = locale === 'fr' ? 'fr-FR' : `${locale}-${locale.toUpperCase()}`;
+  const alternates = buildAlternates(locale, 'post', postId);
+  const can = canonical(locale, 'post', postId);
+
+  // Blog posts data with full content (préservé)
+  const blogPosts: Record<
+    string,
+    {
+      id: string;
+      title: string;
+      content: string; // HTML localisé via t()
+      date: string; // ISO
+      tags: TagKey[];
+      language: string;
+      image: string;
+      readTime: string;
+    }
+  > = {
     'guide-complet-visas-europeens': {
       id: 'guide-complet-visas-europeens',
       title: t('blog.posts.visa_guide.title'),
@@ -431,41 +460,64 @@ const BlogPost: React.FC<BlogPostProps> = ({ navigate, postId }) => {
 
   const blogPost = blogPosts[postId];
 
+  // SEO values (dépendent du post)
+  const seoTitle =
+    blogPost?.title ??
+    (postId
+      ? postId
+          .split('-')
+          .map((s) => s.charAt(0).toUpperCase() + s.slice(1))
+          .join(' ')
+      : 'Article');
+
+  const seoDesc = ''; // tu peux mettre un résumé court ici si tu en as un séparé
+  const published = blogPost?.date ?? new Date().toISOString().slice(0, 10);
+  const ogImage = blogPost?.image;
+
+  const jsonLd = [
+    articleSchema({
+      headline: seoTitle,
+      datePublished: published,
+      dateModified: published,
+      image: ogImage,
+      inLanguage: bcp47,
+      url: can
+    })
+  ];
+
   if (!blogPost) {
     return (
-      <div className="pt-24 min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">{t('blog.not_found_title')}</h1>
-          <button
-            onClick={() => navigate('blog')}
-            className="text-blue-600 hover:text-blue-700 font-semibold"
-          >
-            {t('blog.back_to_blog')}
-          </button>
+      <>
+        <SEO
+          title={seoTitle}
+          description={seoDesc}
+          canonical={can}
+          locale={bcp47}
+          alternates={alternates}
+          ogImage={ogImage}
+          jsonLd={jsonLd}
+        />
+
+        <div className="pt-24 min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">{t('blog.not_found_title')}</h1>
+            <Link to={PATHS[locale].blog} className="text-blue-600 hover:text-blue-700 font-semibold">
+              {t('blog.back_to_blog')}
+            </Link>
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 
-  // Update URL and page title
-  React.useEffect(() => {
-    window.history.pushState({}, '', `/blog/${postId}`);
-    document.title = `${blogPost.title} - ${t('blog.site_title')}`;
-    
-    return () => {
-      document.title = t('blog.default_title');
-    };
-  }, [postId, blogPost.title, t]);
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
+  const formatDate = (dateString: string) =>
+    new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
     });
-  };
 
-  const shareUrl = `${window.location.origin}/blog/${postId}`;
+  const shareUrl = can; // utilise l'URL canonique calculée
   const shareTitle = blogPost.title;
 
   const shareLinks = [
@@ -478,7 +530,9 @@ const BlogPost: React.FC<BlogPostProps> = ({ navigate, postId }) => {
     {
       name: 'Twitter',
       icon: <Twitter size={20} />,
-      url: `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}`,
+      url: `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(
+        shareTitle
+      )}`,
       color: 'hover:bg-sky-500'
     },
     {
@@ -490,126 +544,137 @@ const BlogPost: React.FC<BlogPostProps> = ({ navigate, postId }) => {
   ];
 
   return (
-    <div className="pt-24">
-      {/* Back Button */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <button
-          onClick={() => navigate('blog')}
-          className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200"
-        >
-          <ArrowLeft size={20} />
-          <span>{t('blog.back_to_blog')}</span>
-        </button>
-      </div>
+    <>
+      <SEO
+        title={seoTitle}
+        description={seoDesc}
+        canonical={can}
+        locale={bcp47}
+        alternates={alternates}
+        ogImage={ogImage}
+        jsonLd={jsonLd}
+      />
 
-      {/* Article Header */}
-      <article className="container mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="max-w-4xl mx-auto">
-          {/* Hero Image */}
-          <div className="relative rounded-2xl overflow-hidden mb-8 shadow-2xl">
-            <img
-              src={blogPost.image}
-              alt={blogPost.title}
-              className="w-full h-64 md:h-96 object-cover"
-            />
-            <div className="absolute inset-0 bg-black/20"></div>
-          </div>
+      <div className="pt-24">
+        {/* Back Button */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <Link
+            to={PATHS[locale].blog}
+            className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200"
+          >
+            <ArrowLeft size={20} />
+            <span>{t('blog.back_to_blog')}</span>
+          </Link>
+        </div>
 
-          {/* Article Meta */}
-          <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
-            <div className="flex items-center space-x-4 text-gray-600">
-              <div className="flex items-center space-x-2">
-                <Calendar size={16} />
-                <span>{formatDate(blogPost.date)}</span>
-              </div>
-              <span>•</span>
-              <span>{blogPost.readTime}</span>
-              <span>•</span>
-              <span className="px-3 py-1 bg-gray-100 rounded-full text-sm font-medium">
-                {t('blog.language_label')}
-              </span>
+        {/* Article Header */}
+        <article className="container mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+          <div className="max-w-4xl mx-auto">
+            {/* Hero Image */}
+            <div className="relative rounded-2xl overflow-hidden mb-8 shadow-2xl">
+              <img
+                src={blogPost.image}
+                alt={blogPost.title}
+                className="w-full h-64 md:h-96 object-cover"
+                loading="eager"
+              />
+              <div className="absolute inset-0 bg-black/20"></div>
             </div>
 
-            {/* Share Buttons */}
-            <div className="flex items-center space-x-2">
-              <span className="text-gray-600 font-medium mr-2">
-                <Share2 size={16} className="inline mr-1" />
-                {t('blog.share')}
-              </span>
-              {shareLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`p-2 rounded-lg bg-gray-100 text-gray-600 ${link.color} hover:text-white transition-colors duration-200`}
-                  title={`Share on ${link.name}`}
+            {/* Article Meta */}
+            <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
+              <div className="flex items-center space-x-4 text-gray-600">
+                <div className="flex items-center space-x-2">
+                  <Calendar size={16} />
+                  <span>{formatDate(blogPost.date)}</span>
+                </div>
+                <span>•</span>
+                <span>{blogPost.readTime}</span>
+                <span>•</span>
+                <span className="px-3 py-1 bg-gray-100 rounded-full text-sm font-medium">
+                  {t('blog.language_label')}
+                </span>
+              </div>
+
+              {/* Share Buttons */}
+              <div className="flex items-center space-x-2">
+                <span className="text-gray-600 font-medium mr-2">
+                  <Share2 size={16} className="inline mr-1" />
+                  {t('blog.share')}
+                </span>
+                {shareLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`p-2 rounded-lg bg-gray-100 text-gray-600 ${link.color} hover:text-white transition-colors duration-200`}
+                    title={`Share on ${link.name}`}
+                  >
+                    {link.icon}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Title */}
+            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              {blogPost.title}
+            </h1>
+
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mb-8">
+              {blogPost.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
                 >
-                  {link.icon}
-                </a>
+                  {t(`blog.topics.${tag}`)}
+                </span>
               ))}
             </div>
-          </div>
 
-          {/* Title */}
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            {blogPost.title}
-          </h1>
-
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2 mb-8">
-            {blogPost.tags.map((tag) => (
-              <span
-                key={tag}
-                className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
-              >
-                {t(`blog.topics.${tag}`)}
-              </span>
-            ))}
-          </div>
-
-          {/* Article Content */}
-          <div className="prose prose-lg max-w-none">
-            <div
-              className="text-gray-700 leading-relaxed space-y-6"
-              dangerouslySetInnerHTML={{ __html: blogPost.content }}
-            />
-          </div>
-
-          {/* Author Box */}
-          <div className="mt-12 p-6 bg-gray-50 rounded-2xl">
-            <div className="flex items-start space-x-4">
-              <img
-                src="https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?auto=compress&cs=tinysrgb&w=100"
-                alt="Williams Jullin"
-                className="w-16 h-16 rounded-full object-cover"
+            {/* Article Content */}
+            <div className="prose prose-lg max-w-none">
+              <div
+                className="text-gray-700 leading-relaxed space-y-6"
+                dangerouslySetInnerHTML={{ __html: blogPost.content }}
               />
-              <div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Williams Jullin</h3>
-                <p className="text-gray-600 mb-4">
-                  {t('blog.author_bio')}
-                </p>
-                <div className="flex space-x-4">
-                  <button
-                    onClick={() => navigate('story')}
-                    className="text-blue-600 hover:text-blue-700 font-semibold"
-                  >
-                    {t('blog.author.read_story')}
-                  </button>
-                  <button
-                    onClick={() => navigate('contact')}
-                    className="text-blue-600 hover:text-blue-700 font-semibold"
-                  >
-                    {t('blog.author.get_in_touch')}
-                  </button>
+            </div>
+
+            {/* Author Box */}
+            <div className="mt-12 p-6 bg-gray-50 rounded-2xl">
+              <div className="flex items-start space-x-4">
+                <img
+                  src="https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?auto=compress&cs=tinysrgb&w=100"
+                  alt="Williams Jullin"
+                  className="w-16 h-16 rounded-full object-cover"
+                />
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Williams Jullin</h3>
+                  <p className="text-gray-600 mb-4">
+                    {t('blog.author_bio')}
+                  </p>
+                  <div className="flex space-x-4">
+                    <Link
+                      to={PATHS[locale].story}
+                      className="text-blue-600 hover:text-blue-700 font-semibold"
+                    >
+                      {t('blog.author.read_story')}
+                    </Link>
+                    <Link
+                      to={PATHS[locale].contact}
+                      className="text-blue-600 hover:text-blue-700 font-semibold"
+                    >
+                      {t('blog.author.get_in_touch')}
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </article>
-    </div>
+        </article>
+      </div>
+    </>
   );
-};
-
-export default BlogPost;
+}

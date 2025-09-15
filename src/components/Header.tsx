@@ -1,14 +1,10 @@
+// src/components/Header.tsx
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Menu, X, ExternalLink, ChevronDown } from 'lucide-react';
 import ReactCountryFlag from 'react-country-flag';
-
-interface HeaderProps {
-  currentPage: string;
-  navigate: (page: string) => void;
-  currentLanguage: string;
-  setCurrentLanguage: (lang: string) => void;
-}
+import { PATHS, LOCALES, type Locale } from '../router/paths';
 
 const languages = [
   { code: 'en', countryCode: 'GB', name: 'English' },
@@ -20,19 +16,20 @@ const languages = [
   { code: 'zh', countryCode: 'CN', name: '中文' }
 ];
 
-const Header: React.FC<HeaderProps> = ({
-  currentPage,
-  navigate,
-  currentLanguage,
-  setCurrentLanguage
-}) => {
+export default function Header() {
+  const { t, i18n } = useTranslation();
+  const location = useLocation();
+
+  // Locale courante
+  const locale = (i18n.language?.split('-')[0] ?? 'fr') as Locale;
+
+  // UI state
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
   const [isAdminMode, setIsAdminMode] = useState(false);
-  const { t } = useTranslation();
 
-  // Mode admin via raccourci clavier
+  // Mode admin via raccourci clavier (Ctrl+Shift+A)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'A') {
@@ -44,26 +41,44 @@ const Header: React.FC<HeaderProps> = ({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  // Ombre & fond au scroll
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = [
-    { key: 'home', label: t('nav.home') },
-    { key: 'story', label: t('nav.story') },
+  // Détermine si un lien est actif selon l'URL
+  const isActive = (path: string) => {
+    if (path === PATHS[locale].home) {
+      return location.pathname === '/' || location.pathname === PATHS[locale].home;
+    }
+    return location.pathname.startsWith(path);
+  };
+
+  // Items de navigation
+  const navItems: Array<
+    | { key: 'home' | 'story' | 'blog' | 'contact'; label: string; to: string; external?: undefined; adminOnly?: boolean }
+    | { key: 'ulixai' | 'sos-expat'; label: string; external: string; to?: undefined; adminOnly?: boolean }
+    | { key: 'admin'; label: string; to: string; adminOnly: true; external?: undefined }
+  > = [
+    { key: 'home', label: t('nav.home'), to: PATHS[locale].home },
+    { key: 'story', label: t('nav.story'), to: PATHS[locale].story },
     { key: 'ulixai', label: t('nav.ulixai'), external: 'https://ulixai.com' },
     { key: 'sos-expat', label: t('nav.sos_expat'), external: 'https://sos-expat.com' },
-    { key: 'blog', label: t('nav.blog') },
-    ...(isAdminMode ? [{ key: 'admin', label: `🔐 ${t('nav.admin')}`, adminOnly: true }] : []),
-    { key: 'contact', label: t('nav.contact') }
+    { key: 'blog', label: t('nav.blog'), to: PATHS[locale].blog },
+    ...(isAdminMode ? [{ key: 'admin', label: `🔐 ${t('nav.admin')}`, to: '/admin', adminOnly: true as const }] : []),
+    { key: 'contact', label: t('nav.contact'), to: PATHS[locale].contact }
   ];
 
   const currentLang =
-    languages.find(lang => lang.code === currentLanguage) || languages[0];
+    languages.find(lang => lang.code === locale) || languages[0];
+
+  const switchLanguage = (l: Locale) => {
+    i18n.changeLanguage(l);
+    // Redirige vers la home de la langue choisie (simple, fiable)
+    window.location.href = PATHS[l].home;
+  };
 
   return (
     <header
@@ -76,34 +91,33 @@ const Header: React.FC<HeaderProps> = ({
       <div className="container mx-auto px-3 sm:px-4 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div onClick={() => navigate('home')} className="cursor-pointer group">
+          <Link to={PATHS[locale].home} className="cursor-pointer group">
             <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg md:rounded-xl shadow-lg group-hover:from-blue-600 group-hover:to-blue-700 transition-all duration-300 transform group-hover:scale-105">
               <span className="text-white font-black text-base md:text-lg lg:text-xl">
                 WJ
               </span>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navItems.map(item => (
               <div key={item.key} className="relative group">
-                {item.adminOnly && (
-                  <button
-                    onClick={() => navigate(item.key)}
+                {item.adminOnly ? (
+                  <Link
+                    to={item.to}
                     className={`text-gray-300 hover:text-white transition-colors duration-300 font-medium text-sm xl:text-base py-2 relative ${
-                      currentPage === item.key ? 'text-white' : ''
+                      isActive(item.to) ? 'text-white' : ''
                     }`}
                   >
                     {item.label}
                     <span
                       className={`absolute -bottom-1 left-0 h-0.5 bg-blue-400 rounded-full transition-all duration-300 ${
-                        currentPage === item.key ? 'w-full' : 'w-0 group-hover:w-full'
+                        isActive(item.to) ? 'w-full' : 'w-0 group-hover:w-full'
                       }`}
                     />
-                  </button>
-                )}
-                {!item.adminOnly && item.external ? (
+                  </Link>
+                ) : item.external ? (
                   <a
                     href={item.external}
                     target="_blank"
@@ -114,21 +128,19 @@ const Header: React.FC<HeaderProps> = ({
                     <ExternalLink size={12} className="xl:w-3.5 xl:h-3.5" />
                   </a>
                 ) : (
-                  !item.adminOnly && (
-                    <button
-                      onClick={() => navigate(item.key)}
-                      className={`text-gray-300 hover:text-white transition-colors duration-300 font-medium text-sm xl:text-base py-2 relative ${
-                        currentPage === item.key ? 'text-white' : ''
+                  <Link
+                    to={item.to!}
+                    className={`text-gray-300 hover:text-white transition-colors duration-300 font-medium text-sm xl:text-base py-2 relative ${
+                      isActive(item.to!) ? 'text-white' : ''
+                    }`}
+                  >
+                    {item.label}
+                    <span
+                      className={`absolute -bottom-1 left-0 h-0.5 bg-blue-400 rounded-full transition-all duration-300 ${
+                        isActive(item.to!) ? 'w-full' : 'w-0 group-hover:w-full'
                       }`}
-                    >
-                      {item.label}
-                      <span
-                        className={`absolute -bottom-1 left-0 h-0.5 bg-blue-400 rounded-full transition-all duration-300 ${
-                          currentPage === item.key ? 'w-full' : 'w-0 group-hover:w-full'
-                        }`}
-                      />
-                    </button>
-                  )
+                    />
+                  </Link>
                 )}
               </div>
             ))}
@@ -162,11 +174,11 @@ const Header: React.FC<HeaderProps> = ({
                     <button
                       key={lang.code}
                       onClick={() => {
-                        setCurrentLanguage(lang.code); // ✅ utilise la prop requise
+                        switchLanguage(lang.code as Locale);
                         setShowLanguageDropdown(false);
                       }}
                       className={`touch-button flex items-center space-x-3 md:space-x-4 w-full px-4 py-3 md:px-4 md:py-3 text-left hover:bg-slate-700/50 active:bg-slate-600/50 transition-colors duration-150 ${
-                        currentLanguage === lang.code
+                        locale === lang.code
                           ? 'bg-slate-700/30 text-blue-300'
                           : 'text-gray-300'
                       }`}
@@ -212,24 +224,23 @@ const Header: React.FC<HeaderProps> = ({
                       target="_blank"
                       rel="noopener noreferrer"
                       className="touch-link flex items-center space-x-3 px-4 py-4 md:px-4 md:py-4 text-gray-300 hover:text-white hover:bg-slate-800/50 active:bg-slate-700/50 rounded-lg md:rounded-xl transition-all duration-200"
+                      onClick={() => setIsMenuOpen(false)}
                     >
                       <span className="text-sm md:text-base font-medium">{item.label}</span>
                       <ExternalLink size={14} className="md:w-4 md:h-4" />
                     </a>
                   ) : (
-                    <button
-                      onClick={() => {
-                        navigate(item.key);
-                        setIsMenuOpen(false);
-                      }}
+                    <Link
+                      to={item.to!}
+                      onClick={() => setIsMenuOpen(false)}
                       className={`touch-button block w-full text-left px-4 py-4 md:px-4 md:py-4 rounded-lg md:rounded-xl transition-all duration-200 text-sm md:text-base font-medium ${
-                        currentPage === item.key
+                        isActive(item.to!)
                           ? 'text-white bg-slate-800/50'
                           : 'text-gray-300 hover:text-white hover:bg-slate-800/50 active:bg-slate-700/50'
                       }`}
                     >
                       {item.label}
-                    </button>
+                    </Link>
                   )}
                 </div>
               ))}
@@ -239,6 +250,4 @@ const Header: React.FC<HeaderProps> = ({
       </div>
     </header>
   );
-};
-
-export default Header;
+}

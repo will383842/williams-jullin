@@ -34,7 +34,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     if (description) {
       let metaDescription = document.querySelector('meta[name="description"]');
       if (!metaDescription) {
-        metaDescription = document.createElement('meta');
+        metaDescription = document.createElemen'meta';
         metaDescription.setAttribute('name', 'description');
         document.head.appendChild(metaDescription);
       }
@@ -45,7 +45,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     if (keywords) {
       let metaKeywords = document.querySelector('meta[name="keywords"]');
       if (!metaKeywords) {
-        metaKeywords = document.createElement('meta');
+        metaKeywords = document.createElemen'meta';
         metaKeywords.setAttribute('name', 'keywords');
         document.head.appendChild(metaKeywords);
       }
@@ -59,7 +59,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     const updateMetaProperty = (property: string, content: string) => {
       let meta = document.querySelector(`meta[property="${property}"]`);
       if (!meta) {
-        meta = document.createElement('meta');
+        meta = document.createElemen'meta';
         meta.setAttribute('property', property);
         document.head.appendChild(meta);
       }
@@ -77,7 +77,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     const updateTwitterMeta = (name: string, content: string) => {
       let meta = document.querySelector(`meta[name="${name}"]`);
       if (!meta) {
-        meta = document.createElement('meta');
+        meta = document.createElemen'meta';
         meta.setAttribute('name', name);
         document.head.appendChild(meta);
       }
@@ -91,7 +91,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     // Canonical URL
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
-      canonical = document.createElement('link');
+      canonical = document.createElemen'link';
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }

@@ -1,4 +1,4 @@
-// src/pages/Contact.tsx
+﻿// src/pages/Contact.tsx
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Mail, MessageCircle, CheckCircle, AlertTriangle, Loader2 } from 'lucide-react';
@@ -13,7 +13,7 @@ interface ContactProps {
 }
 
 const Contact: React.FC<ContactProps> = ({ navigate }) => {
-  // Au début
+  // Au dÃ©but
   const { t } = useTranslation();
 
   // SEO (i18n)
@@ -44,14 +44,14 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
   const [validationErrors, setValidationErrors] = useState<{[key: string]: string}>({});
   const [touchedFields, setTouchedFields] = useState<{[key: string]: boolean}>({});
 
-  // Validation en temps réel
+  // Validation en temps rÃ©el
   const validateField = (name: string, value: string) => {
     const errors: {[key: string]: string} = {};
     
     switch (name) {
       case 'purpose':
         if (!value.trim()) {
-          // - errors.purpose = 'Veuillez sélectionner un objet';
+          // - errors.purpose = 'Veuillez sÃ©lectionner un objet';
           // + errors.purpose = t('contact.validation.purpose_required');
           errors.purpose = t('contact.validation.purpose_required');
         }
@@ -61,10 +61,10 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
           // - 'Le nom complet est requis'
           errors.fullName = t('contact.validation.name_required');
         } else if (value.trim().length < 2) {
-          // - errors.fullName = 'Le nom doit contenir au moins 2 caractères';
+          // - errors.fullName = 'Le nom doit contenir au moins 2 caractÃ¨res';
           // + errors.fullName = t('contact.validation.name_min');
           errors.fullName = t('contact.validation.name_min');
-        } else if (!/^[a-zA-ZÀ-ÿ\s-']+$/.test(value)) {
+        } else if (!/^[\p{L}\p{M}\s'’-]+$/u.test(value)) {
           // - 'Le nom ne peut contenir que des lettres, espaces et tirets'
           errors.fullName = t('contact.validation.name_charset');
         }
@@ -82,19 +82,19 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
         if (!value.trim()) {
           errors.message = 'Le message est requis';
         } else if (value.trim().length < 10) {
-          errors.message = 'Le message doit contenir au moins 10 caractères';
+          errors.message = 'Le message doit contenir au moins 10 caractÃ¨res';
         } else if (value.length > 2000) {
-          errors.message = 'Le message ne peut pas dépasser 2000 caractères';
+          errors.message = 'Le message ne peut pas dÃ©passer 2000 caractÃ¨res';
         }
         break;
       case 'title':
         if (value && value.length > 200) {
-          errors.title = 'Le titre ne peut pas dépasser 200 caractères';
+          errors.title = 'Le titre ne peut pas dÃ©passer 200 caractÃ¨res';
         }
         break;
       case 'country':
         if (value && value.length > 100) {
-          errors.country = 'Le nom du pays ne peut pas dépasser 100 caractères';
+          errors.country = 'Le nom du pays ne peut pas dÃ©passer 100 caractÃ¨res';
         }
         break;
     }
@@ -145,7 +145,7 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validation complète avant soumission
+    // Validation complÃ¨te avant soumission
     const requiredFields = ['purpose', 'fullName', 'email', 'message'] as const;
     let hasErrors = false;
     
@@ -168,11 +168,11 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
       setTouchedFields(prev => ({ ...prev, country: true }));
     }
     
-    // Vérifier le consentement
+    // VÃ©rifier le consentement
     if (!formData.consent) {
       setShowFeedback(true);
       setFeedbackType('error');
-      // - setError('Vous devez accepter le traitement de vos données personnelles');
+      // - setError('Vous devez accepter le traitement de vos donnÃ©es personnelles');
       // + i18n
       setError(t('contact.validation.consent_required'));
       return;
@@ -201,17 +201,17 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
         country: formData.country
       };
 
-      console.log('📧 Soumission formulaire contact:', contactData);
+      console.log('ðŸ“§ Soumission formulaire contact:', contactData);
       await submitContactForm(contactData);
-      console.log('✅ Formulaire contact soumis avec succès');
+      console.log('âœ… Formulaire contact soumis avec succÃ¨s');
       
-      // Tracker l'événement de soumission
+      // Tracker l'Ã©vÃ©nement de soumission
       await trackEvent('contact_form_submitted', {
         purpose: contactData.purpose,
         country: contactData.country || 'Unknown'
       });
       
-      // Afficher le succès
+      // Afficher le succÃ¨s
       setFeedbackType('success');
       setIsSubmitting(false);
       setFormData({
@@ -229,7 +229,7 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
       // Afficher l'erreur
       setFeedbackType('error');
       setIsSubmitting(false);
-      // Harmoniser avec la clé i18n en fallback
+      // Harmoniser avec la clÃ© i18n en fallback
       setError(err instanceof Error ? err.message : t('contact.toast.error_message'));
     }
   };
@@ -242,7 +242,7 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
       [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
     }));
     
-    // Marquer le champ comme touché et valider
+    // Marquer le champ comme touchÃ© et valider
     setTouchedFields(prev => ({ ...prev, [name]: true }));
     validateField(name, value as string);
   };
@@ -256,15 +256,15 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
         };
       case 'success':
         return {
-          // - 'Message envoyé avec succès ! 🎉'
+          // - 'Message envoyÃ© avec succÃ¨s ! ðŸŽ‰'
           title: t('contact.toast.success_title'),
-          // - 'Merci pour votre message. Williams vous répondra personnellement sous 24-48h.'
+          // - 'Merci pour votre message. Williams vous rÃ©pondra personnellement sous 24-48h.'
           message: t('contact.toast.success_message'),
         };
       case 'error':
         return {
           title: 'Erreur lors de l\'envoi',
-          // - message: error || 'Une erreur est survenue. Veuillez vérifier vos informations et réessayer.'
+          // - message: error || 'Une erreur est survenue. Veuillez vÃ©rifier vos informations et rÃ©essayer.'
           message: error || t('contact.toast.error_message'),
         };
       default:
@@ -327,7 +327,7 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
                   </div>
 
                   <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
-                    {/* Résumé des erreurs */}
+                    {/* RÃ©sumÃ© des erreurs */}
                     {Object.keys(validationErrors).some(key => (validationErrors as any)[key]) && (
                       <div className="bg-red-50 border border-red-200 rounded-lg p-4">
                         <div className="flex items-center space-x-2 mb-2">
@@ -336,7 +336,7 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
                         </div>
                         <ul className="text-sm text-red-700 space-y-1">
                           {Object.entries(validationErrors).map(([field, error]) => 
-                            error ? <li key={field}>• {error}</li> : null
+                            error ? <li key={field}>â€¢ {error}</li> : null
                           )}
                         </ul>
                       </div>
@@ -353,7 +353,7 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
                         value={formData.purpose}
                         onChange={handleChange}
                         required
-                        className={`w-full px-3 py-3 md:px-4 border rounded-lg md:rounded-xl focus:ring-2 transition-all durée-200 text-sm md:text-base ${getFieldBorderClass(getValidationState('purpose'), touchedFields.purpose)}`}
+                        className={`w-full px-3 py-3 md:px-4 border rounded-lg md:rounded-xl focus:ring-2 transition-all durÃ©e-200 text-sm md:text-base ${getFieldBorderClass(getValidationState('purpose'), touchedFields.purpose)}`}
                       >
                         <option value="">{t('contact.form.select_purpose')}</option>
                         {purposes.map(purpose => (
@@ -382,7 +382,7 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
                         value={formData.fullName}
                         onChange={handleChange}
                         required
-                        className={`w-full px-3 py-3 md:px-4 border rounded-lg md:rounded-xl focus:ring-2 transition-all durée-200 text-sm md:text-base ${getFieldBorderClass(getValidationState('fullName'), touchedFields.fullName)}`}
+                        className={`w-full px-3 py-3 md:px-4 border rounded-lg md:rounded-xl focus:ring-2 transition-all durÃ©e-200 text-sm md:text-base ${getFieldBorderClass(getValidationState('fullName'), touchedFields.fullName)}`}
                         placeholder={t('contact.form.full_name_placeholder')}
                       />
                       <FormValidation
@@ -405,7 +405,7 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className={`w-full px-3 py-3 md:px-4 border rounded-lg md:rounded-xl focus:ring-2 transition-all durée-200 text-sm md:text-base ${getFieldBorderClass(getValidationState('email'), touchedFields.email)}`}
+                        className={`w-full px-3 py-3 md:px-4 border rounded-lg md:rounded-xl focus:ring-2 transition-all durÃ©e-200 text-sm md:text-base ${getFieldBorderClass(getValidationState('email'), touchedFields.email)}`}
                         placeholder={t('contact.form.email_placeholder')}
                       />
                       <FormValidation
@@ -427,7 +427,7 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
                         name="title"
                         value={formData.title}
                         onChange={handleChange}
-                        className="w-full px-3 py-3 md:px-4 border border-slate-300 rounded-lg md:rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all durée-200 text-sm md:text-base"
+                        className="w-full px-3 py-3 md:px-4 border border-slate-300 rounded-lg md:rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all durÃ©e-200 text-sm md:text-base"
                         placeholder={t('contact.form.subject_placeholder')}
                       />
                     </div>
@@ -443,7 +443,7 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
                         name="country"
                         value={formData.country}
                         onChange={handleChange}
-                        className={`w-full px-3 py-3 md:px-4 border rounded-lg md:rounded-xl focus:ring-2 transition-all durée-200 text-sm md:text-base ${getFieldBorderClass(getValidationState('country'), touchedFields.country)}`}
+                        className={`w-full px-3 py-3 md:px-4 border rounded-lg md:rounded-xl focus:ring-2 transition-all durÃ©e-200 text-sm md:text-base ${getFieldBorderClass(getValidationState('country'), touchedFields.country)}`}
                         placeholder={t('contact.form.country_placeholder')}
                       />
                       <FormValidation
@@ -466,7 +466,7 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
                         onChange={handleChange}
                         required
                         rows={4}
-                        className={`w-full px-3 py-3 md:px-4 border rounded-lg md:rounded-xl focus:ring-2 transition-all durée-200 resize-vertical text-sm md:text-base md:rows-6 ${getFieldBorderClass(getValidationState('message'), touchedFields.message)}`}
+                        className={`w-full px-3 py-3 md:px-4 border rounded-lg md:rounded-xl focus:ring-2 transition-all durÃ©e-200 resize-vertical text-sm md:text-base md:rows-6 ${getFieldBorderClass(getValidationState('message'), touchedFields.message)}`}
                         placeholder={t('contact.form.message_placeholder')}
                       />
                       <div className="flex justify-between items-center mt-1">
@@ -502,7 +502,7 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
                     <button
                       type="submit"
                       disabled={isSubmitting || !isFormValid()}
-                      className={`touch-button w-full py-4 px-6 rounded-lg md:rounded-xl font-semibold text-white transition-all durée-200 text-base md:text-base flex items-center justify-center space-x-2 ${
+                      className={`touch-button w-full py-4 px-6 rounded-lg md:rounded-xl font-semibold text-white transition-all durÃ©e-200 text-base md:text-base flex items-center justify-center space-x-2 ${
                         isSubmitting || !isFormValid()
                           ? 'bg-slate-400 cursor-not-allowed'
                           : 'bg-blue-600 hover:bg-blue-700 active:bg-blue-800 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl'
@@ -575,3 +575,4 @@ const Contact: React.FC<ContactProps> = ({ navigate }) => {
 };
 
 export default Contact;
+

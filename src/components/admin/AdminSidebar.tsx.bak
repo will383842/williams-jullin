@@ -1,4 +1,4 @@
-﻿// src/components/admin/AdminSidebar.tsx
+// src/components/admin/AdminSidebar.tsx
 import React, { useState } from 'react';
 import { 
   LayoutDashboard, Mail, TrendingUp, BarChart3, Settings, 
@@ -41,7 +41,7 @@ const AdminSidebar: React.FC<AdminSidebarProps> = ({
 
   const [collapsed, setCollapsed] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Set<MainSection>>(
-    new Set(['messages']) // Messages ouvert par dÃ©faut
+    new Set(['messages']) // Messages ouvert par défaut
   );
 
   const menuItems: MenuItem[] = [
@@ -128,7 +128,7 @@ const AdminSidebar: React.FC<AdminSidebarProps> = ({
     try {
       await signOut(auth);
     } catch (error) {
-      console.error('Erreur de dÃ©connexion:', error);
+      console.error('Erreur de déconnexion:', error);
     }
   };
 
@@ -201,7 +201,7 @@ const AdminSidebar: React.FC<AdminSidebarProps> = ({
                   )}
                 </button>
 
-                {/* Sous-Ã©lÃ©ments */}
+                {/* Sous-éléments */}
                 {hasSubItems && !collapsed && isExpanded && (
                   <ul className="mt-2 ml-4 space-y-1">
                     {item.subItems!.map((subItem) => {
@@ -236,7 +236,7 @@ const AdminSidebar: React.FC<AdminSidebarProps> = ({
                   </ul>
                 )}
 
-                {/* Version rÃ©duite - indicateur de sous-Ã©lÃ©ments */}
+                {/* Version réduite - indicateur de sous-éléments */}
                 {hasSubItems && collapsed && isActive && (
                   <div className="mt-2 ml-2 w-2 h-2 bg-blue-500 rounded-full"></div>
                 )}
@@ -309,4 +309,3 @@ const AdminSidebar: React.FC<AdminSidebarProps> = ({
 };
 
 export default AdminSidebar;
-

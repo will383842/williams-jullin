@@ -57,7 +57,7 @@ const AIMetaTags: React.FC<AIMetaTagsProps> = ({ page, customData }) => {
 
     // Ajouter tous les meta tags IA
     aiMetaTags.forEach(tag => {
-      const meta = document.createElement('meta');
+      const meta = document.createElemen'meta';
       meta.setAttribute('name', tag.name);
       meta.setAttribute('content', tag.content);
       document.head.appendChild(meta);
@@ -66,7 +66,7 @@ const AIMetaTags: React.FC<AIMetaTagsProps> = ({ page, customData }) => {
     // Meta tags spécifiques par page
     const pageSpecificTags = getPageSpecificAITags(page);
     pageSpecificTags.forEach(tag => {
-      const meta = document.createElement('meta');
+      const meta = document.createElemen'meta';
       meta.setAttribute('name', tag.name);
       meta.setAttribute('content', tag.content);
       document.head.appendChild(meta);
@@ -272,7 +272,7 @@ const AIMetaTags: React.FC<AIMetaTagsProps> = ({ page, customData }) => {
     };
 
     // Injecter les données structurées enrichies
-    const script = document.createElement('script');
+    const script = document.createElemen'script';
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(aiEnrichedStructuredData, null, 2);
     document.head.appendChild(script);
@@ -292,7 +292,7 @@ const AIMetaTags: React.FC<AIMetaTagsProps> = ({ page, customData }) => {
     ];
 
     entityTags.forEach(tag => {
-      const meta = document.createElement('meta');
+      const meta = document.createElemen'meta';
       meta.setAttribute('name', tag.name);
       meta.setAttribute('content', tag.content);
       document.head.appendChild(meta);
@@ -311,7 +311,7 @@ const AIMetaTags: React.FC<AIMetaTagsProps> = ({ page, customData }) => {
     ];
 
     intentTags.forEach(tag => {
-      const meta = document.createElement('meta');
+      const meta = document.createElemen'meta';
       meta.setAttribute('name', tag.name);
       meta.setAttribute('content', tag.content);
       document.head.appendChild(meta);
@@ -330,7 +330,7 @@ const AIMetaTags: React.FC<AIMetaTagsProps> = ({ page, customData }) => {
     ];
 
     culturalTags.forEach(tag => {
-      const meta = document.createElement('meta');
+      const meta = document.createElemen'meta';
       meta.setAttribute('name', tag.name);
       meta.setAttribute('content', tag.content);
       document.head.appendChild(meta);

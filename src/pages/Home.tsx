@@ -25,7 +25,7 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = ({ navigate }) => {
   const { t } = useTranslation();
 
-  // Tracker cette page
+  // Tracker cette page (clé i18n)
   usePageTracking('home', t('home.analytics.title'));
 
   // SEO (titre + meta + JSON-LD)
@@ -66,7 +66,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
           name: t('home.structured.website.name'),
           url: 'https://williamsjullin.com',
           description: t('home.structured.website.description'),
-          inLanguage: ['fr','en','de','es','pt','ru','zh'], // ✅ 7 langues
+          inLanguage: ['fr', 'en', 'de', 'es', 'pt', 'ru', 'zh'],
           isAccessibleForFree: true,
           author: { '@id': 'https://williamsjullin.com/#person' },
           publisher: { '@id': 'https://williamsjullin.com/#person' },
@@ -74,7 +74,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
       ],
     };
 
-    // Remplace l'ancien script si présent
+    // Remplace l'ancien JSON-LD si présent
     const existingScript = document.querySelector('script[type="application/ld+json"]');
     if (existingScript) existingScript.remove();
 
@@ -86,7 +86,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
 
   return (
     <main className="overflow-hidden" role="main">
-      {/* HERO SECTION - Mobile First Layout */}
+      {/* HERO SECTION */}
       <section className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0">
@@ -100,8 +100,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-20">
           <div className="max-w-7xl mx-auto">
-            
-            {/* Mobile Layout */}
+            {/* Mobile */}
             <div className="lg:hidden text-white text-center">
               {/* Badge */}
               <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
@@ -124,7 +123,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                 {t('home.hero.subtitle')}
               </p>
 
-              {/* Photo - AVANT les CTA comme demandé */}
+              {/* Photo */}
               <div className="mb-8">
                 <div className="relative max-w-sm mx-auto">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-indigo-600/30 rounded-2xl rotate-2 blur-xl" />
@@ -155,7 +154,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                   href="https://ulixai.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-4 rounded-2xl font-bold flex items-center justify-center space-x-3 transition-all durée-300 transform hover:scale-105 shadow-2xl hover:shadow-blue-500/25"
+                  className="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-4 rounded-2xl font-bold flex items-center justify-center space-x-3 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-blue-500/25"
                 >
                   <MessageCircle size={20} />
                   <span className="text-center leading-tight">{t('home.hero.cta_secondary')}</span>
@@ -186,7 +185,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
               </div>
             </div>
 
-            {/* Desktop Layout */}
+            {/* Desktop */}
             <div className="hidden lg:grid grid-cols-12 gap-12 items-center">
               {/* Texte gauche */}
               <div className="lg:col-span-7 text-white">
@@ -258,7 +257,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                 </div>
               </div>
 
-              {/* Image droite — locale et stable */}
+              {/* Image droite */}
               <div className="lg:col-span-5">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-indigo-600/30 rounded-3xl rotate-3 blur-xl" />
@@ -282,7 +281,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
-              {/* Image Gauche */}
+              {/* Image */}
               <div className="relative order-2 lg:order-1">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-indigo-600/20 rounded-2xl md:rounded-3xl rotate-1 md:rotate-2 blur-sm" />
                 <div className="relative bg-white rounded-2xl md:rounded-3xl p-3 md:p-4 shadow-2xl">
@@ -297,7 +296,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                 </div>
               </div>
 
-              {/* Texte Droite */}
+              {/* Texte */}
               <div className="relative order-1 lg:order-2">
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-slate-900 mb-6 text-center lg:text-left">
                   {t('home.conference.title')}
@@ -342,7 +341,9 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                         {t('home.conference.impact_title')}
                       </h4>
                     </div>
-                    <p className="text-orange-700 text-xs md:text-sm pl-9 md:pl-11">{t('home.conference.impact_description')}</p>
+                    <p className="text-orange-700 text-xs md:text-sm pl-9 md:pl-11">
+                      {t('home.conference.impact_description')}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -351,11 +352,11 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
         </div>
       </section>
 
-      {/* SECTION SOLUTIONS (SOS-Expat & Ulixai) */}
+      {/* SOLUTIONS (SOS-Expat & Ulixai) */}
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto space-y-16 md:space-y-20">
-            {/* Bloc SOS-Expat */}
+            {/* SOS-Expat */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
               {/* Texte */}
               <div className="relative">
@@ -427,7 +428,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
               </div>
             </div>
 
-            {/* Bloc Ulixai */}
+            {/* Ulixai */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
               {/* Image */}
               <div className="relative">
@@ -641,7 +642,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
         </div>
       </section>
 
-      {/* SECTION SERVICES */}
+      {/* SERVICES */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 to-blue-50/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -652,13 +653,13 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                   {t('home.hero.badge_verified')}
                 </span>
               </div>
-              
+
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6">
                 <span className="bg-gradient-to-r from-slate-900 to-blue-900 bg-clip-text text-transparent">
                   {t('home.hero.headline')}
                 </span>
               </h2>
-              
+
               <p className="text-base md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
                 {t('home.hero.subtitle')}
                 <strong className="text-blue-600"> <Trans i18nKey="home.hero.tagline" /></strong>
@@ -679,9 +680,16 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                 { name: t('home.services.transport'), icon: '🚗' },
                 { name: t('home.services.renovation'), icon: '🔨' },
               ].map((service, index) => (
-                <div key={index} className="group text-center p-4 md:p-6 bg-white rounded-xl md:rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                  <div className="text-3xl md:text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
-                  <p className="text-xs md:text-sm font-semibold text-slate-700 leading-tight group-hover:text-blue-600 transition-colors duration-300">{service.name}</p>
+                <div
+                  key={index}
+                  className="group text-center p-4 md:p-6 bg-white rounded-xl md:rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                >
+                  <div className="text-3xl md:text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
+                    {service.icon}
+                  </div>
+                  <p className="text-xs md:text-sm font-semibold text-slate-700 leading-tight group-hover:text-blue-600 transition-colors duration-300">
+                    {service.name}
+                  </p>
                 </div>
               ))}
             </div>
@@ -699,7 +707,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
         </div>
       </section>
 
-      {/* TÉMOIGNAGES - ILS NOUS FONT CONFIANCE */}
+      {/* TÉMOIGNAGES */}
       <section className="py-16 md:py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
@@ -714,9 +722,9 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
               </p>
             </div>
 
-            {/* Testimonials Desktop */}
+            {/* Desktop */}
             <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {/* Testimonial 1 */}
+              {/* 1 */}
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-100 shadow-lg">
                 <div className="flex items-center space-x-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -737,7 +745,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                 </div>
               </div>
 
-              {/* Testimonial 2 */}
+              {/* 2 */}
               <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-100 shadow-lg">
                 <div className="flex items-center space-x-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -758,7 +766,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                 </div>
               </div>
 
-              {/* Testimonial 3 */}
+              {/* 3 */}
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-100 shadow-lg">
                 <div className="flex items-center space-x-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -780,21 +788,17 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
               </div>
             </div>
 
-            {/* Testimonials Mobile - Carrousel défilant */}
+            {/* Mobile (carrousel auto) */}
             <div className="md:hidden relative">
               <style jsx>{`
                 @keyframes slide-left {
                   0% { transform: translateX(0); }
                   100% { transform: translateX(-50%); }
                 }
-                .testimonials-scroll {
-                  animation: slide-left 20s linear infinite;
-                }
-                .testimonials-scroll:hover {
-                  animation-play-state: paused;
-                }
+                .testimonials-scroll { animation: slide-left 20s linear infinite; }
+                .testimonials-scroll:hover { animation-play-state: paused; }
               `}</style>
-              
+
               <div className="overflow-hidden">
                 <div className="testimonials-scroll flex space-x-4 w-[200%]">
                   {/* Première série */}
@@ -860,7 +864,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                     </div>
                   </div>
 
-                  {/* Deuxième série (identique pour effet continu) */}
+                  {/* Deuxième série */}
                   <div className="flex space-x-4 w-1/2">
                     <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-4 border border-blue-100 shadow-lg min-w-[280px]">
                       <div className="flex items-center space-x-1 mb-3">
@@ -925,11 +929,12 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* BLOG SECTION (pas d'images ici) */}
+      {/* BLOG */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 to-blue-50/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -953,9 +958,9 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
               </button>
             </div>
 
-            {/* Articles du blog */}
+            {/* Articles */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {/* Article 1 - Guide Visas */}
+              {/* Article 1 */}
               <article className="bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2">
                 <div className="relative overflow-hidden">
                   <img
@@ -967,21 +972,21 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                     {t('blog.language_label')}
                   </div>
                 </div>
-                
+
                 <div className="p-4 md:p-6">
                   <div className="flex items-center space-x-2 text-gray-500 text-xs md:text-sm mb-2 md:mb-3">
                     <Calendar size={14} className="md:w-4 md:h-4" />
                     <span>{t('blog.posts.visa_guide.date')}</span>
                   </div>
-                  
+
                   <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3 line-clamp-2 leading-tight">
                     {t('blog.posts.visa_guide.title')}
                   </h3>
-                  
+
                   <p className="text-gray-600 mb-3 md:mb-4 line-clamp-3 text-sm md:text-base leading-relaxed">
                     {t('blog.posts.visa_guide.excerpt')}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
                     <span className="px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
                       <Tag size={10} className="md:w-3 md:h-3 inline mr-1" />
@@ -992,7 +997,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                       {t('blog.topics.tips')}
                     </span>
                   </div>
-                  
+
                   <button
                     onClick={() => navigate('blog', 'guide-complet-visas-europeens')}
                     className="touch-link flex items-center space-x-2 text-blue-600 hover:text-blue-700 active:text-blue-800 font-semibold transition-colors duration-200 text-sm md:text-base py-2"
@@ -1003,7 +1008,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                 </div>
               </article>
 
-              {/* Article 2 - Banking Nomades */}
+              {/* Article 2 */}
               <article className="bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2">
                 <div className="relative overflow-hidden">
                   <img
@@ -1015,21 +1020,21 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                     {t('blog.language_label')}
                   </div>
                 </div>
-                
+
                 <div className="p-4 md:p-6">
                   <div className="flex items-center space-x-2 text-gray-500 text-xs md:text-sm mb-2 md:mb-3">
                     <Calendar size={14} className="md:w-4 md:h-4" />
                     <span>{t('blog.posts.banking_nomad.date')}</span>
                   </div>
-                  
+
                   <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3 line-clamp-2 leading-tight">
                     {t('blog.posts.banking_nomad.title')}
                   </h3>
-                  
+
                   <p className="text-gray-600 mb-3 md:mb-4 line-clamp-3 text-sm md:text-base leading-relaxed">
                     {t('blog.posts.banking_nomad.excerpt')}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
                     <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
                       <Tag size={10} className="md:w-3 md:h-3 inline mr-1" />
@@ -1040,7 +1045,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                       {t('blog.topics.tips')}
                     </span>
                   </div>
-                  
+
                   <button
                     onClick={() => navigate('blog', 'banking-digital-nomades-solutions')}
                     className="touch-link flex items-center space-x-2 text-blue-600 hover:text-blue-700 active:text-blue-800 font-semibold transition-colors duration-200 text-sm md:text-base py-2"
@@ -1051,7 +1056,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                 </div>
               </article>
 
-              {/* Article 3 - Logement Berlin */}
+              {/* Article 3 */}
               <article className="bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2">
                 <div className="relative overflow-hidden">
                   <img
@@ -1063,21 +1068,21 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                     {t('blog.language_label')}
                   </div>
                 </div>
-                
+
                 <div className="p-4 md:p-6">
                   <div className="flex items-center space-x-2 text-gray-500 text-xs md:text-sm mb-2 md:mb-3">
                     <Calendar size={14} className="md:w-4 md:h-4" />
                     <span>{t('blog.posts.housing_berlin.date')}</span>
                   </div>
-                  
+
                   <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3 line-clamp-2 leading-tight">
                     {t('blog.posts.housing_berlin.title')}
                   </h3>
-                  
+
                   <p className="text-gray-600 mb-3 md:mb-4 line-clamp-3 text-sm md:text-base leading-relaxed">
                     {t('blog.posts.housing_berlin.excerpt')}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
                     <span className="px-2 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
                       <Tag size={10} className="md:w-3 md:h-3 inline mr-1" />
@@ -1088,10 +1093,10 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                       {t('blog.topics.culture')}
                     </span>
                   </div>
-                  
+
                   <button
                     onClick={() => navigate('blog', 'trouver-logement-berlin-guide-expat')}
-                    className="touch-link flex items-center space-x-2 text-blue-600 hover:text-blue-700 active:text-blue-800 font-semibold transition-colors durée-200 text-sm md:text-base py-2"
+                    className="touch-link flex items-center space-x-2 text-blue-600 hover:text-blue-700 active:text-blue-800 font-semibold transition-colors duration-200 text-sm md:text-base py-2"
                   >
                     <span>{t('blog.read_more')}</span>
                     <ArrowRight size={14} className="md:w-4 md:h-4" />

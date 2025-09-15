@@ -60,7 +60,7 @@ const Footer: React.FC<FooterProps> = ({ navigate }) => {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-blue-200 hover:text-blue-300 transition-colors duration-200"
               >
-                <span>Ulixai</span>
+                <span>{t('nav.ulixai')}</span>
                 <ExternalLink size={14} />
               </a>
               <a
@@ -69,7 +69,7 @@ const Footer: React.FC<FooterProps> = ({ navigate }) => {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-blue-200 hover:text-blue-300 transition-colors duration-200"
               >
-                <span>SOS-Expat</span>
+                <span>{t('nav.sos_expat')}</span>
                 <ExternalLink size={14} />
               </a>
             </div>
@@ -83,13 +83,13 @@ const Footer: React.FC<FooterProps> = ({ navigate }) => {
                 onClick={() => navigate('blog')}
                 className="block text-blue-200 hover:text-blue-300 transition-colors duration-200"
               >
-                Blog
+                {t('nav.blog')}
               </button>
               <button
                 onClick={() => navigate('contact')}
                 className="block text-blue-200 hover:text-blue-300 transition-colors duration-200"
               >
-                Contact
+                {t('nav.contact')}
               </button>
               <button
                 onClick={() => navigate('investors')}

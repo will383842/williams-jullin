@@ -1,4 +1,4 @@
-{
+﻿{
   "admin": {
     "activity": {
       "none": "None",
@@ -66,8 +66,10 @@
       "archive": "Archive",
       "archived": "Archived",
       "cancel": "Cancel",
+      "collapse": "Collapse",
       "create": "Create",
       "delete": "Delete",
+      "expand": "Expand",
       "high": "High",
       "last_1h": "Last 1h",
       "last_24h": "Last 24h",
@@ -190,7 +192,8 @@
       "dashboard": "Dashboard",
       "investors": "Investors",
       "messages": "Messages",
-      "notifications": "Notifications"
+      "notifications": "Notifications",
+      "settings": "Settings"
     },
     "notifications": {
       "actions": {
@@ -1136,8 +1139,8 @@
       "community_stat_2": "Countries covered",
       "community_title": "Our Community",
       "mission_details": {
-        "sos_expat_1": "SOS‑Expat: instant matching with a lawyer or an experienced expat for your case; first consultation by chat/phone/video in under 5 minutes, anywhere in the world, in your language.",
-        "sos_expat_2": "SOS‑Expat: payouts sent in under 24 hours, for both the lawyer and the helping expat.",
+        "sos_expat_1": "SOS-Expat: instant matching with a lawyer or an experienced expat for your case; first consultation by chat/phone/video in under 5 minutes, anywhere in the world, in your language.",
+        "sos_expat_2": "SOS-Expat: payouts sent in under 24 hours, for both the lawyer and the helping expat.",
         "ulixai_1": "ULIXAI: all your needs (visa, banking, paperwork, driver…) → multiple provider offers for you to choose from.",
         "ulixai_2": "ULIXAI: providers, helpers and local pros monetize their skills, with guaranteed payment in a few days."
       },

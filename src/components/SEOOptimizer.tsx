@@ -87,7 +87,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   const updateMetaTag = (attribute: string, name: string, content: string) => {
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     if (!meta) {
-      meta = document.createElement('meta');
+      meta = document.createElemen'meta';
       meta.setAttribute(attribute, name);
       document.head.appendChild(meta);
     }
@@ -97,7 +97,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   const updateCanonicalUrl = (url: string) => {
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
-      canonical = document.createElement('link');
+      canonical = document.createElemen'link';
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }
@@ -141,7 +141,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       }
     };
 
-    const script = document.createElement('script');
+    const script = document.createElemen'script';
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(homeStructuredData, null, 2);
     document.head.appendChild(script);

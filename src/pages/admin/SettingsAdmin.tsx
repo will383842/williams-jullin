@@ -618,7 +618,7 @@ const SettingsAdmin: React.FC = () => {
                       <input
                         type="checkbox"
                         checked={settings.analytics.trackAnonymously}
-                        onChange={(e) => updateSetting(['analytics', 'trackAnonymously'], e.target.checked))}
+                        onChange={(e) => updateSetting(['analytics', 'trackAnonymously'], e.target.checked)}
                         className="rounded border-slate-300"
                       />
                       <span className="text-sm">Tracking anonyme</span>

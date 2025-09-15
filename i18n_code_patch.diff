@@ -1,4 +1,5 @@
-﻿--- a/project/src/pages/admin/LogsAdmin.tsx
+﻿diff --git a/project/src/pages/admin/LogsAdmin.tsx b/project/src/pages/admin/LogsAdmin.tsx
+--- a/project/src/pages/admin/LogsAdmin.tsx
 +++ b/project/src/pages/admin/LogsAdmin.tsx
 @@ -38,7 +38,7 @@
  }
@@ -36,6 +37,7 @@
    };
  
    const formatDuration = (duration?: number) => {
+diff --git a/project/src/components/admin/AdminSidebar.tsx b/project/src/components/admin/AdminSidebar.tsx
 --- a/project/src/components/admin/AdminSidebar.tsx
 +++ b/project/src/components/admin/AdminSidebar.tsx
 @@ -82,7 +82,7 @@
@@ -74,6 +76,7 @@
                </button>
                <button
                  onClick={handleSignOut}
+diff --git a/project/src/components/BlogEditor.tsx b/project/src/components/BlogEditor.tsx
 --- a/project/src/components/BlogEditor.tsx
 +++ b/project/src/components/BlogEditor.tsx
 @@ -12,6 +12,7 @@

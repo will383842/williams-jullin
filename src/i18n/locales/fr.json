@@ -1,57 +1,57 @@
-{
+﻿{
   "admin": {
     "activity": {
-      "none": "None",
+      "none": "Aucun",
       "recent": "Recent",
-      "recent_actions": "Recent actions",
-      "title": "Title"
+      "recent_actions": "Actions récentes",
+      "title": "Titre"
     },
     "analytics": {
-      "all_data": "All data",
+      "all_data": "Toutes les données",
       "devices": "Devices",
       "geo": "Geo",
       "over_time": "Over time",
-      "subtitle": "Subtitle"
+      "subtitle": "Sous-titre"
     },
     "audit": {
       "checklist": {
-        "admin_console": "Admin console",
-        "connected": "Connected",
+        "admin_console": "Console d'administration",
+        "connected": "Connecté",
         "contacts": "Contacts",
-        "deployment_ready": "Deployment ready",
+        "deployment_ready": "Déploiement prêt",
         "firestore": "Firestore",
-        "languages": "Languages",
+        "languages": "Langues",
         "performance": "Performance",
-        "security": "Security",
-        "seo": "Seo",
-        "spa": "Spa"
+        "security": "Sécurité",
+        "seo": "SEO",
+        "spa": "SPA"
       },
-      "close_panel": "Close panel",
+      "close_panel": "Fermer le panneau",
       "details_label": "Details label",
-      "errors": "Errors",
+      "errors": "Erreurs",
       "export": "Export",
-      "footer": "Footer",
-      "header_title": "Header title",
-      "last_run": "Last run",
-      "open_button": "Open button",
-      "open_title": "Open title",
-      "recommendation_label": "Recommendation label",
-      "run_full": "Run full",
-      "running": "Running",
-      "success": "Success",
-      "success_ratio": "Success ratio",
-      "tests_count": "Tests count",
-      "warnings": "Warnings"
+      "footer": "Pied de page",
+      "header_title": "Titre d'en-tête",
+      "last_run": "Dernière exécution",
+      "open_button": "Bouton d'ouverture",
+      "open_title": "Titre d'ouverture",
+      "recommendation_label": "Libellé de recommandation",
+      "run_full": "Exécuter complètement",
+      "running": "En cours",
+      "success": "Succès",
+      "success_ratio": "Taux de réussite",
+      "tests_count": "Nombre de tests",
+      "warnings": "Avertissements"
     },
     "auth": {
-      "admin_required": "Admin required",
+      "admin_required": "Administrateur requis",
       "checking": "Checking",
       "connecting": "Connecting",
       "invalid_email": "Invalid email",
-      "login_error": "Login error",
-      "logout": "Logout",
-      "secure_login_required": "Secure login required",
-      "sign_in": "Sign in",
+      "login_error": "Erreur de connexion",
+      "logout": "Se déconnecter",
+      "secure_login_required": "Connexion sécurisée requise",
+      "sign_in": "Se connecter",
       "user_not_found": "User not found",
       "wrong_password": "Wrong password"
     },
@@ -73,49 +73,51 @@
       "last_24h": "Last 24h",
       "last_30d": "Last 30d",
       "last_7d": "Last 7d",
-      "loading": "Loading",
+      "loading": "Chargement",
       "low": "Low",
-      "mark_read": "Mark read",
-      "mark_replied": "Mark replied",
+      "mark_read": "Marquer comme lu",
+      "mark_replied": "Marquer comme répondu",
       "medium": "Medium",
       "new": "New",
-      "no_results": "No results",
-      "of": "Of",
+      "no_results": "Aucun résultat",
+      "of": "de",
       "per_page": "Per page",
-      "read": "Read",
+      "read": "Lu",
       "replied": "Replied",
       "selected": "Selected",
       "total": "Total",
       "urgent": "Urgent",
-      "view_details": "View details"
+      "view_details": "Voir les détails",
+      "expand": "Déplier",
+      "collapse": "Replier"
     },
     "contacts": {
-      "bulk_action_error": "Bulk action error",
+      "bulk_action_error": "Erreur d'action groupée",
       "country": "Country",
-      "delete_confirm_description": "Delete confirm description",
-      "delete_confirm_title": "Delete confirm title",
-      "delete_error": "Delete error",
-      "deleted_success": "Deleted success",
-      "detail_title": "Detail title",
-      "email": "Email",
-      "full_name": "Full name",
+      "delete_confirm_description": "Description de la confirmation de suppression",
+      "delete_confirm_title": "Titre de confirmation de suppression",
+      "delete_error": "Erreur de suppression",
+      "deleted_success": "Suppression réussie",
+      "detail_title": "Titre du détail",
+      "email": "Courriel",
+      "full_name": "Nom complet",
       "message": "Message",
-      "priority": "Priority",
-      "priority_update_error": "Priority update error",
-      "priority_updated_success": "Priority updated success",
+      "priority": "Priorité",
+      "priority_update_error": "Erreur de mise à jour de priorité",
+      "priority_updated_success": "Priorité mise à jour avec succès",
       "received_date": "Received date",
       "status": "Status",
-      "status_update_error": "Status update error",
-      "status_updated_success": "Status updated success",
-      "subject": "Subject",
-      "subtitle": "Subtitle"
+      "status_update_error": "Erreur de mise à jour de statut",
+      "status_updated_success": "Statut mis à jour avec succès",
+      "subject": "Sujet",
+      "subtitle": "Sous-titre"
     },
     "dashboard": {
       "need_attention": "Need attention",
-      "title": "Title"
+      "title": "Titre"
     },
     "header": {
-      "title": "Title"
+      "title": "Titre"
     },
     "investors": {
       "all_types": "All types",
@@ -125,25 +127,25 @@
         "meeting_scheduled": "Meeting scheduled",
         "reject": "Reject"
       },
-      "bulk_action_error": "Bulk action error",
-      "delete_confirm_description": "Delete confirm description",
-      "delete_confirm_title": "Delete confirm title",
-      "delete_error": "Delete error",
-      "deleted_success": "Deleted success",
-      "detail_title": "Detail title",
-      "email": "Email",
+      "bulk_action_error": "Erreur d'action groupée",
+      "delete_confirm_description": "Description de la confirmation de suppression",
+      "delete_confirm_title": "Titre de confirmation de suppression",
+      "delete_error": "Erreur de suppression",
+      "deleted_success": "Suppression réussie",
+      "detail_title": "Titre du détail",
+      "email": "Courriel",
       "experience": "Experience",
-      "full_name": "Full name",
+      "full_name": "Nom complet",
       "geographic_focus": "Geographic focus",
       "investment_amount": "Investment amount",
       "investor_type": "Investor type",
       "message": "Message",
-      "organization": "Organization",
-      "phone": "Phone",
+      "organization": "Organisation",
+      "phone": "Téléphone",
       "platform_interest": "Platform interest",
-      "position": "Position",
-      "priority_update_error": "Priority update error",
-      "priority_updated_success": "Priority updated success",
+      "position": "Poste",
+      "priority_update_error": "Erreur de mise à jour de priorité",
+      "priority_updated_success": "Priorité mise à jour avec succès",
       "received_date": "Received date",
       "section": {
         "investment": "Investment",
@@ -159,44 +161,45 @@
         "qualified": "Qualified",
         "rejected": "Rejected"
       },
-      "status_update_error": "Status update error",
-      "status_updated_success": "Status updated success",
-      "subtitle": "Subtitle",
+      "status_update_error": "Erreur de mise à jour de statut",
+      "status_updated_success": "Statut mis à jour avec succès",
+      "subtitle": "Sous-titre",
       "table": {
-        "email": "Email",
-        "name": "Name",
-        "organization": "Organization",
-        "priority": "Priority",
+        "email": "Courriel",
+        "name": "Nom",
+        "organization": "Organisation",
+        "priority": "Priorité",
         "received": "Received",
         "status": "Status",
         "ticket": "Ticket",
-        "timeline": "Timeline",
+        "timeline": "Chronologie",
         "type": "Type"
       },
-      "timeline": "Timeline",
-      "title": "Title",
+      "timeline": "Chronologie",
+      "title": "Titre",
       "website": "Website"
     },
     "logs": {
       "confirm_clear": "Confirm clear",
-      "gc_error": "Gc error",
-      "gc_success": "Gc success",
-      "none": "None",
-      "subtitle": "Subtitle",
-      "title": "Title"
+      "gc_error": "Erreur GC",
+      "gc_success": "Succès GC",
+      "none": "Aucun",
+      "subtitle": "Sous-titre",
+      "title": "Titre"
     },
     "menu": {
       "contacts": "Contacts",
-      "dashboard": "Dashboard",
-      "investors": "Investors",
+      "dashboard": "Tableau de bord",
+      "investors": "Investisseurs",
       "messages": "Messages",
-      "notifications": "Notifications"
+      "notifications": "Notifications",
+      "settings": "Paramètres"
     },
     "notifications": {
       "actions": {
         "archive": "Archive",
-        "mark_all_read": "Mark all read",
-        "mark_read": "Mark read"
+        "mark_all_read": "Tout marquer comme lu",
+        "mark_read": "Marquer comme lu"
       },
       "channels_label": "Channels label",
       "filters": {
@@ -205,7 +208,7 @@
           "contact": "Contact",
           "investor": "Investor",
           "marketing": "Marketing",
-          "security": "Security",
+          "security": "Sécurité",
           "system": "System",
           "update": "Update"
         },
@@ -214,95 +217,95 @@
         },
         "read": {
           "all": "All",
-          "read": "Read",
-          "unread": "Unread"
+          "read": "Lu",
+          "unread": "Non lu"
         },
         "types": {
           "all": "All",
-          "error": "Error",
+          "error": "Erreur",
           "info": "Info",
-          "success": "Success",
+          "success": "Succès",
           "system": "System",
-          "warning": "Warning"
+          "warning": "Avertissement"
         }
       },
       "form": {
         "message": "Message",
-        "priority": "Priority",
-        "title": "Title",
+        "priority": "Priorité",
+        "title": "Titre",
         "type": "Type"
       },
-      "loading": "Loading",
+      "loading": "Chargement",
       "new": {
         "button": "Button",
-        "title": "Title"
+        "title": "Titre"
       },
-      "none": "None",
+      "none": "Aucun",
       "settings": {
-        "categories": "Categories",
-        "close": "Close",
+        "categories": "Catégories",
+        "close": "Fermer",
         "desktop": "Desktop",
-        "enable": "Enable",
+        "enable": "Activer",
         "general": "General",
         "open": "Open",
         "quiet_hours": {
-          "enable": "Enable",
+          "enable": "Activer",
           "end": "End",
           "start": "Start",
-          "title": "Title"
+          "title": "Titre"
         },
-        "save": "Save",
-        "sound": "Sound",
-        "title": "Title"
+        "save": "Enregistrer",
+        "sound": "Son",
+        "title": "Titre"
       },
       "stats": {
-        "today": "Today",
+        "today": "Aujourd'hui",
         "total": "Total",
-        "unread": "Unread",
+        "unread": "Non lu",
         "urgent": "Urgent"
       },
-      "subtitle": "Subtitle",
-      "title": "Title"
+      "subtitle": "Sous-titre",
+      "title": "Titre"
     },
     "realtime": {
-      "active_users": "Active users",
-      "activity_5min": "Activity 5min",
+      "active_users": "Utilisateurs actifs",
+      "activity_5min": "Activité sur 5 minutes",
       "by": "By",
-      "close": "Close",
-      "connected": "Connected",
+      "close": "Fermer",
+      "connected": "Connecté",
       "disconnected": "Disconnected",
-      "error_rate": "Error rate",
-      "errors": "Errors",
+      "error_rate": "Taux d'erreur",
+      "errors": "Erreurs",
       "events": "Events",
       "info": "Info",
       "last_5m": "Last 5m",
-      "memory": "Memory",
-      "none": "None",
+      "memory": "Mémoire",
+      "none": "Aucun",
       "req_per_min": "Req per min",
-      "response_time": "Response time",
-      "stream": "Stream",
-      "subtitle": "Subtitle",
-      "success": "Success",
-      "system_load": "System load",
-      "system_metrics": "System metrics",
-      "title": "Title",
-      "uptime": "Uptime",
-      "view_details": "View details",
-      "warnings": "Warnings"
+      "response_time": "Temps de réponse",
+      "stream": "Flux",
+      "subtitle": "Sous-titre",
+      "success": "Succès",
+      "system_load": "Charge du système",
+      "system_metrics": "Métriques système",
+      "title": "Titre",
+      "uptime": "Temps de fonctionnement",
+      "view_details": "Voir les détails",
+      "warnings": "Avertissements"
     },
     "search": {
       "contacts_placeholder": "Contacts placeholder",
       "investors_placeholder": "Investors placeholder",
-      "placeholder": "Placeholder"
+      "placeholder": "Texte indicatif"
     },
     "settings": {
       "availability": "Availability",
-      "backup_success": "Backup success",
-      "load_error": "Load error",
+      "backup_success": "Backup succès",
+      "load_error": "Load erreur",
       "restore_confirm": "Restore confirm",
       "system_state": "System state",
-      "system_subtitle": "System subtitle",
-      "system_title": "System title",
+      "system_subtitle": "System subtitre",
+      "system_title": "System titre",
       "unsaved_changes": "Unsaved changes"
     },
     "stats": {
@@ -312,26 +315,26 @@
       "new": "Nouveaux"
     },
     "status": {
-      "close_panel": "Close panel",
-      "components_ready": "Components ready",
+      "close_panel": "Fermer le panneau",
+      "components_ready": "Components luy",
       "config_required": "Config required",
-      "critical_errors_headline": "Critical errors headline",
+      "critical_errors_headline": "Critical erreurs headline",
       "enable_services_hint": "Enable services hint",
       "env_missing": "Env missing",
       "firebase": {
         "connection": "Connection"
       },
       "firebase_test": {
-        "error": "Error",
+        "error": "Erreur",
         "run": "Run",
-        "running": "Running",
-        "title": "Title"
+        "running": "En cours",
+        "title": "Titre"
       },
       "improvements_headline": "Improvements headline",
-      "open_title": "Open title",
-      "production_ready_badge": "Production ready badge",
-      "ready_headline": "Ready headline",
-      "title": "Title"
+      "open_title": "Titre d'ouverture",
+      "production_ready_badge": "Production luy badge",
+      "ready_headline": "Luy headline",
+      "title": "Titre"
     },
     "subtitle": "Contrôles de prod, contenus et analytics",
     "title": "Tableau de bord Admin",
@@ -440,7 +443,7 @@
             "3": "3",
             "4": "4"
           },
-          "title": "Title"
+          "title": "Titre"
         },
         "conclusion": "Une bonne préparation santé vous permettra de vivre votre expatriation sereinement. N'hésitez pas à vous faire accompagner par des professionnels spécialisés dans la santé expatriée.",
         "excerpt": "Comprendre les systèmes de santé à l'étranger, exigences d'assurance et comment accéder à des soins médicaux de qualité en tant qu'expatrié.",
@@ -467,11 +470,11 @@
           "negotiate": "Negotiate",
           "react_fast": "React fast",
           "search_portals": "Search portals",
-          "title": "Title"
+          "title": "Titre"
         },
         "scams": {
           "desc": "Desc",
-          "title": "Title"
+          "title": "Titre"
         },
         "title": "Trouver un Logement à Berlin : Guide Complet de l'Expatrié"
       },
@@ -535,7 +538,7 @@
     "site_title": "Williams Jullin",
     "structured": {
       "description": "Description",
-      "name": "Name",
+      "name": "Nom",
       "topic_culture": "Topic culture",
       "topic_culture_desc": "Topic culture desc",
       "topic_expat": "Topic expat",
@@ -581,7 +584,7 @@
     }
   },
   "common": {
-    "close": "Close",
+    "close": "Fermer",
     "just_now": "Just now",
     "retry": "Retry"
   },
@@ -688,7 +691,7 @@
   },
   "home": {
     "analytics": {
-      "title": "Title"
+      "title": "Titre"
     },
     "blog": {
       "see_all": "Tous les articles",
@@ -819,27 +822,27 @@
     "structured": {
       "person": {
         "description": "Description",
-        "jobTitle": "JobTitle"
+        "jobTitle": "JobTitre"
       },
       "website": {
         "description": "Description",
-        "name": "Name"
+        "name": "Nom"
       }
     },
     "testimonials": {
       "item_1": {
         "meta": "Meta",
-        "name": "Name",
+        "name": "Nom",
         "quote": "Quote"
       },
       "item_2": {
         "meta": "Meta",
-        "name": "Name",
+        "name": "Nom",
         "quote": "Quote"
       },
       "item_3": {
         "meta": "Meta",
-        "name": "Name",
+        "name": "Nom",
         "quote": "Quote"
       },
       "testimonial_1": {
@@ -857,8 +860,8 @@
       "title": "Ils nous font confiance"
     },
     "trust": {
-      "subtitle": "Subtitle",
-      "title": "Title"
+      "subtitle": "Sous-titre",
+      "title": "Titre"
     },
     "ulixai": {
       "alt": "Ulixai - Le bon prestataire partout dans le monde"
@@ -880,7 +883,7 @@
     },
     "form": {
       "consent": "J'accepte d'être contacté par Williams Jullin concernant cette opportunité d'investissement et consens au traitement de mes données personnelles.",
-      "email": "Email",
+      "email": "Courriel",
       "email_placeholder": "votre@email.com",
       "experience": {
         "experienced": "Expérimenté",
@@ -914,7 +917,7 @@
       "position": "Position / Rôle",
       "position_placeholder": "Managing Partner, Directeur d'Investissement...",
       "previous_investments": "Expérience d'investissement",
-      "progress_title": "Progress title",
+      "progress_title": "Progress titre",
       "range_other": "Autre montant",
       "section_consent": "Consentements",
       "section_interest": "Intérêt Spécifique",

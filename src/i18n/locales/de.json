@@ -1,4 +1,4 @@
-{
+﻿{
   "admin": {
     "activity": {
       "none": "None",
@@ -87,7 +87,9 @@
       "selected": "Selected",
       "total": "Total",
       "urgent": "Urgent",
-      "view_details": "View details"
+      "view_details": "View details",
+      "expand": "Erweitern",
+      "collapse": "Einklappen"
     },
     "contacts": {
       "bulk_action_error": "Bulk action error",
@@ -190,7 +192,8 @@
       "dashboard": "Dashboard",
       "investors": "Investors",
       "messages": "Messages",
-      "notifications": "Notifications"
+      "notifications": "Notifications",
+      "settings": "Einstellungen"
     },
     "notifications": {
       "actions": {

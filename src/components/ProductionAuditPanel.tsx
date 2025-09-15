@@ -131,7 +131,7 @@ const ProductionAuditPanel: React.FC = () => {
     
     const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    const a = document.createElemen'a';
     a.href = url;
     a.download = `production-audit-${new Date().toISOString().split('T')[0]}.json`;
     a.click();

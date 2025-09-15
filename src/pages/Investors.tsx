@@ -596,33 +596,7 @@ const Investors: React.FC<InvestorsProps> = ({ navigate }) => {
             </div>
 
             <div className="space-y-8">
-              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <TrendingUp className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{t('investors.why_invest.growth.title')}</h3>
-                    <p className="text-gray-700 mb-4">
-                      {t('investors.why_invest.growth.description')}
-                    </p>
-                    <div className="grid grid-cols-3 gap-4 text-center">
-                      <div>
-                        <div className="text-2xl font-bold text-blue-600">300%</div>
-                        <div className="text-sm text-gray-600">{t('investors.why_invest.growth.metric_1')}</div>
-                      </div>
-                      <div>
-                        <div className="text-2xl font-bold text-blue-600">85%</div>
-                        <div className="text-sm text-gray-600">{t('investors.why_invest.growth.metric_2')}</div>
-                      </div>
-                      <div>
-                        <div className="text-2xl font-bold text-blue-600">4.8/5</div>
-                        <div className="text-sm text-gray-600">{t('investors.why_invest.growth.metric_3')}</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
 
               <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-100">
                 <div className="flex items-start space-x-4">

@@ -28,7 +28,7 @@ const AIContextInjector: React.FC<AIContextInjectorProps> = ({ page }) => {
   }, [page]);
 
   const createChatGPTContext = () => {
-    const chatgptContext = document.createElement('div');
+    const chatgptContext = document.createElemen'div';
     chatgptContext.id = 'chatgpt-context';
     chatgptContext.style.display = 'none';
     chatgptContext.setAttribute('data-ai-type', 'chatgpt');
@@ -46,7 +46,7 @@ const AIContextInjector: React.FC<AIContextInjectorProps> = ({ page }) => {
   };
 
   const createClaudeContext = () => {
-    const claudeContext = document.createElement('div');
+    const claudeContext = document.createElemen'div';
     claudeContext.id = 'claude-context';
     claudeContext.style.display = 'none';
     claudeContext.setAttribute('data-ai-type', 'claude');
@@ -63,7 +63,7 @@ const AIContextInjector: React.FC<AIContextInjectorProps> = ({ page }) => {
   };
 
   const createGeminiContext = () => {
-    const geminiContext = document.createElement('div');
+    const geminiContext = document.createElemen'div';
     geminiContext.id = 'gemini-context';
     geminiContext.style.display = 'none';
     geminiContext.setAttribute('data-ai-type', 'gemini');
@@ -80,7 +80,7 @@ const AIContextInjector: React.FC<AIContextInjectorProps> = ({ page }) => {
   };
 
   const createPerplexityContext = () => {
-    const perplexityContext = document.createElement('div');
+    const perplexityContext = document.createElemen'div';
     perplexityContext.id = 'perplexity-context';
     perplexityContext.style.display = 'none';
     perplexityContext.setAttribute('data-ai-type', 'perplexity');
@@ -97,7 +97,7 @@ const AIContextInjector: React.FC<AIContextInjectorProps> = ({ page }) => {
   };
 
   const createUniversalAIContext = () => {
-    const universalContext = document.createElement('div');
+    const universalContext = document.createElemen'div';
     universalContext.id = 'universal-ai-context';
     universalContext.style.display = 'none';
     universalContext.setAttribute('data-ai-type', 'universal');
@@ -129,7 +129,7 @@ const AIContextInjector: React.FC<AIContextInjectorProps> = ({ page }) => {
 
   const injectKnowledgeGraph = () => {
     // Injecter le knowledge graph complet
-    const kgScript = document.createElement('script');
+    const kgScript = document.createElemen'script';
     kgScript.type = 'application/ld+json';
     kgScript.id = 'knowledge-graph-data';
     kgScript.textContent = JSON.stringify(williamsJullinKnowledgeGraph, null, 2);
@@ -137,7 +137,7 @@ const AIContextInjector: React.FC<AIContextInjectorProps> = ({ page }) => {
     
     // Ajouter des meta tags pour chaque entité du knowledge graph
     Object.entries(williamsJullinKnowledgeGraph.entities).forEach(([key, entity]) => {
-      const meta = document.createElement('meta');
+      const meta = document.createElemen'meta';
       meta.setAttribute('name', `kg:entity:${key.toLowerCase()}`);
       meta.setAttribute('content', entity.description);
       document.head.appendChild(meta);

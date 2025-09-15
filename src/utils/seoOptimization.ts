@@ -330,7 +330,7 @@ export const injectStructuredData = (data: any) => {
   existingScripts.forEach(script => script.remove());
   
   // Ajouter les nouvelles données structurées
-  const script = document.createElement('script');
+  const script = document.createElemen'script';
   script.type = 'application/ld+json';
   script.textContent = JSON.stringify(data, null, 2);
   document.head.appendChild(script);

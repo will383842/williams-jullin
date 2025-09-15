@@ -83,6 +83,18 @@ function App() {
     document.documentElement.lang = i18n.language;
   }, [i18n.language]);
 
+  // ✅ Abonnement à i18n.on('languageChanged') pour mettre à jour <html lang> automatiquement
+  useEffect(() => {
+    const onLang = (lng: string) => {
+      document.documentElement.lang = lng;
+    };
+    i18n.on('languageChanged', onLang);
+    onLang(i18n.language); // initial sync
+    return () => {
+      i18n.off('languageChanged', onLang);
+    };
+  }, []); // volontairement [] pour coller à la demande
+
   const renderPage = () => {
     switch (currentPage) {
       case 'story':

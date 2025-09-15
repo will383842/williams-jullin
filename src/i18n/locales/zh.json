@@ -749,12 +749,38 @@
   },
   "home": {
     "analytics": {
-      "title": "Title"
+      "title": "标题"
     },
     "blog": {
-      "see_all": "All articles",
-      "subtitle": "Expert advice for your expatriation",
-      "title": "Latest articles"
+      "see_all": "文本",
+      "subtitle": "标题",
+      "title": "标题",
+      "read_more": "文本",
+      "language_label": "标签",
+      "topics": {
+        "visas": "文本",
+        "tips": "文本",
+        "banking": "文本",
+        "housing": "文本",
+        "culture": "文本"
+      },
+      "posts": {
+        "visa_guide": {
+          "date": "文本",
+          "title": "标题",
+          "excerpt": "描述"
+        },
+        "banking_nomad": {
+          "date": "文本",
+          "title": "标题",
+          "excerpt": "描述"
+        },
+        "housing_berlin": {
+          "date": "文本",
+          "title": "标题",
+          "excerpt": "描述"
+        }
+      }
     },
     "clients": {
       "individuals": "个人",
@@ -775,20 +801,20 @@
       "title": "受全球领导者信任"
     },
     "conference": {
-      "badge": "Keynote speaker",
-      "description": "I share my expertise with thousands of expats around the world",
-      "impact_description": "Speaker at expat and traveler conferences worldwide.",
-      "impact_title": "My Global Impact",
-      "photo_alt": "Williams Jullin giving a keynote on expatriation",
-      "point_1": "I give international conferences on expatriation",
-      "point_2": "Recognized expert in international mobility",
-      "point_3": "I am the founder of SOS-Expat and Ulixai",
-      "title": "My conferences on expatriation and expat life",
-      "topic_1": "The challenges of modern expatriation",
-      "topic_2": "How to create income as an expat",
-      "topic_3": "The future of international mobility",
-      "topic_4": "Building global mutual aid networks",
-      "topics_title": "🎤 My conference topics"
+      "badge": "徽章",
+      "description": "描述",
+      "impact_description": "描述",
+      "impact_title": "标题",
+      "photo_alt": "描述",
+      "point_1": "文本",
+      "point_2": "文本",
+      "point_3": "文本",
+      "title": "标题",
+      "topic_1": "文本",
+      "topic_2": "文本",
+      "topic_3": "文本",
+      "topic_4": "文本",
+      "topics_title": "标题"
     },
     "cta": {
       "contact": "联系我们",
@@ -797,28 +823,28 @@
       "title": "准备转型您的全球旅程？"
     },
     "double_impact": {
-      "badge": "Double Impact",
-      "conclusion_desc": "We help expats with their challenges AND we create income opportunities for helpers and providers, worldwide.",
-      "conclusion_title": "Global Double Impact",
+      "badge": "徽章",
+      "conclusion_desc": "描述",
+      "conclusion_title": "标题",
       "sos": {
-        "cta": "Start with SOS-Expat",
-        "mission_1_desc": "Expats, travelers, vacationers in difficulty worldwide",
-        "mission_1_title": "Mission 1: Immediate help",
-        "mission_2_desc": "Lawyers & helping expats earn with prepaid calls",
-        "mission_2_title": "Mission 2: Guaranteed income",
-        "name": "SOS-Expat.com",
-        "tagline": "Immediate help"
+        "cta": "操作",
+        "mission_1_desc": "描述",
+        "mission_1_title": "标题",
+        "mission_2_desc": "描述",
+        "mission_2_title": "标题",
+        "name": "姓名",
+        "tagline": "文本"
       },
-      "subtitle": "Help expats AND create income for everyone, worldwide",
-      "title": "2 platforms, 4 missions",
+      "subtitle": "标题",
+      "title": "标题",
       "ulixai": {
-        "cta": "Post a request on Ulixai",
-        "mission_1_desc": "Find the right provider anywhere in the world",
-        "mission_1_title": "Mission 1: Unlimited services & choice between multiple offers and providers",
-        "mission_2_desc": "Expat providers or professionals earn income wherever they are in the world",
-        "mission_2_title": "Mission 2: Global income",
-        "name": "Ulixai.com",
-        "tagline": "Services & Quotes"
+        "cta": "操作",
+        "mission_1_desc": "描述",
+        "mission_1_title": "标题",
+        "mission_2_desc": "描述",
+        "mission_2_title": "标题",
+        "name": "姓名",
+        "tagline": "文本"
       }
     },
     "help": {
@@ -836,15 +862,16 @@
     },
     "hero": {
       "badge": "全球流动性专家",
-      "badge_verified": "Badge verified",
+      "badge_verified": "徽章",
       "cta_primary": "获得专家帮助",
       "cta_secondary": "了解我的故事",
-      "headline": "Headline",
-      "photo_alt": "Williams Jullin - Global mobility expert",
+      "headline": "无限服务",
+      "photo_alt": "描述",
       "subtitle": "国际流动性专家，拥有创新平台，为全球超过50万外籍人士提供服务。",
       "title": "转型全球流动性",
-      "title_1": "Williams",
-      "title_2": "Jullin"
+      "title_1": "标题",
+      "title_2": "标题",
+      "tagline": "您在全球移居路上的伙伴。"
     },
     "mission": {
       "community": "社区",
@@ -873,37 +900,39 @@
       "title": "可信合作伙伴网络"
     },
     "seo": {
-      "description": "Global expatriation expertise. 24/7 help, verified services, expert advice, inclusive worldwide community.",
-      "title": "Williams Jullin - #1 Global Expat Expert | Help for 500K+ Expats | 197 Countries | All Nationalities"
+      "description": "描述",
+      "title": "标题"
     },
     "services": {
-      "banking": "Banking",
-      "education": "Education",
-      "health": "Health",
-      "housing": "Housing",
-      "jobs": "Jobs",
-      "moving": "Moving",
-      "renovation": "Renovation",
-      "tax": "Tax",
-      "taxes": "Taxes",
-      "transport": "Transport",
-      "visas": "Visas",
-      "visas_permits": "Visas permits",
-      "work": "Work"
+      "banking": "文本",
+      "education": "文本",
+      "health": "描述",
+      "housing": "文本",
+      "jobs": "文本",
+      "moving": "文本",
+      "renovation": "文本",
+      "tax": "文本",
+      "taxes": "文本",
+      "transport": "文本",
+      "visas": "文本",
+      "visas_permits": "文本",
+      "work": "文本",
+      "more_html": "……以及更多服务。"
     },
     "solutions": {
       "discover": "发现",
       "sos": {
-        "badge_1": "24/7 Services",
-        "badge_2": "Guaranteed Income",
-        "badge_3": "Secure Payment",
-        "badge_time": "Instant call",
-        "call_to_action": "👉 Need help right now?<br/>👉 Want to help and get paid? Join the network.",
-        "description": "In less than 5 minutes, we connect you with a trusted lawyer or expat helper. Guaranteed call. No stress, no surprises—just a solution, now.",
-        "feature_1": "100+ verified pros and helpers",
-        "feature_2": "Worldwide, 24/7",
-        "feature_3": "Human first, efficiency second",
-        "title": "SOS-Expat: Immediate help for everyone"
+        "badge_1": "徽章",
+        "badge_2": "徽章",
+        "badge_3": "徽章",
+        "badge_time": "徽章",
+        "call_to_action": "文本",
+        "description": "描述",
+        "feature_1": "文本",
+        "feature_2": "文本",
+        "feature_3": "文本",
+        "title": "标题",
+        "cta": "操作"
       },
       "sos_desc": "为全球危急情况下的外籍人士提供紧急援助和紧急支持。",
       "sos_feature_1": "24/7紧急支持",
@@ -913,28 +942,29 @@
       "subtitle": "两个综合平台，旨在支持您国际旅程的每个方面。",
       "title": "我的解决方案",
       "ulixai": {
-        "client_step_1": "Describe your need (country, language, service, deadline).",
-        "client_step_2": "Receive multiple proposals and quotes from verified providers who speak your language.",
-        "client_step_3": "Choose in-person or online services. Payment, history and reviews in one place.",
-        "client_title": "Client side — how it works",
-        "description": "Helping expat providers or verified pros, quick responses, fast quotes, simple tracking. For expats, future expats, travelers, vacationers — all nationalities, everywhere.",
-        "examples": "Examples: visa, translations, housing, education, health, procedures, troubleshooting, moving, work…",
-        "provider_step_1": "2-minute registration (expat or pro).",
-        "provider_step_2": "Receive requests according to your languages/countries.",
-        "provider_step_3": "Quote → completion → payment, build your reputation.",
-        "provider_title": "Provider side",
-        "title": "Ulixai — The right provider, in your language, wherever you are",
-        "why_fair": "income for expats & pros",
-        "why_fair_label": "Fair",
-        "why_fast": "quotes in minutes, centralized tracking",
-        "why_fast_label": "Fast",
-        "why_global": "anywhere in the world",
-        "why_global_label": "Global",
-        "why_multilingual": "in your language",
-        "why_multilingual_label": "Multilingual",
-        "why_title": "Why Ulixai",
-        "why_verified": "expats or verified & evaluated pros",
-        "why_verified_label": "Verified"
+        "client_step_1": "文本",
+        "client_step_2": "文本",
+        "client_step_3": "文本",
+        "client_title": "标题",
+        "description": "描述",
+        "examples": "文本",
+        "provider_step_1": "文本",
+        "provider_step_2": "文本",
+        "provider_step_3": "文本",
+        "provider_title": "标题",
+        "title": "标题",
+        "why_fair": "文本",
+        "why_fair_label": "标签",
+        "why_fast": "文本",
+        "why_fast_label": "标签",
+        "why_global": "文本",
+        "why_global_label": "标签",
+        "why_multilingual": "文本",
+        "why_multilingual_label": "标签",
+        "why_title": "标题",
+        "why_verified": "文本",
+        "why_verified_label": "标签",
+        "cta": "操作"
       },
       "ulixai_desc": "具有AI驱动工具和专家指导的综合搬迁平台。",
       "ulixai_feature_1": "AI驱动匹配",
@@ -943,61 +973,61 @@
       "ulixai_title": "Ulixai"
     },
     "sos_expat": {
-      "alt": "SOS-Expat - Immediate help for expats"
+      "alt": "描述"
     },
     "stats": {
       "countries_covered": "国家",
       "expats_helped": "帮助的外籍人士",
       "satisfaction_rate": "满意度",
-      "services": "SOS-Expat & Ulixai Services",
+      "services": "文本",
       "years_experience": "年经验"
     },
     "structured": {
       "person": {
-        "description": "Description",
-        "jobTitle": "JobTitle"
+        "description": "描述",
+        "jobTitle": "标题"
       },
       "website": {
-        "description": "Description",
-        "name": "Name"
+        "description": "描述",
+        "name": "姓名"
       }
     },
     "testimonials": {
       "item_1": {
-        "meta": "Meta",
-        "name": "Name",
-        "quote": "Quote"
+        "meta": "文本",
+        "name": "姓名",
+        "quote": "引用"
       },
       "item_2": {
-        "meta": "Meta",
-        "name": "Name",
-        "quote": "Quote"
+        "meta": "文本",
+        "name": "姓名",
+        "quote": "引用"
       },
       "item_3": {
-        "meta": "Meta",
-        "name": "Name",
-        "quote": "Quote"
+        "meta": "文本",
+        "name": "姓名",
+        "quote": "引用"
       },
       "testimonial_1": {
-        "location": "Singapore",
-        "name": "Léa M.",
-        "quote": "Thanks to SOS-Expat, I was able to solve my visa problem AND start generating income by helping other expats.",
-        "role": "Lawyer"
+        "location": "文本",
+        "name": "姓名",
+        "quote": "引用",
+        "role": "文本"
       },
       "testimonial_2": {
-        "location": "Toronto",
-        "name": "Yassine K.",
-        "quote": "Ulixai allowed me to find the perfect apartment in Berlin AND develop my real estate consulting business.",
-        "role": "Consultant"
+        "location": "文本",
+        "name": "姓名",
+        "quote": "引用",
+        "role": "文本"
       },
-      "title": "They trust us"
+      "title": "标题"
     },
     "trust": {
-      "subtitle": "Subtitle",
-      "title": "Title"
+      "subtitle": "标题",
+      "title": "标题"
     },
     "ulixai": {
-      "alt": "Ulixai - The right provider anywhere in the world"
+      "alt": "描述"
     }
   },
   "investors": {
@@ -1363,8 +1393,8 @@
   },
   "story": {
     "cta": {
-      "badge": "My signature",
-      "connect": "💬 Want to chat? Let's connect!",
+      "badge": "徽章",
+      "connect": "文本",
       "sos_button": "探索SOS-Expat",
       "subtitle": "成为正在转型国际流动性的全球社区的一部分。",
       "title": "加入旅程",
@@ -1379,8 +1409,8 @@
       "mission_details": {
         "sos_expat_1": "SOS‑Expat: instant matching with a lawyer or an experienced expat for your case; first consultation by chat/phone/video in under 5 minutes, anywhere in the world, in your language.",
         "sos_expat_2": "SOS‑Expat: payouts sent in under 24 hours, for both the lawyer and the helping expat.",
-        "ulixai_1": "ULIXAI: all your needs (visa, banking, paperwork, driver…) → multiple provider offers for you to choose from.",
-        "ulixai_2": "ULIXAI: providers, helpers and local pros monetize their skills, with guaranteed payment in a few days."
+        "ulixai_1": "文本",
+        "ulixai_2": "文本"
       },
       "mission_subtitle": "两个互补平台，四个明确使命。",
       "mission_title": "在一个生态系统中连接全世界的外籍人士和旅行者",
@@ -1391,20 +1421,21 @@
     },
     "hero": {
       "badge": "威廉姆斯·朱林",
-      "companies": "SOS-Expat & Ulixai",
+      "companies": "文本",
       "location": "总部设在泰国",
       "role_1": "企业家",
       "role_2": "创新者",
       "subtitle": "我将创业视为理所当然，作为创造和发展的需要。我的执念：不断突破我的极限，发现我能走多远。",
       "title_1": "企业家",
-      "title_2": "创始人兼CEO"
+      "title_2": "创始人兼CEO",
+      "image_alt": "描述"
     },
     "intro": {
-      "badge": "The obsession that guides me",
+      "badge": "徽章",
       "paragraph_1": "我的国际流动性之旅始于作为外籍人士的个人挑战。在国家间搬迁时，我亲身体验了数百万外籍人士每天面临的复杂性、挫折和支持缺口。",
       "paragraph_2": "这些个人经历成为理解外籍人士真正需要什么的基础——不仅仅是信息，而是全面的支持、可靠的网络和真正有效的创新解决方案。",
       "paragraph_3": "今天，通过SOS-Expat和Ulixai，我将这些见解转化为平台，帮助超过500,000名外籍人士成功导航他们的国际旅程。",
-      "quote": "Adrenaline nourishes me. Routine extinguishes me. I want challenges, unexpected events, that pressure that pushes to invent and exceed oneself. That's where I feel fully alive.",
+      "quote": "引用",
       "title": "旅程开始"
     },
     "platforms": {
@@ -1433,7 +1464,7 @@
       "before_2017": "2017年前：创建了几家公司，有成功也有失败。成功给了我信心，失败教会了我谦逊并教会了我。每次经历都锻造了我的韧性并完善了我的创业愿景。",
       "event_1": {
         "description": "推出一个经历爆炸性增长的品牌。令人眩晕的上升，挑战所有预测。",
-        "emotion": "🚀",
+        "emotion": "文本",
         "feeling": "成功的兴奋",
         "lesson": "成功可能比我们想象的来得更快",
         "location": "法国",
@@ -1441,7 +1472,7 @@
       },
       "event_2": {
         "description": "Covid袭击。不到两年，一切都崩溃了。残酷的冲击，完全的损失...但也是一个启示。",
-        "emotion": "💔",
+        "emotion": "文本",
         "feeling": "从内部重建",
         "lesson": "有时你必须失去一切才能找到一切",
         "location": "法国",
@@ -1449,7 +1480,7 @@
       },
       "event_3": {
         "description": "48岁时，我做出了将改变我生活的决定：移居国外。离开我的舒适区，在别处重生。",
-        "emotion": "✈️",
+        "emotion": "文本",
         "feeling": "重新开始的勇气",
         "lesson": "重新开始永远不会太晚",
         "location": "法国",
@@ -1457,7 +1488,7 @@
       },
       "event_4": {
         "description": "2024年7月：我永久定居泰国。没有网络，没有帮助。独自一人。每一步都成为挑战。",
-        "emotion": "🌴",
+        "emotion": "文本",
         "feeling": "外籍人士的孤独",
         "lesson": "移居揭示了我们真正的内在力量",
         "location": "泰国",
@@ -1465,7 +1496,7 @@
       },
       "event_5": {
         "description": "从凌晨4点到晚上11点7/7。很少见到我的孩子...为了一个目标最令人心碎的牺牲：创建第一个将团结全世界所有外籍人士的平台。",
-        "emotion": "💻",
+        "emotion": "文本",
         "feeling": "创造性痴迷",
         "lesson": "最伟大的项目诞生于孤独和坚持不懈",
         "location": "泰国",
@@ -1473,30 +1504,31 @@
       },
       "event_6": {
         "description": "2025年8月：同时推出总部设在爱沙尼亚的SOS-Expat和Ulixai。两个平台，4个使命：连接全世界的外籍人士。",
-        "emotion": "🌍",
+        "emotion": "文本",
         "feeling": "全球影响，人类使命",
         "lesson": "最好的想法来自我们自己的斗争",
         "location": "全球",
         "title": "生态系统的诞生"
       },
       "subtitle": "塑造我转型全球流动性使命的关键时刻。",
-      "title": "关键里程碑"
+      "title": "关键里程碑",
+      "ribbon": "从崛起到重建"
     },
     "values": {
-      "badge": "What guides me",
+      "badge": "徽章",
       "build": {
-        "description": "Develop, exceed my skills, always learn",
-        "story": "My obsession since stopping my studies: create and grow",
-        "title": "Build constantly"
+        "description": "描述",
+        "story": "文本",
+        "title": "标题"
       },
       "community": {
         "description": "建立支持网络，让外籍人士能够繁荣发展，而不仅仅是生存。",
         "title": "社区优先"
       },
       "connection": {
-        "description": "Create bridges between cultures and experiences",
-        "story": "Every expat deserves to be accompanied in their journey",
-        "title": "Human connection"
+        "description": "描述",
+        "story": "文本",
+        "title": "标题"
       },
       "global": {
         "description": "理解流动性是关于连接文化，而不仅仅是跨越边界。",
@@ -1508,16 +1540,78 @@
       },
       "innovation": {
         "description": "利用技术解决真实问题并创造有意义的影响。",
-        "story": "If I struggle, it means others struggle too",
+        "story": "文本",
         "title": "创新"
       },
       "resilience": {
-        "description": "Rebuild from within after collapse",
-        "story": "Covid took everything from me, but revealed who I really was",
-        "title": "Resilience"
+        "description": "描述",
+        "story": "文本",
+        "title": "标题"
       },
       "subtitle": "指导我工作中每个决策和创新的原则。",
-      "title": "核心价值观"
+      "title": "核心价值观",
+      "items": {
+        "build": {
+          "title": "标题",
+          "subtitle": "标题",
+          "bubble": "文本"
+        },
+        "resilience": {
+          "title": "标题",
+          "subtitle": "标题",
+          "bubble": "文本"
+        },
+        "connection": {
+          "title": "标题",
+          "subtitle": "标题",
+          "bubble": "文本"
+        },
+        "innovation": {
+          "title": "创新",
+          "subtitle": "利用技术解决真实问题并创造有意义的影响。",
+          "bubble": "文本"
+        }
+      }
+    },
+    "mission": {
+      "title": "使命诞生",
+      "body": "无论是移居者还是旅行者，都不应独自面对。借助 ULIXAI.com 与 SOS‑Expat.com，支持变得简单、快捷、随处可达——每个人也都可以在全球获得收入。"
+    },
+    "seo": {
+      "title": "我的故事 — Williams Jullin｜从崩溃到重生",
+      "headline": "韧性与全球移居专业之旅",
+      "description": "了解 Williams Jullin 如何从疫情低谷走向泰国新生，成为全球移居专家，并通过 Ulixai 与 SOS‑Expat 帮助了 50 万+ 海外人士。",
+      "article_section": "传记",
+      "keywords": [
+        "Williams Jullin 故事",
+        "移居专家历程",
+        "Ulixai 与 SOS‑Expat 创始人",
+        "泰国移居",
+        "海外创业者",
+        "移居成功故事",
+        "海外人士灵感",
+        "移居动力",
+        "移居韧性",
+        "海外重建",
+        "移居转变"
+      ],
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "移居（Expatriation）",
+          "description": "在海外生活的过程"
+        },
+        {
+          "@type": "Thing",
+          "name": "国际创业",
+          "description": "跨国创建与运营企业"
+        },
+        {
+          "@type": "Thing",
+          "name": "韧性",
+          "description": "挫折后自我重建的能力"
+        }
+      ]
     }
   }
 }

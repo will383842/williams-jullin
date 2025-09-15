@@ -696,7 +696,33 @@
     "blog": {
       "see_all": "All articles",
       "subtitle": "Expert advice for your expatriation",
-      "title": "Latest articles"
+      "title": "Latest articles",
+      "read_more": "",
+      "language_label": "",
+      "topics": {
+        "visas": "",
+        "tips": "",
+        "banking": "",
+        "housing": "",
+        "culture": ""
+      },
+      "posts": {
+        "visa_guide": {
+          "date": "",
+          "title": "",
+          "excerpt": ""
+        },
+        "banking_nomad": {
+          "date": "",
+          "title": "",
+          "excerpt": ""
+        },
+        "housing_berlin": {
+          "date": "",
+          "title": "",
+          "excerpt": ""
+        }
+      }
     },
     "conference": {
       "badge": "Keynote speaker",
@@ -748,11 +774,12 @@
       "badge_verified": "Badge verified",
       "cta_primary": "Immediate help in less than 5 minutes (SOS-Expat)",
       "cta_secondary": "Need services → find a provider (Ulixai)",
-      "headline": "Headline",
+      "headline": "Unlimited services",
       "photo_alt": "Williams Jullin - Global mobility expert",
       "subtitle": "Founder of Ulixai.com and SOS-Expat.com — I instantly connect 304 million expats and 1.465 billion travelers with verified providers, worldwide.",
       "title_1": "Williams",
-      "title_2": "Jullin"
+      "title_2": "Jullin",
+      "tagline": "Trusted help for every move, everywhere."
     },
     "seo": {
       "description": "Global expatriation expertise. 24/7 help, verified services, expert advice, inclusive worldwide community.",
@@ -771,7 +798,8 @@
       "transport": "Transport",
       "visas": "Visas",
       "visas_permits": "Visas permits",
-      "work": "Work"
+      "work": "Work",
+      "more_html": "…and many more services."
     },
     "solutions": {
       "sos": {
@@ -784,7 +812,8 @@
         "feature_1": "100+ verified pros and helpers",
         "feature_2": "Worldwide, 24/7",
         "feature_3": "Human first, efficiency second",
-        "title": "SOS-Expat: Immediate help for everyone"
+        "title": "SOS-Expat: Immediate help for everyone",
+        "cta": ""
       },
       "ulixai": {
         "client_step_1": "Describe your need (country, language, service, deadline).",
@@ -808,7 +837,8 @@
         "why_multilingual_label": "Multilingual",
         "why_title": "Why Ulixai",
         "why_verified": "expats or verified & evaluated pros",
-        "why_verified_label": "Verified"
+        "why_verified_label": "Verified",
+        "cta": ""
       }
     },
     "sos_expat": {
@@ -1031,14 +1061,7 @@
         "description": "First platform to combine emergency help AND planned services. Powerful network effects and high barriers to entry.",
         "title": "Competitive Advantages"
       },
-      "growth": {
-        "description": "125K+ expats already helped with 300% year-over-year growth. Our metrics show massive adoption and high retention.",
-        "metric_1": "Annual growth",
-        "metric_2": "Retention rate",
-        "metric_3": "Client satisfaction",
-        "title": "Proven Growth"
-      },
-      "subtitle": "A unique opportunity to participate in transforming expat assistance",
+            "subtitle": "A unique opportunity to participate in transforming expat assistance",
       "team": {
         "description": "Williams Jullin, an expat founder himself, intimately understands the challenges. Strong technical team with experience in large-scale platforms.",
         "title": "Experienced Team"
@@ -1159,7 +1182,8 @@
       "role_2": "Innovator",
       "subtitle": "I live entrepreneurship as an evidence, as a need to create and develop. My obsession: constantly pushing my limits and discovering how far I can go.",
       "title_1": "Entrepreneur",
-      "title_2": "Founder & CEO"
+      "title_2": "Founder & CEO",
+      "image_alt": "Williams Jullin"
     },
     "intro": {
       "badge": "The obsession that guides me",
@@ -1242,7 +1266,8 @@
         "title": "The birth of the ecosystem"
       },
       "subtitle": "Each step has shaped my vision and mission today",
-      "title": "My entrepreneurial journey"
+      "title": "My entrepreneurial journey",
+      "ribbon": "From ascent to rebuilding"
     },
     "values": {
       "badge": "What guides me",
@@ -1266,7 +1291,69 @@
         "story": "Covid took everything from me, but revealed who I really was",
         "title": "Resilience"
       },
-      "title": "My entrepreneurial philosophy"
+      "title": "My entrepreneurial philosophy",
+      "items": {
+        "build": {
+          "title": "Build constantly",
+          "subtitle": "Develop, exceed my skills, always learn",
+          "bubble": "My obsession since stopping my studies: create and grow"
+        },
+        "resilience": {
+          "title": "Resilience",
+          "subtitle": "Rebuild from within after collapse",
+          "bubble": "Covid took everything from me, but revealed who I really was"
+        },
+        "connection": {
+          "title": "Human connection",
+          "subtitle": "Create bridges between cultures and experiences",
+          "bubble": "Every expat deserves to be accompanied in their journey"
+        },
+        "innovation": {
+          "title": "Social innovation",
+          "subtitle": "Transform struggles into solutions for everyone",
+          "bubble": "If I struggle, it means others struggle too"
+        }
+      }
+    },
+    "mission": {
+      "title": "The Mission is Born",
+      "body": "Expat or traveler, no one should be alone. With ULIXAI.com and SOS‑Expat.com, help is simple, fast and available everywhere — and anyone can also earn globally."
+    },
+    "seo": {
+      "title": "My Story — Williams Jullin | From Collapse to Rebirth",
+      "headline": "Journey of resilience and global expatriation expertise",
+      "description": "Discover how Williams Jullin went from the Covid collapse to a new life in Thailand, becoming a global expert in expatriation and helping 500K+ expats with Ulixai & SOS‑Expat.",
+      "article_section": "Biography",
+      "keywords": [
+        "Williams Jullin story",
+        "expatriation expert journey",
+        "Ulixai SOS‑Expat founder",
+        "Thailand expatriation",
+        "expat entrepreneur",
+        "expatriation success story",
+        "inspiration for expats",
+        "expatriation motivation",
+        "expat resilience",
+        "rebuilding abroad",
+        "expatriation transformation"
+      ],
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Expatriation",
+          "description": "Process of living abroad"
+        },
+        {
+          "@type": "Thing",
+          "name": "International Entrepreneurship",
+          "description": "Building businesses across borders"
+        },
+        {
+          "@type": "Thing",
+          "name": "Resilience",
+          "description": "Ability to rebuild after setbacks"
+        }
+      ]
     }
   }
 }

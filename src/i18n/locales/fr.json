@@ -696,7 +696,33 @@
     "blog": {
       "see_all": "Tous les articles",
       "subtitle": "Conseils d'expert pour votre expatriation",
-      "title": "Derniers articles"
+      "title": "Derniers articles",
+      "read_more": "Texte",
+      "language_label": "Libellé",
+      "topics": {
+        "visas": "Texte",
+        "tips": "Texte",
+        "banking": "Texte",
+        "housing": "Texte",
+        "culture": "Texte"
+      },
+      "posts": {
+        "visa_guide": {
+          "date": "Texte",
+          "title": "Titre",
+          "excerpt": "Description"
+        },
+        "banking_nomad": {
+          "date": "Texte",
+          "title": "Titre",
+          "excerpt": "Description"
+        },
+        "housing_berlin": {
+          "date": "Texte",
+          "title": "Titre",
+          "excerpt": "Description"
+        }
+      }
     },
     "conference": {
       "badge": "Conférencier",
@@ -719,7 +745,7 @@
       "title": "Prêt à transformer votre parcours international ?"
     },
     "double_impact": {
-      "badge": "Double Impact",
+      "badge": "Badge",
       "conclusion_desc": "Nous aidons les expatriés avec leurs défis ET nous créons des opportunités de revenus pour les aidants et prestataires, partout dans le monde.",
       "conclusion_title": "Double Impact Mondial",
       "sos": {
@@ -728,7 +754,7 @@
         "mission_1_title": "Mission 1 : Aide immédiate",
         "mission_2_desc": "Avocats & expatriés aidants gagnent avec des appels prépayés",
         "mission_2_title": "Mission 2 : Revenus garantis",
-        "name": "SOS-Expat.com",
+        "name": "Nom",
         "tagline": "Aide immédiate"
       },
       "subtitle": "Aider les expatriés ET créer des revenus pour tous, partout dans le monde",
@@ -739,20 +765,21 @@
         "mission_1_title": "Mission 1 : Services illimités & choix entre plusieurs offres et prestataires",
         "mission_2_desc": "Prestataires expatriés ou professionnels gagnent des revenus où qu'ils soient dans le monde",
         "mission_2_title": "Mission 2 : Revenus mondiaux",
-        "name": "Ulixai.com",
+        "name": "Nom",
         "tagline": "Services & Devis"
       }
     },
     "hero": {
       "badge": "Expert en Mobilité Internationale",
-      "badge_verified": "Badge verified",
+      "badge_verified": "Badge",
       "cta_primary": "Aide immédiate en moins de 5 minutes (SOS-Expat)",
       "cta_secondary": "Un besoin de services → trouver un prestataire (Ulixai)",
-      "headline": "Headline",
+      "headline": "Des services illimités",
       "photo_alt": "Williams Jullin - Expert en mobilité internationale",
       "subtitle": "Fondateur d'Ulixai.com et SOS-Expat.com — je connecte instantanément 304 millions d'expatriés et 1,465 milliard voyageurs avec des prestataires vérifiés, partout dans le monde.",
-      "title_1": "Williams",
-      "title_2": "Jullin"
+      "title_1": "Titre",
+      "title_2": "Titre",
+      "tagline": "Une aide fiable pour chaque départ, partout."
     },
     "seo": {
       "description": "Expertise mondiale. Aide 24/7, services vérifiés, conseils d'expert, communauté inclusive.",
@@ -763,15 +790,16 @@
       "education": "Éducation",
       "health": "Santé",
       "housing": "Logement",
-      "jobs": "Jobs",
-      "moving": "Moving",
-      "renovation": "Renovation",
+      "jobs": "Texte",
+      "moving": "Texte",
+      "renovation": "Texte",
       "tax": "Fiscalité",
-      "taxes": "Taxes",
-      "transport": "Transport",
-      "visas": "Visas",
-      "visas_permits": "Visas permits",
-      "work": "Travail"
+      "taxes": "Texte",
+      "transport": "Texte",
+      "visas": "Texte",
+      "visas_permits": "Texte",
+      "work": "Travail",
+      "more_html": "…et bien plus encore."
     },
     "solutions": {
       "sos": {
@@ -784,7 +812,8 @@
         "feature_1": "100+ pros et aidants vérifiés",
         "feature_2": "Partout dans le monde, 24/7",
         "feature_3": "Humain d'abord, efficacité ensuite",
-        "title": "SOS-Expat : Aide immédiate pour tous"
+        "title": "SOS-Expat : Aide immédiate pour tous",
+        "cta": "Action"
       },
       "ulixai": {
         "client_step_1": "Décrivez votre besoin (pays, langue, service, délai).",
@@ -803,12 +832,13 @@
         "why_fast": "devis en minutes, suivi centralisé",
         "why_fast_label": "Rapide",
         "why_global": "partout dans le monde",
-        "why_global_label": "Global",
+        "why_global_label": "Libellé",
         "why_multilingual": "dans votre langue",
         "why_multilingual_label": "Multilingue",
         "why_title": "Pourquoi Ulixai",
         "why_verified": "expatriés ou pros vérifiés & évalués",
-        "why_verified_label": "Vérifié"
+        "why_verified_label": "Vérifié",
+        "cta": "Action"
       }
     },
     "sos_expat": {
@@ -831,31 +861,31 @@
     },
     "testimonials": {
       "item_1": {
-        "meta": "Meta",
+        "meta": "Texte",
         "name": "Nom",
-        "quote": "Quote"
+        "quote": "Citation"
       },
       "item_2": {
-        "meta": "Meta",
+        "meta": "Texte",
         "name": "Nom",
-        "quote": "Quote"
+        "quote": "Citation"
       },
       "item_3": {
-        "meta": "Meta",
+        "meta": "Texte",
         "name": "Nom",
-        "quote": "Quote"
+        "quote": "Citation"
       },
       "testimonial_1": {
         "location": "Singapour",
-        "name": "Léa M.",
+        "name": "Nom",
         "quote": "Grâce à SOS-Expat, j'ai pu résoudre mon problème de visa ET commencer à générer des revenus en aidant d'autres expatriés.",
         "role": "Avocate"
       },
       "testimonial_2": {
-        "location": "Toronto",
-        "name": "Yassine K.",
+        "location": "Texte",
+        "name": "Nom",
         "quote": "Ulixai m'a permis de trouver l'appartement parfait à Berlin ET de développer mon activité de conseil immobilier.",
-        "role": "Consultant"
+        "role": "Texte"
       },
       "title": "Ils nous font confiance"
     },
@@ -1031,13 +1061,7 @@
         "description": "Première plateforme à combiner aide d'urgence ET services planifiés. Effets de réseau puissants et barrières d'entrée élevées.",
         "title": "Avantages Concurrentiels"
       },
-      "growth": {
-        "description": "125K+ expatriés déjà aidés avec 300% de croissance année après année. Nos métriques montrent une adoption massive et une forte rétention.",
-        "metric_1": "Croissance annuelle",
-        "metric_2": "Taux de rétention",
-        "metric_3": "Satisfaction client",
-        "title": "Croissance Prouvée"
-      },
+      
       "subtitle": "Une opportunité unique de participer à la transformation de l'aide aux expatriés",
       "team": {
         "description": "Williams Jullin, fondateur expatrié lui-même, comprend intimement les défis. Équipe technique solide avec expérience dans les plateformes à grande échelle.",
@@ -1127,10 +1151,10 @@
     "cta": {
       "badge": "Ma signature",
       "connect": "💬 Envie d'échanger ? Connectons-nous !",
-      "sos_button": "🆘 SOS Expat",
+      "sos_button": "Action",
       "subtitle": "Je suis un créateur d'expériences humaines convaincu qu'une vie ailleurs peut être un nouveau départ pour s'accomplir.",
       "title": "Un bâtisseur de ponts entre les cultures",
-      "ulixai_button": "🔍 Ulixai"
+      "ulixai_button": "Action"
     },
     "expatriation": {
       "badge": "La révélation",
@@ -1152,14 +1176,15 @@
       "title": "L'expatriation qui change tout"
     },
     "hero": {
-      "badge": "Williams Jullin",
-      "companies": "SOS-Expat & Ulixai",
+      "badge": "Badge",
+      "companies": "Texte",
       "location": "Basé en Thaïlande",
-      "role_1": "Entrepreneur",
+      "role_1": "Texte",
       "role_2": "Innovateur",
       "subtitle": "Je n'ai pas choisi l'entrepreneuriat : j'en ai besoin. Créer, développer, innover… c'est mon oxygène. Mon obsession : repousser mes limites, encore et toujours, pour découvrir jusqu'où je peux aller.",
-      "title_1": "Entrepreneur",
-      "title_2": "Fondateur & CEO"
+      "title_1": "Titre",
+      "title_2": "Fondateur & CEO",
+      "image_alt": "Description"
     },
     "intro": {
       "badge": "Ce qui me guide",
@@ -1195,31 +1220,31 @@
       "before_2017": "J'ai créé plusieurs sociétés. Les succès m'ont donné confiance, les échecs, parfois anéantissants, m'ont appris l'humilité et forgé ma résilience. Chaque étape, aussi dure soit-elle, a nourri cette détermination à me relever et a affiné ma vision entrepreneuriale.",
       "event_1": {
         "description": "Lancement d'une marque qui connaît une croissance explosive. Une ascension vertigineuse qui défie toutes les prévisions.",
-        "emotion": "🚀",
+        "emotion": "Texte",
         "feeling": "L'euphorie de la réussite",
         "lesson": "Le succès peut venir plus vite qu'on ne l'imagine",
-        "location": "France",
+        "location": "Texte",
         "title": "Le décollage fulgurant"
       },
       "event_2": {
         "description": "Le Covid frappe. En moins de deux ans, tout s'effondre. Un choc brutal, une perte totale... mais aussi une révélation.",
-        "emotion": "💔",
+        "emotion": "Texte",
         "feeling": "La reconstruction de l'intérieur",
         "lesson": "Parfois, il faut tout perdre pour tout retrouver",
-        "location": "France",
+        "location": "Texte",
         "title": "La chute et l'anéantissement"
       },
       "event_3": {
         "description": "À 48 ans, je prends la décision qui va changer ma vie : m'expatrier. Quitter ma zone de confort pour renaître ailleurs.",
-        "emotion": "✈️",
+        "emotion": "Texte",
         "feeling": "Le courage de recommencer",
         "lesson": "Il n'est jamais trop tard pour recommencer",
-        "location": "France",
+        "location": "Texte",
         "title": "La décision du grand saut"
       },
       "event_4": {
         "description": "Juillet 2024 : je m'installe définitivement en Thaïlande. Aucun réseau, aucune aide. Seul. Chaque démarche devient un défi.",
-        "emotion": "🌴",
+        "emotion": "Texte",
         "feeling": "La solitude de l'expatrié",
         "lesson": "L'expatriation révèle notre vraie force intérieure",
         "location": "Thaïlande",
@@ -1227,7 +1252,7 @@
       },
       "event_5": {
         "description": "De 4h du matin à 23h 7/7. En ne voyant que peu mes enfants... Le sacrifice le plus déchirant pour un seul objectif : créer la première plateforme qui rassemblera tous les expatriés du monde.",
-        "emotion": "💻",
+        "emotion": "Texte",
         "feeling": "L'obsession créatrice",
         "lesson": "Les plus grands projets naissent dans la solitude et l'acharnement",
         "location": "Thaïlande",
@@ -1235,14 +1260,15 @@
       },
       "event_6": {
         "description": "Août 2025 : lancement simultané de SOS-Expat et Ulixai basé en Estonie. Deux plateformes, 4 missions pour connecter les expatriés du monde entier.",
-        "emotion": "🌍",
+        "emotion": "Texte",
         "feeling": "Impact global, mission humaine",
         "lesson": "Les plus belles idées naissent souvent des épreuves les plus dures.",
-        "location": "Global",
+        "location": "Texte",
         "title": "La naissance de l'écosystème"
       },
       "subtitle": "Chaque étape a façonné ma vision et ma mission aujourd'hui",
-      "title": "Mon parcours d'entrepreneur"
+      "title": "Mon parcours d'entrepreneur",
+      "ribbon": "De l’ascension à la reconstruction"
     },
     "values": {
       "badge": "Ce qui me guide",
@@ -1266,7 +1292,69 @@
         "story": "Le Covid m'a tout pris, mais m'a révélé qui j'étais vraiment",
         "title": "Résilience"
       },
-      "title": "Ma philosophie d'entrepreneur"
+      "title": "Ma philosophie d'entrepreneur",
+      "items": {
+        "build": {
+          "title": "Construire sans cesse",
+          "subtitle": "Développer, dépasser ses compétences, apprendre toujours",
+          "bubble": "Mon obsession : créer, apprendre et grandir"
+        },
+        "resilience": {
+          "title": "Résilience",
+          "subtitle": "Se reconstruire de l'intérieur après l'effondrement",
+          "bubble": "Le Covid m'a tout pris, mais m'a révélé qui j'étais vraiment"
+        },
+        "connection": {
+          "title": "Connexion humaine",
+          "subtitle": "Créer des ponts entre les cultures et les expériences",
+          "bubble": "Chaque expatrié mérite d'être accompagné dans son parcours"
+        },
+        "innovation": {
+          "title": "Innovation sociale",
+          "subtitle": "Transformer les galères en solutions pour tous",
+          "bubble": "Si je galère, c'est que d'autres galèrent aussi"
+        }
+      }
+    },
+    "mission": {
+      "title": "La mission naît",
+      "body": "Expatrié ou voyageur, personne ne devrait être seul. Avec ULIXAI.com et SOS‑Expat.com, l’aide est simple, rapide et accessible partout — et chacun peut aussi générer des revenus dans le monde entier."
+    },
+    "seo": {
+      "title": "Mon Histoire — Williams Jullin | De l’effondrement à la renaissance",
+      "headline": "Parcours de résilience et d’expertise en expatriation",
+      "description": "Découvrez comment Williams Jullin est passé de l’effondrement Covid à une nouvelle vie en Thaïlande, devenant expert mondial de l’expatriation et aidant 500K+ expatriés avec Ulixai & SOS‑Expat.",
+      "article_section": "Biographie",
+      "keywords": [
+        "histoire Williams Jullin",
+        "parcours expert expatriation",
+        "fondateur Ulixai SOS‑Expat",
+        "expatriation Thaïlande",
+        "entrepreneur expatrié",
+        "success story expatriation",
+        "inspiration expatriés",
+        "motivation expatriation",
+        "résilience expatrié",
+        "reconstruction à l’étranger",
+        "transformation expatriation"
+      ],
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Expatriation",
+          "description": "Vivre à l’étranger"
+        },
+        {
+          "@type": "Thing",
+          "name": "Entrepreneuriat international",
+          "description": "Créer des entreprises à l’international"
+        },
+        {
+          "@type": "Thing",
+          "name": "Résilience",
+          "description": "Capacité à se reconstruire après un échec"
+        }
+      ]
     }
   }
 }
